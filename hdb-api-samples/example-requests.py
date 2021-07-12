@@ -1,6 +1,7 @@
 import base64
 import datetime
 
+import requests
 from tabulate import tabulate
 
 bto_details_urls = [
@@ -515,14 +516,25 @@ if __name__ == '__main__':
     rows = []
     for url in bto_details_urls:
         path_segment = url.rsplit('/', 1)[-1]
-        month, bto_project_type, b64_chunk = path_segment.split('_')
+        month, project_type, b64_chunk = path_segment.split('_')
         town, rest = base64.b64decode(b64_chunk + '===').decode('ascii').split('_', 1)
         project_code, timestamp = rest[:-13], rest[-13:]
+
+        r1 = requests.get(f'https://resources.homes.hdb.gov.sg/nf/{month}/bto/'
+                          f'unit_xml/'
+                          f'UNIT_{month}_{project_type}_{b64_chunk}.xml')
+        r2 = requests.get(f'https://resources.homes.hdb.gov.sg/nf/{month}/bto/'
+                          f'{town.lower()}_{project_code.lower().rstrip("_")}/'
+                          f'{month}_{project_type}_{b64_chunk}.xml')
+
         rows.append((url,
                      month,
-                     bto_project_type,
+                     project_type,
                      town,
                      project_code,
-                     datetime.datetime.utcfromtimestamp(int(timestamp) / 1000)))
+                     datetime.datetime.utcfromtimestamp(int(timestamp) / 1000),
+                     r1.status_code,
+                     r2.status_code,
+                     ))
 
-    print(tabulate(rows, headers=['month', 'type', 'url', 'town', 'code', 'timestamp']))
+    print(tabulate(rows, headers=['month', 'type', 'url', 'town', 'code', 'timestamp', 'xml1', 'xml2']))
