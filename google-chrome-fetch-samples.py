@@ -1,0 +1,503 @@
+import requests
+
+
+def fetch(url, params):
+    """
+    dummy function
+
+    :param url:
+    :param params:
+    :return:
+    """
+    return requests.get(url, **params)
+
+
+fetch("https://resources.homes.hdb.gov.sg/nf/2021-05/bto/unit_xml/UNIT_2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng.xml",
+      {
+          "headers":        {
+              "accept":           "*/*",
+              "accept-language":  "en-US,en;q=0.9",
+              "cache-control":    "no-cache",
+              "pragma":           "no-cache",
+              "sec-ch-ua":        "\"Chromium\";v=\"91\", \" Not;A Brand\";v=\"99\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-fetch-dest":   "empty",
+              "sec-fetch-mode":   "cors",
+              "sec-fetch-site":   "same-site"
+          },
+          "referrer":       "https://homes.hdb.gov.sg/",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body":           None,
+          "method":         "GET",
+          "mode":           "cors",
+          "credentials":    "omit"
+      })
+
+fetch("https://resources.homes.hdb.gov.sg/nf/2021-05/bto/gl_n1c13/2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng.xml",
+      {
+          "headers":        {
+              "accept":           "*/*",
+              "accept-language":  "en-US,en;q=0.9",
+              "cache-control":    "no-cache",
+              "pragma":           "no-cache",
+              "sec-ch-ua":        "\"Chromium\";v=\"91\", \" Not;A Brand\";v=\"99\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-fetch-dest":   "empty",
+              "sec-fetch-mode":   "cors",
+              "sec-fetch-site":   "same-site"
+          },
+          "referrer":       "https://homes.hdb.gov.sg/",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body":           None,
+          "method":         "GET",
+          "mode":           "cors",
+          "credentials":    "omit"
+      })
+
+fetch("https://homes.hdb.gov.sg/home-api/protected/v1/newFlat/getSelectionProjectAvailabilityAndEthnic",
+      {
+          "headers":        {
+              "accept":           "application/json, text/plain, */*",
+              "accept-language":  "en-US,en;q=0.9",
+              "cache-control":    "no-cache",
+              "content-type":     "application/json",
+              "pragma":           "no-cache",
+              "sec-ch-ua":        "\"Chromium\";v=\"91\", \" Not;A Brand\";v=\"99\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-fetch-dest":   "empty",
+              "sec-fetch-mode":   "cors",
+              "sec-fetch-site":   "same-origin",
+              "sessionid":        "LI1626000000000XXXXXXXXXXXXXXXX"
+          },
+          "referrer":       "https://homes.hdb.gov.sg/home/bto/details/2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body":           "{\"projectId\":\"2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng\"}",
+          "method":         "POST",
+          "mode":           "cors",
+          "credentials":    "include"
+      })
+
+fetch("https://homes.hdb.gov.sg/home/assets/GeoJSON/MP14_REGION_WEB_PL.geojson",
+      {
+          "headers":        {
+              "accept":           "*/*",
+              "accept-language":  "en-US,en;q=0.9",
+              "cache-control":    "no-cache",
+              "pragma":           "no-cache",
+              "sec-ch-ua":        "\"Chromium\";v=\"91\", \" Not;A Brand\";v=\"99\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-fetch-dest":   "empty",
+              "sec-fetch-mode":   "cors",
+              "sec-fetch-site":   "same-origin"
+          },
+          "referrer":       "https://homes.hdb.gov.sg/home/finding-a-flat?ballotQtr=2021-05",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body":           None,
+          "method":         "GET",
+          "mode":           "cors",
+          "credentials":    "include"
+      })
+
+fetch("https://homes.hdb.gov.sg/home-api/public/v1/launch/getFlatTypeUnitAvailability",
+      {
+          "headers":        {
+              "accept":           "application/json, text/plain, */*",
+              "accept-language":  "en-US,en;q=0.9",
+              "cache-control":    "no-cache",
+              "content-type":     "application/json",
+              "pragma":           "no-cache",
+              "sec-ch-ua":        "\"Chromium\";v=\"91\", \" Not;A Brand\";v=\"99\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-fetch-dest":   "empty",
+              "sec-fetch-mode":   "cors",
+              "sec-fetch-site":   "same-origin",
+              "sessionid":        "LI1626000000000XXXXXXXXXXXXXXXX"
+          },
+          "referrer":       "https://homes.hdb.gov.sg/home/bto/details/2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body":           "{\"projectId\":\"2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng\"}",
+          "method":         "POST",
+          "mode":           "cors",
+          "credentials":    "include"
+      })
+
+fetch("https://homes.hdb.gov.sg/home-api/public/v1/launch/getLaunchProjectsInSameTown",
+      {
+          "headers":        {
+              "accept":           "application/json, text/plain, */*",
+              "accept-language":  "en-US,en;q=0.9",
+              "cache-control":    "no-cache",
+              "content-type":     "application/json",
+              "pragma":           "no-cache",
+              "sec-ch-ua":        "\"Chromium\";v=\"91\", \" Not;A Brand\";v=\"99\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-fetch-dest":   "empty",
+              "sec-fetch-mode":   "cors",
+              "sec-fetch-site":   "same-origin",
+              "sessionid":        "LI1626000000000XXXXXXXXXXXXXXXX"
+          },
+          "referrer":       "https://homes.hdb.gov.sg/home/bto/details/2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body":           "{\"salesMode\":\"BTO\",\"projectId\":\"2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng\"}",
+          "method":         "POST",
+          "mode":           "cors",
+          "credentials":    "include"
+      })
+
+fetch("https://homes.hdb.gov.sg/home-api/protected/v1/newFlat/getFloorAreaAndPriceRange",
+      {
+          "headers":        {
+              "accept":           "application/json, text/plain, */*",
+              "accept-language":  "en-US,en;q=0.9",
+              "cache-control":    "no-cache",
+              "content-type":     "application/json",
+              "pragma":           "no-cache",
+              "sec-ch-ua":        "\"Chromium\";v=\"91\", \" Not;A Brand\";v=\"99\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-fetch-dest":   "empty",
+              "sec-fetch-mode":   "cors",
+              "sec-fetch-site":   "same-origin",
+              "sessionid":        "LI1626000000000XXXXXXXXXXXXXXXX"
+          },
+          "referrer":       "https://homes.hdb.gov.sg/home/bto/details/2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body":           "{\"projectId\":\"2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng\",\"flatType\":\"2F\",\"type\":1}",
+          "method":         "POST",
+          "mode":           "cors",
+          "credentials":    "include"
+      })
+
+fetch("https://homes.hdb.gov.sg/home-api/protected/v1/newFlat/getFloorAreaAndPriceRange",
+      {
+          "headers":        {
+              "accept":           "application/json, text/plain, */*",
+              "accept-language":  "en-US,en;q=0.9",
+              "cache-control":    "no-cache",
+              "content-type":     "application/json",
+              "pragma":           "no-cache",
+              "sec-ch-ua":        "\"Chromium\";v=\"91\", \" Not;A Brand\";v=\"99\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-fetch-dest":   "empty",
+              "sec-fetch-mode":   "cors",
+              "sec-fetch-site":   "same-origin",
+              "sessionid":        "LI1626000000000XXXXXXXXXXXXXXXX"
+          },
+          "referrer":       "https://homes.hdb.gov.sg/home/bto/details/2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body":           "{\"projectId\":\"2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng\",\"flatType\":\"4\",\"type\":0}",
+          "method":         "POST",
+          "mode":           "cors",
+          "credentials":    "include"
+      })
+
+fetch("https://homes.hdb.gov.sg/home-api/protected/v1/login/insertUpdateSalesApplication",
+      {
+          "headers":        {
+              "accept":           "application/json, text/plain, */*",
+              "accept-language":  "en-US,en;q=0.9",
+              "cache-control":    "no-cache",
+              "content-type":     "application/json",
+              "pragma":           "no-cache",
+              "sec-ch-ua":        "\"Chromium\";v=\"91\", \" Not;A Brand\";v=\"99\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-fetch-dest":   "empty",
+              "sec-fetch-mode":   "cors",
+              "sec-fetch-site":   "same-origin",
+              "sessionid":        "LI1626000000000XXXXXXXXXXXXXXXX"
+          },
+          "referrer":       "https://homes.hdb.gov.sg/home/finding-a-flat?ballotQtr=2021-05",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body":           "{\"headers\":{\"normalizedNames\":{},\"lazyUpdate\":None}}",
+          "method":         "POST",
+          "mode":           "cors",
+          "credentials":    "include"
+      })
+
+fetch("https://homes.hdb.gov.sg/home-api/protected/v1/login/login",
+      {
+          "headers":        {
+              "accept":                       "application/json, text/plain, */*",
+              "accept-language":              "en-US,en;q=0.9",
+              "access-control-allow-headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With",
+              "access-control-allow-origin":  "https://homes.hdb.gov.sg/home",
+              "cache-control":                "no-cache",
+              "content-type":                 "application/json",
+              "pragma":                       "no-cache",
+              "sec-ch-ua":                    "\"Chromium\";v=\"91\", \" Not;A Brand\";v=\"99\"",
+              "sec-ch-ua-mobile":             "?0",
+              "sec-fetch-dest":               "empty",
+              "sec-fetch-mode":               "cors",
+              "sec-fetch-site":               "same-origin",
+              "sessionid":                    "LI1626000000000XXXXXXXXXXXXXXXX"
+          },
+          "referrer":       "https://homes.hdb.gov.sg/home/finding-a-flat?ballotQtr=2021-05",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body":           "{\"loginDevice\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36\",\"sessionId\":\"LI1626000000000XXXXXXXXXXXXXXXX\"}",
+          "method":         "POST",
+          "mode":           "cors",
+          "credentials":    "include"
+      })
+
+fetch("https://homes.hdb.gov.sg/home-api/public/v1/cookie/checkSPCPCookie",
+      {
+          "headers":        {
+              "accept":                       "application/json, text/plain, */*",
+              "accept-language":              "en-US,en;q=0.9",
+              "access-control-allow-headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With",
+              "access-control-allow-origin":  "https://homes.hdb.gov.sg/home",
+              "cache-control":                "no-cache",
+              "content-type":                 "application/json",
+              "pragma":                       "no-cache",
+              "sec-ch-ua":                    "\"Chromium\";v=\"91\", \" Not;A Brand\";v=\"99\"",
+              "sec-ch-ua-mobile":             "?0",
+              "sec-fetch-dest":               "empty",
+              "sec-fetch-mode":               "cors",
+              "sec-fetch-site":               "same-origin",
+              "sessionid":                    "LI1626000000000XXXXXXXXXXXXXXXX"
+          },
+          "referrer":       "https://homes.hdb.gov.sg/home/finding-a-flat?ballotQtr=2021-05",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body":           None,
+          "method":         "POST",
+          "mode":           "cors",
+          "credentials":    "include"
+      })
+
+fetch("https://homes.hdb.gov.sg/home-api/protected/v1/person/getPersonContactDetails",
+      {
+          "headers":        {
+              "accept":           "application/json, text/plain, */*",
+              "accept-language":  "en-US,en;q=0.9",
+              "cache-control":    "no-cache",
+              "pragma":           "no-cache",
+              "sec-ch-ua":        "\"Chromium\";v=\"91\", \" Not;A Brand\";v=\"99\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-fetch-dest":   "empty",
+              "sec-fetch-mode":   "cors",
+              "sec-fetch-site":   "same-origin",
+              "sessionid":        "LI1626000000000XXXXXXXXXXXXXXXX"
+          },
+          "referrer":       "https://homes.hdb.gov.sg/home/my-profile/buyer-overview",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body":           None,
+          "method":         "POST",
+          "mode":           "cors",
+          "credentials":    "include"
+      })
+
+fetch("https://homes.hdb.gov.sg/home-api/public/v1/launch/getLaunchProjectsInSameTown",
+      {
+          "headers":        {
+              "accept":           "application/json, text/plain, */*",
+              "accept-language":  "en-US,en;q=0.9",
+              "cache-control":    "no-cache",
+              "content-type":     "application/json",
+              "pragma":           "no-cache",
+              "sec-ch-ua":        "\"Chromium\";v=\"91\", \" Not;A Brand\";v=\"99\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-fetch-dest":   "empty",
+              "sec-fetch-mode":   "cors",
+              "sec-fetch-site":   "same-origin",
+              "sessionid":        "LI1626000000000XXXXXXXXXXXXXXXX"
+          },
+          "referrer":       "https://homes.hdb.gov.sg/home/bto/details/2021-02_BTO_VFBfTjlDMTgxNjExMTE1ODAxMDAz",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body":           "{\"salesMode\":\"BTO\",\"projectId\":\"2021-02_BTO_VFBfTjlDMTgxNjExMTE1ODAxMDAz\"}",
+          "method":         "POST",
+          "mode":           "cors",
+          "credentials":    "include"
+      })
+
+fetch("https://homes.hdb.gov.sg/home-api/protected/v1/newFlat/getFlatsSelectionTownLevel",
+      {
+          "headers":        {
+              "accept":           "application/json, text/plain, */*",
+              "accept-language":  "en-US,en;q=0.9",
+              "cache-control":    "no-cache",
+              "content-type":     "application/json",
+              "pragma":           "no-cache",
+              "sec-ch-ua":        "\"Chromium\";v=\"91\", \" Not;A Brand\";v=\"99\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-fetch-dest":   "empty",
+              "sec-fetch-mode":   "cors",
+              "sec-fetch-site":   "same-origin",
+              "sessionid":        "LI1626000000000XXXXXXXXXXXXXXXX"
+          },
+          "referrer":       "https://homes.hdb.gov.sg/home/my-profile/buyer-overview",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body":           "{}",
+          "method":         "POST",
+          "mode":           "cors",
+          "credentials":    "include"
+      })
+
+fetch("https://homes.hdb.gov.sg/home-api/public/v1/launch/getApplicationDeadlineAndLinkByProjectId",
+      {
+          "headers":        {
+              "accept":           "application/json, text/plain, */*",
+              "accept-language":  "en-US,en;q=0.9",
+              "cache-control":    "no-cache",
+              "content-type":     "application/json",
+              "pragma":           "no-cache",
+              "sec-ch-ua":        "\"Chromium\";v=\"91\", \" Not;A Brand\";v=\"99\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-fetch-dest":   "empty",
+              "sec-fetch-mode":   "cors",
+              "sec-fetch-site":   "same-origin",
+              "sessionid":        "LI1626000000000XXXXXXXXXXXXXXXX"
+          },
+          "referrer":       "https://homes.hdb.gov.sg/home/bto/details/2021-02_BTO_VFBfTjlDMTgxNjExMTE1ODAxMDAz",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body":           "{\"projectId\":\"2021-02_BTO_VFBfTjlDMTgxNjExMTE1ODAxMDAz\"}",
+          "method":         "POST",
+          "mode":           "cors",
+          "credentials":    "include"
+      })
+
+fetch("https://homes.hdb.gov.sg/home-api/public/v1/launch/getApplicationDeadlineAndLinkByProjectId",
+      {
+          "headers":        {
+              "accept":           "application/json, text/plain, */*",
+              "accept-language":  "en-US,en;q=0.9",
+              "cache-control":    "no-cache",
+              "content-type":     "application/json",
+              "pragma":           "no-cache",
+              "sec-ch-ua":        "\"Chromium\";v=\"91\", \" Not;A Brand\";v=\"99\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-fetch-dest":   "empty",
+              "sec-fetch-mode":   "cors",
+              "sec-fetch-site":   "same-origin",
+              "sessionid":        "LI1626000000000XXXXXXXXXXXXXXXX"
+          },
+          "referrer":       "https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_SkVfTjJDMjYxNjExMjkwMTAwNDE5",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body":           "{\"projectId\":\"2021-02_UPB_SkVfTjJDMjYxNjExMjkwMTAwNDE5\"}",
+          "method":         "POST",
+          "mode":           "cors",
+          "credentials":    "include"
+      })
+
+fetch("https://homes.hdb.gov.sg/home-api/protected/v1/map/getSalesApplicationProjects",
+      {
+          "headers":        {
+              "accept":           "application/json, text/plain, */*",
+              "accept-language":  "en-US,en;q=0.9",
+              "cache-control":    "no-cache",
+              "content-type":     "application/json",
+              "pragma":           "no-cache",
+              "sec-ch-ua":        "\"Chromium\";v=\"91\", \" Not;A Brand\";v=\"99\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-fetch-dest":   "empty",
+              "sec-fetch-mode":   "cors",
+              "sec-fetch-site":   "same-origin",
+              "sessionid":        "LI1626000000000XXXXXXXXXXXXXXXX"
+          },
+          "referrer":       "https://homes.hdb.gov.sg/home/finding-a-flat?ballotQtr=2021-05",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body":           "{\"ballotQtr\":\"2021-05\"}",
+          "method":         "POST",
+          "mode":           "cors",
+          "credentials":    "include"
+      })
+
+fetch("https://homes.hdb.gov.sg/home/assets/GeoJSON/MP14_REGION_WEB_PL.geojson",
+      {
+          "headers":        {
+              "accept":           "*/*",
+              "accept-language":  "en-US,en;q=0.9",
+              "cache-control":    "no-cache",
+              "pragma":           "no-cache",
+              "sec-ch-ua":        "\"Chromium\";v=\"91\", \" Not;A Brand\";v=\"99\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-fetch-dest":   "empty",
+              "sec-fetch-mode":   "cors",
+              "sec-fetch-site":   "same-origin"
+          },
+          "referrer":       "https://homes.hdb.gov.sg/home/finding-a-flat?ballotQtr=2021-05",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body":           None,
+          "method":         "GET",
+          "mode":           "cors",
+          "credentials":    "include"
+      })
+
+fetch("https://homes.hdb.gov.sg/home-api/public/v1/launch/getSalesPastApplicationRate",
+      {
+          "headers":        {
+              "accept":           "application/json, text/plain, */*",
+              "accept-language":  "en-US,en;q=0.9",
+              "cache-control":    "no-cache",
+              "content-type":     "application/json",
+              "pragma":           "no-cache",
+              "sec-ch-ua":        "\"Chromium\";v=\"91\", \" Not;A Brand\";v=\"99\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-fetch-dest":   "empty",
+              "sec-fetch-mode":   "cors",
+              "sec-fetch-site":   "same-origin",
+              "sessionid":        "LI1626000000000XXXXXXXXXXXXXXXX"  # seems to be 'LI' + timestamp + random b64
+          },
+          "referrer":       "https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_SkVfTjJDMjYxNjExMjkwMTAwNDE5",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body":           "{\"salesMode\":\"BTO\",\"townCode\":\"Jurong East\",\"flatTypes\":[\"2F\",\"3\",\"4\"]}",
+          "method":         "POST",
+          "mode":           "cors",
+          "credentials":    "include"
+      })
+
+fetch("https://homes.hdb.gov.sg/home-api/protected/v1/newFlat/getSalesApplicationStatusByProjectId",
+      {
+          "headers":        {
+              "accept":           "application/json, text/plain, */*",
+              "accept-language":  "en-US,en;q=0.9",
+              "cache-control":    "no-cache",
+              "content-type":     "application/json",
+              "pragma":           "no-cache",
+              "sec-ch-ua":        "\"Chromium\";v=\"91\", \" Not;A Brand\";v=\"99\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-fetch-dest":   "empty",
+              "sec-fetch-mode":   "cors",
+              "sec-fetch-site":   "same-origin",
+              "sessionid":        "LI1626000000000XXXXXXXXXXXXXXXX"
+          },
+          "referrer":       "https://homes.hdb.gov.sg/home/bto/details/2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body":           "{\"projectId\":\"2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng\"}",
+          "method":         "POST",
+          "mode":           "cors",
+          "credentials":    "include"
+      })
+
+fetch("https://homes.hdb.gov.sg/home/assets/GeoJSON/MP14_REGION_WEB_PL.geojson",
+      {
+          "headers":        {
+              "accept":           "*/*",
+              "accept-language":  "en-US,en;q=0.9",
+              "cache-control":    "no-cache",
+              "pragma":           "no-cache",
+              "sec-ch-ua":        "\"Chromium\";v=\"91\", \" Not;A Brand\";v=\"99\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-fetch-dest":   "empty",
+              "sec-fetch-mode":   "cors",
+              "sec-fetch-site":   "same-origin"
+          },
+          "referrer":       "https://homes.hdb.gov.sg/home/finding-a-flat?ballotQtr=2021-05",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body":           None,
+          "method":         "GET",
+          "mode":           "cors",
+          "credentials":    "include"
+      })
+
+# https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_SEdfTjFDMTUxNjExMjg5NTAwNDE2
+# https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_SEdfTjJDMTExNjExMjg5ODA0MjY4
+# https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_SkVfTjJDMjYxNjExMjkwMTAwNDE5
+# https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_VEFQX045QzEwMTYxMTI5MTAwMDQ2Mw
+# https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_S1dOX041QzUyMTYxMTI5MDQwMDUxOQ
+# https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_UVRfTjJDMTE2MTEyOTA3MDA0MDY
+# https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_VEFQX045QzE5MTYxMTI5MTMwMzk2NQ
+# https://homes.hdb.gov.sg/home/bto/details/2020-11_BTO_VEdfRDJDNDE2MDgwMjI2NDc1MjQ
+# 
+# https://homes.hdb.gov.sg/home/bto/details/2021-02_BTO_VFBfTjlDMTUxNjEwODg2NjAzNzE0
+# https://homes.hdb.gov.sg/home/bto/details/2021-02_BTO_VFBfTjlDMTgxNjExMTE1ODAxMDAz
+# https://homes.hdb.gov.sg/home/bto/details/2021-02_BTO_VFBfTjlDMTMxNjEwODg2MzAzNTUw
+# https://homes.hdb.gov.sg/home/bto/details/2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng
