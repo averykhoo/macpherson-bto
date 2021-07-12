@@ -1,0 +1,20 @@
+[
+    {
+        "coordinates": "[1.3264487157551526, 103.88907711456513]",
+        "properties": {
+            "address": "Macpherson Weave",
+            "listingType": "BTO",
+            "description": [
+                {
+                    "photoUrl": "2021-05/bto/gl_n1c13/gl_n1c13_thumbnail.jpg",
+                    "town": "Geylang",
+                    "ballotQtr": "2021-05",
+                    "flatType": "4-Room",
+                    "projectId": "2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng"
+                }
+            ],
+            "hdbCategory": "1",
+            "region": "CENTRAL REGION"
+        }
+    }
+]

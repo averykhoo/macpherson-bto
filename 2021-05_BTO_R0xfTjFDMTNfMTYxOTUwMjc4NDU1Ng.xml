@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<template>
+    <project-name>MacPherson Weave</project-name>
+    <standard-project-info>
+        <key>
+            <town>Geylang</town>
+            <tooltip/>
+            <uri/>
+        </key>
+        <key>
+            <point>1042|907</point>
+        </key>
+        <key>
+            <latitude>1.3271563</latitude>
+            <longitude>103.8892293</longitude>
+        </key>
+        <key>
+            <completion-date>1Q2026</completion-date>
+            <tooltip>
+                				
+                <![CDATA[
+					This is an estimated date that the flat will be completed and ready for key collection, and the actual completion date will depend on the progress of construction works on site. As the Estimated Completion Date (ECD) is indicative only, HDB shall not be responsible for any damage or loss arising from a change in the ECD.<br/><br/>
+					After booking the flat, buyers may check for updates via My HDBPage on HDB InfoWEB, as the construction of the project progresses.<br/><br/>
+					Note: The contractual date in the Agreement for Lease by which HDB is required to deliver vacant possession of the booked flat to buyers is known as the Delivery Possession Date (DPD), which is 18 months after the ECD. Currently, the estimated DPD is 30 September 2027.]]>
+                			
+            </tooltip>
+            <uri/>
+        </key>
+        <key>
+            <remaining-lease>99</remaining-lease>
+            <tooltip>The 3- and 4-room flats are sold on a 99-year lease. First-timer and second-timer families will be offered 99-year 2-room Flexi flats. Eligible Singapore Citizens and their spouses (if applicable) aged 55 and above can choose a short lease of between 15 and 45 years, in five year increments, for the 2-room Flexi flat. The chosen lease has to cover them up to the age of at least 95 years.</tooltip>
+            <uri/>
+        </key>
+        <key>
+            <lease-period-2rm>B</lease-period-2rm>
+        </key>
+        <key>
+            <price-tooltip>
+                				
+                <![CDATA[
+					The indicative price range of the flats exclude grants and are based on 99-year leases.<br/><br/>
+					Actual prices may vary based on the actual attributes of the flats at the time of selection. Find out details of the Optional Component Scheme offered for this project.]]>
+                			
+            </price-tooltip>
+        </key>
+        <unit-details>
+            <ukey>
+                <flat-type>2-room Flexi (Type 1)</flat-type>
+                <supply>54</supply>
+                <est-floor-area-lower>38</est-floor-area-lower>
+                <est-floor-area-upper>38</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <price-range-lower>180000</price-range-lower>
+                <price-range-upper>210000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        						
+                        <![CDATA[
+   						<h4>Finishes and Fittings</h4>
+						<br>
+	  					<p>Please note that all samples of finishes shown in the images below are strictly for reference only and subject to change without notice. The samples shown are conceptual and indicative only and the colour schemes, design, dimensions, type, tonal differences, and specifications may differ from the actual fittings installed in the flat.</p>
+						<p>Buyers are advised to view actual samples of the finishes for the living/ dining/ bedroom/ door laminate on display near the Sales Office.<p>
+						<br>
+						<h5>Non-Optional Finishes</h5>
+						<br>
+						<p>
+						More than just a well-designed and functional interior, the 2-room Flexi (Type 1) flats will come with the following finishes and fittings: 
+	  					</p>
+						<ul>
+	    					<li>Floor tiles in the:</li>
+	    					<ul>
+								<li>Household shelter</li>
+								<li>Bathroom</li>
+								<li>Kitchen</li>
+							</ul>
+	    					<li>Wall tiles in the: </li>
+	    					<ul>
+	        					<li>Bathroom</li>
+								<li>Kitchen</li>
+	    					</ul>
+						<li>A sliding partition/ door for the bedroom and folding bathroom door</li>
+						<li>Grab bars (for 2-room Flexi flats on short-leases)</li>
+						</ul>
+						]]>
+                        					
+                    </non-optional>
+                    <optional>
+                        <floor>
+                            <header>Package 1: Flooring for Living/ Dining and Bedroom</header>
+                            <price>2570</price>
+                            <text>
+                                							
+                                <![CDATA[
+							<ul>
+	    					<li>Vinyl strip flooring</li> 
+							</ul>
+	   						<p>Buyers who opt for Package 1, will be provided with a 3-panel sliding partition, separating the living room and bedroom.  Those who do not opt for Package 1, will be provided with a 2-panel sliding partition separating the living room and bedroom.</p>
+							]]>
+                                							
+                            </text>
+                        </floor>
+                        <door>
+                            <header>Package 2: Sanitary fittings</header>
+                            <price>520</price>
+                            <text>
+                                							
+                                <![CDATA[
+							<ul>
+								<li>Washbasin with tap mixer</li>
+								<li>Shower set with bath/ shower mixer</li>
+							</ul>
+							]]>
+                                							
+                            </text>
+                        </door>
+                        <elderly>
+                            <header>Package 3 for short-lease 2-room Flexi flats</header>
+                            <price>6000</price>
+                            <text>
+                                							
+                                <![CDATA[
+							<p>Buyers who opt for Package 3 must opt for Package 1.</p>
+							<ul>
+								<li>Lighting </li>
+								<li>Window grilles </li>
+								<li>Built-in kitchen cabinets with induction hob and cooker hood, kitchen sink, tap, and dish drying rack. Buyers who are wheel-chair bound may choose to have a lower kitchen countertop</li>
+								<li>Built-in wardrobe</li>
+								<li>Water heater</li>
+								<li>Mirror and toilet roll holder in bathroom</li>
+							</ul>
+							]]>
+                                							
+                            </text>
+                        </elderly>
+                    </optional>
+                </finishes-and-fittings-text>
+            </ukey>
+            <ukey>
+                <flat-type>2-room Flexi (Type 2)</flat-type>
+                <supply>162</supply>
+                <est-floor-area-lower>48</est-floor-area-lower>
+                <est-floor-area-upper>48</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <price-range-lower>235000</price-range-lower>
+                <price-range-upper>269000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        						
+                        <![CDATA[
+   						<h4>Finishes and Fittings</h4>
+						<br>
+	  					<p>Please note that all samples of finishes shown in the images below are strictly for reference only and subject to change without notice. The samples shown are conceptual and indicative only and the colour schemes, design, dimensions, type, tonal differences, and specifications may differ from the actual fittings installed in the flat.</p>
+						<p>Buyers are advised to view actual samples of the finishes for the living/ dining/ bedroom/ door laminate on display near the Sales Office.<p>
+						<br>
+						<h5>Non-Optional Finishes</h5>
+						<br>
+						<p>
+						More than just a well-designed and functional interior, the 2-room Flexi (Type 2) flats will come with the following finishes and fittings:
+	  					</p>
+						<ul>
+	    					<li>Floor tiles in the:</li>
+	    					<ul>
+								<li>Household shelter</li>
+								<li>Bathroom</li>
+								<li>Kitchen</li>
+							</ul>
+	    					<li>Wall tiles in the: </li>
+	    					<ul>
+	        					<li>Bathroom</li>
+								<li>Kitchen</li>
+	    					</ul>
+						<li>A sliding partition/ door for the bedroom and folding bathroom door</li>
+						<li>Grab bars (for 2-room Flexi flats on short-leases)</li>
+						</ul>
+						]]>
+                        					
+                    </non-optional>
+                    <optional>
+                        <floor>
+                            <header>Package 1: Flooring for Living/ Dining and Bedroom</header>
+                            <price>3030</price>
+                            <text>
+                                							
+                                <![CDATA[
+							<ul>
+	    					<li>Vinyl strip flooring</li> 
+							</ul>
+	   						<p>Buyers who opt for Package 1, will be provided with a 3-panel sliding partition, separating the living room and bedroom. Those who do not opt for Package 1, will be provided with a 2-panel sliding partition separating the living room and bedroom.</p>
+							]]>
+                                							
+                            </text>
+                        </floor>
+                        <door>
+                            <header>Package 2: Sanitary fittings</header>
+                            <price>520</price>
+                            <text>
+                                							
+                                <![CDATA[
+							<ul>
+								<li>Washbasin with tap mixer</li>
+								<li>Shower set with bath/ shower mixer</li>
+							</ul>
+							]]>
+                                							
+                            </text>
+                        </door>
+                        <elderly>
+                            <header>Package 3 for short-lease 2-room Flexi flats</header>
+                            <price>7230</price>
+                            <text>
+                                							
+                                <![CDATA[
+							<p>Buyers who opt for Package 3 must opt for Package 1.</p>
+							<ul>
+								<li>Lighting </li>
+								<li>Window grilles </li>
+								<li>Built-in kitchen cabinets with induction hob and cooker hood, kitchen sink, tap, and dish drying rack. Buyers who are wheel-chair bound may choose to have a lower kitchen countertop</li>
+								<li>Built-in wardrobe</li>
+								<li>Water heater</li>
+								<li>Mirror and toilet roll holder in bathroom</li>
+								<li>Laminated UPVC folding door for the flexible space</li>
+							</ul>
+							]]>
+                                							
+                            </text>
+                        </elderly>
+                    </optional>
+                </finishes-and-fittings-text>
+            </ukey>
+            <ukey>
+                <flat-type>3-Room (Income Ceiling $14,000)</flat-type>
+                <supply>156</supply>
+                <est-floor-area-lower>69</est-floor-area-lower>
+                <est-floor-area-upper>69</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <price-range-lower>343000</price-range-lower>
+                <price-range-upper>405000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        						
+                        <![CDATA[
+   						<h4>Finishes and Fittings</h4>
+						<br>
+	  					<p>Please note that all samples of finishes shown in the images below are strictly for reference only and subject to change without notice. The samples shown are conceptual and indicative only and the colour schemes, design, dimensions, type, tonal differences, and specifications may differ from the actual fittings installed in the flat.</p>
+						<p>Buyers are advised to view actual samples of the finishes for the living/ dining/ bedroom/ door laminate on display near the Sales Office.<p>
+						<br>
+						<h5>Non-Optional Finishes</h5>
+						<br>
+						<p>
+						More than just a well-designed and functional interior, the 3-room flats will come with the following finishes and fittings: 
+	  					</p>						
+						<ul>
+							<li>Floor tiles in the:</li>
+	    					<ul>
+								<li>Household shelter</li>
+								<li>Bathrooms</li>
+								<li>Kitchen/ utility</li>
+	    					</ul>
+							<li>Wall tiles in the: </li>
+	    					<ul>
+	        					<li>Bathrooms</li>
+								<li>Kitchen/ utility </li>
+	    					</ul>
+	    				</ul>
+						]]>
+                        					
+                    </non-optional>
+                    <optional>
+                        <floor>
+                            <header>Flooring for Living/ Dining and Bedrooms </header>
+                            <price>3270</price>
+                            <text>
+                                							
+                                <![CDATA[
+							<ul>
+	    					<li>Vinyl strip flooring in the bedrooms</li>
+							<li>Polished porcelain floor tiles in the living/ dining area</li> 
+	   						</ul>
+							]]>
+                                							
+                            </text>
+                        </floor>
+                        <door>
+                            <header>Internal Doors and Sanitary Fittings</header>
+                            <price>2640</price>
+                            <text>
+                                							
+                                <![CDATA[
+							<ul>
+							<ul>
+	    					<li>2 laminated UPVC bedroom doors</li>
+							<li>2 laminated UPVC folding bathroom doors</li>
+							<li>Wash basin with tap mixer</li>
+							<li>Shower set with bath/ shower mixer</li>
+							</ul>
+							]]>
+                                							
+                            </text>
+                        </door>
+                    </optional>
+                </finishes-and-fittings-text>
+            </ukey>
+            <ukey>
+                <flat-type>4-room</flat-type>
+                <supply>1010</supply>
+                <est-floor-area-lower>93</est-floor-area-lower>
+                <est-floor-area-upper>93</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <price-range-lower>489000</price-range-lower>
+                <price-range-upper>626000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        						
+                        <![CDATA[
+   						<h4>Finishes and Fittings</h4>
+						<br>
+	  					<p>Please note that all samples of finishes shown in the images below are strictly for reference only and subject to change without notice. The samples shown are conceptual and indicative only and the colour schemes, design, dimensions, type, tonal differences, and specifications may differ from the actual fittings installed in the flat.</p>
+						<p>Buyers are advised to view actual samples of the finishes for the living/ dining/ bedroom/ door laminate on display near the Sales Office.<p>
+						<br>
+						<h5>Non-Optional Finishes</h5>
+						<br>
+						<p>
+						More than just a well-designed and functional interior, the 4-room flats will come with the following finishes and fittings:
+	  					</p>						
+						<ul>
+							<li>Floor tiles in the:</li>
+	    					<ul>
+								<li>Household shelter</li>
+								<li>Bathrooms</li>
+	        						<li>Kitchen and service yard</li>
+	    					</ul>
+							<li>Wall tiles in the: </li>
+	    					<ul>
+	        					<li>Bathrooms</li>
+								<li>Kitchen</li>
+	    					</ul>
+	    				</ul>
+						]]>
+                        					
+                    </non-optional>
+                    <optional>
+                        <floor>
+                            <header>Flooring for Living/ Dining and Bedrooms </header>
+                            <price>4870</price>
+                            <text>
+                                							
+                                <![CDATA[
+							<ul>
+	    					<li>Vinyl strip flooring in the bedrooms</li>
+							<li>Polished porcelain floor tiles in the living/ dining area</li> 
+							</ul>
+							]]>
+                                							
+                            </text>
+                        </floor>
+                        <door>
+                            <header>Internal Doors and Sanitary Fittings</header>
+                            <price>3020</price>
+                            <text>
+                                							
+                                <![CDATA[
+							<ul>
+							<ul>
+	    					<li>3 laminated UPVC bedroom doors</li>
+							<li>2 laminated UPVC folding bathroom doors</li>
+	   						<li>Wash basin with tap mixer</li>
+							<li>Shower set with bath/ shower mixer</li>
+							</ul>
+							]]>
+                                							
+                            </text>
+                        </door>
+                    </optional>
+                </finishes-and-fittings-text>
+            </ukey>
+        </unit-details>
+        <overview>
+            <p>
+                			
+                <![CDATA[
+			<h6>Geylang</h6>
+			<br>
+			Located next to MacPherson MRT station, MacPherson Weave  <a class="audioBtn macpherson-weave"><i class="fas fa-volume-up"></i></a> is bounded by Circuit Road, Circuit Link, and Paya Lebar Road. The development comprises 7 residential blocks ranging from 15 to 19 storeys in height. You can choose from 1,382 units of 2-room Flexi, 3-, and 4-room flats.
+			<br><br>
+			MacPherson Weave takes its name from its colourful façade, which features interweaving bands of colours inspired by tropical fruits grown in Singapore. The development will include a fruit-themed children’s playground alongside landscaped spaces and fitness areas, which will feature mementos and motifs referencing the area’s rich and diverse history.
+			<br><br>   
+   			A 2-storey childcare centre and a residents’ network centre will also be located within the development. The roof gardens atop some of the residential blocks, childcare centre, and Multi-Storey Car Park (MSCP) will serve as communal spaces for you to mingle with your family and neighbours while enjoying views of the surroundings. Please refer to the site plan for the facilities provided in the development. Facilities in this development will be accessible by the public.  
+			]]>
+                			
+            </p>
+        </overview>
+        <notes>
+            <p>
+                	
+			
+                <![CDATA[HDB precincts are planned to serve the evolving needs of the community. There are spaces catered for future inclusion of amenities/ facilities (such as childcare centres, elderly-related facilities, education centres, residents' network centres, and day activity centres), commercial facilities (such as shops and eating houses), mechanical and electrical rooms, and such other facilities depending on the prevailing needs. These spaces could be in the void decks, common property, car parks, or stand-alone community buildings.
+			<br><br>
+			To facilitate your flat application, we have provided information on the surrounding land use, proposed facilities and their locations in the maps and plans of individual projects. As the information provided is based on the current planning intent of the relevant authorities, such information is indicative only and subject to review from time to time.
+			<br><br>
+			<ul>
+   			<li>Visit the virtual showflats at <a href="https://esales.hdb.gov.sg/bp25/MNHG/eamnhindex/index.html?utm_source=May21website&utm_medium=link&utm_campaign=MNHG">My Nice Home Gallery</a> and get interior decor ideas</li>
+			</ul>
+			]]>
+                			
+            </p>
+        </notes>
+    </standard-project-info>
+    <template-body>
+        <row>
+            <header>Eco-Friendly Features</header>
+        </row>
+        <row>
+            <p>
+                				
+                <![CDATA[<p>To encourage green and sustainable living, MacPherson Weave will have several eco-friendly features such as:</p>
+				<ul>
+					<li>Separate chutes for recyclable waste</li>
+					<li>Regenerative lifts to reduce energy consumption</li>
+					<li>Bicycle stands to encourage cycling as an environmentally-friendly form of transport</li>
+					<li>Parking spaces to facilitate future provision of electrical vehicle charging stations</li>
+					<li>Use of sustainable products in the development</li>
+					<li>Active, Beautiful, Clean Waters design features to clean rainwater and beautify the landscapes</li>
+				</ul>]]>
+                			
+            </p>
+        </row>
+        <row>
+            <template1>
+                <photo-folder>2021-05/bto/gl_n1c13/template1</photo-folder>
+                <photos>
+                    <photo>2021-05/bto/gl_n1c13/template1/1.jpg</photo>
+                    <photo>2021-05/bto/gl_n1c13/template1/2.jpg</photo>
+                    <photo>2021-05/bto/gl_n1c13/template1/3.jpg</photo>
+                </photos>
+            </template1>
+        </row>
+        <row>
+            <header>Smart Solutions</header>
+        </row>
+        <row>
+            <p>
+                <![CDATA[The common areas within MacPherson Weave will be installed with Smart Lighting to reduce energy usage, and contribute to a sustainable and safer living environment.
+				]]>
+            </p>
+        </row>
+        <row>
+            <header>About Geylang Town</header>
+        </row>
+        <row>
+            <p>
+                 
+				
+                <![CDATA[
+				Explore the wide variety of food and shopping choices at the nearby Circuit Road Market & Food Centre, MacPherson Market & Food Centre, and the hawker centre at Blk 79/ 79A Circuit Road. Visit <a href="https://www.hdb.gov.sg/cs/infoweb/residential/where2shop/explore/geylang">Where2Shop@HDB</a> to find out more about HDB’s heartland shops in this area.
+				<br><br>
+				Geylang town also offers a range of recreational and sports facilities. Enjoy an evening stroll or participate in outdoor activities at one of several nearby parks, or go for a jog at the park connector along Pelton Canal.  Take a refreshing dip at Geylang East Swimming Complex, or pick up a new skill at MacPherson Community Centre. If you enjoy reading, the Geylang East Library is just a short bus ride away.
+				<br><br>
+				Parents with school-going children can consider nearby schools such as Canossa Catholic Primary School, Maha Bodhi School, Geylang Methodist Primary and Secondary schools, as well as Manjusri Secondary School.
+				<br><br>
+				The adjacent MacPherson MRT station, bus services, and the Pan Island Expressway (PIE) will serve residents' transport needs.
+				]]>
+                			
+            </p>
+        </row>
+        <row>
+            <template2>
+                <photo-folder>2021-05/bto/gl_n1c13/template2</photo-folder>
+                <photos>
+                    <photo>2021-05/bto/gl_n1c13/template2/1.jpg</photo>
+                    <photo>2021-05/bto/gl_n1c13/template2/2.jpg</photo>
+                    <photo>2021-05/bto/gl_n1c13/template2/3.jpg</photo>
+                </photos>
+            </template2>
+        </row>
+    </template-body>
+    <resources>
+        <town-map>2021-05/bto/gl_n1c13/townmap/townmap_gl_n1c13.jpg</town-map>
+        <carousel>
+            <link>2021-05/bto/gl_n1c13/carousel/01_perspective.jpg</link>
+            <link>2021-05/bto/gl_n1c13/carousel/02_perspective.jpg</link>
+            <link>2021-05/bto/gl_n1c13/carousel/03_siteplan_gl_n1c13.jpg</link>
+            <link>2021-05/bto/gl_n1c13/carousel/m01.jpg</link>
+            <link>2021-05/bto/gl_n1c13/carousel/m02.jpg</link>
+            <link>2021-05/bto/gl_n1c13/carousel/m03.jpg</link>
+            <link>2021-05/bto/gl_n1c13/carousel/m04.jpg</link>
+            <link>2021-05/bto/gl_n1c13/carousel/m05.jpg</link>
+            <link>2021-05/bto/gl_n1c13/carousel/m06.jpg</link>
+            <link>2021-05/bto/gl_n1c13/carousel/m07.jpg</link>
+            <link>2021-05/bto/gl_n1c13/carousel/m08.jpg</link>
+            <link>2021-05/bto/gl_n1c13/carousel/m09.jpg</link>
+            <link>2021-05/bto/gl_n1c13/carousel/m10.jpg</link>
+            <link>2021-05/bto/gl_n1c13/carousel/m11.jpg</link>
+            <link>2021-05/bto/gl_n1c13/carousel/m12.jpg</link>
+            <link>2021-05/bto/gl_n1c13/carousel/m13.jpg</link>
+            <link>2021-05/bto/gl_n1c13/carousel/m14.jpg</link>
+            <link>2021-05/bto/gl_n1c13/carousel/m15.jpg</link>
+            <link>2021-05/bto/gl_n1c13/carousel/m16.jpg</link>
+            <link>2021-05/bto/gl_n1c13/carousel/m17.jpg</link>
+            <link>2021-05/bto/gl_n1c13/carousel/m18.jpg</link>
+            <link>2021-05/bto/gl_n1c13/carousel/m19.jpg</link>
+        </carousel>
+        <sound>2021-05/bto/gl_n1c13/sound/gl_n1c13.mp3</sound>
+        <genspecs>
+            <genspecs-2rm>2021-05/bto/gl_n1c13/genspecs/genspecs_gl_n1c13_2rm.jpg</genspecs-2rm>
+            <genspecs-2rm>2021-05/bto/gl_n1c13/genspecs/genspecs_gl_n1c13_2rm_3rm_4rm.jpg</genspecs-2rm>
+            <genspecs-3rm>2021-05/bto/gl_n1c13/genspecs/genspecs_gl_n1c13_2rm_3rm_4rm.jpg</genspecs-3rm>
+            <genspecs-4rm>2021-05/bto/gl_n1c13/genspecs/genspecs_gl_n1c13_2rm_3rm_4rm.jpg</genspecs-4rm>
+        </genspecs>
+        <layoutideas>
+            <layoutideas-2rmtype1>2021-05/bto/gl_n1c13/layoutideas/layoutideas_gl_n1c13_2rmType1.jpg</layoutideas-2rmtype1>
+            <layoutideas-2rmtype2>2021-05/bto/gl_n1c13/layoutideas/layoutideas_gl_n1c13_2rmType2.jpg</layoutideas-2rmtype2>
+            <layoutideas-3rm>2021-05/bto/gl_n1c13/layoutideas/layoutideas_gl_n1c13_3rm.jpg</layoutideas-3rm>
+            <layoutideas-4rm>2021-05/bto/gl_n1c13/layoutideas/layoutideas_gl_n1c13_4rm.jpg</layoutideas-4rm>
+        </layoutideas>
+        <resale>
+            <resale-2rm>2021-05/bto/gl_n1c13/resale/resale_gl_n1c13_2rm.jpg</resale-2rm>
+            <resale-3rm>2021-05/bto/gl_n1c13/resale/resale_gl_n1c13_3rm.jpg</resale-3rm>
+            <resale-4rm>2021-05/bto/gl_n1c13/resale/resale_gl_n1c13_4rm.jpg</resale-4rm>
+        </resale>
+        <oydh>
+            <oydh-3rm>2021-05/bto/gl_n1c13/oydh/oydh_gl_n1c13_3rm.jpg</oydh-3rm>
+            <oydh-4rm>2021-05/bto/gl_n1c13/oydh/oydh_gl_n1c13_4rm.jpg</oydh-4rm>
+        </oydh>
+        <unitdis>
+            <blk95a>2021-05/bto/gl_n1c13/unitdis/unitdis_gl_n1c13_95a.jpg</blk95a>
+            <blk95b>2021-05/bto/gl_n1c13/unitdis/unitdis_gl_n1c13_95b.jpg</blk95b>
+            <blk95c>2021-05/bto/gl_n1c13/unitdis/unitdis_gl_n1c13_95c.jpg</blk95c>
+            <blk97a>2021-05/bto/gl_n1c13/unitdis/unitdis_gl_n1c13_97a.jpg</blk97a>
+            <blk97b>2021-05/bto/gl_n1c13/unitdis/unitdis_gl_n1c13_97b.jpg</blk97b>
+            <blk99a>2021-05/bto/gl_n1c13/unitdis/unitdis_gl_n1c13_99a.jpg</blk99a>
+            <blk99b>2021-05/bto/gl_n1c13/unitdis/unitdis_gl_n1c13_99b.jpg</blk99b>
+        </unitdis>
+        <blockplan>
+            <blk95a>
+                <lv16>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95a_zz_16.jpg</lv16>
+            </blk95a>
+            <blk95a>
+                <lv17>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95a_zz_17.jpg</lv17>
+            </blk95a>
+            <blk95a>
+                <lv18>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95a_zz_18_19.jpg</lv18>
+                <lv19>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95a_zz_18_19.jpg</lv19>
+            </blk95a>
+            <blk95a>
+                <lv2>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95a_zz_2-15.jpg</lv2>
+                <lv3>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95a_zz_2-15.jpg</lv3>
+                <lv4>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95a_zz_2-15.jpg</lv4>
+                <lv5>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95a_zz_2-15.jpg</lv5>
+                <lv6>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95a_zz_2-15.jpg</lv6>
+                <lv7>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95a_zz_2-15.jpg</lv7>
+                <lv8>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95a_zz_2-15.jpg</lv8>
+                <lv9>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95a_zz_2-15.jpg</lv9>
+                <lv10>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95a_zz_2-15.jpg</lv10>
+                <lv11>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95a_zz_2-15.jpg</lv11>
+                <lv12>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95a_zz_2-15.jpg</lv12>
+                <lv13>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95a_zz_2-15.jpg</lv13>
+                <lv14>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95a_zz_2-15.jpg</lv14>
+                <lv15>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95a_zz_2-15.jpg</lv15>
+            </blk95a>
+            <blk95b>
+                <lv2>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95b_zz_2.jpg</lv2>
+            </blk95b>
+            <blk95b>
+                <lv3>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95b_zz_3-19.jpg</lv3>
+                <lv4>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95b_zz_3-19.jpg</lv4>
+                <lv5>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95b_zz_3-19.jpg</lv5>
+                <lv6>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95b_zz_3-19.jpg</lv6>
+                <lv7>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95b_zz_3-19.jpg</lv7>
+                <lv8>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95b_zz_3-19.jpg</lv8>
+                <lv9>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95b_zz_3-19.jpg</lv9>
+                <lv10>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95b_zz_3-19.jpg</lv10>
+                <lv11>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95b_zz_3-19.jpg</lv11>
+                <lv12>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95b_zz_3-19.jpg</lv12>
+                <lv13>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95b_zz_3-19.jpg</lv13>
+                <lv14>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95b_zz_3-19.jpg</lv14>
+                <lv15>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95b_zz_3-19.jpg</lv15>
+                <lv16>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95b_zz_3-19.jpg</lv16>
+                <lv17>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95b_zz_3-19.jpg</lv17>
+                <lv18>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95b_zz_3-19.jpg</lv18>
+                <lv19>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95b_zz_3-19.jpg</lv19>
+            </blk95b>
+            <blk95c>
+                <lv16>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95c_zz_16.jpg</lv16>
+            </blk95c>
+            <blk95c>
+                <lv17>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95c_zz_17.jpg</lv17>
+            </blk95c>
+            <blk95c>
+                <lv18>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95c_zz_18_19.jpg</lv18>
+                <lv19>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95c_zz_18_19.jpg</lv19>
+            </blk95c>
+            <blk95c>
+                <lv2>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95c_zz_2.jpg</lv2>
+            </blk95c>
+            <blk95c>
+                <lv3>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95c_zz_3-15.jpg</lv3>
+                <lv4>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95c_zz_3-15.jpg</lv4>
+                <lv5>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95c_zz_3-15.jpg</lv5>
+                <lv6>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95c_zz_3-15.jpg</lv6>
+                <lv7>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95c_zz_3-15.jpg</lv7>
+                <lv8>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95c_zz_3-15.jpg</lv8>
+                <lv9>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95c_zz_3-15.jpg</lv9>
+                <lv10>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95c_zz_3-15.jpg</lv10>
+                <lv11>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95c_zz_3-15.jpg</lv11>
+                <lv12>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95c_zz_3-15.jpg</lv12>
+                <lv13>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95c_zz_3-15.jpg</lv13>
+                <lv14>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95c_zz_3-15.jpg</lv14>
+                <lv15>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_95c_zz_3-15.jpg</lv15>
+            </blk95c>
+            <blk97a>
+                <lv16>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97a_zz_16.jpg</lv16>
+            </blk97a>
+            <blk97a>
+                <lv17>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97a_zz_17.jpg</lv17>
+            </blk97a>
+            <blk97a>
+                <lv18>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97a_zz_18_19.jpg</lv18>
+                <lv19>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97a_zz_18_19.jpg</lv19>
+            </blk97a>
+            <blk97a>
+                <lv2>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97a_zz_2-8_10-15.jpg</lv2>
+                <lv3>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97a_zz_2-8_10-15.jpg</lv3>
+                <lv4>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97a_zz_2-8_10-15.jpg</lv4>
+                <lv5>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97a_zz_2-8_10-15.jpg</lv5>
+                <lv6>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97a_zz_2-8_10-15.jpg</lv6>
+                <lv7>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97a_zz_2-8_10-15.jpg</lv7>
+                <lv8>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97a_zz_2-8_10-15.jpg</lv8>
+                <lv10>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97a_zz_2-8_10-15.jpg</lv10>
+                <lv11>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97a_zz_2-8_10-15.jpg</lv11>
+                <lv12>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97a_zz_2-8_10-15.jpg</lv12>
+                <lv13>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97a_zz_2-8_10-15.jpg</lv13>
+                <lv14>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97a_zz_2-8_10-15.jpg</lv14>
+                <lv15>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97a_zz_2-8_10-15.jpg</lv15>
+            </blk97a>
+            <blk97a>
+                <lv9>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97a_zz_9.jpg</lv9>
+            </blk97a>
+            <blk97b>
+                <lv16>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97b_zz_16.jpg</lv16>
+            </blk97b>
+            <blk97b>
+                <lv17>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97b_zz_17.jpg</lv17>
+            </blk97b>
+            <blk97b>
+                <lv18>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97b_zz_18_19.jpg</lv18>
+                <lv19>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97b_zz_18_19.jpg</lv19>
+            </blk97b>
+            <blk97b>
+                <lv2>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97b_zz_2-15.jpg</lv2>
+                <lv3>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97b_zz_2-15.jpg</lv3>
+                <lv4>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97b_zz_2-15.jpg</lv4>
+                <lv5>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97b_zz_2-15.jpg</lv5>
+                <lv6>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97b_zz_2-15.jpg</lv6>
+                <lv7>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97b_zz_2-15.jpg</lv7>
+                <lv8>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97b_zz_2-15.jpg</lv8>
+                <lv9>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97b_zz_2-15.jpg</lv9>
+                <lv10>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97b_zz_2-15.jpg</lv10>
+                <lv11>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97b_zz_2-15.jpg</lv11>
+                <lv12>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97b_zz_2-15.jpg</lv12>
+                <lv13>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97b_zz_2-15.jpg</lv13>
+                <lv14>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97b_zz_2-15.jpg</lv14>
+                <lv15>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_97b_zz_2-15.jpg</lv15>
+            </blk97b>
+            <blk99a>
+                <lv2>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99a_zz_2-8_10-19.jpg</lv2>
+                <lv3>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99a_zz_2-8_10-19.jpg</lv3>
+                <lv4>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99a_zz_2-8_10-19.jpg</lv4>
+                <lv5>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99a_zz_2-8_10-19.jpg</lv5>
+                <lv6>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99a_zz_2-8_10-19.jpg</lv6>
+                <lv7>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99a_zz_2-8_10-19.jpg</lv7>
+                <lv8>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99a_zz_2-8_10-19.jpg</lv8>
+                <lv10>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99a_zz_2-8_10-19.jpg</lv10>
+                <lv11>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99a_zz_2-8_10-19.jpg</lv11>
+                <lv12>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99a_zz_2-8_10-19.jpg</lv12>
+                <lv13>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99a_zz_2-8_10-19.jpg</lv13>
+                <lv14>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99a_zz_2-8_10-19.jpg</lv14>
+                <lv15>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99a_zz_2-8_10-19.jpg</lv15>
+                <lv16>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99a_zz_2-8_10-19.jpg</lv16>
+                <lv17>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99a_zz_2-8_10-19.jpg</lv17>
+                <lv18>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99a_zz_2-8_10-19.jpg</lv18>
+                <lv19>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99a_zz_2-8_10-19.jpg</lv19>
+            </blk99a>
+            <blk99a>
+                <lv9>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99a_zz_9.jpg</lv9>
+            </blk99a>
+            <blk99b>
+                <lv16>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99b_zz_16.jpg</lv16>
+            </blk99b>
+            <blk99b>
+                <lv17>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99b_zz_17.jpg</lv17>
+            </blk99b>
+            <blk99b>
+                <lv18>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99b_zz_18_19.jpg</lv18>
+                <lv19>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99b_zz_18_19.jpg</lv19>
+            </blk99b>
+            <blk99b>
+                <lv2>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99b_zz_2_3.jpg</lv2>
+                <lv3>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99b_zz_2_3.jpg</lv3>
+            </blk99b>
+            <blk99b>
+                <lv4>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99b_zz_4.jpg</lv4>
+            </blk99b>
+            <blk99b>
+                <lv5>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99b_zz_5-15.jpg</lv5>
+                <lv6>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99b_zz_5-15.jpg</lv6>
+                <lv7>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99b_zz_5-15.jpg</lv7>
+                <lv8>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99b_zz_5-15.jpg</lv8>
+                <lv9>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99b_zz_5-15.jpg</lv9>
+                <lv10>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99b_zz_5-15.jpg</lv10>
+                <lv11>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99b_zz_5-15.jpg</lv11>
+                <lv12>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99b_zz_5-15.jpg</lv12>
+                <lv13>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99b_zz_5-15.jpg</lv13>
+                <lv14>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99b_zz_5-15.jpg</lv14>
+                <lv15>2021-05/bto/gl_n1c13/blockplan/blockplan_gl_n1c13_99b_zz_5-15.jpg</lv15>
+            </blk99b>
+        </blockplan>
+        <ocsleaflet>
+            <ocsleaflet-2rm>2021-05/bto/gl_n1c13/ocsleaflet/ocsleaflet_gl_n1c13_2rm(1).png</ocsleaflet-2rm>
+            <ocsleaflet-2rm>2021-05/bto/gl_n1c13/ocsleaflet/ocsleaflet_gl_n1c13_2rm(2).png</ocsleaflet-2rm>
+            <ocsleaflet-3rm>2021-05/bto/gl_n1c13/ocsleaflet/ocsleaflet_gl_n1c13_3rm_4rm(1).png</ocsleaflet-3rm>
+            <ocsleaflet-4rm>2021-05/bto/gl_n1c13/ocsleaflet/ocsleaflet_gl_n1c13_3rm_4rm(1).png</ocsleaflet-4rm>
+        </ocsleaflet>
+        <ocs>
+            <ocs-door>
+                <door-3rm>2021-05/bto/gl_n1c13/ocs/door/door_gl_n1c13_3rm_4rm(1).jpg</door-3rm>
+                <door-4rm>2021-05/bto/gl_n1c13/ocs/door/door_gl_n1c13_3rm_4rm(1).jpg</door-4rm>
+            </ocs-door>
+            <ocs-floor>
+                <floor-2rmtype1>2021-05/bto/gl_n1c13/ocs/floor/floor_gl_n1c13_2rmtype1_2rmtype2_3rm_4rm(1).jpg</floor-2rmtype1>
+                <floor-2rmtype2>2021-05/bto/gl_n1c13/ocs/floor/floor_gl_n1c13_2rmtype1_2rmtype2_3rm_4rm(1).jpg</floor-2rmtype2>
+                <floor-3rm>2021-05/bto/gl_n1c13/ocs/floor/floor_gl_n1c13_2rmtype1_2rmtype2_3rm_4rm(1).jpg</floor-3rm>
+                <floor-4rm>2021-05/bto/gl_n1c13/ocs/floor/floor_gl_n1c13_2rmtype1_2rmtype2_3rm_4rm(1).jpg</floor-4rm>
+                <floor-3rm>2021-05/bto/gl_n1c13/ocs/floor/floor_gl_n1c13_3rm_4rm(2).jpg</floor-3rm>
+                <floor-4rm>2021-05/bto/gl_n1c13/ocs/floor/floor_gl_n1c13_3rm_4rm(2).jpg</floor-4rm>
+            </ocs-floor>
+            <ocs-elderly>
+                <elderly-2rmtype2>2021-05/bto/gl_n1c13/ocs/elderly/elderly_gl_n1c13_2rmtype2(1).jpg</elderly-2rmtype2>
+            </ocs-elderly>
+        </ocs>
+        <nonocs>
+            <nonocs-2rmtype1>2021-05/bto/gl_n1c13/nonocs/nonocs_gl_n1c13_2rmtype1_2rmtype2_3rm_4rm(1).jpg</nonocs-2rmtype1>
+            <nonocs-2rmtype2>2021-05/bto/gl_n1c13/nonocs/nonocs_gl_n1c13_2rmtype1_2rmtype2_3rm_4rm(1).jpg</nonocs-2rmtype2>
+            <nonocs-3rm>2021-05/bto/gl_n1c13/nonocs/nonocs_gl_n1c13_2rmtype1_2rmtype2_3rm_4rm(1).jpg</nonocs-3rm>
+            <nonocs-4rm>2021-05/bto/gl_n1c13/nonocs/nonocs_gl_n1c13_2rmtype1_2rmtype2_3rm_4rm(1).jpg</nonocs-4rm>
+            <nonocs-2rmtype1>2021-05/bto/gl_n1c13/nonocs/nonocs_gl_n1c13_2rmtype1_2rmtype2_3rm_4rm(2).jpg</nonocs-2rmtype1>
+            <nonocs-2rmtype2>2021-05/bto/gl_n1c13/nonocs/nonocs_gl_n1c13_2rmtype1_2rmtype2_3rm_4rm(2).jpg</nonocs-2rmtype2>
+            <nonocs-3rm>2021-05/bto/gl_n1c13/nonocs/nonocs_gl_n1c13_2rmtype1_2rmtype2_3rm_4rm(2).jpg</nonocs-3rm>
+            <nonocs-4rm>2021-05/bto/gl_n1c13/nonocs/nonocs_gl_n1c13_2rmtype1_2rmtype2_3rm_4rm(2).jpg</nonocs-4rm>
+            <nonocs-2rmtype1>2021-05/bto/gl_n1c13/nonocs/nonocs_gl_n1c13_2rmtype1_2rmtype2_3rm_4rm(3).jpg</nonocs-2rmtype1>
+            <nonocs-2rmtype2>2021-05/bto/gl_n1c13/nonocs/nonocs_gl_n1c13_2rmtype1_2rmtype2_3rm_4rm(3).jpg</nonocs-2rmtype2>
+            <nonocs-3rm>2021-05/bto/gl_n1c13/nonocs/nonocs_gl_n1c13_2rmtype1_2rmtype2_3rm_4rm(3).jpg</nonocs-3rm>
+            <nonocs-4rm>2021-05/bto/gl_n1c13/nonocs/nonocs_gl_n1c13_2rmtype1_2rmtype2_3rm_4rm(3).jpg</nonocs-4rm>
+            <nonocs-2rmtype1>2021-05/bto/gl_n1c13/nonocs/nonocs_gl_n1c13_2rmtype1_2rmtype2_3rm_4rm(4).jpg</nonocs-2rmtype1>
+            <nonocs-2rmtype2>2021-05/bto/gl_n1c13/nonocs/nonocs_gl_n1c13_2rmtype1_2rmtype2_3rm_4rm(4).jpg</nonocs-2rmtype2>
+            <nonocs-3rm>2021-05/bto/gl_n1c13/nonocs/nonocs_gl_n1c13_2rmtype1_2rmtype2_3rm_4rm(4).jpg</nonocs-3rm>
+            <nonocs-4rm>2021-05/bto/gl_n1c13/nonocs/nonocs_gl_n1c13_2rmtype1_2rmtype2_3rm_4rm(4).jpg</nonocs-4rm>
+        </nonocs>
+    </resources>
+</template>

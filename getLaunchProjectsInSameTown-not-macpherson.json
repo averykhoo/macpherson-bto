@@ -1,0 +1,30 @@
+{
+    "projectList": [
+        {
+            "listingType": "BTO",
+            "ballotQtr": "2021-02",
+            "stage": "Post-Launch",
+            "launchEndDate": "2021-02-10T15:59:00.000+0000",
+            "launchStartDate": null,
+            "projectId": "2021-02_BTO_VFBfTjlDMTMxNjEwODg2MzAzNTUw",
+            "projectCode": "BTO_TP_N9C13",
+            "precinctName": "Bartley Greenrise",
+            "flatType": "3-Room, 4-Room",
+            "town": "Toa Payoh",
+            "photoUrl": "2021-02/bto/tp_n9c13/tp_n9c13_thumbnail.jpg"
+        },
+        {
+            "listingType": "BTO",
+            "ballotQtr": "2021-02",
+            "stage": "Post-Launch",
+            "launchEndDate": "2021-02-10T15:59:00.000+0000",
+            "launchStartDate": null,
+            "projectId": "2021-02_BTO_VFBfTjlDMTUxNjEwODg2NjAzNzE0",
+            "projectCode": "BTO_TP_N9C15",
+            "precinctName": "Parkedge @ Bidadari",
+            "flatType": "4-Room, 5-Room",
+            "town": "Toa Payoh",
+            "photoUrl": "2021-02/bto/tp_n9c15/tp_n9c15_thumbnail.jpg"
+        }
+    ]
+}
