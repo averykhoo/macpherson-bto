@@ -1,15 +1,38 @@
-import requests
+import base64
+import datetime
+
+from tabulate import tabulate
+
+bto_details_urls = [
+    'https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_SEdfTjFDMTUxNjExMjg5NTAwNDE2',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_SEdfTjJDMTExNjExMjg5ODA0MjY4',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_SkVfTjJDMjYxNjExMjkwMTAwNDE5',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_VEFQX045QzEwMTYxMTI5MTAwMDQ2Mw',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_S1dOX041QzUyMTYxMTI5MDQwMDUxOQ',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_UVRfTjJDMTE2MTEyOTA3MDA0MDY',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_VEFQX045QzE5MTYxMTI5MTMwMzk2NQ',
+    'https://homes.hdb.gov.sg/home/bto/details/2020-11_BTO_VEdfRDJDNDE2MDgwMjI2NDc1MjQ',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-02_BTO_VFBfTjlDMTUxNjEwODg2NjAzNzE0',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-02_BTO_VFBfTjlDMTgxNjExMTE1ODAxMDAz',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-02_BTO_VFBfTjlDMTMxNjEwODg2MzAzNTUw',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng',
+]
 
 
 def fetch(url, params):
     """
-    dummy function
+    dummy function badly mimicking javascript fetch
+    ignores most of the params
+    just exists for linting
 
     :param url:
     :param params:
     :return:
     """
-    return requests.get(url, **params)
+    # method = params.pop('method')
+    # headers = params.pop('headers')
+    # return requests.request(method, url, headers=headers)
+    pass
 
 
 fetch("https://resources.homes.hdb.gov.sg/nf/2021-05/bto/unit_xml/UNIT_2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng.xml",
@@ -488,16 +511,18 @@ fetch("https://homes.hdb.gov.sg/home/assets/GeoJSON/MP14_REGION_WEB_PL.geojson",
           "credentials":    "include"
       })
 
-# https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_SEdfTjFDMTUxNjExMjg5NTAwNDE2
-# https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_SEdfTjJDMTExNjExMjg5ODA0MjY4
-# https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_SkVfTjJDMjYxNjExMjkwMTAwNDE5
-# https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_VEFQX045QzEwMTYxMTI5MTAwMDQ2Mw
-# https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_S1dOX041QzUyMTYxMTI5MDQwMDUxOQ
-# https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_UVRfTjJDMTE2MTEyOTA3MDA0MDY
-# https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_VEFQX045QzE5MTYxMTI5MTMwMzk2NQ
-# https://homes.hdb.gov.sg/home/bto/details/2020-11_BTO_VEdfRDJDNDE2MDgwMjI2NDc1MjQ
-# 
-# https://homes.hdb.gov.sg/home/bto/details/2021-02_BTO_VFBfTjlDMTUxNjEwODg2NjAzNzE0
-# https://homes.hdb.gov.sg/home/bto/details/2021-02_BTO_VFBfTjlDMTgxNjExMTE1ODAxMDAz
-# https://homes.hdb.gov.sg/home/bto/details/2021-02_BTO_VFBfTjlDMTMxNjEwODg2MzAzNTUw
-# https://homes.hdb.gov.sg/home/bto/details/2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng
+if __name__ == '__main__':
+    rows = []
+    for url in bto_details_urls:
+        path_segment = url.rsplit('/', 1)[-1]
+        month, bto_project_type, b64_chunk = path_segment.split('_')
+        town, rest = base64.b64decode(b64_chunk + '===').decode('ascii').split('_', 1)
+        project_code, timestamp = rest[:-13], rest[-13:]
+        rows.append((url,
+                     month,
+                     bto_project_type,
+                     town,
+                     project_code,
+                     datetime.datetime.utcfromtimestamp(int(timestamp) / 1000)))
+
+    print(tabulate(rows, headers=['month', 'type', 'url', 'town', 'code', 'timestamp']))
