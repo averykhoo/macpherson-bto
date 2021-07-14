@@ -62,9 +62,12 @@ if __name__ == '__main__':
     with open('../hdb-api-samples/getSelectionProjectAvailabilityAndEthnic.json', 'rb') as f:
         for block_data in json.load(f)['projectBlockFlatTypeInfoMap'].values():
             for unit_data in block_data.values():
-                unit_data['total'] = df[(df['block'] == unit_data['block']) &
-                                        (df['flat_type'].str.casefold() == unit_data['flatType'].casefold())
-                                        ]['available'].sum()
+                unit_data['remaining'] = df[(df['block'] == unit_data['block']) &
+                                            (df['flat_type'].str.casefold() == unit_data['flatType'].casefold())
+                                            ]['available'].sum()
+                unit_data['total'] = len(df[(df['block'] == unit_data['block']) &
+                                            (df['flat_type'].str.casefold() == unit_data['flatType'].casefold())
+                                            ])
                 rows_2.append(unit_data)
 
     df2 = pd.DataFrame(rows_2)

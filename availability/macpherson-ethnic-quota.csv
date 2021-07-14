@@ -1,14 +1,14 @@
-block,flat_type,chinese,malay,indian,total
-95A,2-room flexi,91,24,13,108
-95A,3-room,71,19,10,0
-95A,"3-room (income ceiling $14,000)",71,19,10,84
-95A,4-room,54,14,8,64
-95B,2-room flexi,91,24,13,108
-95B,3-room,60,16,9,0
-95B,"3-room (income ceiling $14,000)",60,16,9,72
-95B,4-room,59,15,8,70
-95C,4-room,158,42,23,188
-97A,4-room,159,42,23,189
-97B,4-room,145,38,21,172
-99A,4-room,136,36,20,161
-99B,4-room,140,37,20,166
+block,flat_type,chinese,malay,indian,remaining,total
+95A,2-room flexi,91,24,13,108,108
+95A,3-room,71,19,10,0,0
+95A,"3-room (income ceiling $14,000)",71,19,10,84,84
+95A,4-room,54,14,8,64,64
+95B,2-room flexi,91,24,13,108,108
+95B,3-room,60,16,9,0,0
+95B,"3-room (income ceiling $14,000)",60,16,9,72,72
+95B,4-room,59,15,8,70,70
+95C,4-room,158,42,23,188,188
+97A,4-room,159,42,23,189,189
+97B,4-room,145,38,21,172,172
+99A,4-room,136,36,20,161,161
+99B,4-room,140,37,20,166,166
