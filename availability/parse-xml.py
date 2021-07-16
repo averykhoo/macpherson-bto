@@ -19,7 +19,9 @@ if __name__ == '__main__':
     prev_file = sorted(backups_dir.glob('*.json'))[-1]
     with prev_file.open('rb') as f:
         if json.load(f) != availability_json:
-            shutil.copyfile(json_path, backups_dir / f'{datetime.datetime.now().strftime("%Y-%m-%d--%H-%M-%S")}.json')
+            new_path = backups_dir / f'{datetime.datetime.now().strftime("%Y-%m-%d--%H-%M-%S")}.json'
+            with new_path.open('w', encoding='utf8') as f2:
+                json.dump(availability_json, f2, indent=4)
 
     r = requests.get('https://resources.homes.hdb.gov.sg/nf/2021-05/bto/unit_xml/'
                      'UNIT_2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng.xml')
