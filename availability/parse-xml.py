@@ -60,7 +60,7 @@ if __name__ == '__main__':
     df.to_csv('macpherson-prices.csv', index=False)
 
     rows_2 = []
-    with open('../hdb-api-samples/getSelectionProjectAvailabilityAndEthnic.json', 'rb') as f:
+    with open('getSelectionProjectAvailabilityAndEthnic.json', 'rb') as f:
         for block_data in json.load(f)['projectBlockFlatTypeInfoMap'].values():
             for unit_data in block_data.values():
                 unit_data['remaining'] = df[(df['block'] == unit_data['block']) &
