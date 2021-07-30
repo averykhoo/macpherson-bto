@@ -4,7 +4,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,available
 95A,2-Room Flexi,#19,19,6788,514,48,268500,True
 95A,2-Room Flexi,#19,19,6806,516,48,268500,True
 95A,2-Room Flexi,#19,19,6824,518,48,268500,True
-95A,2-Room Flexi,#19,19,6842,520,48,268500,True
+95A,2-Room Flexi,#19,19,6842,520,48,268500,False
 95A,2-Room Flexi,#18,18,6751,500,48,268500,True
 95A,2-Room Flexi,#18,18,6769,502,48,268500,True
 95A,2-Room Flexi,#18,18,6787,514,48,268500,True
@@ -194,7 +194,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,available
 95A,4-Room,#19,19,7152,526,93,607100,True
 95A,4-Room,#19,19,7170,528,93,607100,True
 95A,4-Room,#18,18,7151,526,93,607100,True
-95A,4-Room,#18,18,7169,528,93,607100,True
+95A,4-Room,#18,18,7169,528,93,607100,False
 95A,4-Room,#17,17,7150,526,93,604700,True
 95A,4-Room,#17,17,7168,528,93,604700,True
 95A,4-Room,#16,16,7149,526,93,602300,True
@@ -216,7 +216,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,available
 95A,4-Room,#12,12,7145,526,93,592700,True
 95A,4-Room,#12,12,7163,528,93,592700,True
 95A,4-Room,#11,11,7116,522,93,590300,True
-95A,4-Room,#11,11,7130,524,93,590300,True
+95A,4-Room,#11,11,7130,524,93,590300,False
 95A,4-Room,#11,11,7144,526,93,590300,True
 95A,4-Room,#11,11,7162,528,93,590300,True
 95A,4-Room,#10,10,7115,522,93,587900,True
@@ -266,7 +266,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,available
 95B,2-Room Flexi,#18,18,6895,542,48,268500,True
 95B,2-Room Flexi,#18,18,6913,544,48,268500,True
 95B,2-Room Flexi,#18,18,6931,546,38,209900,True
-95B,2-Room Flexi,#18,18,6949,548,38,209900,True
+95B,2-Room Flexi,#18,18,6949,548,38,209900,False
 95B,2-Room Flexi,#17,17,6858,530,38,209000,True
 95B,2-Room Flexi,#17,17,6876,532,48,267300,True
 95B,2-Room Flexi,#17,17,6894,542,48,267300,True
@@ -276,7 +276,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,available
 95B,2-Room Flexi,#16,16,6857,530,38,208100,True
 95B,2-Room Flexi,#16,16,6875,532,48,266100,True
 95B,2-Room Flexi,#16,16,6893,542,48,266100,True
-95B,2-Room Flexi,#16,16,6911,544,48,266100,True
+95B,2-Room Flexi,#16,16,6911,544,48,266100,False
 95B,2-Room Flexi,#16,16,6929,546,38,208100,True
 95B,2-Room Flexi,#16,16,6947,548,38,208100,True
 95B,2-Room Flexi,#15,15,6856,530,38,207200,True
@@ -297,7 +297,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,available
 95B,2-Room Flexi,#13,13,6908,544,48,262500,True
 95B,2-Room Flexi,#13,13,6926,546,38,205400,True
 95B,2-Room Flexi,#13,13,6944,548,38,205400,True
-95B,2-Room Flexi,#12,12,6853,530,38,204500,True
+95B,2-Room Flexi,#12,12,6853,530,38,204500,False
 95B,2-Room Flexi,#12,12,6871,532,48,261300,True
 95B,2-Room Flexi,#12,12,6889,542,48,261300,True
 95B,2-Room Flexi,#12,12,6907,544,48,261300,True
@@ -534,7 +534,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,available
 95C,4-Room,#17,17,7400,574,93,610800,True
 95C,4-Room,#16,16,7255,558,93,620600,True
 95C,4-Room,#16,16,7273,560,93,620600,True
-95C,4-Room,#16,16,7291,562,93,620600,True
+95C,4-Room,#16,16,7291,562,93,620600,False
 95C,4-Room,#16,16,7309,564,93,608400,True
 95C,4-Room,#16,16,7327,566,93,608400,True
 95C,4-Room,#16,16,7345,568,93,608400,True
@@ -1221,7 +1221,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,available
 99B,4-Room,#19,19,8044,650,93,613200,True
 99B,4-Room,#19,19,8062,652,93,601000,True
 99B,4-Room,#19,19,8080,654,93,613200,True
-99B,4-Room,#19,19,8098,656,93,607100,True
+99B,4-Room,#19,19,8098,656,93,607100,False
 99B,4-Room,#19,19,8116,658,93,613200,True
 99B,4-Room,#18,18,7967,640,93,613200,True
 99B,4-Room,#18,18,7985,642,93,613200,True
