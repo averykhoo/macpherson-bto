@@ -520,12 +520,20 @@ if __name__ == '__main__':
         town, rest = base64.b64decode(b64_chunk + '===').decode('ascii').split('_', 1)
         project_code, timestamp = rest[:-13], rest[-13:]
 
+        # month = '2021-08'
+        # project_type = 'BTO'
+
         r1 = requests.get(f'https://resources.homes.hdb.gov.sg/nf/{month}/bto/'
                           f'unit_xml/'
                           f'UNIT_{month}_{project_type}_{b64_chunk}.xml')
         r2 = requests.get(f'https://resources.homes.hdb.gov.sg/nf/{month}/bto/'
                           f'{town.lower()}_{project_code.lower().rstrip("_")}/'
                           f'{month}_{project_type}_{b64_chunk}.xml')
+
+        # map_url = 'https://resources.homes.hdb.gov.sg/nf/2021-02/upcoming-bto/qt_n2c1/townmap/townmap_qt_n2c1.jpg'
+        r3 = requests.get(f'https://resources.homes.hdb.gov.sg/nf/{month}/'
+                          f'upcoming-bto/{town.lower()}_{project_code.lower()}/'
+                          f'townmap/townmap_{town.lower()}_{project_code.lower()}.jpg')
 
         rows.append((url,
                      month,
@@ -535,6 +543,10 @@ if __name__ == '__main__':
                      datetime.datetime.utcfromtimestamp(int(timestamp) / 1000),
                      r1.status_code,
                      r2.status_code,
+                     r3.status_code,
                      ))
 
-    print(tabulate(rows, headers=['month', 'type', 'url', 'town', 'code', 'timestamp', 'xml1', 'xml2']))
+        # with open(r3.url.rsplit('/')[-1], 'wb') as f:
+        #     f.write(r3.content)
+
+    print(tabulate(rows, headers=['url', 'month', 'type', 'town', 'code', 'timestamp', 'xml1', 'xml2', 'jpg']))
