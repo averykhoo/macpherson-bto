@@ -23,7 +23,8 @@ if __name__ == '__main__':
                 json.dump(availability_json, f2, indent=4)
 
     r = requests.get('https://resources.homes.hdb.gov.sg/nf/2021-05/bto/unit_xml/'
-                     'UNIT_2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng.xml')
+                     'UNIT_2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng.xml',
+                     verify=False)
     soup = BeautifulSoup(r.content, 'lxml-xml')
 
     rows = []
