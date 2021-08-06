@@ -40,7 +40,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,available
 95A,2-Room Flexi,#13,13,6782,514,48,262500,True
 95A,2-Room Flexi,#13,13,6800,516,48,262500,True
 95A,2-Room Flexi,#13,13,6818,518,48,262500,True
-95A,2-Room Flexi,#13,13,6836,520,48,262500,True
+95A,2-Room Flexi,#13,13,6836,520,48,262500,False
 95A,2-Room Flexi,#12,12,6745,500,48,261300,True
 95A,2-Room Flexi,#12,12,6763,502,48,261300,False
 95A,2-Room Flexi,#12,12,6781,514,48,261300,True
@@ -210,7 +210,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,available
 95A,4-Room,#13,13,7118,522,93,595100,True
 95A,4-Room,#13,13,7132,524,93,595100,True
 95A,4-Room,#13,13,7146,526,93,595100,True
-95A,4-Room,#13,13,7164,528,93,595100,True
+95A,4-Room,#13,13,7164,528,93,595100,False
 95A,4-Room,#12,12,7117,522,93,592700,True
 95A,4-Room,#12,12,7131,524,93,592700,True
 95A,4-Room,#12,12,7145,526,93,592700,True
@@ -221,7 +221,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,available
 95A,4-Room,#11,11,7162,528,93,590300,True
 95A,4-Room,#10,10,7115,522,93,587900,True
 95A,4-Room,#10,10,7129,524,93,587900,True
-95A,4-Room,#10,10,7143,526,93,587900,True
+95A,4-Room,#10,10,7143,526,93,587900,False
 95A,4-Room,#10,10,7161,528,93,587900,True
 95A,4-Room,#09,9,7114,522,93,585500,True
 95A,4-Room,#09,9,7128,524,93,585500,True
@@ -303,7 +303,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,available
 95B,2-Room Flexi,#12,12,6907,544,48,261300,True
 95B,2-Room Flexi,#12,12,6925,546,38,204500,True
 95B,2-Room Flexi,#12,12,6943,548,38,204500,True
-95B,2-Room Flexi,#11,11,6852,530,38,203600,True
+95B,2-Room Flexi,#11,11,6852,530,38,203600,False
 95B,2-Room Flexi,#11,11,6870,532,48,260100,True
 95B,2-Room Flexi,#11,11,6888,542,48,260100,True
 95B,2-Room Flexi,#11,11,6906,544,48,260100,True
@@ -960,7 +960,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,available
 97B,4-Room,#11,11,7681,608,93,584200,True
 97B,4-Room,#11,11,7699,610,93,596400,True
 97B,4-Room,#11,11,7717,612,93,596400,True
-97B,4-Room,#11,11,7735,614,93,596400,True
+97B,4-Room,#11,11,7735,614,93,596400,False
 97B,4-Room,#11,11,7749,616,93,596400,True
 97B,4-Room,#11,11,7763,618,93,596400,True
 97B,4-Room,#11,11,7781,620,93,596400,True
