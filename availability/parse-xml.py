@@ -12,6 +12,10 @@ json_path = Path('getSelectionProjectAvailabilityAndEthnic.json')
 
 if __name__ == '__main__':
 
+    # load unit metadata
+    with open('unit-metadata.json', 'rb') as f:
+        unit_metadata = json.load(f)
+
     # load json
     with json_path.open('rb') as f:
         availability_json = json.load(f)
@@ -39,6 +43,9 @@ if __name__ == '__main__':
                     unit_number = unit.find('unit-number')
                     area_sqm = unit.find('area')
                     price = unit.find('price')
+
+                    unit_tag = unit_metadata.get(f'#{level_number.text}-{unit_number.text}', '')
+
                     rows.append([block_number.text,
                                  _type.text,
                                  f'#{level_number.text}',
@@ -47,10 +54,21 @@ if __name__ == '__main__':
                                  int(unit_number.text),
                                  int(area_sqm.text),
                                  int(price.text),
+                                 unit_tag,
                                  False,  # default availability
                                  ])
 
-    headers = ['block', 'flat_type', 'level_str', 'level_number', 'unit_id', 'stack', 'area_sqm', 'price', 'available']
+    headers = ['block',
+               'flat_type',
+               'level_str',
+               'level_number',
+               'unit_id',
+               'stack',
+               'area_sqm',
+               'price',
+               'tag',
+               'available',
+               ]
     df = pd.DataFrame(rows, columns=headers)
 
     with open('getSelectionProjectAvailabilityAndEthnic.json', 'rb') as f:
