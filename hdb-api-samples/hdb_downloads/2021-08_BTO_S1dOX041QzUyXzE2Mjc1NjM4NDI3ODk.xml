@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <project-name>Towner Residences</project-name>
+    <standard-project-info>
+        <key>
+            <town>Kallang/Whampoa</town>
+            <tooltip/>
+            <uri/>
+        </key>
+        <key>
+            <point>692|772</point>
+        </key>
+        <key>
+            <latitude>1.3211337</latitude>
+            <longitude>103.8565761</longitude>
+        </key>
+        <key>
+            <completion-date>4Q2026</completion-date>
+            <tooltip>
+                				
+                
+					This is an estimated date that the flat will be completed and ready for key collection, and the actual completion date will depend on the progress of construction works on site. As the Estimated Completion Date (ECD) is indicative only, HDB shall not be responsible for any damage or loss arising from a change in the ECD.&lt;br/>&lt;br/>
+					After booking the flat, buyers may check for updates via My HDBPage on HDB InfoWEB, as the construction of the project progresses.&lt;br/>&lt;br/>
+					Note: The contractual date in the Agreement for Lease by which HDB is required to deliver vacant possession of the booked flat to buyers is known as the Delivery Possession Date (DPD), which is 18 months after the ECD. Currently, the estimated DPD is 30 June 2028.
+                			
+            </tooltip>
+            <uri/>
+        </key>
+        <key>
+            <remaining-lease>99</remaining-lease>
+            <tooltip>The 3- and 4-room flats are sold on a 99-year lease.</tooltip>
+            <uri/>
+        </key>
+        <key>
+            <selection-month>October 2021 to June 2022</selection-month>
+        </key>
+        <key>
+            <est-waiting-time>58 months</est-waiting-time>
+        </key>
+        <key>
+            <lease-period-2rm/>
+        </key>
+        <key>
+            <price-tooltip>
+                				
+                
+					The indicative price range of the flats exclude grants, and are based on 99-year leases.&lt;br/>&lt;br/>
+					Actual prices may vary based on the actual attributes of the flats at the time of selection. Find out details of the Optional Component Scheme offered for this project.
+                			
+            </price-tooltip>
+        </key>
+        <unit-details>
+            <ukey>
+                <flat-type>3-Room (Income Ceiling $14,000)</flat-type>
+                <supply>90</supply>
+                <est-floor-area-lower>68</est-floor-area-lower>
+                <est-floor-area-upper>68</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <est-internal-floor-area-lower>65</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>65</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>336000</price-range-lower>
+                <price-range-upper>440000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        						
+                        
+   						&lt;h4>Finishes and Fittings&lt;/h4>
+						&lt;br>
+						&lt;h5>Non-Optional Finishes&lt;/h5>
+						&lt;br>
+						&lt;p>
+						More than just a well-designed and functional interior, the 3-room flats will come with the following finishes and fittings: 
+	  					&lt;/p>						
+						&lt;ul>
+							&lt;li>Floor tiles in the:&lt;/li>
+	    					&lt;ul>
+								&lt;li>Bathrooms&lt;/li>
+								&lt;li>Household shelter&lt;/li>
+	        					&lt;li>Kitchen/ utility&lt;/li>
+							
+	    					&lt;/ul>
+							&lt;li>Wall tiles in the: &lt;/li>
+	    					&lt;ul>
+	        					&lt;li>Bathrooms&lt;/li>
+	   						&lt;li>Kitchen/ utility&lt;/li>
+	    					&lt;/ul>
+	    				&lt;/ul>
+						
+                        					
+                    </non-optional>
+                    <optional>
+                        <floor>
+                            <header>Flooring for Living/ Dining, Dry Kitchen, and Bedrooms </header>
+                            <price>3300</price>
+                            <text>
+                                							
+                                
+							&lt;ul>
+	    					&lt;li>Vinyl strip flooring in the bedrooms&lt;/li>
+							&lt;li>Polished porcelain floor tiles in the living/ dining, dry kitchen&lt;/li> 
+							&lt;/ul>
+							
+                                							
+                            </text>
+                        </floor>
+                        <door>
+                            <header>Internal Doors and Sanitary Fittings</header>
+                            <price>2700</price>
+                            <text>
+                                							
+                                
+							&lt;ul>
+							&lt;ul>
+	    					&lt;li>2 laminated UPVC bedroom doors&lt;/li>
+							&lt;li>2 laminated UPVC folding bathroom doors&lt;/li>
+	   						&lt;li>Wash basin with tap mixer&lt;/li>
+							&lt;li>Shower set with bath/ shower mixer&lt;/li>
+							&lt;/ul>
+							
+                                							
+                            </text>
+                        </door>
+                    </optional>
+                </finishes-and-fittings-text>
+            </ukey>
+            <ukey>
+                <flat-type>4-Room</flat-type>
+                <supply>226</supply>
+                <est-floor-area-lower>93</est-floor-area-lower>
+                <est-floor-area-upper>93</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <est-internal-floor-area-lower>90</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>90</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>500000</price-range-lower>
+                <price-range-upper>656000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        						
+                        
+   						&lt;h4>Finishes and Fittings&lt;/h4>
+						&lt;br>
+						&lt;h5>Non-Optional Finishes&lt;/h5>
+						&lt;br>
+						&lt;p>
+						More than just a well-designed and functional interior, the 4-room flats will come with the following finishes and fittings:   
+	  					&lt;/p>						
+						&lt;ul>
+							&lt;li>Floor tiles in the:&lt;/li>
+	    					&lt;ul>
+								&lt;li>Bathrooms&lt;/li>
+								&lt;li>Household shelter&lt;/li>
+	        					&lt;li>Kitchen&lt;/li>
+							&lt;li>Service yard&lt;/li>
+							
+	    					&lt;/ul>
+							&lt;li>Wall tiles in the: &lt;/li>
+	    					&lt;ul>
+	        					&lt;li>Bathrooms&lt;/li>
+    							&lt;li>Kitchen&lt;/li>
+	    					&lt;/ul>
+	    				&lt;/ul>
+						
+                        					
+                    </non-optional>
+                    <optional>
+                        <floor>
+                            <header>Flooring for Living/ Dining and Bedrooms </header>
+                            <price>4970</price>
+                            <text>
+                                							
+                                
+							&lt;ul>
+	    					&lt;li>Vinyl strip flooring in the bedrooms&lt;/li>
+							&lt;li>Polished porcelain floor tiles in the living/ dining&lt;/li> 
+							&lt;/ul>
+							
+                                							
+                            </text>
+                        </floor>
+                        <door>
+                            <header>Internal Doors and Sanitary Fittings</header>
+                            <price>3080</price>
+                            <text>
+                                							
+                                
+							&lt;ul>
+							&lt;ul>
+	    					&lt;li>3 laminated UPVC bedroom doors&lt;/li>
+							&lt;li>2 laminated UPVC folding bathroom doors&lt;/li>
+	   						&lt;li>Wash basin with tap mixer&lt;/li>
+							&lt;li>Shower set with bath/ shower mixer&lt;/li>
+							&lt;/ul>
+							
+                                							
+                            </text>
+                        </door>
+                    </optional>
+                </finishes-and-fittings-text>
+            </ukey>
+        </unit-details>
+        <overview>
+            <p>
+                			
+                
+			&lt;h6>Kallang/ Whampoa&lt;/h6>
+			&lt;br>
+			Located along Towner Road, Towner Residences &lt;a class="audioBtn tower-residences">&lt;i class="fas fa-volume-up">&lt;/i>&lt;/a> comprises 2 residential blocks that are 25 and 40 storeys tall. You can choose from the 316 units of 3- and 4-room flats on offer at one of the blocks, while the other block will comprise rental flats. 
+			&lt;br>&lt;br>
+			The roof garden located on the 33rd storey will offer residents panoramic views of the area. Recreational facilities such as children’s playgrounds, fitness corners, and resting shelters will be set amid lush greenery at the development's central green. The Multi-Storey Car Park will come with a childcare centre at the 1st storey and roof garden at the 6th storey. Please refer to the site plan for the facilities provided in the development. Facilities in this development will be accessible by the public. 
+			&lt;br>&lt;br> 
+			
+                			
+            </p>
+        </overview>
+        <notes>
+            <p>
+                			
+                HDB precincts are planned to serve the evolving needs of the community. There are spaces catered for future inclusion of amenities/ facilities (such as childcare centres, elderly-related facilities, education centres, residents' network centres, and day activity centres), commercial facilities (such as shops and eating houses), mechanical and electrical rooms, and such other facilities depending on the prevailing needs. These spaces could be in the void decks, common property, car parks, or stand-alone community buildings.
+			&lt;br>&lt;br>
+			To facilitate your flat application, we have provided information on the surrounding land use, proposed facilities and their locations in the maps and plans of individual projects. As the information provided is based on the current planning intent of the relevant authorities, such information is indicative only and subject to review from time to time.
+			&lt;br>&lt;br>
+			&lt;ul>
+			&lt;li>Get answers to &lt;a href="https://www.hdb.gov.sg/cs/infoweb/residential/buying-a-flat/new/buying-process/application-procedure/faqs-for-sales-launch">Frequently Asked Questions on sales launches&lt;/a>&lt;/li>
+			&lt;br>
+   			&lt;li>Visit the virtual showflats at &lt;a href="https://www.hdb.gov.sg/mynicehomegallery?utm_source=Aug21website&amp;utm_medium=link&amp;utm_campaign=MNHG">My Nice Home Gallery&lt;/a> and get interior decor ideas&lt;/li>
+			&lt;/ul>
+			
+                			
+            </p>
+        </notes>
+    </standard-project-info>
+    <template-body>
+        <row>
+            <header>Eco-Friendly Features</header>
+        </row>
+        <row>
+            <p>
+                				
+                &lt;p>To encourage green and sustainable living, Towner Residences will have several eco-friendly features such as:&lt;/p>
+				&lt;ul>
+					&lt;li>Separate chutes for recyclable waste&lt;/li>
+					&lt;li>Regenerative lifts to reduce energy consumption&lt;/li>
+					&lt;li>Bicycle stands to encourage cycling as an environmentally-friendly form of transport&lt;/li>
+					&lt;li>Parking spaces to facilitate future provision of electrical vehicle charging stations &lt;/li>
+					&lt;li>Use of sustainable products in the development&lt;/li>
+					&lt;li>Active, Beautiful, Clean Waters design features to clean rainwater and beautify the landscapes&lt;/li>
+				&lt;/ul>
+                			
+            </p>
+        </row>
+        <row>
+            <template1>
+                <photo-folder>2021-08/bto/kwn_n5c52/template1</photo-folder>
+                <photos>
+                    <photo>2021-08/bto/kwn_n5c52/template1/1.jpg</photo>
+                    <photo>2021-08/bto/kwn_n5c52/template1/2.jpg</photo>
+                    <photo>2021-08/bto/kwn_n5c52/template1/3.jpg</photo>
+                </photos>
+            </template1>
+        </row>
+        <row>
+            <header>Smart Solutions</header>
+        </row>
+        <row>
+            <p>
+                Smart Lighting will be installed in the common areas within Towner Residences to reduce energy usage, and contribute to a sustainable and safer living environment.
+				
+            </p>
+        </row>
+        <row>
+            <header>About Kallang/ Whampoa Town</header>
+        </row>
+        <row>
+            <p>
+                 
+				
+                
+				Located near Towner Residences is the Whampoa Drive neighbourhood centre, where you can dine to your heart’s content at the Whampoa Drive Makan Place. Alternatively, you can head to Bendemeer Shopping Mall and shop along its covered pedestrian mall or buy some fresh produce at its market. To find more heartland shops in Kallang/ Whampoa town, simply visit &lt;a href="https://www.hdb.gov.sg/cs/infoweb/residential/where2shop/explore/kallang-whampoa">Where2Shop@HDB&lt;/a>.
+				&lt;br>&lt;br>
+				Sports enthusiasts will enjoy the wide variety of sports and recreational facilities available in Kallang/ Whampoa, ranging from Jalan Besar Stadium and Swimming Complex, Whampoa and Kallang Park Connectors, and St. Wilfred Squash and Tennis Centre. Residents can also visit Whampoa Community Club and Kallang Community Club to learn new crafts and make new friends.
+				&lt;br>&lt;br>
+				Towner Residences is well-connected, served by the nearby Central Expressway and Boon Keng MRT station. Schools in the vicinity include Northlight School, Hong Wen School, and Bendemeer Primary and Secondary Schools.
+				
+                			
+            </p>
+        </row>
+        <row>
+            <template2>
+                <photo-folder>2021-08/bto/kwn_n5c52/template2</photo-folder>
+                <photos>
+                    <photo>2021-08/bto/kwn_n5c52/template2/1.jpg</photo>
+                    <photo>2021-08/bto/kwn_n5c52/template2/2.jpg</photo>
+                    <photo>2021-08/bto/kwn_n5c52/template2/3.jpg</photo>
+                    <photo>2021-08/bto/kwn_n5c52/template2/4.jpg</photo>
+                    <photo>2021-08/bto/kwn_n5c52/template2/5.jpg</photo>
+                </photos>
+            </template2>
+        </row>
+    </template-body>
+    <resources>
+        <town-map>2021-08/bto/kwn_n5c52/townmap/townmap_kwn_n5c52.jpg</town-map>
+        <carousel>
+            <link>2021-08/bto/kwn_n5c52/carousel/01_perspective.jpg</link>
+            <link>2021-08/bto/kwn_n5c52/carousel/02_perspective.jpg</link>
+            <link>2021-08/bto/kwn_n5c52/carousel/03_siteplan_kwn_n5c52.jpg</link>
+        </carousel>
+        <sound>2021-08/bto/kwn_n5c52/sound/kwn_n5c52.mp3</sound>
+        <genspecs>
+            <genspecs-3rm>2021-08/bto/kwn_n5c52/genspecs/genspecs_kwn_n5c52_3rm_4rm.jpg</genspecs-3rm>
+            <genspecs-4rm>2021-08/bto/kwn_n5c52/genspecs/genspecs_kwn_n5c52_3rm_4rm.jpg</genspecs-4rm>
+        </genspecs>
+        <layoutideas>
+            <layoutideas-3rm>2021-08/bto/kwn_n5c52/layoutideas/layoutideas_kwn_n5c52_3rm.jpg</layoutideas-3rm>
+            <layoutideas-4rm>2021-08/bto/kwn_n5c52/layoutideas/layoutideas_kwn_n5c52_4rm(1).jpg</layoutideas-4rm>
+            <layoutideas-4rm>2021-08/bto/kwn_n5c52/layoutideas/layoutideas_kwn_n5c52_4rm(2).jpg</layoutideas-4rm>
+        </layoutideas>
+        <resale>
+            <resale-3rm>2021-08/bto/kwn_n5c52/resale/resale_kwn_n5c52_3rm.jpg</resale-3rm>
+            <resale-4rm>2021-08/bto/kwn_n5c52/resale/resale_kwn_n5c52_4rm.jpg</resale-4rm>
+        </resale>
+        <oydh>
+            <oydh-3rm>2021-08/bto/kwn_n5c52/oydh/oydh_kwn_n5c52_3rm.jpg</oydh-3rm>
+            <oydh-4rm>2021-08/bto/kwn_n5c52/oydh/oydh_kwn_n5c52_4rm.jpg</oydh-4rm>
+        </oydh>
+        <ocsleaflet>
+            <ocsleaflet-3rm>2021-08/bto/kwn_n5c52/ocsleaflet/ocsleaflet_kwn_n5c52_3rm_4rm(1).png</ocsleaflet-3rm>
+            <ocsleaflet-4rm>2021-08/bto/kwn_n5c52/ocsleaflet/ocsleaflet_kwn_n5c52_3rm_4rm(1).png</ocsleaflet-4rm>
+        </ocsleaflet>
+        <ocs/>
+    </resources>
+</template>

@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <project-name>Tampines GreenQuartz</project-name>
+    <standard-project-info>
+        <key>
+            <town>Tampines</town>
+            <tooltip/>
+            <uri/>
+        </key>
+        <key>
+            <point>951|1627</point>
+        </key>
+        <key>
+            <latitude>1.3419045</latitude>
+            <longitude>103.9381528</longitude>
+        </key>
+        <key>
+            <completion-date>2Q2026</completion-date>
+            <tooltip>
+                				
+                
+					This is an estimated date that the flat will be completed and ready for key collection, and the actual completion date will depend on the progress of construction works on site. As the Estimated Completion Date (ECD) is indicative only, HDB shall not be responsible for any damage or loss arising from a change in the ECD.&lt;br/>&lt;br/>
+					After booking the flat, buyers may check for updates via My HDBPage on HDB InfoWEB, as the construction of the project progresses.&lt;br/>&lt;br/>
+					Note: The contractual date in the Agreement for Lease by which HDB is required to deliver vacant possession of the booked flat to buyers is known as the Delivery Possession Date (DPD), which is 18 months after the ECD. Currently, the estimated DPD is 31 December 2027.
+                			
+            </tooltip>
+            <uri/>
+        </key>
+        <key>
+            <remaining-lease>99</remaining-lease>
+            <tooltip>The 3-, 4- and 5-room flats are sold on a 99-year lease. First-timer and second-timer families will be offered 99-year 2-room Flexi flats. Eligible Singapore Citizens and their spouses (if applicable) aged 55 and above can choose a short lease of between 15 and 45 years, in five-year increments, for the 2-room Flexi flat. The chosen lease has to cover them up to the age of at least 95 years.</tooltip>
+            <uri/>
+        </key>
+        <key>
+            <selection-month>October 2021 to June 2022</selection-month>
+        </key>
+        <key>
+            <est-waiting-time>52 months</est-waiting-time>
+        </key>
+        <key>
+            <lease-period-2rm>B</lease-period-2rm>
+        </key>
+        <key>
+            <price-tooltip>
+                				
+                
+					The indicative price range of the flats exclude grants and are based on 99-year leases.&lt;br/>&lt;br/>
+					Actual prices may vary based on the actual attributes of the flats at the time of selection. Prices include the costs of floor finishes, internal doors, and sanitary fittings.
+                			
+            </price-tooltip>
+        </key>
+        <unit-details>
+            <ukey>
+                <flat-type>2-Room Flexi (Type 1)</flat-type>
+                <supply>58</supply>
+                <est-floor-area-lower>40</est-floor-area-lower>
+                <est-floor-area-upper>40</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <est-internal-floor-area-lower>38</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>38</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>142000</price-range-lower>
+                <price-range-upper>164000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        						
+                        
+   						&lt;h4>Finishes and Fittings&lt;/h4>
+						&lt;br>
+						&lt;h5>Non-Optional Finishes&lt;/h5>
+						&lt;br>
+						&lt;p>
+						To boost construction productivity, Tampines GreenQuartz will be built using the Prefabricated Prefinished Volumetric Construction (PPVC) method. The flats will come with full floor finishes, internal doors, and sanitary fittings.
+	  					&lt;/p>
+						&lt;p>The 2-room Flexi (Type 1) flats will come with the following finishes and fittings:&lt;/p>
+						&lt;ul>
+	    					&lt;li>Vinyl strip flooring in the:&lt;/li>
+	    					&lt;ul>
+							&lt;li>Living/ dining&lt;/li>
+	        					&lt;li>Bedroom&lt;/li>
+	    					&lt;/ul>
+	    					&lt;li>Floor tiles in the:&lt;/li>
+	    					&lt;ul>
+								&lt;li>Bathroom&lt;/li>
+								&lt;li>Household shelter&lt;/li>
+								&lt;li>Kitchen&lt;/li>
+							&lt;/ul>
+	    					&lt;li>Wall tiles in the: &lt;/li>
+	    					&lt;ul>
+	        					&lt;li>Bathroom&lt;/li>
+								&lt;li>Kitchen&lt;/li>
+	    					&lt;/ul>
+						&lt;li>A sliding partition/ door for the bedroom and folding bathroom door&lt;/li>
+						&lt;li>Sanitary fittings, i.e. wash basin with tap mixer, shower set with bath/ shower mixer, and water closet suite&lt;/li>
+						&lt;li>Grab bars (for 2-room Flexi flats on short-leases)&lt;/li>
+						&lt;/ul>
+						
+                        					
+                    </non-optional>
+                    <optional>
+                        <floor>
+                            <header>OCS Package for short-lease 2-room Flexi flats </header>
+                            <price>6200</price>
+                            <text>
+                                							
+                                
+							&lt;ul>
+								&lt;li>Lighting &lt;/li>
+								&lt;li>Window grilles &lt;/li>
+								&lt;li>Built-in kitchen cabinets with induction hob and cooker hood, kitchen sink, tap, and dish drying rack. Buyers who are wheel-chair bound may choose to have a lower kitchen countertop.&lt;/li>
+								&lt;li>Built-in wardrobe&lt;/li>
+								&lt;li>Water heater&lt;/li>
+								&lt;li>Mirror and toilet roll holder in bathroom&lt;/li> 
+							&lt;/ul>
+							
+                                							
+                            </text>
+                        </floor>
+                    </optional>
+                </finishes-and-fittings-text>
+            </ukey>
+            <ukey>
+                <flat-type>2-Room Flexi (Type 2)</flat-type>
+                <supply>144</supply>
+                <est-floor-area-lower>49</est-floor-area-lower>
+                <est-floor-area-upper>49</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <est-internal-floor-area-lower>47</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>47</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>165000</price-range-lower>
+                <price-range-upper>196000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        						
+                        
+   						&lt;h4>Finishes and Fittings&lt;/h4>
+						&lt;br>
+						&lt;h5>Non-Optional Finishes&lt;/h5>
+						&lt;br>
+						&lt;p>
+						To boost construction productivity, Tampines GreenQuartz will be built using the Prefabricated Prefinished Volumetric Construction (PPVC) method. The flats will come with full floor finishes, internal doors, and sanitary fittings.
+	  					&lt;/p>
+						&lt;p>The 2-room Flexi (Type 2) flats will come with the following finishes and fittings:&lt;/p>
+						&lt;ul>
+	    					&lt;li>Vinyl strip flooring in the:&lt;/li>
+	    					&lt;ul>
+							&lt;li>Living/ dining&lt;/li>
+	        					&lt;li>Bedroom&lt;/li>
+	    					&lt;/ul>
+	    					&lt;li>Floor tiles in the:&lt;/li>
+	    					&lt;ul>
+								&lt;li>Bathroom&lt;/li>
+								&lt;li>Household shelter&lt;/li>
+								&lt;li>Kitchen&lt;/li>
+							&lt;/ul>
+	    					&lt;li>Wall tiles in the: &lt;/li>
+	    					&lt;ul>
+	        					&lt;li>Bathroom&lt;/li>
+								&lt;li>Kitchen&lt;/li>
+	    					&lt;/ul>
+						&lt;li>A sliding partition/ door for the bedroom and folding bathroom door&lt;/li>
+						&lt;li>Sanitary fittings, i.e. wash basin with tap mixer, shower set with bath/ shower mixer, and water closet suite&lt;/li>
+						&lt;li>Grab bars (for 2-room Flexi flats on short-leases)&lt;/li>
+						&lt;/ul>
+						
+                        					
+                    </non-optional>
+                    <optional>
+                        <floor>
+                            <header>OCS Package for short-lease 2-room Flexi flats </header>
+                            <price>7420</price>
+                            <text>
+                                							
+                                
+							&lt;ul>
+								&lt;li>Lighting &lt;/li>
+								&lt;li>Window grilles &lt;/li>
+								&lt;li>Built-in kitchen cabinets with induction hob and cooker hood, kitchen sink, tap, and dish drying rack. Buyers who are wheel-chair bound may choose to have a lower kitchen countertop.&lt;/li>
+								&lt;li>Built-in wardrobe&lt;/li>
+								&lt;li>Water heater&lt;/li>
+								&lt;li>Mirror and toilet roll holder in bathroom&lt;/li> 
+								&lt;li>Laminated UPVC folding door for the flexible space&lt;/li> 
+							&lt;/ul>
+							
+                                							
+                            </text>
+                        </floor>
+                    </optional>
+                </finishes-and-fittings-text>
+            </ukey>
+            <ukey>
+                <flat-type>3-Room (Income Ceiling $14,000)</flat-type>
+                <supply>87</supply>
+                <est-floor-area-lower>71</est-floor-area-lower>
+                <est-floor-area-upper>71</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <est-internal-floor-area-lower>68</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>68</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>244000</price-range-lower>
+                <price-range-upper>291000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        						
+                        
+   						&lt;h4>Finishes and Fittings&lt;/h4>
+						&lt;br>
+						&lt;h5>Non-Optional Finishes&lt;/h5>
+						&lt;br>
+						&lt;p>
+						To boost construction productivity, Tampines GreenQuartz will be built using the Prefabricated Prefinished Volumetric Construction (PPVC) method. The flats will come with full floor finishes, internal doors, and sanitary fittings.
+	  					&lt;/p>
+						&lt;p>The 3-room flats will come with the following finishes and fittings:&lt;/p>
+						&lt;ul>
+	    					&lt;li>Vinyl strip flooring in the:&lt;/li>
+	    					&lt;ul>
+							&lt;li>Living/ dining, dry kitchen&lt;/li>
+	        					&lt;li>Bedrooms&lt;/li>
+	    					&lt;/ul>
+	    					&lt;li>Floor tiles in the:&lt;/li>
+	    					&lt;ul>
+								&lt;li>Bathroom&lt;/li>
+								&lt;li>Household shelter&lt;/li>
+								&lt;li>Kitchen/ utility&lt;/li>
+							&lt;/ul>
+	    					&lt;li>Wall tiles in the: &lt;/li>
+	    					&lt;ul>
+	        					&lt;li>Bathrooms&lt;/li>
+								&lt;li>Kitchen/ utility&lt;/li>
+	    					&lt;/ul>
+						&lt;li>Internal doors for bedrooms and folding doors for bathrooms&lt;/li>
+						&lt;li>Sanitary fittings, i.e. wash basin with tap mixer, shower set with bath/ shower mixer, and water closet suite&lt;/li>
+						&lt;/ul>
+						
+                        					
+                    </non-optional>
+                </finishes-and-fittings-text>
+            </ukey>
+            <ukey>
+                <flat-type>4-Room</flat-type>
+                <supply>687</supply>
+                <est-floor-area-lower>95 - 98</est-floor-area-lower>
+                <est-floor-area-upper>95 - 98</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <est-internal-floor-area-lower>92 - 95</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>92 - 95</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>352000</price-range-lower>
+                <price-range-upper>445000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        						
+                        
+   						&lt;h4>Finishes and Fittings&lt;/h4>
+						&lt;br>
+						&lt;h5>Non-Optional Finishes&lt;/h5>
+						&lt;br>
+						&lt;p>
+						To boost construction productivity, Tampines GreenQuartz will be built using the Prefabricated Prefinished Volumetric Construction (PPVC) method. The flats will come with full floor finishes, internal doors, and sanitary fittings.
+	  					&lt;/p>
+	 					&lt;p>Some 4-room units will come with a balcony.&lt;/p>
+						&lt;p>The 4-room flats will come with the following finishes and fittings:&lt;/p>
+						&lt;ul>
+	    					&lt;li>Vinyl strip flooring in the:&lt;/li>
+	    					&lt;ul>
+							&lt;li>Living/ dining&lt;/li>
+	        					&lt;li>Bedrooms&lt;/li>
+	    					&lt;/ul>
+	    					&lt;li>Floor tiles in the:&lt;/li>
+	    					&lt;ul>
+								&lt;li>Bathroom&lt;/li>
+								&lt;li>Household shelter&lt;/li>
+								&lt;li>Kitchen and service yard&lt;/li>
+								&lt;li>Balcony (where applicable)&lt;/li>
+							&lt;/ul>
+	    					&lt;li>Wall tiles in the: &lt;/li>
+	    					&lt;ul>
+	        					&lt;li>Bathrooms&lt;/li>
+								&lt;li>Kitchen&lt;/li>
+	    					&lt;/ul>
+						&lt;li>Internal doors for bedrooms and folding doors for bathrooms&lt;/li>
+						&lt;li>Sanitary fittings, i.e. wash basin with tap mixer, shower set with bath/ shower mixer, and water closet suite&lt;/li>
+						&lt;/ul>
+						
+                        					
+                    </non-optional>
+                </finishes-and-fittings-text>
+            </ukey>
+            <ukey>
+                <flat-type>5-Room</flat-type>
+                <supply>637</supply>
+                <est-floor-area-lower>113 - 116</est-floor-area-lower>
+                <est-floor-area-upper>113 - 116</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <est-internal-floor-area-lower>110 - 113</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>110 - 113</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>485000</price-range-lower>
+                <price-range-upper>597000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        						
+                        
+   						&lt;h4>Finishes and Fittings&lt;/h4>
+						&lt;br>
+						&lt;h5>Non-Optional Finishes&lt;/h5>
+						&lt;br>
+						&lt;p>
+						To boost construction productivity, Tampines GreenQuartz will be built using the Prefabricated Prefinished Volumetric Construction (PPVC) method. The flats will come with full floor finishes, internal doors, and sanitary fittings.
+	  					&lt;/p>
+						&lt;p>Some 5-room units will come with a balcony.&lt;/p>
+						&lt;p>The 5-room flats will come with the following finishes and fittings:&lt;/p>
+						&lt;ul>
+	    					&lt;li>Vinyl strip flooring in the:&lt;/li>
+	    					&lt;ul>
+							&lt;li>Living/ dining&lt;/li>
+	        					&lt;li>Bedrooms&lt;/li>
+	    					&lt;/ul>
+	    					&lt;li>Floor tiles in the:&lt;/li>
+	    					&lt;ul>
+								&lt;li>Bathroom&lt;/li>
+								&lt;li>Household shelter&lt;/li>
+								&lt;li>Kitchen and service yard&lt;/li>
+								&lt;li>Balcony (where applicable)&lt;/li>
+							&lt;/ul>
+	    					&lt;li>Wall tiles in the: &lt;/li>
+	    					&lt;ul>
+	        					&lt;li>Bathrooms&lt;/li>
+								&lt;li>Kitchen&lt;/li>
+	    					&lt;/ul>
+						&lt;li>Internal doors for bedrooms and folding doors for bathrooms&lt;/li>
+						&lt;li>Sanitary fittings, i.e. wash basin with tap mixer, shower set with bath/ shower mixer, and water closet suite&lt;/li>
+						&lt;/ul>
+						
+                        					
+                    </non-optional>
+                </finishes-and-fittings-text>
+            </ukey>
+        </unit-details>
+        <overview>
+            <p>
+                			
+                
+			&lt;h6>Tampines&lt;/h6>
+			&lt;br>
+			Bounded by Bedok Reservoir Road and Tampines Street 95 and 96, Tampines GreenQuartz &lt;a class="audioBtn tampines-greenquartz">&lt;i class="fas fa-volume-up">&lt;/i>&lt;/a> comprises 13 residential blocks ranging from 10 to 17 storeys in height. You can choose from 1,613 units of 2-room Flexi, 3-, 4-, and 5-room flats. 
+			&lt;br>&lt;br>
+			The design of Tampines GreenQuartz is inspired by area's history as a former quarry, as well as the multifaceted quartz gem stone. A park will be located within the development, which will have an eco-pond with a central boardwalk that brings residents close to nature. 
+			&lt;br>&lt;br>
+			Apart from the park, roof gardens at some residential blocks and the Multi-Storey Car Parks will also offer relaxing green spaces for you to unwind and connect with your neighbours. For daily exercise and activities, you and your family can visit the children's playgrounds and adult and elderly fitness stations within the development. You can also enjoy the conveniences of a childcare centre and residents' network centre located within the development. Please refer to the site plan for the facilities provided in the development. Facilities in this development will be accessible by the public.
+			&lt;br>&lt;br>   			
+			
+                			
+            </p>
+        </overview>
+        <notes>
+            <p>
+                			
+                HDB precincts are planned to serve the evolving needs of the community. There are spaces catered for future inclusion of amenities/ facilities (such as childcare centres, elderly-related facilities, education centres, residents' network centres, and day activity centres), commercial facilities (such as shops and eating houses), mechanical and electrical rooms, and such other facilities depending on the prevailing needs. These spaces could be in the void decks, common property, car parks, or stand-alone community buildings.
+			&lt;br>&lt;br>
+			To facilitate your flat application, we have provided information on the surrounding land use, proposed facilities and their locations in the maps and plans of individual projects. As the information provided is based on the current planning intent of the relevant authorities, such information is indicative only and subject to review from time to time.
+			&lt;br>&lt;br>
+			&lt;ul>
+			&lt;li>Get answers to &lt;a href="https://www.hdb.gov.sg/cs/infoweb/residential/buying-a-flat/new/buying-process/application-procedure/faqs-for-sales-launch">Frequently Asked Questions on sales launches&lt;/a>&lt;/li>
+			&lt;br>
+   			&lt;li>Visit the virtual showflats at &lt;a href="https://www.hdb.gov.sg/mynicehomegallery?utm_source=Aug21website&amp;utm_medium=link&amp;utm_campaign=MNHG">My Nice Home Gallery&lt;/a> and get interior decor ideas&lt;/li>
+			&lt;/ul>
+			
+                			
+            </p>
+        </notes>
+    </standard-project-info>
+    <template-body>
+        <row>
+            <header>Eco-Friendly Features</header>
+        </row>
+        <row>
+            <p>
+                				
+                &lt;p>To encourage green and sustainable living, Tampines GreenQuartz will have several eco-friendly features such as:&lt;/p>
+				&lt;ul>
+					&lt;li>Separate chutes for recyclable waste&lt;/li>
+					&lt;li>Regenerative lifts to reduce energy consumption&lt;/li>
+					&lt;li>Bicycle stands to encourage cycling as an environmentally-friendly form of transport&lt;/li>
+					&lt;li>Parking spaces to facilitate future provision of electrical vehicle charging stations&lt;/li>
+					&lt;li>Use of sustainable products in the development&lt;/li>
+					&lt;li>Active, Beautiful, Clean Waters design features to clean rainwater and beautify the landscapes&lt;/li>
+				&lt;/ul>
+                			
+            </p>
+        </row>
+        <row>
+            <template1>
+                <photo-folder>2021-08/bto/tap_n9c10/template1</photo-folder>
+                <photos>
+                    <photo>2021-08/bto/tap_n9c10/template1/1.jpg</photo>
+                    <photo>2021-08/bto/tap_n9c10/template1/2.jpg</photo>
+                    <photo>2021-08/bto/tap_n9c10/template1/3.jpg</photo>
+                </photos>
+            </template1>
+        </row>
+        <row>
+            <header>Smart Solutions</header>
+        </row>
+        <row>
+            <p>
+                &lt;p>Tampines GreenQuartz will come with the following smart solutions to reduce energy usage, and contribute to a more sustainable and safer living environment:&lt;/p>
+				&lt;ul>
+					&lt;li>Smart Lighting in common areas to reduce energy usage&lt;/li>
+					&lt;li>Smart Pneumatic Waste Conveyance System to optimise the deployment of resources for cleaner and fuss-free waste disposal&lt;/li>
+				&lt;/ul>
+            </p>
+        </row>
+        <row>
+            <header>About Tampines Town</header>
+        </row>
+        <row>
+            <p>
+                 
+				
+                
+				Tampines Town offers a myriad of amenities to meet your daily needs. Many shopping and dining choices are available at the shopping malls such as Tampines 1 and Century Square at the Tampines Regional Centre. You can also discover more heartland shops around Tampines Town by visiting  &lt;a href="https://www.hdb.gov.sg/residential/where2shop/explore/tampines">Where2Shop@HDB&lt;/a>.
+				&lt;br>&lt;br>
+				Tampines Town offers a variety of recreational and sports facilities. Visit Tampines Hub, an integrated community and lifestyle hub, to access amenities such as swimming pools, a stadium, as well as a regional library and Community Club. For those looking for a tranquil walk or jog amidst greenery, you can head over to Bedok Reservoir Park.
+				&lt;br>&lt;br>
+				Parents with school-going children can consider nearby schools such as Junyuan Primary and Secondary Schools as well as Temasek Polytechnic.
+				&lt;br>&lt;br>
+				You will be served by public transportation at the Tampines West MRT station. For drivers, the Pan-Island Expressway (PIE) will connect you to your destinations.
+				
+                			
+            </p>
+        </row>
+        <row>
+            <template2>
+                <photo-folder>2021-08/bto/tap_n9c10/template2</photo-folder>
+                <photos>
+                    <photo>2021-08/bto/tap_n9c10/template2/1.jpg</photo>
+                    <photo>2021-08/bto/tap_n9c10/template2/2.jpg</photo>
+                    <photo>2021-08/bto/tap_n9c10/template2/3.jpg</photo>
+                    <photo>2021-08/bto/tap_n9c10/template2/4.jpg</photo>
+                    <photo>2021-08/bto/tap_n9c10/template2/5.jpg</photo>
+                    <photo>2021-08/bto/tap_n9c10/template2/6.jpg</photo>
+                </photos>
+            </template2>
+        </row>
+    </template-body>
+    <resources>
+        <town-map>2021-08/bto/tap_n9c10/townmap/townmap_tap_n9c10.jpg</town-map>
+        <carousel>
+            <link>2021-08/bto/tap_n9c10/carousel/01_perspective.jpg</link>
+            <link>2021-08/bto/tap_n9c10/carousel/02_perspective.jpg</link>
+            <link>2021-08/bto/tap_n9c10/carousel/03_siteplan_tap_n9c10.jpg</link>
+            <link>2021-08/bto/tap_n9c10/carousel/04_perspective.jpg</link>
+            <link>2021-08/bto/tap_n9c10/carousel/05_perspective.jpg</link>
+            <link>2021-08/bto/tap_n9c10/carousel/06_perspective.jpg</link>
+        </carousel>
+        <sound>2021-08/bto/tap_n9c10/sound/tap_n9c10.mp3</sound>
+        <genspecs>
+            <genspecs-2rm>2021-08/bto/tap_n9c10/genspecs/genspecs_tap_n9c10_2rm.jpg</genspecs-2rm>
+            <genspecs-2rm>2021-08/bto/tap_n9c10/genspecs/genspecs_tap_n9c10_2rm_3rm_4rm_5rm.jpg</genspecs-2rm>
+            <genspecs-3rm>2021-08/bto/tap_n9c10/genspecs/genspecs_tap_n9c10_2rm_3rm_4rm_5rm.jpg</genspecs-3rm>
+            <genspecs-4rm>2021-08/bto/tap_n9c10/genspecs/genspecs_tap_n9c10_2rm_3rm_4rm_5rm.jpg</genspecs-4rm>
+            <genspecs-5rm>2021-08/bto/tap_n9c10/genspecs/genspecs_tap_n9c10_2rm_3rm_4rm_5rm.jpg</genspecs-5rm>
+        </genspecs>
+        <layoutideas>
+            <layoutideas-2rmtype1>2021-08/bto/tap_n9c10/layoutideas/layoutideas_tap_n9c10_2rmType1.jpg</layoutideas-2rmtype1>
+            <layoutideas-2rmtype2>2021-08/bto/tap_n9c10/layoutideas/layoutideas_tap_n9c10_2rmType2.jpg</layoutideas-2rmtype2>
+            <layoutideas-3rm>2021-08/bto/tap_n9c10/layoutideas/layoutideas_tap_n9c10_3rm.jpg</layoutideas-3rm>
+            <layoutideas-4rm>2021-08/bto/tap_n9c10/layoutideas/layoutideas_tap_n9c10_4rm(1).jpg</layoutideas-4rm>
+            <layoutideas-4rm>2021-08/bto/tap_n9c10/layoutideas/layoutideas_tap_n9c10_4rm(2).jpg</layoutideas-4rm>
+            <layoutideas-5rm>2021-08/bto/tap_n9c10/layoutideas/layoutideas_tap_n9c10_5rm(1).jpg</layoutideas-5rm>
+            <layoutideas-5rm>2021-08/bto/tap_n9c10/layoutideas/layoutideas_tap_n9c10_5rm(2).jpg</layoutideas-5rm>
+        </layoutideas>
+        <resale>
+            <resale-2rm>2021-08/bto/tap_n9c10/resale/resale_tap_n9c10_2rm.jpg</resale-2rm>
+            <resale-3rm>2021-08/bto/tap_n9c10/resale/resale_tap_n9c10_3rm.jpg</resale-3rm>
+            <resale-4rm>2021-08/bto/tap_n9c10/resale/resale_tap_n9c10_4rm.jpg</resale-4rm>
+            <resale-5rm>2021-08/bto/tap_n9c10/resale/resale_tap_n9c10_5rm.jpg</resale-5rm>
+        </resale>
+        <oydh>
+            <oydh-3rm>2021-08/bto/tap_n9c10/oydh/oydh_tap_n9c10_3rm.jpg</oydh-3rm>
+            <oydh-4rm>2021-08/bto/tap_n9c10/oydh/oydh_tap_n9c10_4rm.jpg</oydh-4rm>
+        </oydh>
+        <ocsleaflet>
+            <ocsleaflet-2rm>2021-08/bto/tap_n9c10/ocsleaflet/ocsleaflet_tap_n9c10_2rm(1).png</ocsleaflet-2rm>
+            <ocsleaflet-2rm>2021-08/bto/tap_n9c10/ocsleaflet/ocsleaflet_tap_n9c10_2rm(2).png</ocsleaflet-2rm>
+        </ocsleaflet>
+        <ocs/>
+    </resources>
+</template>

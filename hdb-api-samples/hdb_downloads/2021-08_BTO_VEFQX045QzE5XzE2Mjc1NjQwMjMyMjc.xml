@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <project-name>Tampines GreenJade</project-name>
+    <standard-project-info>
+        <key>
+            <town>Tampines</town>
+            <tooltip/>
+            <uri/>
+        </key>
+        <key>
+            <point>702|1626</point>
+        </key>
+        <key>
+            <latitude>1.3418080</latitude>
+            <longitude>103.9357281</longitude>
+        </key>
+        <key>
+            <completion-date>3Q2025</completion-date>
+            <tooltip>
+                				
+                
+					This is an estimated date that the flat will be completed and ready for key collection, and the actual completion date will depend on the progress of construction works on site. As the Estimated Completion Date (ECD) is indicative only, HDB shall not be responsible for any damage or loss arising from a change in the ECD.&lt;br/>&lt;br/>
+					After booking the flat, buyers may check for updates via My HDBPage on HDB InfoWEB, as the construction of the project progresses.&lt;br/>&lt;br/>
+					Note: The contractual date in the Agreement for Lease by which HDB is required to deliver vacant possession of the booked flat to buyers is known as the Delivery Possession Date (DPD), which is 18 months after the ECD. Currently, the estimated DPD is 31 March 2027.
+                			
+            </tooltip>
+            <uri/>
+        </key>
+        <key>
+            <remaining-lease>99</remaining-lease>
+            <tooltip>The 4- and 5-room flats are sold on a 99-year lease.</tooltip>
+            <uri/>
+        </key>
+        <key>
+            <selection-month>October 2021 to June 2022</selection-month>
+        </key>
+        <key>
+            <est-waiting-time>43 months</est-waiting-time>
+        </key>
+        <key>
+            <lease-period-2rm/>
+        </key>
+        <key>
+            <price-tooltip>
+                				
+                
+					The indicative price range of the flats exclude grants and are based on 99-year leases.&lt;br/>&lt;br/>
+					Actual prices may vary based on the actual attributes of the flats at the time of selection. Prices include the costs of floor finishes, internal doors, and sanitary fittings.
+                			
+            </price-tooltip>
+        </key>
+        <unit-details>
+            <ukey>
+                <flat-type>4-Room</flat-type>
+                <supply>302</supply>
+                <est-floor-area-lower>95</est-floor-area-lower>
+                <est-floor-area-upper>95</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <est-internal-floor-area-lower>92</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>92</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>342000</price-range-lower>
+                <price-range-upper>419000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        						
+                        
+   						&lt;h4>Finishes and Fittings&lt;/h4>
+						&lt;br>
+						&lt;h5>Non-Optional Finishes&lt;/h5>
+						&lt;br>
+						&lt;p>
+						To boost construction productivity, Tampines GreenJade will be built using the Prefabricated Prefinished Volumetric Construction (PPVC) method. The flats will come with full floor finishes, internal doors, and sanitary fittings.
+	  					&lt;/p>
+						&lt;p>The 4-room flats will come with the following finishes and fittings:&lt;/p>
+						&lt;ul>
+	    					&lt;li>Vinyl strip flooring in the&lt;/li>
+	    					&lt;ul>
+							&lt;li>Living/ dining&lt;/li>
+	        					&lt;li>Bedrooms&lt;/li>
+	    					&lt;/ul>
+	    					&lt;li>Floor tiles in the:&lt;/li>
+	    					&lt;ul>
+	        					&lt;li>Bathrooms&lt;/li>
+	        					&lt;li>Household shelter&lt;/li>
+							&lt;li>Kitchen and service yard&lt;/li>
+	    					&lt;/ul>
+							&lt;li>Wall tiles in the: &lt;/li>
+	    					&lt;ul>
+	        					&lt;li>Bathrooms&lt;/li>
+							&lt;li>Kitchen&lt;/li>
+	    					&lt;/ul>
+	   					&lt;li>Internal doors for bedrooms and folding doors for bathrooms&lt;/li>
+						&lt;li>Sanitary fittings, i.e. wash basin with tap mixer, shower set with bath/ shower mixer, and water closet suite&lt;/li>
+						&lt;/ul>
+						
+                        					
+                    </non-optional>
+                </finishes-and-fittings-text>
+            </ukey>
+            <ukey>
+                <flat-type>5-Room</flat-type>
+                <supply>244</supply>
+                <est-floor-area-lower>116</est-floor-area-lower>
+                <est-floor-area-upper>116</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <est-internal-floor-area-lower>110</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>110</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>475000</price-range-lower>
+                <price-range-upper>564000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        						
+                        
+   						&lt;h4>Finishes and Fittings&lt;/h4>
+						&lt;br>
+						&lt;h5>Non-Optional Finishes&lt;/h5>
+						&lt;br>
+						&lt;p>
+						To boost construction productivity, Tampines GreenJade will be built using the Prefabricated Prefinished Volumetric Construction (PPVC) method. The flats will come with full floor finishes, internal doors, and sanitary fittings.
+	  					&lt;/p>
+						&lt;p>The 5-room flats will come with the following finishes and fittings:&lt;/p>
+						&lt;ul>
+	    					&lt;li>Vinyl strip flooring in the&lt;/li>
+	    					&lt;ul>
+							&lt;li>Living/ dining&lt;/li>
+	        					&lt;li>Bedrooms&lt;/li>
+	    					&lt;/ul>
+	    					&lt;li>Floor tiles in the:&lt;/li>
+	    					&lt;ul>
+	        					&lt;li>Bathrooms&lt;/li>
+	        					&lt;li>Household shelter&lt;/li>
+							&lt;li>Kitchen and service yard&lt;/li>
+							&lt;li>Balcony&lt;/li>
+	    					&lt;/ul>
+							&lt;li>Wall tiles in the: &lt;/li>
+	    					&lt;ul>
+	        					&lt;li>Bathrooms&lt;/li>
+							&lt;li>Kitchen&lt;/li>
+	    					&lt;/ul>
+	   					&lt;li>Internal doors for bedrooms and folding doors for bathrooms&lt;/li>
+						&lt;li>Sanitary fittings, i.e. wash basin with tap mixer, shower set with bath/ shower mixer, and water closet suite&lt;/li>
+						&lt;/ul>
+						
+                        					
+                    </non-optional>
+                </finishes-and-fittings-text>
+            </ukey>
+        </unit-details>
+        <overview>
+            <p>
+                			
+                
+			&lt;h6>Tampines&lt;/h6>
+			&lt;br>
+			Tampines GreenJade  &lt;a class="audioBtn tampines-greenjade">&lt;i class="fas fa-volume-up">&lt;/i>&lt;/a> will be bounded by Tampines Street 96 and Bedok Reservoir Road. The development sits in the vicinity of several park connectors and Bedok Reservoir, offering you a green haven to return home to. The development's name references the surrounding greenery and the area’s history as a former quarry. Comprising 6 residential blocks that range from 15 to 17 storeys in height, you can choose from 546 units of 4- and 5-room flats.
+			&lt;br>&lt;br>
+			The Multi-Storey Car Park located within the development will come with a roof garden which features recreational and communal spaces such as a children's playground, community garden, and resting shelters. For those who enjoy exercising, adult and elderly fitness stations in the development will help you maintain a healthy lifestyle. 
+			&lt;br>&lt;br>   
+   			A childcare centre is also conveniently located within the development. Please refer to the site plan for the facilities provided in this development. Facilities in this development will be accessible by the public.
+			
+                			
+            </p>
+        </overview>
+        <notes>
+            <p>
+                			
+                HDB precincts are planned to serve the evolving needs of the community. There are spaces catered for future inclusion of amenities/ facilities (such as childcare centres, elderly-related facilities, education centres, residents' network centres, and day activity centres), commercial facilities (such as shops and eating houses), mechanical and electrical rooms, and such other facilities depending on the prevailing needs. These spaces could be in the void decks, common property, car parks, or stand-alone community buildings.
+			&lt;br>&lt;br>
+			To facilitate your flat application, we have provided information on the surrounding land use, proposed facilities and their locations in the maps and plans of individual projects. As the information provided is based on the current planning intent of the relevant authorities, such information is indicative only and subject to review from time to time.
+			&lt;br>&lt;br>
+			&lt;ul>
+			&lt;li>Get answers to &lt;a href="https://www.hdb.gov.sg/cs/infoweb/residential/buying-a-flat/new/buying-process/application-procedure/faqs-for-sales-launch">Frequently Asked Questions on sales launches&lt;/a>&lt;/li>
+			&lt;br>
+   			&lt;li>Visit the virtual showflats at &lt;a href="https://www.hdb.gov.sg/mynicehomegallery?utm_source=Aug21website&amp;utm_medium=link&amp;utm_campaign=MNHG">My Nice Home Gallery&lt;/a> and get interior decor ideas&lt;/li>
+			&lt;/ul>
+			
+                			
+            </p>
+        </notes>
+    </standard-project-info>
+    <template-body>
+        <row>
+            <header>Eco-Friendly Features</header>
+        </row>
+        <row>
+            <p>
+                				
+                &lt;p>To encourage green and sustainable living, Tampines GreenJade will have several eco-friendly features:&lt;/p>
+				&lt;ul>
+					&lt;li>Separate chutes for recyclable waste&lt;/li>
+					&lt;li>Regenerative lifts to reduce energy consumption&lt;/li>
+					&lt;li>Bicycle stands to encourage cycling as an environmentally-friendly form of transport&lt;/li>
+					&lt;li>Parking spaces to facilitate future provision of electrical vehicle charging stations&lt;/li>
+					&lt;li>Use of sustainable products in the development&lt;/li>
+					&lt;li>Active, Beautiful, Clean Waters design features to clean rainwater and beautify the landscapes&lt;/li>
+				&lt;/ul>
+                			
+            </p>
+        </row>
+        <row>
+            <template1>
+                <photo-folder>2021-08/bto/tap_n9c19/template1</photo-folder>
+                <photos>
+                    <photo>2021-08/bto/tap_n9c19/template1/1.jpg</photo>
+                    <photo>2021-08/bto/tap_n9c19/template1/2.jpg</photo>
+                    <photo>2021-08/bto/tap_n9c19/template1/3.jpg</photo>
+                </photos>
+            </template1>
+        </row>
+        <row>
+            <header>Smart Solutions</header>
+        </row>
+        <row>
+            <p>
+                &lt;p>Tampines GreenJade will come with the following smart solutions to reduce energy usage, and contribute to a more sustainable and safer living environment:&lt;/p>
+				&lt;ul>
+					&lt;li>Smart Lighting in common areas to reduce energy usage&lt;/li>
+					&lt;li>Smart Pneumatic Waste Conveyance System to optimise the deployment of resources for cleaner and fuss-free waste disposal&lt;/li>
+				&lt;/ul>
+            </p>
+        </row>
+        <row>
+            <header>About Tampines Town</header>
+        </row>
+        <row>
+            <p>
+                 
+				
+                
+				Tampines Town offers a myriad of amenities to meet your daily needs. Many shopping and dining choices are available at the shopping malls such as Tampines 1 and Century Square at the Tampines Regional Centre. You can also discover more heartland shops around Tampines Town by visiting &lt;a href="https://www.hdb.gov.sg/residential/where2shop/explore/tampines">Where2Shop@HDB&lt;/a>.
+				&lt;br>&lt;br>
+				Tampines Town offers a variety of recreational and sports facilities. Visit Tampines Hub, an integrated community and lifestyle hub, to access amenities such as swimming pools, a stadium, as well as a regional library and Community Club. For those looking for a tranquil walk or jog amidst greenery, you can head over to Bedok Reservoir Park.
+				&lt;br>&lt;br>
+				Parents with school-going children can consider nearby schools such as Junyuan Primary and Secondary Schools as well as Temasek Polytechnic.
+				&lt;br>&lt;br>
+				You will be served by public transportation at the Tampines West MRT station. For drivers, the Pan-Island Expressway (PIE) will connect you to your destinations.
+				
+                			
+            </p>
+        </row>
+        <row>
+            <template2>
+                <photo-folder>2021-08/bto/tap_n9c19/template2</photo-folder>
+                <photos>
+                    <photo>2021-08/bto/tap_n9c19/template2/1.jpg</photo>
+                    <photo>2021-08/bto/tap_n9c19/template2/2.jpg</photo>
+                    <photo>2021-08/bto/tap_n9c19/template2/3.jpg</photo>
+                    <photo>2021-08/bto/tap_n9c19/template2/4.jpg</photo>
+                    <photo>2021-08/bto/tap_n9c19/template2/5.jpg</photo>
+                    <photo>2021-08/bto/tap_n9c19/template2/6.jpg</photo>
+                </photos>
+            </template2>
+        </row>
+    </template-body>
+    <resources>
+        <town-map>2021-08/bto/tap_n9c19/townmap/townmap_tap_n9c19.jpg</town-map>
+        <carousel>
+            <link>2021-08/bto/tap_n9c19/carousel/01_perspective.jpg</link>
+            <link>2021-08/bto/tap_n9c19/carousel/02_perspective.jpg</link>
+            <link>2021-08/bto/tap_n9c19/carousel/03_siteplan_tap_n9c19.jpg</link>
+        </carousel>
+        <sound>2021-08/bto/tap_n9c19/sound/tap_n9c19.mp3</sound>
+        <genspecs>
+            <genspecs-4rm>2021-08/bto/tap_n9c19/genspecs/genspecs_tap_n9c19_4rm_5rm.jpg</genspecs-4rm>
+            <genspecs-5rm>2021-08/bto/tap_n9c19/genspecs/genspecs_tap_n9c19_4rm_5rm.jpg</genspecs-5rm>
+        </genspecs>
+        <layoutideas>
+            <layoutideas-4rm>2021-08/bto/tap_n9c19/layoutideas/layoutideas_tap_n9c19_4rm(1).jpg</layoutideas-4rm>
+            <layoutideas-5rm>2021-08/bto/tap_n9c19/layoutideas/layoutideas_tap_n9c19_5rm(1).jpg</layoutideas-5rm>
+        </layoutideas>
+        <resale>
+            <resale-4rm>2021-08/bto/tap_n9c19/resale/resale_tap_n9c19_4rm.jpg</resale-4rm>
+            <resale-5rm>2021-08/bto/tap_n9c19/resale/resale_tap_n9c19_5rm.jpg</resale-5rm>
+        </resale>
+        <oydh>
+            <oydh-4rm>2021-08/bto/tap_n9c19/oydh/oydh_tap_n9c19_4rm.jpg</oydh-4rm>
+        </oydh>
+        <ocs/>
+    </resources>
+</template>

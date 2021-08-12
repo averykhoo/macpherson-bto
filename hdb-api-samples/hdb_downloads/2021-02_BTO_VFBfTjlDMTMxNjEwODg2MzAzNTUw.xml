@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<template>
+    <project-name>Bartley GreenRise</project-name>
+    <standard-project-info>
+        <key>
+            <town>Toa Payoh</town>
+            <tooltip/>
+            <uri/>
+        </key>
+        <key>
+            <point>1440|432</point>
+        </key>
+        <key>
+            <latitude>1.3431648</latitude>
+            <longitude>103.8774920</longitude>
+        </key>
+        <key>
+            <completion-date>2Q2025</completion-date>
+            <tooltip/>
+            <uri/>
+        </key>
+        <key>
+            <remaining-lease>99</remaining-lease>
+            <tooltip>The 3- and 4-room flats are sold on a 99-year lease.</tooltip>
+            <uri/>
+        </key>
+        <key>
+            <possession-date>30 November 2026 to 31 December 2026</possession-date>
+            <tooltip>The date that the HDB is required under the Agreement for Lease to deliver possession of the flat. Applicants will be informed of it during the signing of the Agreement for Lease.</tooltip>
+        </key>
+        <key>
+            <selection-month>March to October 2021</selection-month>
+        </key>
+        <key>
+            <est-waiting-time>47 or 48 months</est-waiting-time>
+            <tooltip>Computed from median month of the selection exercise (i.e. Jun 2021) to the Estimated Completion Date. The construction time depends on many factors, such as the complexity of design, soil conditions, and site conditions.</tooltip>
+        </key>
+        <key>
+            <lease-period-2rm/>
+        </key>
+        <key>
+            <price-tooltip>
+                				
+                <![CDATA[
+					The indicative price range of the flats exclude grants and are based on 99-year leases.<br/><br/>
+					Actual prices may vary based on the actual attributes of the flats at the time of selection. Find out details of the Optional Component Scheme offered for this project.]]>
+                			
+            </price-tooltip>
+        </key>
+        <unit-details>
+            <ukey>
+                <flat-type>3-Room</flat-type>
+                <supply>96</supply>
+                <est-floor-area-lower>68</est-floor-area-lower>
+                <est-floor-area-upper>68</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <est-internal-floor-area-lower>65</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>65</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>312000</price-range-lower>
+                <price-range-upper>362000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        						
+                        <![CDATA[
+   						<h4>Finishes and Fittings</h4>
+						<br>
+	  					<p>Please note that all samples of finishes shown in the images below are strictly for reference only and subject to change without notice. The samples shown are conceptual and indicative only and the colour schemes, design, dimensions, type, tonal differences, and specifications may differ from the actual fittings installed in the flat.</p>
+						<p>Buyers are advised to view actual samples of the finishes for the living/ dining/ bedroom/ door laminate on display near the Sales Office.<p>
+						<br>
+						<h5>Non-Optional Finishes</h5>
+						<br>
+						<p>More than just a well-designed and functional interior, the 3-room flats will come with the following finishes and fittings: </p>
+						<ul>
+	    					<li>Floor tiles in the:</li>
+	    					<ul>
+	        					<li>household shelter</li>
+								<li>bathrooms</li>
+	        					<li>kitchen/ utility </li>
+	        					
+	    					</ul>
+	    					<li>Wall tiles in the:</li>
+	    					<ul>
+	        					<li>bathrooms</li>
+	        					<li>kitchen/ utility </li>
+	    					</ul>
+						</ul>
+						]]>
+                        					
+                    </non-optional>
+                    <optional>
+                        <floor>
+                            <header>Flooring for Living/ Dining and Bedrooms </header>
+                            <price>3230</price>
+                            <text>
+                                							
+                                <![CDATA[
+							<ul>
+	    					<li>Vinyl strip flooring in the bedrooms</li>
+	    					<li>Polished porcelain floor tiles in the living/ dining/ dry kitchen area</li>
+							</ul>
+							]]>
+                                							
+                            </text>
+                        </floor>
+                        <door>
+                            <header>Internal Doors and Sanitary Fittings</header>
+                            <price>2640</price>
+                            <text>
+                                							
+                                <![CDATA[
+							<ul>
+	    					<li>2 laminated UPVC bedroom doors</li>
+							<li>2 laminated UPVC folding bathroom doors</li>
+							<li>Wash basin with tap mixer</li>
+							<li>Shower set with bath/ shower mixer</li>
+							</ul>
+							]]>
+                                							
+                            </text>
+                        </door>
+                    </optional>
+                </finishes-and-fittings-text>
+            </ukey>
+            <ukey>
+                <flat-type>4-Room</flat-type>
+                <supply>291</supply>
+                <est-floor-area-lower>93</est-floor-area-lower>
+                <est-floor-area-upper>93</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <est-internal-floor-area-lower>90</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>90</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>496000</price-range-lower>
+                <price-range-upper>580000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        						
+                        <![CDATA[
+   						<h4>Finishes and Fittings</h4>
+						<br>
+	  					<p>Please note that all samples of finishes shown in the images below are strictly for reference only and subject to change without notice. The samples shown are conceptual and indicative only and the colour schemes, design, dimensions, type, tonal differences, and specifications may differ from the actual fittings installed in the flat.</p>
+						<p>Buyers are advised to view actual samples of the finishes for the living/ dining/ bedroom/ door laminate on display near the Sales Office.<p>
+						<br>
+						<h5>Non-Optional Finishes</h5>
+						<br>
+						<p>More than just a well-designed and functional interior, the 4-room flats will come with the following finishes and fittings: </p>
+						<ul>
+	    					<li>Floor tiles in the:</li>
+	    					<ul>
+								<li>household shelter</li>
+								<li>bathrooms</li>	        					
+	        					<li>kitchen and service yard </li>
+	    					</ul>
+	    					<li>Wall tiles in the:</li>
+	    					<ul>
+	        					<li>bathrooms</li>
+	        					<li>kitchen </li>
+	    					</ul>
+						</ul>
+						]]>
+                        					
+                    </non-optional>
+                    <optional>
+                        <floor>
+                            <header>Flooring for Living/ Dining and Bedrooms </header>
+                            <price>4870</price>
+                            <text>
+                                							
+                                <![CDATA[
+							<ul>
+	    					<li>Vinyl strip flooring in the bedrooms</li>
+	    					<li>Polished porcelain floor tiles in the living/ dining area</li>
+							</ul>
+							]]>
+                                							
+                            </text>
+                        </floor>
+                        <door>
+                            <header>Internal Doors and Sanitary Fittings</header>
+                            <price>3020</price>
+                            <text>
+                                							
+                                <![CDATA[
+							<ul>
+	    					<li>3 laminated UPVC bedroom doors</li>
+							<li>2 laminated UPVC folding bathroom doors</li>
+							<li>Wash basin with tap mixer</li>
+							<li>Shower set with bath/ shower mixer</li>
+							</ul>
+							]]>
+                                							
+                            </text>
+                        </door>
+                    </optional>
+                </finishes-and-fittings-text>
+            </ukey>
+        </unit-details>
+        <overview>
+            <p>
+                			
+                <![CDATA[
+			<h6>Toa Payoh</h6>
+			<br>
+			Bartley GreenRise <a class="audioBtn bartley-greenrise"><i class="fas fa-volume-up"></i></a> will be bounded by Bartley Road, Bidadari Park Drive, and Bartley Walk. The name 'Bartley GreenRise' references the different levels of greenery within the precinct, from ground level to the roof gardens above the car park and at residential blocks.
+			<br><br>	
+			Bartley GreenRise comprises 3 residential blocks with staggered heights of 11 to 17 storeys. You can choose a home from 387 units of 3- and 4-room flats.
+			<br><br>
+			You can enjoy green spaces at the adjacent Bidadari Greenway, and at the roof gardens at the residential blocks and above the 2-Storey car park located in the development. These spaces provide a tranquil environment for you to relax, or to enjoy facilities such as the fitness stations and children’s playground. A childcare centre will also be located within the development, along Bidadari Greenway. You can also stroll or jog down Bidadari Greenway towards Bidadari Park or Bartley MRT station. 
+			<br><br>
+			Commercial facilities located in the neighbouring precinct, Woodleigh Hillside, can be conveniently accessed via a linkbridge across Bidadari Park Drive.
+			<br><br>
+			Please refer to the site plan for the facilities to be provided in the development. Facilities in the development will be accessible by the public.
+			]]>
+                			
+            </p>
+        </overview>
+        <notes>
+            <p>
+                	
+			
+                <![CDATA[HDB precincts are planned to serve the evolving needs of the community. There are spaces catered for future inclusion of amenities/ facilities (such as childcare centres, elderly-related facilities, education centres, residents' committee centres, and day activity centres), commercial facilities (such as shops and eating houses), mechanical and electrical rooms, and such other facilities depending on the prevailing needs. These spaces could be in the void decks, common property, car parks, or stand-alone community buildings.
+			<br><br>
+			To facilitate your flat application, we have provided information on the surrounding land use, proposed facilities and their locations in the maps and plans of individual projects. As the information provided is based on the current planning intent of the relevant authorities, such information is indicative only and subject to review from time to time.
+			<br><br>
+			<ul>
+   			<li>Visit the virtual showflats at <a href="https://esales.hdb.gov.sg/bp25/MNHG/eamnhindex/index.html?utm_source=Feb21website&utm_medium=link&utm_campaign=MNHG">My Nice Home Gallery</a> and get interior decor ideas</li>
+			</ul>
+			]]>
+                			
+            </p>
+        </notes>
+    </standard-project-info>
+    <template-body>
+        <row>
+            <header>Eco-Friendly Features</header>
+        </row>
+        <row>
+            <p>
+                				
+                <![CDATA[<p>In a bid to go green for the earth, Bartley GreenRise will have several eco-friendly features to encourage green and sustainable lifestyles, such as: </p>
+				<ul>
+					<li>Separate chutes for recyclable waste</li>
+					<li>Regenerative lifts to reduce energy consumption</li>
+					<li>Bicycle stands to encourage cycling as an environmentally-friendly form of transport</li>
+					<li>Parking spaces to facilitate car-sharing schemes</li>
+					<li>Use of sustainable products in the development</li>
+					<li>Active, Beautiful, Clean Waters design features to clean rainwater and beautify the landscapes</li>
+				</ul>]]>
+                			
+            </p>
+        </row>
+        <row>
+            <template1>
+                <photo-folder>2021-02/bto/tp_n9c13/template1</photo-folder>
+                <photos>
+                    <photo>2021-02/bto/tp_n9c13/template1/1.jpg</photo>
+                    <photo>2021-02/bto/tp_n9c13/template1/2.jpg</photo>
+                    <photo>2021-02/bto/tp_n9c13/template1/3.jpg</photo>
+                </photos>
+            </template1>
+        </row>
+        <row>
+            <header>Smart Solutions</header>
+        </row>
+        <row>
+            <p>
+                <![CDATA[<p>Bartley GreenRise will feature Smart Solutions for a more liveable, efficient, sustainable and safe living environment. These solutions include:</p>
+				<ul>
+					<li>Smart Lighting in common areas to reduce energy usage</li>
+					<li>Smart Pneumatic Waste Conveyance System to optimise the deployment of resources for cleaner and fuss-free waste disposal</li>
+				</ul>]]>
+            </p>
+        </row>
+        <row>
+            <header>About Bidadari Estate (in Toa Payoh Town)</header>
+        </row>
+        <row>
+            <p>
+                				
+                <![CDATA[Located in the central region of Singapore, Bidadari is well served by the North-East Line (Woodleigh and Potong Pasir MRT stations) and the Circle Line (Bartley MRT station). Known for its rolling landscape and picturesque greenery, Bidadari is envisioned to be a tranquil, urban oasis where residents can rest, relax, and connect with family and friends.
+				<br><br>
+				Referencing the area's green origins, the future Bidadari Park will be centrally located in Bidadari Estate, to form a green lung. The new Alkaff Lake will be situated within the park, to recreate the sense of tranquility of the former Alkaff Lake Gardens. To celebrate the rich heritage of Bidadari, the former Upper Aljunied Road will be transformed into a 700-metre Heritage Walk lined with conserved rain trees. 
+				<br><br>
+				Bidadari Park will be complemented by Bidadari Greenway, a 1.6km-long “green spine” along Bidadari Park Drive which extends from Bartley Road to Upper Serangoon Road. Commercial and social communal facilities within adjacent public housing developments will line the Bidadari Greenway, creating opportunities for community interaction. A cycling and pedestrian network has also been planned for the estate, which will mostly run through the green corridors, the Bidadari Greenway, and the Bidadari Park, enabling residents to safely walk and cycle around the estate.
+				<br><br>
+				For shopping and dining needs, residents can look forward to the hawker centre integrated within Woodleigh Village, and the commercial facilities within the Woodleigh Mall/ Woodleigh Residences mixed development. You can also visit the neighbourhood centre located nearby at Potong Pasir Avenue 1. You can find out more about these heartland shops by visiting <a href="https://www.hdb.gov.sg/cs/infoweb/residential/where2shop/explore/toa-payoh">Where2Shop@HDB</a>.
+				<br><br>
+				For families with school-going children, nearby schools include Cedar Primary School with an MOE kindergarten, Maris Stella High School (Primary and Secondary), Bartley Secondary School, and Cedar Girls’ Secondary School.]]>
+                			
+            </p>
+        </row>
+        <row>
+            <template2>
+                <photo-folder>2021-02/bto/tp_n9c13/template2</photo-folder>
+                <photos>
+                    <photo>2021-02/bto/tp_n9c13/template2/1.jpg</photo>
+                    <photo>2021-02/bto/tp_n9c13/template2/2.jpg</photo>
+                    <photo>2021-02/bto/tp_n9c13/template2/3.jpg</photo>
+                    <photo>2021-02/bto/tp_n9c13/template2/4.jpg</photo>
+                    <photo>2021-02/bto/tp_n9c13/template2/5.jpg</photo>
+                </photos>
+            </template2>
+        </row>
+    </template-body>
+    <resources>
+        <town-map>2021-02/bto/tp_n9c13/townmap/townmap_tp_n9c13.jpg</town-map>
+        <carousel>
+            <link>2021-02/bto/tp_n9c13/carousel/01_perspective.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/02_perspective.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/03_siteplan_tp_n9c13.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/04_model.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/05_model.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/06_model.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/07_model.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/08_model.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/09_model.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/10_model.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/11_model.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/12_model.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/13_model.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/14_model.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/15_model.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/16_model.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/17_model.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/18_model.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/19_model.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/20_model.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/21_model.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/22_model.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/23_model.jpg</link>
+            <link>2021-02/bto/tp_n9c13/carousel/24_model.jpg</link>
+        </carousel>
+        <sound>2021-02/bto/tp_n9c13/sound/tp_n9c13.mp3</sound>
+        <genspecs>
+            <genspecs-3rm>2021-02/bto/tp_n9c13/genspecs/genspecs_tp_n9c13_3rm_4rm.jpg</genspecs-3rm>
+            <genspecs-4rm>2021-02/bto/tp_n9c13/genspecs/genspecs_tp_n9c13_3rm_4rm.jpg</genspecs-4rm>
+        </genspecs>
+        <layoutideas>
+            <layoutideas-3rm>2021-02/bto/tp_n9c13/layoutideas/layoutideas_tp_n9c13_3rm.jpg</layoutideas-3rm>
+            <layoutideas-4rm>2021-02/bto/tp_n9c13/layoutideas/layoutideas_tp_n9c13_4rm(1).jpg</layoutideas-4rm>
+            <layoutideas-4rm>2021-02/bto/tp_n9c13/layoutideas/layoutideas_tp_n9c13_4rm(2).jpg</layoutideas-4rm>
+        </layoutideas>
+        <resale>
+            <resale-3rm>2021-02/bto/tp_n9c13/resale/resale_tp_n9c13_3rm.jpg</resale-3rm>
+            <resale-4rm>2021-02/bto/tp_n9c13/resale/resale_tp_n9c13_4rm.jpg</resale-4rm>
+        </resale>
+        <oydh>
+            <oydh-3rm>2021-02/bto/tp_n9c13/oydh/oydh_tp_n9c13_3rm.jpg</oydh-3rm>
+            <oydh-4rm>2021-02/bto/tp_n9c13/oydh/oydh_tp_n9c13_4rm.jpg</oydh-4rm>
+        </oydh>
+        <unitdis>
+            <blk216a>2021-02/bto/tp_n9c13/unitdis/unitdis_tp_n9c13_216a.jpg</blk216a>
+            <blk216b>2021-02/bto/tp_n9c13/unitdis/unitdis_tp_n9c13_216b.jpg</blk216b>
+            <blk216c>2021-02/bto/tp_n9c13/unitdis/unitdis_tp_n9c13_216c.jpg</blk216c>
+        </unitdis>
+        <blockplan>
+            <blk216a>
+                <lv14>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216a_zz_14.jpg</lv14>
+            </blk216a>
+            <blk216a>
+                <lv15>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216a_zz_15.jpg</lv15>
+            </blk216a>
+            <blk216a>
+                <lv16>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216a_zz_16.jpg</lv16>
+            </blk216a>
+            <blk216a>
+                <lv3>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216a_zz_3.jpg</lv3>
+            </blk216a>
+            <blk216a>
+                <lv4>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216a_zz_4-13.jpg</lv4>
+                <lv5>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216a_zz_4-13.jpg</lv5>
+                <lv6>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216a_zz_4-13.jpg</lv6>
+                <lv7>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216a_zz_4-13.jpg</lv7>
+                <lv8>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216a_zz_4-13.jpg</lv8>
+                <lv9>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216a_zz_4-13.jpg</lv9>
+                <lv10>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216a_zz_4-13.jpg</lv10>
+                <lv11>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216a_zz_4-13.jpg</lv11>
+                <lv12>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216a_zz_4-13.jpg</lv12>
+                <lv13>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216a_zz_4-13.jpg</lv13>
+            </blk216a>
+            <blk216b>
+                <lv12>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216b_zz_12.jpg</lv12>
+            </blk216b>
+            <blk216b>
+                <lv13>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216b_zz_13.jpg</lv13>
+            </blk216b>
+            <blk216b>
+                <lv14>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216b_zz_14.jpg</lv14>
+            </blk216b>
+            <blk216b>
+                <lv2>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216b_zz_2.jpg</lv2>
+            </blk216b>
+            <blk216b>
+                <lv3>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216b_zz_3-11.jpg</lv3>
+                <lv4>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216b_zz_3-11.jpg</lv4>
+                <lv5>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216b_zz_3-11.jpg</lv5>
+                <lv6>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216b_zz_3-11.jpg</lv6>
+                <lv7>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216b_zz_3-11.jpg</lv7>
+                <lv8>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216b_zz_3-11.jpg</lv8>
+                <lv9>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216b_zz_3-11.jpg</lv9>
+                <lv10>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216b_zz_3-11.jpg</lv10>
+                <lv11>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216b_zz_3-11.jpg</lv11>
+            </blk216b>
+            <blk216c>
+                <lv15>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216c_zz_15.jpg</lv15>
+            </blk216c>
+            <blk216c>
+                <lv16>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216c_zz_16.jpg</lv16>
+            </blk216c>
+            <blk216c>
+                <lv17>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216c_zz_17.jpg</lv17>
+            </blk216c>
+            <blk216c>
+                <lv4>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216c_zz_4.jpg</lv4>
+            </blk216c>
+            <blk216c>
+                <lv5>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216c_zz_5-14.jpg</lv5>
+                <lv6>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216c_zz_5-14.jpg</lv6>
+                <lv7>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216c_zz_5-14.jpg</lv7>
+                <lv8>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216c_zz_5-14.jpg</lv8>
+                <lv9>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216c_zz_5-14.jpg</lv9>
+                <lv10>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216c_zz_5-14.jpg</lv10>
+                <lv11>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216c_zz_5-14.jpg</lv11>
+                <lv12>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216c_zz_5-14.jpg</lv12>
+                <lv13>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216c_zz_5-14.jpg</lv13>
+                <lv14>2021-02/bto/tp_n9c13/blockplan/blockplan_tp_n9c13_216c_zz_5-14.jpg</lv14>
+            </blk216c>
+        </blockplan>
+        <ocsleaflet>
+            <ocsleaflet-3rm>2021-02/bto/tp_n9c13/ocsleaflet/ocsleaflet_tp_n9c13_3rm_4rm(1).jpg</ocsleaflet-3rm>
+            <ocsleaflet-4rm>2021-02/bto/tp_n9c13/ocsleaflet/ocsleaflet_tp_n9c13_3rm_4rm(1).jpg</ocsleaflet-4rm>
+        </ocsleaflet>
+        <ocs>
+            <ocs-door>
+                <door-3rm>2021-02/bto/tp_n9c13/ocs/door/door_tp_n9c13_3rm_4rm(1).jpg</door-3rm>
+                <door-4rm>2021-02/bto/tp_n9c13/ocs/door/door_tp_n9c13_3rm_4rm(1).jpg</door-4rm>
+            </ocs-door>
+            <ocs-floor>
+                <floor-3rm>2021-02/bto/tp_n9c13/ocs/floor/floor_tp_n9c13_3rm_4rm(1).jpg</floor-3rm>
+                <floor-4rm>2021-02/bto/tp_n9c13/ocs/floor/floor_tp_n9c13_3rm_4rm(1).jpg</floor-4rm>
+                <floor-3rm>2021-02/bto/tp_n9c13/ocs/floor/floor_tp_n9c13_3rm_4rm(2).jpg</floor-3rm>
+                <floor-4rm>2021-02/bto/tp_n9c13/ocs/floor/floor_tp_n9c13_3rm_4rm(2).jpg</floor-4rm>
+            </ocs-floor>
+        </ocs>
+        <nonocs>
+            <nonocs-3rm>2021-02/bto/tp_n9c13/nonocs/nonocs_tp_n9c13_3rm_4rm(1).jpg</nonocs-3rm>
+            <nonocs-4rm>2021-02/bto/tp_n9c13/nonocs/nonocs_tp_n9c13_3rm_4rm(1).jpg</nonocs-4rm>
+            <nonocs-3rm>2021-02/bto/tp_n9c13/nonocs/nonocs_tp_n9c13_3rm_4rm(2).jpg</nonocs-3rm>
+            <nonocs-4rm>2021-02/bto/tp_n9c13/nonocs/nonocs_tp_n9c13_3rm_4rm(2).jpg</nonocs-4rm>
+            <nonocs-3rm>2021-02/bto/tp_n9c13/nonocs/nonocs_tp_n9c13_3rm_4rm(3).jpg</nonocs-3rm>
+            <nonocs-4rm>2021-02/bto/tp_n9c13/nonocs/nonocs_tp_n9c13_3rm_4rm(3).jpg</nonocs-4rm>
+            <nonocs-3rm>2021-02/bto/tp_n9c13/nonocs/nonocs_tp_n9c13_3rm_4rm(4).jpg</nonocs-3rm>
+            <nonocs-4rm>2021-02/bto/tp_n9c13/nonocs/nonocs_tp_n9c13_3rm_4rm(4).jpg</nonocs-4rm>
+            <nonocs-3rm>2021-02/bto/tp_n9c13/nonocs/nonocs_tp_n9c13_3rm_4rm(5).jpg</nonocs-3rm>
+            <nonocs-4rm>2021-02/bto/tp_n9c13/nonocs/nonocs_tp_n9c13_3rm_4rm(5).jpg</nonocs-4rm>
+        </nonocs>
+    </resources>
+</template>

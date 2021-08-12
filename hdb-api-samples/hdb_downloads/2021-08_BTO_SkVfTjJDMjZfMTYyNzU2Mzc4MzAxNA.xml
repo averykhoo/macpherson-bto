@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <project-name>Toh Guan Grove</project-name>
+    <standard-project-info>
+        <key>
+            <town>Jurong East</town>
+            <tooltip/>
+            <uri/>
+        </key>
+        <key>
+            <point>1720|772</point>
+        </key>
+        <key>
+            <latitude>1.3403868</latitude>
+            <longitude>103.7455434</longitude>
+        </key>
+        <key>
+            <completion-date>1Q2026</completion-date>
+            <tooltip>
+                				
+                
+					This is an estimated date that the flat will be completed and ready for key collection, and the actual completion date will depend on the progress of construction works on site. As the Estimated Completion Date (ECD) is indicative only, HDB shall not be responsible for any damage or loss arising from a change in the ECD.&lt;br/>&lt;br/>
+					After booking the flat, buyers may check for updates via My HDBPage on HDB InfoWEB, as the construction of the project progresses.&lt;br/>&lt;br/>
+					Note: The contractual date in the Agreement for Lease by which HDB is required to deliver vacant possession of the booked flat to buyers is known as the Delivery Possession Date (DPD), which is 18 months after the ECD. Currently, the estimated DPD is 30 September 2027.
+                			
+            </tooltip>
+            <uri/>
+        </key>
+        <key>
+            <remaining-lease>99</remaining-lease>
+            <tooltip>The 3- and 4-room flats are sold on a 99-year lease. First-timer and second-timer families, and first-timer singles will be offered 99-year 2-room Flexi flats. Eligible Singapore Citizens and their spouses (if applicable) aged 55 and above can choose a short lease of between 15 and 45 years, in five-year increments, for the 2-room Flexi flat. The chosen lease has to cover them up to the age of at least 95 years.</tooltip>
+            <uri/>
+        </key>
+        <key>
+            <selection-month>October 2021 to June 2022</selection-month>
+        </key>
+        <key>
+            <est-waiting-time>49 months</est-waiting-time>
+        </key>
+        <key>
+            <lease-period-2rm>B</lease-period-2rm>
+        </key>
+        <key>
+            <price-tooltip>
+                				
+                
+					The indicative price range of the flats exclude grants, and are based on 99-year leases.&lt;br/>&lt;br/>
+					Actual prices may vary based on the actual attributes of the flats at the time of selection. Find out details of the Optional Component Scheme offered for this project.&lt;br/>&lt;br/>
+					Singles who apply for a 2-room Flexi flat under the Single Singapore Citizen Scheme will pay $15,000 more than married couples.
+                			
+            </price-tooltip>
+        </key>
+        <unit-details>
+            <ukey>
+                <flat-type>2-Room Flexi (Type 1)</flat-type>
+                <supply>74</supply>
+                <est-floor-area-lower>38</est-floor-area-lower>
+                <est-floor-area-upper>38</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <est-internal-floor-area-lower>36</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>36</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>121000</price-range-lower>
+                <price-range-upper>146000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        						
+                        
+   						&lt;h4>Finishes and Fittings&lt;/h4>
+						&lt;br>
+						&lt;h5>Non-Optional Finishes&lt;/h5>
+						&lt;br>
+						&lt;p>
+						More than just a well-designed and functional interior, the 2-room Flexi (Type 1) flats will come with the following finishes and fittings: 
+	  					&lt;/p>
+						&lt;ul>
+	    					&lt;li>Floor tiles in the:&lt;/li>
+	    					&lt;ul>
+								&lt;li>Bathroom&lt;/li>
+								&lt;li>Household shelter&lt;/li>
+								&lt;li>Kitchen&lt;/li>
+							&lt;/ul>
+	    					&lt;li>Wall tiles in the: &lt;/li>
+	    					&lt;ul>
+	        					&lt;li>Bathroom&lt;/li>
+								&lt;li>Kitchen&lt;/li>
+	    					&lt;/ul>
+						&lt;li>A sliding partition/ door for the bedroom and folding bathroom door&lt;/li>
+						&lt;li>Grab bars (for 2-room Flexi flats on short-leases)&lt;/li>
+						&lt;/ul>
+						
+                        					
+                    </non-optional>
+                    <optional>
+                        <floor>
+                            <header>Package 1: Flooring for Living/ Dining and Bedroom</header>
+                            <price>2490</price>
+                            <text>
+                                							
+                                
+							&lt;ul>
+	    					&lt;li>Vinyl strip flooring&lt;/li> 
+							&lt;/ul>
+	   						&lt;p>Buyers who opt for Package 1, will be provided with a 3-panel sliding partition, separating the living room and bedroom.  Those who do not opt for Package 1, will be provided with a 2-panel sliding partition separating the living room and bedroom.&lt;/p>
+							
+                                							
+                            </text>
+                        </floor>
+                        <door>
+                            <header>Package 2: Sanitary fittings</header>
+                            <price>530</price>
+                            <text>
+                                							
+                                
+							&lt;ul>
+								&lt;li>Wash basin with tap mixer&lt;/li>
+								&lt;li>Shower set with bath/ shower mixer&lt;/li>
+							&lt;/ul>
+							
+                                							
+                            </text>
+                        </door>
+                        <elderly>
+                            <header>Package 3 for short-lease 2-room Flexi flats</header>
+                            <price>6120</price>
+                            <text>
+                                							
+                                
+							&lt;p>Buyers who opt for Package 3 must opt for Package 1.&lt;/p>
+							&lt;ul>
+								&lt;li>Lighting &lt;/li>
+								&lt;li>Window grilles &lt;/li>
+								&lt;li>Built-in kitchen cabinets with induction hob and cooker hood, kitchen sink, tap, and dish drying rack. Buyers who are wheel-chair bound may choose to have a lower kitchen countertop.&lt;/li>
+								&lt;li>Built-in wardrobe&lt;/li>
+								&lt;li>Water heater&lt;/li>
+								&lt;li>Mirror and toilet roll holder in bathroom&lt;/li>
+							&lt;/ul>
+							
+                                							
+                            </text>
+                        </elderly>
+                    </optional>
+                </finishes-and-fittings-text>
+            </ukey>
+            <ukey>
+                <flat-type>2-Room Flexi (Type 2)</flat-type>
+                <supply>170</supply>
+                <est-floor-area-lower>48</est-floor-area-lower>
+                <est-floor-area-upper>48</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <est-internal-floor-area-lower>46</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>46</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>154000</price-range-lower>
+                <price-range-upper>189000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        						
+                        
+   						&lt;h4>Finishes and Fittings&lt;/h4>
+						&lt;br>
+						&lt;h5>Non-Optional Finishes&lt;/h5>
+						&lt;br>
+						&lt;p>
+						More than just a well-designed and functional interior, the 2-room Flexi (Type 2) flats will come with the following finishes and fittings: 
+	  					&lt;/p>
+						&lt;ul>
+	    					&lt;li>Floor tiles in the:&lt;/li>
+	    					&lt;ul>
+								&lt;li>Bathroom&lt;/li>
+								&lt;li>Household shelter&lt;/li>
+								&lt;li>Kitchen&lt;/li>
+							&lt;/ul>
+	    					&lt;li>Wall tiles in the: &lt;/li>
+	    					&lt;ul>
+	        					&lt;li>Bathroom&lt;/li>
+								&lt;li>Kitchen&lt;/li>
+	    					&lt;/ul>
+						&lt;li>A sliding partition/ door for the bedroom and folding bathroom door&lt;/li>
+						&lt;li>Grab bars (for 2-room Flexi flats on short-leases)&lt;/li>
+						&lt;/ul>
+						
+                        					
+                    </non-optional>
+                    <optional>
+                        <floor>
+                            <header>Package 1: Flooring for Living/ Dining and Bedroom</header>
+                            <price>2960</price>
+                            <text>
+                                							
+                                
+							&lt;ul>
+	    					&lt;li>Vinyl strip flooring&lt;/li> 
+							&lt;/ul>
+	   						&lt;p>Buyers who opt for Package 1, will be provided with a 3-panel sliding partition, separating the living room and bedroom.  Those who do not opt for Package 1, will be provided with a 2-panel sliding partition separating the living room and bedroom.&lt;/p>
+							
+                                							
+                            </text>
+                        </floor>
+                        <door>
+                            <header>Package 2: Sanitary fittings</header>
+                            <price>530</price>
+                            <text>
+                                							
+                                
+							&lt;ul>
+								&lt;li>Wash basin with tap mixer&lt;/li>
+								&lt;li>Shower set with bath/ shower mixer&lt;/li>
+							&lt;/ul>
+							
+                                							
+                            </text>
+                        </door>
+                        <elderly>
+                            <header>Package 3 for short-lease 2-room Flexi flats</header>
+                            <price>7380</price>
+                            <text>
+                                							
+                                
+							&lt;p>Buyers who opt for Package 3 must opt for Package 1.&lt;/p>
+							&lt;ul>
+								&lt;li>Lighting &lt;/li>
+								&lt;li>Window grilles &lt;/li>
+								&lt;li>Built-in kitchen cabinets with induction hob and cooker hood, kitchen sink, tap, and dish drying rack. Buyers who are wheel-chair bound may choose to have a lower kitchen countertop.&lt;/li>
+								&lt;li>Built-in wardrobe&lt;/li>
+								&lt;li>Water heater&lt;/li>
+								&lt;li>Mirror and toilet roll holder in bathroom&lt;/li>
+								&lt;li>Laminated UPVC folding door for the flexible space &lt;/li>
+							&lt;/ul>
+							
+                                							
+                            </text>
+                        </elderly>
+                    </optional>
+                </finishes-and-fittings-text>
+            </ukey>
+            <ukey>
+                <flat-type>3-Room (Income Ceiling $7,000)</flat-type>
+                <supply>85</supply>
+                <est-floor-area-lower>69</est-floor-area-lower>
+                <est-floor-area-upper>69</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <est-internal-floor-area-lower>66</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>66</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>237000</price-range-lower>
+                <price-range-upper>281000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        						
+                        
+   						&lt;h4>Finishes and Fittings&lt;/h4>
+						&lt;br>
+						&lt;h5>Non-Optional Finishes&lt;/h5>
+						&lt;br>
+						&lt;p>
+						More than just a well-designed and functional interior, the 3-room flats will come with the following finishes and fittings:   
+	  					&lt;/p>						
+						&lt;ul>
+							&lt;li>Floor tiles in the:&lt;/li>
+	    					&lt;ul>
+								&lt;li>Bathrooms&lt;/li>
+								&lt;li>Household shelter&lt;/li>
+	        					&lt;li>Kitchen/ utility&lt;/li>
+							
+	    					&lt;/ul>
+							&lt;li>Wall tiles in the: &lt;/li>
+	    					&lt;ul>
+	        					&lt;li>Bathrooms&lt;/li>
+	   						&lt;li>Kitchen/ utility&lt;/li>
+	    					&lt;/ul>
+	    				&lt;/ul>
+						
+                        					
+                    </non-optional>
+                    <optional>
+                        <floor>
+                            <header>Flooring for Living/ Dining, Dry Kitchen, and Bedrooms </header>
+                            <price>3340</price>
+                            <text>
+                                							
+                                
+							&lt;ul>
+	    					&lt;li>Vinyl strip flooring in the bedrooms&lt;/li>
+							&lt;li>Polished porcelain floor tiles in the living/ dining, dry kitchen&lt;/li> 
+							&lt;/ul>
+							
+                                							
+                            </text>
+                        </floor>
+                        <door>
+                            <header>Internal Doors and Sanitary Fittings</header>
+                            <price>2700</price>
+                            <text>
+                                							
+                                
+							&lt;ul>
+							&lt;ul>
+	    					&lt;li>2 laminated UPVC bedroom doors&lt;/li>
+							&lt;li>2 laminated UPVC folding bathroom doors&lt;/li>
+	   						&lt;li>Wash basin with tap mixer&lt;/li>
+							&lt;li>Shower set with bath/ shower mixer&lt;/li>
+							&lt;/ul>
+							
+                                							
+                            </text>
+                        </door>
+                    </optional>
+                </finishes-and-fittings-text>
+            </ukey>
+            <ukey>
+                <flat-type>4-Room</flat-type>
+                <supply>240</supply>
+                <est-floor-area-lower>93</est-floor-area-lower>
+                <est-floor-area-upper>93</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <est-internal-floor-area-lower>90</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>90</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>347000</price-range-lower>
+                <price-range-upper>436000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        						
+                        
+   						&lt;h4>Finishes and Fittings&lt;/h4>
+						&lt;br>
+						&lt;h5>Non-Optional Finishes&lt;/h5>
+						&lt;br>
+						&lt;p>
+						More than just a well-designed and functional interior, the 4-room flats will come with the following finishes and fittings:   
+	  					&lt;/p>						
+						&lt;ul>
+							&lt;li>Floor tiles in the:&lt;/li>
+	    					&lt;ul>
+								&lt;li>Bathrooms&lt;/li>
+								&lt;li>Household shelter&lt;/li>
+	        					&lt;li>Kitchen and service yard&lt;/li>
+							
+	    					&lt;/ul>
+							&lt;li>Wall tiles in the: &lt;/li>
+	    					&lt;ul>
+	        					&lt;li>Bathrooms&lt;/li>
+    							&lt;li>Kitchen&lt;/li>
+	    					&lt;/ul>
+	    				&lt;/ul>
+						
+                        					
+                    </non-optional>
+                    <optional>
+                        <floor>
+                            <header>Flooring for Living/ Dining and Bedrooms </header>
+                            <price>4970</price>
+                            <text>
+                                							
+                                
+							&lt;ul>
+	    					&lt;li>Vinyl strip flooring in the bedrooms&lt;/li>
+							&lt;li>Polished porcelain floor tiles in the living/ dining&lt;/li> 
+							&lt;/ul>
+							
+                                							
+                            </text>
+                        </floor>
+                        <door>
+                            <header>Internal Doors and Sanitary Fittings</header>
+                            <price>3080</price>
+                            <text>
+                                							
+                                
+							&lt;ul>
+							&lt;ul>
+	    					&lt;li>3 laminated UPVC bedroom doors&lt;/li>
+							&lt;li>2 laminated UPVC folding bathroom doors&lt;/li>
+	   						&lt;li>Wash basin with tap mixer&lt;/li>
+							&lt;li>Shower set with bath/ shower mixer&lt;/li>
+							&lt;/ul>
+							
+                                							
+                            </text>
+                        </door>
+                    </optional>
+                </finishes-and-fittings-text>
+            </ukey>
+        </unit-details>
+        <overview>
+            <p>
+                			
+                
+			&lt;h6>Jurong East&lt;/h6>
+			&lt;br>
+			Toh Guan Grove &lt;a class="audioBtn toh-guan-grove">&lt;i class="fas fa-volume-up">&lt;/i>&lt;/a> will be located along Toh Guan Road and comprise 3 residential blocks, ranging from 10 to 37 storeys. You can choose your home from 569 units of 2-room Flexi, 3-, and 4-room flats.
+			&lt;br>&lt;br>
+			The development's design and name reference the natural forms of the mangroves which once populated the area. 
+			&lt;br>&lt;br>
+			Recreational and communal activity nodes such as children's playgrounds, adult and elderly fitness stations, and resting shelters will be set amid the lush greenery and open spaces. You can also enjoy moments of quiet respite at the roof gardens and viewing decks located at some residential blocks. 
+			&lt;br>&lt;br>   
+   			Toh Guan Grove will also feature shops, a supermarket, and a residents' network centre for your convenience. Residents at Toh Guan Grove will be served by the existing Multi-Storey Car Parks at Blocks 267A and 282A. Please refer to the site plan for the facilities provided in this development. Facilities in this development will be accessible by the public. 
+ 			&lt;br>&lt;br>  
+			
+                			
+            </p>
+        </overview>
+        <notes>
+            <p>
+                			
+                HDB precincts are planned to serve the evolving needs of the community. There are spaces catered for future inclusion of amenities/ facilities (such as childcare centres, elderly-related facilities, education centres, residents' network centres, and day activity centres), commercial facilities (such as shops and eating houses), mechanical and electrical rooms, and such other facilities depending on the prevailing needs. These spaces could be in the void decks, common property, car parks, or stand-alone community buildings.
+			&lt;br>&lt;br>
+			To facilitate your flat application, we have provided information on the surrounding land use, proposed facilities and their locations in the maps and plans of individual projects. As the information provided is based on the current planning intent of the relevant authorities, such information is indicative only and subject to review from time to time.
+			&lt;br>&lt;br>
+			&lt;ul>
+			&lt;li>Get answers to &lt;a href="https://www.hdb.gov.sg/cs/infoweb/residential/buying-a-flat/new/buying-process/application-procedure/faqs-for-sales-launch">Frequently Asked Questions on sales launches&lt;/a>&lt;/li>
+			&lt;br>
+   			&lt;li>Visit the virtual showflats at &lt;a href="https://www.hdb.gov.sg/mynicehomegallery?utm_source=Aug21website&amp;utm_medium=link&amp;utm_campaign=MNHG">My Nice Home Gallery&lt;/a> and get interior decor ideas&lt;/li>
+			&lt;/ul>
+			
+                			
+            </p>
+        </notes>
+    </standard-project-info>
+    <template-body>
+        <row>
+            <header>Eco-Friendly Features</header>
+        </row>
+        <row>
+            <p>
+                				
+                &lt;p>To encourage green and sustainable living, Toh Guan Grove will have several eco-friendly features such as:&lt;/p>
+				&lt;ul>
+					&lt;li>Separate chutes for recyclable waste&lt;/li>
+					&lt;li>Regenerative lifts to reduce energy consumption&lt;/li>
+					&lt;li>Bicycle stands to encourage cycling as an environmentally-friendly form of transport&lt;/li>
+					&lt;li>Use of sustainable products in the development&lt;/li>
+					&lt;li>Active, Beautiful, Clean Waters design features to clean rainwater and beautify the landscapes&lt;/li>
+				&lt;/ul>
+                			
+            </p>
+        </row>
+        <row>
+            <template1>
+                <photo-folder>2021-08/bto/je_n2c26/template1</photo-folder>
+                <photos>
+                    <photo>2021-08/bto/je_n2c26/template1/1.jpg</photo>
+                    <photo>2021-08/bto/je_n2c26/template1/2.jpg</photo>
+                    <photo>2021-08/bto/je_n2c26/template1/3.jpg</photo>
+                </photos>
+            </template1>
+        </row>
+        <row>
+            <header>Smart Solutions</header>
+        </row>
+        <row>
+            <p>
+                Smart Lighting will be installed in the common areas within Toh Guan Grove to reduce energy usage, and contribute to a sustainable and safer living environment.
+				
+            </p>
+        </row>
+        <row>
+            <header>About Jurong East Town</header>
+        </row>
+        <row>
+            <p>
+                 
+				
+                
+				Situated just beyond the hustle and bustle of Jurong East Town Centre, Toh Guan Grove offers you the best of urban living and nature. Enjoy the conveniences offered by shopping malls such as Westgate, JEM, and IMM. You can also explore more shopping and dining choices, as well as heartland shops by visiting &lt;a href="https://www.hdb.gov.sg/residential/where2shop/explore/jurong-east">Where2Shop@HDB&lt;/a>.
+				&lt;br>&lt;br>
+				Nature lovers can enjoy the vast Jurong Lake Gardens and the verdant waterside greenery of the Ulu Pandan Park Connector. You can also explore new hobbies and activities at Yuhua Community Club and Jurong Regional Library.
+				&lt;br>&lt;br>
+				Parents with school-going children can consider schools in the vicinity such as Yuhua Primary School, Fuhua Primary School, and Crest Secondary School.
+				&lt;br>&lt;br>
+				You will be served by public transportation nodes at the Jurong East MRT Station and Bus Interchange. Drivers are well connected to other parts of Singapore via the Pan-Island Expressway. 
+				
+                			
+            </p>
+        </row>
+        <row>
+            <template2>
+                <photo-folder>2021-08/bto/je_n2c26/template2</photo-folder>
+                <photos>
+                    <photo>2021-08/bto/je_n2c26/template2/1.jpg</photo>
+                    <photo>2021-08/bto/je_n2c26/template2/2.jpg</photo>
+                    <photo>2021-08/bto/je_n2c26/template2/3.jpg</photo>
+                    <photo>2021-08/bto/je_n2c26/template2/4.jpg</photo>
+                    <photo>2021-08/bto/je_n2c26/template2/5.jpg</photo>
+                    <photo>2021-08/bto/je_n2c26/template2/6.jpg</photo>
+                </photos>
+            </template2>
+        </row>
+    </template-body>
+    <resources>
+        <town-map>2021-08/bto/je_n2c26/townmap/townmap_je_n2c26.jpg</town-map>
+        <carousel>
+            <link>2021-08/bto/je_n2c26/carousel/01_perspective.jpg</link>
+            <link>2021-08/bto/je_n2c26/carousel/02_perspective.jpg</link>
+            <link>2021-08/bto/je_n2c26/carousel/03_siteplan_je_n2c26.jpg</link>
+        </carousel>
+        <sound>2021-08/bto/je_n2c26/sound/je_n2c26.mp3</sound>
+        <genspecs>
+            <genspecs-2rm>2021-08/bto/je_n2c26/genspecs/genspecs_je_n2c26_2rm.jpg</genspecs-2rm>
+            <genspecs-2rm>2021-08/bto/je_n2c26/genspecs/genspecs_je_n2c26_2rm_3rm_4rm.jpg</genspecs-2rm>
+            <genspecs-3rm>2021-08/bto/je_n2c26/genspecs/genspecs_je_n2c26_2rm_3rm_4rm.jpg</genspecs-3rm>
+            <genspecs-4rm>2021-08/bto/je_n2c26/genspecs/genspecs_je_n2c26_2rm_3rm_4rm.jpg</genspecs-4rm>
+        </genspecs>
+        <layoutideas>
+            <layoutideas-2rmtype1>2021-08/bto/je_n2c26/layoutideas/layoutideas_je_n2c26_2rmType1.jpg</layoutideas-2rmtype1>
+            <layoutideas-2rmtype2>2021-08/bto/je_n2c26/layoutideas/layoutideas_je_n2c26_2rmType2.jpg</layoutideas-2rmtype2>
+            <layoutideas-3rm>2021-08/bto/je_n2c26/layoutideas/layoutideas_je_n2c26_3rm.jpg</layoutideas-3rm>
+            <layoutideas-4rm>2021-08/bto/je_n2c26/layoutideas/layoutideas_je_n2c26_4rm.jpg</layoutideas-4rm>
+        </layoutideas>
+        <resale>
+            <resale-2rm>2021-08/bto/je_n2c26/resale/resale_je_n2c26_2rm.jpg</resale-2rm>
+            <resale-3rm>2021-08/bto/je_n2c26/resale/resale_je_n2c26_3rm.jpg</resale-3rm>
+            <resale-4rm>2021-08/bto/je_n2c26/resale/resale_je_n2c26_4rm.jpg</resale-4rm>
+        </resale>
+        <oydh>
+            <oydh-2rmtype1>2021-08/bto/je_n2c26/oydh/oydh_je_n2c26_2rmType1.jpg</oydh-2rmtype1>
+            <oydh-2rmtype2>2021-08/bto/je_n2c26/oydh/oydh_je_n2c26_2rmType2.jpg</oydh-2rmtype2>
+            <oydh-3rm>2021-08/bto/je_n2c26/oydh/oydh_je_n2c26_3rm.jpg</oydh-3rm>
+            <oydh-4rm>2021-08/bto/je_n2c26/oydh/oydh_je_n2c26_4rm.jpg</oydh-4rm>
+        </oydh>
+        <ocsleaflet>
+            <ocsleaflet-2rm>2021-08/bto/je_n2c26/ocsleaflet/ocsleaflet_je_n2c26_2rm(1).png</ocsleaflet-2rm>
+            <ocsleaflet-2rm>2021-08/bto/je_n2c26/ocsleaflet/ocsleaflet_je_n2c26_2rm(2).png</ocsleaflet-2rm>
+            <ocsleaflet-3rm>2021-08/bto/je_n2c26/ocsleaflet/ocsleaflet_je_n2c26_3rm_4rm(1).png</ocsleaflet-3rm>
+            <ocsleaflet-4rm>2021-08/bto/je_n2c26/ocsleaflet/ocsleaflet_je_n2c26_3rm_4rm(1).png</ocsleaflet-4rm>
+        </ocsleaflet>
+        <ocs/>
+    </resources>
+</template>

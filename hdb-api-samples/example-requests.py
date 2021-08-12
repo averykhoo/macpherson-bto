@@ -1,22 +1,30 @@
 import base64
 import datetime
+import os
 
 import requests
 from tabulate import tabulate
 
 bto_details_urls = [
-    'https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_SEdfTjFDMTUxNjExMjg5NTAwNDE2',
-    'https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_SEdfTjJDMTExNjExMjg5ODA0MjY4',
-    'https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_SkVfTjJDMjYxNjExMjkwMTAwNDE5',
-    'https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_VEFQX045QzEwMTYxMTI5MTAwMDQ2Mw',
-    'https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_S1dOX041QzUyMTYxMTI5MDQwMDUxOQ',
-    'https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_UVRfTjJDMTE2MTEyOTA3MDA0MDY',
-    'https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_VEFQX045QzE5MTYxMTI5MTMwMzk2NQ',
+    # 'https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_SEdfTjFDMTUxNjExMjg5NTAwNDE2',
+    # 'https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_SEdfTjJDMTExNjExMjg5ODA0MjY4',
+    # 'https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_SkVfTjJDMjYxNjExMjkwMTAwNDE5',
+    # 'https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_VEFQX045QzEwMTYxMTI5MTAwMDQ2Mw',
+    # 'https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_S1dOX041QzUyMTYxMTI5MDQwMDUxOQ',
+    # 'https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_UVRfTjJDMTE2MTEyOTA3MDA0MDY',
+    # 'https://homes.hdb.gov.sg/home/bto/details/2021-02_UPB_VEFQX045QzE5MTYxMTI5MTMwMzk2NQ',
     'https://homes.hdb.gov.sg/home/bto/details/2020-11_BTO_VEdfRDJDNDE2MDgwMjI2NDc1MjQ',
     'https://homes.hdb.gov.sg/home/bto/details/2021-02_BTO_VFBfTjlDMTUxNjEwODg2NjAzNzE0',
     'https://homes.hdb.gov.sg/home/bto/details/2021-02_BTO_VFBfTjlDMTgxNjExMTE1ODAxMDAz',
     'https://homes.hdb.gov.sg/home/bto/details/2021-02_BTO_VFBfTjlDMTMxNjEwODg2MzAzNTUw',
     'https://homes.hdb.gov.sg/home/bto/details/2021-05_BTO_R0xfTjFDMTNfMTYxOTUwMjc4NDU1Ng',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-08_BTO_SEdfTjFDMTVfMTYyNzU2NTE2MjYxNA',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-08_BTO_SEdfTjJDMTFfMTYyNzU2MzcyMjcwNQ',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-08_BTO_UVRfTjJDMV8xNjI3NTYzOTAyOTMz',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-08_BTO_VEFQX045QzE5XzE2Mjc1NjQwMjMyMjc',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-08_BTO_VEFQX045QzEwXzE2Mjc1NjM5NjI5MzI',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-08_BTO_SkVfTjJDMjZfMTYyNzU2Mzc4MzAxNA',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-08_BTO_S1dOX041QzUyXzE2Mjc1NjM4NDI3ODk',
 ]
 
 
@@ -526,14 +534,24 @@ if __name__ == '__main__':
         r1 = requests.get(f'https://resources.homes.hdb.gov.sg/nf/{month}/bto/'
                           f'unit_xml/'
                           f'UNIT_{month}_{project_type}_{b64_chunk}.xml')
+        if r1.status_code == 200:
+            with open(f'hdb_downloads/{os.path.basename(r1.url)}', 'wb') as f:
+                f.write(r1.content)
+
         r2 = requests.get(f'https://resources.homes.hdb.gov.sg/nf/{month}/bto/'
                           f'{town.lower()}_{project_code.lower().rstrip("_")}/'
                           f'{month}_{project_type}_{b64_chunk}.xml')
+        if r2.status_code == 200:
+            with open(f'hdb_downloads/{os.path.basename(r2.url)}', 'wb') as f:
+                f.write(r2.content)
 
         # map_url = 'https://resources.homes.hdb.gov.sg/nf/2021-02/upcoming-bto/qt_n2c1/townmap/townmap_qt_n2c1.jpg'
         r3 = requests.get(f'https://resources.homes.hdb.gov.sg/nf/{month}/'
                           f'upcoming-bto/{town.lower()}_{project_code.lower()}/'
                           f'townmap/townmap_{town.lower()}_{project_code.lower()}.jpg')
+        if r3.status_code == 200:
+            with open(f'hdb_downloads/{os.path.basename(r3.url)}', 'wb') as f:
+                f.write(r3.content)
 
         rows.append((url,
                      month,
