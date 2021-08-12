@@ -19,7 +19,7 @@ if __name__ == '__main__':
     # load json
     with json_path.open('rb') as f:
         availability_json = json.load(f)
-    prev_file = sorted(backups_dir.glob('*.json'))[-1]
+    prev_file = sorted(backups_dir.glob('*-*-*--*-*-*.json'))[-1]
     with prev_file.open('rb') as f:
         if json.load(f) != availability_json:
             new_path = backups_dir / f'{datetime.datetime.now().strftime("%Y-%m-%d--%H-%M-%S")}.json'
