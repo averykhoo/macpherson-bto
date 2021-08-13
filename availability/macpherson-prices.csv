@@ -401,7 +401,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95B,"3-Room (Income Ceiling $14,000)",#11,11,7098,540,69,392800,,True
 95B,"3-Room (Income Ceiling $14,000)",#10,10,7043,534,69,386800,MGPS 3+4,True
 95B,"3-Room (Income Ceiling $14,000)",#10,10,7061,536,69,386800,,True
-95B,"3-Room (Income Ceiling $14,000)",#10,10,7079,538,69,391100,MGPS 3+4,True
+95B,"3-Room (Income Ceiling $14,000)",#10,10,7079,538,69,391100,MGPS 3+4,False
 95B,"3-Room (Income Ceiling $14,000)",#10,10,7097,540,69,391100,,True
 95B,"3-Room (Income Ceiling $14,000)",#09,9,7042,534,69,385100,MGPS 3+4,True
 95B,"3-Room (Income Ceiling $14,000)",#09,9,7060,536,69,385100,,True
@@ -413,7 +413,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95B,"3-Room (Income Ceiling $14,000)",#08,8,7095,540,69,387700,,True
 95B,"3-Room (Income Ceiling $14,000)",#07,7,7040,534,69,379100,,True
 95B,"3-Room (Income Ceiling $14,000)",#07,7,7058,536,69,379100,,True
-95B,"3-Room (Income Ceiling $14,000)",#07,7,7076,538,69,383400,MGPS 3+4,True
+95B,"3-Room (Income Ceiling $14,000)",#07,7,7076,538,69,383400,MGPS 3+4,False
 95B,"3-Room (Income Ceiling $14,000)",#07,7,7094,540,69,383400,,True
 95B,"3-Room (Income Ceiling $14,000)",#06,6,7039,534,69,374800,,True
 95B,"3-Room (Income Ceiling $14,000)",#06,6,7057,536,69,374800,MGPS 3+4,True
@@ -460,7 +460,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95B,4-Room,#14,14,7218,554,93,597500,,True
 95B,4-Room,#14,14,7235,556,93,591400,,True
 95B,4-Room,#13,13,7182,550,93,595100,,True
-95B,4-Room,#13,13,7200,552,93,595100,MGPS 3+4,True
+95B,4-Room,#13,13,7200,552,93,595100,MGPS 3+4,False
 95B,4-Room,#13,13,7217,554,93,595100,,True
 95B,4-Room,#13,13,7234,556,93,589000,MGPS 2+4,False
 95B,4-Room,#12,12,7181,550,93,592700,MGPS 2+4,False
@@ -484,7 +484,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95B,4-Room,#08,8,7212,554,93,583100,,True
 95B,4-Room,#08,8,7229,556,93,577000,MGPS 2+4,False
 95B,4-Room,#07,7,7176,550,93,577000,,True
-95B,4-Room,#07,7,7194,552,93,577000,MGPS 3+4,True
+95B,4-Room,#07,7,7194,552,93,577000,MGPS 3+4,False
 95B,4-Room,#07,7,7211,554,93,577000,,True
 95B,4-Room,#07,7,7228,556,93,570900,,True
 95B,4-Room,#06,6,7175,550,93,570900,,True
