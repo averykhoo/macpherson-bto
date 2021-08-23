@@ -1,5 +1,5 @@
 block,flat_type,chinese,malay,indian,remaining,total
-95A,2-room flexi,73,24,13,90,108
+95A,2-room flexi,71,24,13,88,108
 95A,3-room,63,19,10,0,0
 95A,"3-room (income ceiling $14,000)",71,19,10,76,84
 95A,4-room,41,14,8,51,64
@@ -11,4 +11,4 @@ block,flat_type,chinese,malay,indian,remaining,total
 97A,4-room,156,42,23,186,189
 97B,4-room,143,38,21,170,172
 99A,4-room,132,36,20,157,161
-99B,4-room,135,37,20,161,166
+99B,4-room,131,37,20,157,166

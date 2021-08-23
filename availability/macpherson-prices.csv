@@ -5,7 +5,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95A,2-Room Flexi,#19,19,6806,516,48,268500,,True
 95A,2-Room Flexi,#19,19,6824,518,48,268500,,True
 95A,2-Room Flexi,#19,19,6842,520,48,268500,MGPS 2+4,False
-95A,2-Room Flexi,#18,18,6751,500,48,268500,,True
+95A,2-Room Flexi,#18,18,6751,500,48,268500,,False
 95A,2-Room Flexi,#18,18,6769,502,48,268500,,True
 95A,2-Room Flexi,#18,18,6787,514,48,268500,,True
 95A,2-Room Flexi,#18,18,6805,516,48,268500,,False
@@ -81,7 +81,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95A,2-Room Flexi,#06,6,6757,502,48,250700,,True
 95A,2-Room Flexi,#06,6,6775,514,48,250700,,True
 95A,2-Room Flexi,#06,6,6793,516,48,250700,,True
-95A,2-Room Flexi,#06,6,6811,518,48,250700,,True
+95A,2-Room Flexi,#06,6,6811,518,48,250700,,False
 95A,2-Room Flexi,#06,6,6829,520,48,250700,,True
 95A,2-Room Flexi,#05,5,6738,500,48,247800,,True
 95A,2-Room Flexi,#05,5,6756,502,48,247800,,False
@@ -1225,8 +1225,8 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 99B,4-Room,#19,19,8116,658,93,613200,,True
 99B,4-Room,#18,18,7967,640,93,613200,,True
 99B,4-Room,#18,18,7985,642,93,613200,,True
-99B,4-Room,#18,18,8025,648,93,613200,,True
-99B,4-Room,#18,18,8043,650,93,613200,,True
+99B,4-Room,#18,18,8025,648,93,613200,,False
+99B,4-Room,#18,18,8043,650,93,613200,,False
 99B,4-Room,#18,18,8061,652,93,601000,GRO,False
 99B,4-Room,#18,18,8079,654,93,613200,,True
 99B,4-Room,#18,18,8097,656,93,607100,,True
@@ -1249,8 +1249,8 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 99B,4-Room,#16,16,8113,658,93,608400,,True
 99B,4-Room,#15,15,7964,640,93,606000,,True
 99B,4-Room,#15,15,7982,642,93,606000,,True
-99B,4-Room,#15,15,7997,644,93,603600,,True
-99B,4-Room,#15,15,8008,646,93,603600,,True
+99B,4-Room,#15,15,7997,644,93,603600,,False
+99B,4-Room,#15,15,8008,646,93,603600,,False
 99B,4-Room,#15,15,8022,648,93,606000,,True
 99B,4-Room,#15,15,8040,650,93,606000,,True
 99B,4-Room,#15,15,8058,652,93,593800,,True
