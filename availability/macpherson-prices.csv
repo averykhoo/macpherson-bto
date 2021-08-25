@@ -199,7 +199,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95A,4-Room,#17,17,7168,528,93,604700,MGPS 3+4,True
 95A,4-Room,#16,16,7149,526,93,602300,MGPS 3+4,False
 95A,4-Room,#16,16,7167,528,93,602300,,True
-95A,4-Room,#15,15,7120,522,93,597500,,True
+95A,4-Room,#15,15,7120,522,93,597500,,False
 95A,4-Room,#15,15,7134,524,93,597500,,True
 95A,4-Room,#15,15,7148,526,93,599900,,True
 95A,4-Room,#15,15,7166,528,93,599900,,True
@@ -339,7 +339,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95B,2-Room Flexi,#06,6,6901,544,48,250700,,True
 95B,2-Room Flexi,#06,6,6919,546,38,196300,,True
 95B,2-Room Flexi,#06,6,6937,548,38,196300,,True
-95B,2-Room Flexi,#05,5,6846,530,38,194000,,True
+95B,2-Room Flexi,#05,5,6846,530,38,194000,,False
 95B,2-Room Flexi,#05,5,6864,532,48,247800,MGPS 2+4,False
 95B,2-Room Flexi,#05,5,6882,542,48,247800,,True
 95B,2-Room Flexi,#05,5,6900,544,48,247800,,False
@@ -528,7 +528,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95C,4-Room,#17,17,7292,562,93,623000,,True
 95C,4-Room,#17,17,7310,564,93,610800,,True
 95C,4-Room,#17,17,7328,566,93,610800,,True
-95C,4-Room,#17,17,7346,568,93,610800,,True
+95C,4-Room,#17,17,7346,568,93,610800,,False
 95C,4-Room,#17,17,7364,570,93,610800,,True
 95C,4-Room,#17,17,7382,572,93,610800,,True
 95C,4-Room,#17,17,7400,574,93,610800,,True
@@ -697,7 +697,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 97A,4-Room,#19,19,7464,582,93,613200,,True
 97A,4-Room,#19,19,7510,588,93,613200,,True
 97A,4-Room,#19,19,7527,590,93,613200,,True
-97A,4-Room,#19,19,7545,592,93,625400,,True
+97A,4-Room,#19,19,7545,592,93,625400,,False
 97A,4-Room,#19,19,7563,594,93,625400,,True
 97A,4-Room,#19,19,7581,596,93,613200,,True
 97A,4-Room,#19,19,7599,598,93,613200,,True
@@ -1368,7 +1368,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 99B,4-Room,#03,3,7952,640,93,540300,,True
 99B,4-Room,#03,3,7970,642,93,528100,,True
 99B,4-Room,#03,3,8010,648,93,546400,,True
-99B,4-Room,#03,3,8028,650,93,540300,,True
+99B,4-Room,#03,3,8028,650,93,540300,,False
 99B,4-Room,#03,3,8046,652,93,540300,,True
 99B,4-Room,#03,3,8064,654,93,552500,,True
 99B,4-Room,#03,3,8082,656,93,546400,,True
