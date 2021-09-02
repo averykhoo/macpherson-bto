@@ -124,7 +124,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95A,"3-Room (Income Ceiling $14,000)",#15,15,6964,504,69,395300,,True
 95A,"3-Room (Income Ceiling $14,000)",#15,15,6982,506,69,395300,,True
 95A,"3-Room (Income Ceiling $14,000)",#15,15,7000,508,69,399600,,True
-95A,"3-Room (Income Ceiling $14,000)",#15,15,7015,510,69,399600,,True
+95A,"3-Room (Income Ceiling $14,000)",#15,15,7015,510,69,399600,,False
 95A,"3-Room (Income Ceiling $14,000)",#15,15,7030,512,69,395300,,True
 95A,"3-Room (Income Ceiling $14,000)",#14,14,6963,504,69,393600,MGPS 3+4,True
 95A,"3-Room (Income Ceiling $14,000)",#14,14,6981,506,69,393600,,True
@@ -385,11 +385,11 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95B,"3-Room (Income Ceiling $14,000)",#15,15,7102,540,69,399600,,True
 95B,"3-Room (Income Ceiling $14,000)",#14,14,7047,534,69,393600,,True
 95B,"3-Room (Income Ceiling $14,000)",#14,14,7065,536,69,393600,MGPS 3+4,False
-95B,"3-Room (Income Ceiling $14,000)",#14,14,7083,538,69,397900,,True
+95B,"3-Room (Income Ceiling $14,000)",#14,14,7083,538,69,397900,,False
 95B,"3-Room (Income Ceiling $14,000)",#14,14,7101,540,69,397900,,True
 95B,"3-Room (Income Ceiling $14,000)",#13,13,7046,534,69,391900,MGPS 3+4,True
 95B,"3-Room (Income Ceiling $14,000)",#13,13,7064,536,69,391900,,True
-95B,"3-Room (Income Ceiling $14,000)",#13,13,7082,538,69,396200,,True
+95B,"3-Room (Income Ceiling $14,000)",#13,13,7082,538,69,396200,,False
 95B,"3-Room (Income Ceiling $14,000)",#13,13,7100,540,69,396200,,True
 95B,"3-Room (Income Ceiling $14,000)",#12,12,7045,534,69,390200,,True
 95B,"3-Room (Income Ceiling $14,000)",#12,12,7063,536,69,390200,,True
