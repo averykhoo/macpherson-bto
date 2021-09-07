@@ -4,7 +4,6 @@ from pathlib import Path
 
 import pandas as pd
 import requests
-import tabulate
 from bs4 import BeautifulSoup
 
 backups_dir = Path('backups')
@@ -71,7 +70,8 @@ if __name__ == '__main__':
     df = pd.DataFrame(rows, columns=headers)
     df_removed = df[df['unit_id'].apply(lambda x: x in removed_ids)]
 
-    print()
+    print((datetime.datetime.strptime(curr_file.stem, '%Y-%m-%d--%H-%M-%S') - datetime.timedelta(hours=12))
+          .strftime('%d/%m/%Y') + '\t' + 'Public queue')
     print('2-Room total:\t' + str(len(df_removed[df_removed['flat_type'].str.contains('2-Room')])))
     for i, row in df_removed[df_removed['flat_type'].str.contains('2-Room')].iterrows():
         print('Blk ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
