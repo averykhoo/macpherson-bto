@@ -39,7 +39,7 @@ _COL_STRING_CACHE = {c: i for i, c in enumerate(_STRING_COL_CACHE)}  # {'A': 0, 
 
 
 # https://openpyxl.readthedocs.io/en/stable/_modules/openpyxl/utils/cell.html#get_column_letter
-def get_column_letter(idx: int):
+def _get_column_letter(idx: int):
     """
     Convert a column index into a column letter: (3 -> 'C')
     """
@@ -54,7 +54,7 @@ def get_column_letter(idx: int):
         raise ValueError("Invalid column index {0}".format(idx))
 
 
-def column_index_from_string(str_col: str):
+def _column_index_from_string(str_col: str):
     """
     Convert a column name into a numerical index: ('A' -> 1)
     """
@@ -76,8 +76,24 @@ def parse_column_notation(cell_address: str):
         if char.isdigit():
             if i == 0:
                 raise ValueError('no row')
-            return column_index_from_string(cell_address[:i]), int(cell_address[i:])
+            if not cell_address[:i].isalpha():
+                raise ValueError('invalid col')
+            if not cell_address[i:].isdigit():
+                raise ValueError('invalid row')
+            return int(cell_address[i:]), _column_index_from_string(cell_address[:i])
     raise ValueError('no col')
+
+
+def build_column_notation(row: int, column: int):
+    if not isinstance(row, int):
+        raise TypeError(row)
+    elif row <= 0:
+        raise ValueError(row)
+    if not isinstance(column, int):
+        raise TypeError(column)
+    elif column <= 0:
+        raise ValueError(column)
+    return f'{_get_column_letter(column)}{row}'
 
 
 class Workbook:
