@@ -1,3 +1,4 @@
+import itertools
 import os
 import re
 from pprint import pprint
@@ -24,57 +25,59 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 # https://www.googleapis.com/auth/drive
 #   Full, permissive scope to access all of a user's files. Request this scope only when it is strictly necessary.
 
+def _build_cell_notation_index():
+    out = []
+    for _len in range(1, 4):
+        for char_tuple in itertools.product('ABCDEFGHIJKLMNOPQRSTUVWXYZ', repeat=_len):
+            out.append(''.join(char_tuple))
+    return out
+
+
+_STRING_COL_CACHE = _build_cell_notation_index()  # ['A', 'B', 'C', 'D', 'E', 'F', 'G', ...]
+# noinspection PyTypeChecker
+_COL_STRING_CACHE = {c: i for i, c in enumerate(_STRING_COL_CACHE)}  # {'A': 0, 'B': 1, ...}
+
+
 # https://openpyxl.readthedocs.io/en/stable/_modules/openpyxl/utils/cell.html#get_column_letter
-def _get_column_letter(col_idx):
-    """Convert a column number into a column letter (3 -> 'C')
-
-    Right shift the column col_idx by 26 to find column letters in reverse
-    order.  These numbers are 1-based, and can be converted to ASCII
-    ordinals by adding 64.
-
+def get_column_letter(idx: int):
     """
-    # these indicies corrospond to A -> ZZZ and include all allowed
-    # columns
-    if not 1 <= col_idx <= 18278:
-        raise ValueError("Invalid column index {0}".format(col_idx))
-    letters = []
-    while col_idx > 0:
-        col_idx, remainder = divmod(col_idx, 26)
-        # check for exact division and borrow if needed
-        if remainder == 0:
-            remainder = 26
-            col_idx -= 1
-        letters.append(chr(remainder + 64))
-    return ''.join(reversed(letters))
-
-
-_COL_STRING_CACHE = {}
-_STRING_COL_CACHE = {}
-for i in range(1, 18279):
-    col = _get_column_letter(i)
-    _STRING_COL_CACHE[i] = col
-    _COL_STRING_CACHE[col] = i
-
-
-def get_column_letter(idx, ):
-    """Convert a column index into a column letter
-    (3 -> 'C')
+    Convert a column index into a column letter: (3 -> 'C')
     """
+    if not isinstance(idx, int):
+        raise TypeError(idx)
+    elif idx <= 0:
+        raise ValueError(idx)
+
     try:
-        return _STRING_COL_CACHE[idx]
+        return _STRING_COL_CACHE[idx - 1]
     except KeyError:
         raise ValueError("Invalid column index {0}".format(idx))
 
 
-def column_index_from_string(str_col):
-    """Convert a column name into a numerical index
-    ('A' -> 1)
+def column_index_from_string(str_col: str):
+    """
+    Convert a column name into a numerical index: ('A' -> 1)
     """
     # we use a function argument to get indexed name lookup
+    if not isinstance(str_col, str):
+        raise TypeError(str_col)
+    elif not str_col:
+        raise ValueError(str_col)
+
     try:
-        return _COL_STRING_CACHE[str_col.upper()]
+        return _COL_STRING_CACHE[str_col.upper()] + 1
     except KeyError:
         raise ValueError("{0} is not a valid column name".format(str_col))
+
+
+def parse_column_notation(cell_address: str):
+    cell_address = cell_address.upper()
+    for i, char in enumerate(cell_address):
+        if char.isdigit():
+            if i == 0:
+                raise ValueError('no row')
+            return column_index_from_string(cell_address[:i]), int(cell_address[i:])
+    raise ValueError('no col')
 
 
 class Workbook:
@@ -173,27 +176,30 @@ class Workbook:
 
 
 if __name__ == '__main__':
-    # https://docs.google.com/spreadsheets/d/1ahbAXvuamz2PB1COGx2dWjIV8BN75bqYL_KmgdHkWKk/edit#gid=1211096710
-    # wb = Workbook('1ahbAXvuamz2PB1COGx2dWjIV8BN75bqYL_KmgdHkWKk')
+    # # https://docs.google.com/spreadsheets/d/1ahbAXvuamz2PB1COGx2dWjIV8BN75bqYL_KmgdHkWKk/edit#gid=1211096710
+    # # wb = Workbook('1ahbAXvuamz2PB1COGx2dWjIV8BN75bqYL_KmgdHkWKk')
+    #
+    # # https://docs.google.com/spreadsheets/d/1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70/edit#gid=1116371039
+    # # wb = Workbook('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70')  # copy, so I don't break anything
+    #
+    # # https://docs.google.com/spreadsheets/d/1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo/edit#gid=0
+    # wb = Workbook('1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo')  # random unused sheet
+    #
+    # # # values = wb.get_sheet_range_values('Blk 95A', 'A1', 'P29')
+    # # # values = wb.get_sheet_range_values('Blk 95A', 'A11', 'B12')
+    # values = wb.get_sheet_range_values('Sheet1', 'A1', 'B2')
+    # if not values:
+    #     print('No data found.')
+    # else:
+    #     for row in values:
+    #         print(row)
+    #
+    # values = wb.get_cell_properties('Sheet1', 'B2')
+    # # pprint(values['properties'])
+    # pprint(values)
+    #
+    # values = wb.set_cell_format('Sheet1', 1, 1, 0.6, 0.6, 0.6)
+    # pprint(values)
 
-    # https://docs.google.com/spreadsheets/d/1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70/edit#gid=1116371039
-    # wb = Workbook('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70')  # copy, so I don't break anything
-
-    # https://docs.google.com/spreadsheets/d/1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo/edit#gid=0
-    wb = Workbook('1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo')  # random unused sheet
-
-    # # values = wb.get_sheet_range_values('Blk 95A', 'A1', 'P29')
-    # # values = wb.get_sheet_range_values('Blk 95A', 'A11', 'B12')
-    values = wb.get_sheet_range_values('Sheet1', 'A1', 'B2')
-    if not values:
-        print('No data found.')
-    else:
-        for row in values:
-            print(row)
-
-    values = wb.get_cell_properties('Sheet1', 'B2')
-    # pprint(values['properties'])
-    pprint(values)
-
-    values = wb.set_cell_format('Sheet1', 1, 1, 0.6, 0.6, 0.6)
-    pprint(values)
+    for address in ['A1', 'B2', 'D123', 'AA1',]:
+        print(address, parse_column_notation(address))
