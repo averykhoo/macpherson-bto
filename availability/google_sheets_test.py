@@ -1,7 +1,7 @@
 import itertools
 import os
 import re
-from pprint import pprint
+import string
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -28,7 +28,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 def _build_cell_notation_index():
     out = []
     for _len in range(1, 4):
-        for char_tuple in itertools.product('ABCDEFGHIJKLMNOPQRSTUVWXYZ', repeat=_len):
+        for char_tuple in itertools.product(string.ascii_uppercase, repeat=_len):
             out.append(''.join(char_tuple))
     return out
 
@@ -201,5 +201,5 @@ if __name__ == '__main__':
     # values = wb.set_cell_format('Sheet1', 1, 1, 0.6, 0.6, 0.6)
     # pprint(values)
 
-    for address in ['A1', 'B2', 'D123', 'AA1',]:
+    for address in ['A1', 'B2', 'D123', 'AA1', ]:
         print(address, parse_column_notation(address))
