@@ -25,15 +25,8 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 # https://www.googleapis.com/auth/drive
 #   Full, permissive scope to access all of a user's files. Request this scope only when it is strictly necessary.
 
-def _build_cell_notation_index():
-    out = []
-    for _len in range(1, 4):
-        for char_tuple in itertools.product(string.ascii_uppercase, repeat=_len):
-            out.append(''.join(char_tuple))
-    return out
 
-
-_STRING_COL_CACHE = _build_cell_notation_index()  # ['A', 'B', 'C', 'D', 'E', 'F', 'G', ...]
+_STRING_COL_CACHE = [''.join(x) for i in range(1, 4) for x in itertools.product(string.ascii_uppercase, repeat=i)]
 # noinspection PyTypeChecker
 _COL_STRING_CACHE = {c: i for i, c in enumerate(_STRING_COL_CACHE)}  # {'A': 0, 'B': 1, ...}
 
