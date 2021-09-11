@@ -11,7 +11,6 @@ from googleapiclient.discovery import build
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
-
 # Scope (https://developers.google.com/sheets/api/guides/authorizing)
 #   Meaning
 # https://www.googleapis.com/auth/spreadsheets.readonly
@@ -34,11 +33,19 @@ _COL_STRING_CACHE = {c: i for i, c in enumerate(_STRING_COL_CACHE)}  # {'A': 0, 
 # https://openpyxl.readthedocs.io/en/stable/_modules/openpyxl/utils/cell.html#get_column_letter
 def _get_column_letter(idx: int):
     """
-    Convert a column index into a column letter: (3 -> 'C')
+    Convert a column index into a column letter: 2 -> 'B'
+    One-indexed
+    Column between 1 and 18278 inclusive
+    >>> _get_column_letter(1)
+    'A'
+    >>> _get_column_letter(27)
+    'AA'
     """
     if not isinstance(idx, int):
         raise TypeError(idx)
     elif idx <= 0:
+        raise ValueError(idx)
+    elif idx > 18278:
         raise ValueError(idx)
 
     try:
@@ -49,12 +56,20 @@ def _get_column_letter(idx: int):
 
 def _column_index_from_string(str_col: str):
     """
-    Convert a column name into a numerical index: ('A' -> 1)
+    Convert a column name into a numerical index: 'B' -> 2
+    One-indexed
+    Column between A and ZZZ inclusive
+    >>> _column_index_from_string('A')
+    1
+    >>> _column_index_from_string('AA')
+    27
     """
     # we use a function argument to get indexed name lookup
     if not isinstance(str_col, str):
         raise TypeError(str_col)
     elif not str_col:
+        raise ValueError(str_col)
+    elif len(str_col) > 3:
         raise ValueError(str_col)
 
     try:
@@ -64,20 +79,42 @@ def _column_index_from_string(str_col: str):
 
 
 def parse_column_notation(cell_address: str):
+    """
+    Convert R1C1 to coordinates: 'B7' -> (7, 2)
+    One-indexed
+    Column between A and ZZZ inclusive
+    >>> parse_column_notation('A2')
+    (2, 1)
+    >>> parse_column_notation('AA22')
+    (22, 27)
+    """
+    if not isinstance(cell_address, str):
+        raise TypeError(cell_address)
     cell_address = cell_address.upper()
     for i, char in enumerate(cell_address):
         if char.isdigit():
             if i == 0:
-                raise ValueError('no row')
+                raise ValueError(f'no row: {cell_address}')
             if not cell_address[:i].isalpha():
-                raise ValueError('invalid col')
+                raise ValueError(f'invalid col: {cell_address[:i]}')
+            if i > 3:
+                raise ValueError(f'col too large, not supported: {cell_address[:i]}')
             if not cell_address[i:].isdigit():
-                raise ValueError('invalid row')
+                raise ValueError(f'invalid row: {cell_address[i:]}')
             return int(cell_address[i:]), _column_index_from_string(cell_address[:i])
-    raise ValueError('no col')
+    raise ValueError(f'no col: {cell_address}')
 
 
 def build_column_notation(row: int, column: int):
+    """
+    Convert coordinates to R1C1: (7, 2) -> 'B7'
+    One-indexed
+    Column between 1 and 18278 inclusive
+    >>> build_column_notation(2, 1)
+    'A2'
+    >>> build_column_notation(22, 27)
+    'AA22'
+    """
     if not isinstance(row, int):
         raise TypeError(row)
     elif row <= 0:
@@ -85,6 +122,8 @@ def build_column_notation(row: int, column: int):
     if not isinstance(column, int):
         raise TypeError(column)
     elif column <= 0:
+        raise ValueError(column)
+    elif column > 18278:
         raise ValueError(column)
     return f'{_get_column_letter(column)}{row}'
 
@@ -212,3 +251,5 @@ if __name__ == '__main__':
 
     for address in ['A1', 'B2', 'D123', 'AA1', ]:
         print(address, parse_column_notation(address))
+
+    print(len(_COL_STRING_CACHE))
