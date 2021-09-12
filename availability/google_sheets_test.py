@@ -2,6 +2,7 @@ import itertools
 import os
 import re
 import string
+from pprint import pprint
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -188,7 +189,10 @@ class Workbook:
             'cellFormat':   result['sheets'][0]['data'][0]['rowData'][0]['values'][0],
         }
 
-    def set_cell_format(self, sheet_name, cell_row, cell_column, red, green, blue):
+    def set_background_color(self, sheet_name, cell_address, *, red=0.0, green=0.0, blue=0.0):
+        cell_row, cell_column = parse_column_notation(cell_address)
+        cell_row -= 1
+        cell_column -= 1
         body = {
             "requests": [
                 {
@@ -222,6 +226,61 @@ class Workbook:
         }
         return self.sheet.batchUpdate(spreadsheetId=self.spreadsheet_id, body=body).execute()
 
+    def set_text_format(self,
+                        sheet_name,
+                        cell_address,
+                        *,
+                        red=0.0,
+                        green=0.0,
+                        blue=0.0,
+                        bold=False,
+                        italic=False,
+                        underline=False,
+                        strikethrough=False):
+        cell_row, cell_column = parse_column_notation(cell_address)
+        cell_row -= 1
+        cell_column -= 1
+        body = {
+            "requests": [
+                {
+                    "updateCells": {
+                        "range":  {
+                            "sheetId":          self._get_sheet_id(sheet_name),
+                            "startRowIndex":    cell_row,
+                            "endRowIndex":      cell_row + 1,
+                            "startColumnIndex": cell_column,
+                            "endColumnIndex":   cell_column + 1
+                        },
+                        "rows":   [
+                            {
+                                "values": [
+                                    {
+                                        "userEnteredFormat": {
+                                            "textFormat": {
+                                                "foregroundColor": {
+                                                    "red":   red,
+                                                    "green": green,
+                                                    "blue":  blue,
+                                                },
+                                                "fontSize":        None,
+                                                "bold":            bold,
+                                                "italic":          italic,
+                                                "underline":       underline,
+                                                "strikethrough":   strikethrough,
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        "fields": "userEnteredFormat.textFormat"
+                        # "fields": "userEnteredFormat(backgroundColor,textFormat,horizontalAlignment)"
+                    }
+                }
+            ]
+        }
+        return self.sheet.batchUpdate(spreadsheetId=self.spreadsheet_id, body=body).execute()
+
 
 if __name__ == '__main__':
     # # https://docs.google.com/spreadsheets/d/1ahbAXvuamz2PB1COGx2dWjIV8BN75bqYL_KmgdHkWKk/edit#gid=1211096710
@@ -231,7 +290,7 @@ if __name__ == '__main__':
     # # wb = Workbook('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70')  # copy, so I don't break anything
     #
     # # https://docs.google.com/spreadsheets/d/1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo/edit#gid=0
-    # wb = Workbook('1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo')  # random unused sheet
+    wb = Workbook('1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo')  # random unused sheet
     #
     # # # values = wb.get_sheet_range_values('Blk 95A', 'A1', 'P29')
     # # # values = wb.get_sheet_range_values('Blk 95A', 'A11', 'B12')
@@ -242,14 +301,13 @@ if __name__ == '__main__':
     #     for row in values:
     #         print(row)
     #
-    # values = wb.get_cell_properties('Sheet1', 'B2')
-    # # pprint(values['properties'])
-    # pprint(values)
-    #
-    # values = wb.set_cell_format('Sheet1', 1, 1, 0.6, 0.6, 0.6)
-    # pprint(values)
+    values = wb.get_cell_properties('Sheet1', 'B2')
+    # pprint(values['properties'])
+    pprint(values)
 
-    for address in ['A1', 'B2', 'D123', 'AA1', ]:
-        print(address, parse_column_notation(address))
+    values = wb.set_background_color('Sheet1', 'B2', red=0.6, blue=0.6, green=0.6)
+    values = wb.set_text_format('Sheet1', 'B2', red=0, blue=1, green=1)
+    pprint(values)
 
-    print(len(_COL_STRING_CACHE))
+    # for address in ['A1', 'B2', 'D123', 'AA1', ]:
+    #     print(address, parse_column_notation(address))
