@@ -3,6 +3,8 @@ import os
 import re
 import string
 from pprint import pprint
+from typing import Optional
+from typing import Union
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -161,9 +163,10 @@ class Workbook:
 
     def _get_sheet_id(self, sheet_name):
         result = self.sheet.get(spreadsheetId=self.spreadsheet_id,
-                                ranges=[],
+                                ranges=[f'{sheet_name}!A1'],
                                 includeGridData=False,
                                 ).execute()
+        # todo: check sheet name is correct! otherwise maybe the request was badly defined oops
         return result['sheets'][0]['properties']['sheetId']
 
     def get_sheet_range_values(self, sheet_name, range_start, range_end):
@@ -230,13 +233,15 @@ class Workbook:
                         sheet_name,
                         cell_address,
                         *,
-                        red=0.0,
-                        green=0.0,
-                        blue=0.0,
-                        bold=False,
-                        italic=False,
-                        underline=False,
-                        strikethrough=False):
+                        red: Optional[Union[float, int]] = None,  # 0.0 to 1.0
+                        green: Optional[Union[float, int]] = None,  # 0.0 to 1.0
+                        blue: Optional[Union[float, int]] = None,  # 0.0 to 1.0
+                        bold: Optional[bool] = None,
+                        italic: Optional[bool] = None,
+                        underline: Optional[bool] = None,
+                        strikethrough: Optional[bool] = None,
+                        font_size: Optional[Union[float, int]] = None,
+                        ):
         cell_row, cell_column = parse_column_notation(cell_address)
         cell_row -= 1
         cell_column -= 1
@@ -262,7 +267,7 @@ class Workbook:
                                                     "green": green,
                                                     "blue":  blue,
                                                 },
-                                                "fontSize":        None,
+                                                "fontSize":        font_size,
                                                 "bold":            bold,
                                                 "italic":          italic,
                                                 "underline":       underline,
@@ -306,6 +311,7 @@ if __name__ == '__main__':
     pprint(values)
 
     values = wb.set_background_color('Sheet1', 'B2', red=0.6, blue=0.6, green=0.6)
+    pprint(values)
     values = wb.set_text_format('Sheet1', 'B2', red=0, blue=1, green=1)
     pprint(values)
 
