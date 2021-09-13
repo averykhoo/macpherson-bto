@@ -407,11 +407,10 @@ if __name__ == '__main__':
     values = wb.get_cell_properties('Sheet1', 'B2')
     pprint(values)
 
-    # values = wb.set_background_color('Sheet1', 'B2', red=0.6, blue=0.6, green=0.6)
-    # pprint(values)
-    # values = wb.set_text_format('Sheet1', 'B2', red=0, blue=1, green=1)
-    # pprint(values)
-    wb.set_background_color('Sheet1', 'B2')
+    wb.set_background_color('Sheet1', 'B2', **color_hex_to_float('#999999'))
+    # wb.set_background_color('Sheet1', 'B2', red=0.6, blue=0.6, green=0.6)
+    # wb.set_text_format('Sheet1', 'B2', red=0, blue=1, green=1)
+    # wb.set_background_color('Sheet1', 'B2')
     wb.set_text_format('Sheet1', 'B2')
 
     # for address in ['A1', 'B2', 'D123', 'AA1', ]:
