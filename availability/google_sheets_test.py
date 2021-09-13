@@ -207,6 +207,27 @@ def color_hex_to_float(color_hex: str) -> Dict[str, float]:
     }
 
 
+def color_float_to_hex(*, red: float, green: float, blue: float) -> str:
+    """
+    >>> color_float_to_hex(red=1, green=0.8509804, blue=0)
+    '#FFD900'
+    """
+    if not isinstance(red, (int, float)):
+        raise TypeError(red)
+    if not isinstance(green, (int, float)):
+        raise TypeError(green)
+    if not isinstance(blue, (int, float)):
+        raise TypeError(blue)
+    if not 0.0 <= red <= 1.0:
+        raise ValueError(red)
+    if not 0.0 <= green <= 1.0:
+        raise ValueError(green)
+    if not 0.0 <= blue <= 1.0:
+        raise ValueError(blue)
+
+    return f'#{round(red * 0xFF):02X}{round(green * 0xFF):02X}{round(blue * 0xFF):02X}'
+
+
 class Workbook:
     def __init__(self, spreadsheet_id):
 
@@ -290,9 +311,7 @@ class Workbook:
         # default white
         if red is None and green is None and blue is None:
             red = green = blue = 1.0
-        assert isinstance(red, (int, float)) and 0.0 <= red <= 1.0
-        assert isinstance(green, (int, float)) and 0.0 <= red <= 1.0
-        assert isinstance(blue, (int, float)) and 0.0 <= red <= 1.0
+        color_float_to_hex(red=red, green=green, blue=blue)  # use this as a sanity check
 
         body = {
             "requests": [
@@ -390,10 +409,10 @@ if __name__ == '__main__':
     # # wb = Workbook('1ahbAXvuamz2PB1COGx2dWjIV8BN75bqYL_KmgdHkWKk')
     #
     # # https://docs.google.com/spreadsheets/d/1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70/edit#gid=1116371039
-    # wb = Workbook('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70')  # copy, so I don't break anything
+    wb = Workbook('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70')  # copy, so I don't break anything
     #
     # # https://docs.google.com/spreadsheets/d/1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo/edit#gid=0
-    wb = Workbook('1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo')  # random unused sheet
+    # wb = Workbook('1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo')  # random unused sheet
     #
     # # # values = wb.get_sheet_range_values('Blk 95A', 'A1', 'P29')
     # # # values = wb.get_sheet_range_values('Blk 95A', 'A11', 'B12')
@@ -404,14 +423,15 @@ if __name__ == '__main__':
     #     for row in values:
     #         print(row)
     #
-    values = wb.get_cell_properties('Sheet1', 'B2')
+    # values = wb.get_cell_properties('Sheet1', 'B2')
+    values = wb.get_cell_properties('Units taken by date', 'A1')
     pprint(values)
 
-    wb.set_background_color('Sheet1', 'B2', **color_hex_to_float('#999999'))
+    # wb.set_background_color('Sheet1', 'B2', **color_hex_to_float('#999999'))
     # wb.set_background_color('Sheet1', 'B2', red=0.6, blue=0.6, green=0.6)
     # wb.set_text_format('Sheet1', 'B2', red=0, blue=1, green=1)
     # wb.set_background_color('Sheet1', 'B2')
-    wb.set_text_format('Sheet1', 'B2')
+    # wb.set_text_format('Sheet1', 'B2')
 
     # for address in ['A1', 'B2', 'D123', 'AA1', ]:
     #     print(address, parse_column_notation(address))
