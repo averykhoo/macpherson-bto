@@ -207,7 +207,7 @@ def color_hex_to_float(color_hex: str) -> Dict[str, float]:
     }
 
 
-def color_float_to_hex(*, red: float, green: float, blue: float) -> str:
+def color_float_to_hex(*, red: float = 0.0, green: float = 0.0, blue: float = 0.0) -> str:
     """
     >>> color_float_to_hex(red=1, green=0.8509804, blue=0)
     '#FFD900'
@@ -290,16 +290,7 @@ class Workbook:
         # print(result.get('majorDimension'))
         return result.get('values', [])
 
-    def get_cell_value(self, sheet_name, cell_address):
-        assert re.fullmatch(r'[A-Z]+[0-9]+', cell_address)
-        result = self.sheet.values().get(spreadsheetId=self.spreadsheet_id,
-                                         range=f'{sheet_name}!{cell_address}',
-                                         ).execute()
-        # print(result.get('range'))
-        # print(result.get('majorDimension'))
-        return result.get('values', [])[0][0]
-
-    def get_cell_properties(self, sheet_name, cell_address):
+    def get_properties(self, sheet_name, cell_address):
         assert re.fullmatch(r'[A-Z]+[0-9]+', cell_address)
         result = self.sheet.get(spreadsheetId=self.spreadsheet_id,
                                 ranges=[f'{sheet_name}!{cell_address}'],
@@ -311,6 +302,23 @@ class Workbook:
             'columnFormat': result['sheets'][0]['data'][0]['columnMetadata'][0],
             'cellFormat':   result['sheets'][0]['data'][0]['rowData'][0]['values'][0],
         }
+
+    def get_background_color(self, sheet_name, cell_address):
+        _props = self.get_properties(sheet_name, cell_address)
+        return color_float_to_hex(**_props['cellFormat']['effectiveFormat']['backgroundColor'])
+
+    def get_text_color(self, sheet_name, cell_address):
+        _props = self.get_properties(sheet_name, cell_address)
+        return color_float_to_hex(**_props['cellFormat']['effectiveFormat']['textFormat']['foregroundColor'])
+
+    def get_value(self, sheet_name, cell_address):
+        assert re.fullmatch(r'[A-Z]+[0-9]+', cell_address)
+        result = self.sheet.values().get(spreadsheetId=self.spreadsheet_id,
+                                         range=f'{sheet_name}!{cell_address}',
+                                         ).execute()
+        # print(result.get('range'))
+        # print(result.get('majorDimension'))
+        return result.get('values', [])[0][0]
 
     def set_background_color(self, sheet_name, cell_address, *, red=None, green=None, blue=None):
         cell_row, cell_column = parse_column_notation(cell_address)
@@ -432,9 +440,11 @@ if __name__ == '__main__':
     #     for row in values:
     #         print(row)
     #
-    # values = wb.get_cell_properties('Sheet1', 'B2')
-    values = wb.get_cell_properties('Units taken by date', 'A1')
-    values = wb.get_cell_value('Units taken by date', 'A1')
+    # values = wb.get_properties('Sheet1', 'B2')
+    # values = wb.get_properties('Units taken by date', 'A1')
+    # values = wb.get_background_color('Units taken by date', 'A1')
+    values = wb.get_text_color('Units taken by date', 'A1')
+    # values = wb.get_value('Units taken by date', 'A1')
     pprint(values)
 
     # wb.set_background_color('Sheet1', 'B2', **color_hex_to_float('#999999'))
