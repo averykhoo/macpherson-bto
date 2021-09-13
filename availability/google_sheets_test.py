@@ -2,6 +2,8 @@ import itertools
 import os
 import re
 import string
+from pprint import pprint
+from typing import Dict
 from typing import Optional
 from typing import Union
 
@@ -130,6 +132,81 @@ def build_column_notation(row: int, column: int):
     return f'{_get_column_letter(column)}{row}'
 
 
+def color_hex_to_float(color_hex: str) -> Dict[str, float]:
+    """
+    >>> color_hex_to_float('#000000')
+    {'red': 0.0, 'green': 0.0, 'blue': 0.0}
+    >>> color_hex_to_float('#333333')
+    {'red': 0.2, 'green': 0.2, 'blue': 0.2}
+    >>> color_hex_to_float('#FF0000')
+    {'red': 1.0, 'green': 0.0, 'blue': 0.0}
+    >>> color_hex_to_float('#00FF00')
+    {'red': 0.0, 'green': 1.0, 'blue': 0.0}
+    >>> color_hex_to_float('#0000FF')
+    {'red': 0.0, 'green': 0.0, 'blue': 1.0}
+    >>> color_hex_to_float('#FFFFFF')
+    {'red': 1.0, 'green': 1.0, 'blue': 1.0}
+    >>> color_hex_to_float('#ffffff')
+    {'red': 1.0, 'green': 1.0, 'blue': 1.0}
+    >>> color_hex_to_float('FFFFFF')
+    {'red': 1.0, 'green': 1.0, 'blue': 1.0}
+    >>> color_hex_to_float('#000')
+    {'red': 0.0, 'green': 0.0, 'blue': 0.0}
+    >>> color_hex_to_float('#333')
+    {'red': 0.2, 'green': 0.2, 'blue': 0.2}
+    >>> color_hex_to_float('#F00')
+    {'red': 1.0, 'green': 0.0, 'blue': 0.0}
+    >>> color_hex_to_float('#0F0')
+    {'red': 0.0, 'green': 1.0, 'blue': 0.0}
+    >>> color_hex_to_float('#00F')
+    {'red': 0.0, 'green': 0.0, 'blue': 1.0}
+    >>> color_hex_to_float('#FFF')
+    {'red': 1.0, 'green': 1.0, 'blue': 1.0}
+    >>> color_hex_to_float('#fff')
+    {'red': 1.0, 'green': 1.0, 'blue': 1.0}
+    >>> color_hex_to_float('FFF')
+    {'red': 1.0, 'green': 1.0, 'blue': 1.0}
+    """
+    if not isinstance(color_hex, str):
+        raise TypeError(color_hex)
+    if color_hex[0] == '#':
+        _rr_gg_bb = color_hex[1:].strip()
+    else:
+        _rr_gg_bb = color_hex.strip()
+
+    # if parsing fails, this isn't a hex int
+    _rgb_int = int(_rr_gg_bb, 16)
+
+    # parse #FFFFFF
+    if len(_rr_gg_bb) == 6:
+        blue = float(_rgb_int & 0xFF) / 0xFF
+        _rgb_int >>= 8
+        green = float(_rgb_int & 0xFF) / 0xFF
+        _rgb_int >>= 8
+        red = float(_rgb_int & 0xFF) / 0xFF
+        assert _rgb_int >> 8 == 0
+
+    # parse #FFF
+    elif len(_rr_gg_bb) == 3:
+        blue = float(_rgb_int & 0xF) / 0xF
+        _rgb_int >>= 4
+        green = float(_rgb_int & 0xF) / 0xF
+        _rgb_int >>= 4
+        red = float(_rgb_int & 0xF) / 0xF
+        assert _rgb_int >> 4 == 0
+
+    # invalid
+    else:
+        raise ValueError(color_hex)
+
+    # return a dict that can be easily converted to kwargs
+    return {
+        'red':   red,
+        'green': green,
+        'blue':  blue,
+    }
+
+
 class Workbook:
     def __init__(self, spreadsheet_id):
 
@@ -160,25 +237,27 @@ class Workbook:
         self.sheet = service.spreadsheets()
         self.spreadsheet_id = spreadsheet_id
 
-    def _get_sheet_id(self, sheet_name):
-        """
-        sheet names are case-insensitive but space-sensitive
-        only spaces are allowed, not other whitespace
-        """
+    def _get_sheet_names_and_ids(self) -> Dict[str, int]:
         result = self.sheet.get(spreadsheetId=self.spreadsheet_id,
                                 ranges=[],
                                 includeGridData=False,
                                 ).execute()
+        return {sheet['properties']['title']: sheet['properties']['sheetId'] for sheet in result['sheets']}
+
+    def _get_sheet_id(self, sheet_name) -> int:
+        """
+        sheet names are case-insensitive but space-sensitive
+        only spaces are allowed, not other whitespace
+        """
         if not isinstance(sheet_name, str):
             raise TypeError
         if not sheet_name or any(char in sheet_name for char in '\v\t\f\r\n'):
             raise ValueError(sheet_name)
-        sheet_names = []
-        for sheet in result['sheets']:
-            if sheet['properties']['title'].casefold() == sheet_name.casefold():
-                return sheet['properties']['sheetId']
-            sheet_names.append(sheet['properties']['title'])
-        raise ValueError(f'{sheet_name} not in {sheet_names}')
+        sheet_name_ids = self._get_sheet_names_and_ids()
+        for actual_sheet_name, actual_sheet_id in sheet_name_ids.items():
+            if sheet_name.casefold() == actual_sheet_name.casefold():
+                return actual_sheet_id
+        raise IndexError(f'"{sheet_name}" not in {sheet_name_ids.keys()}')
 
     def get_sheet_range_values(self, sheet_name, range_start, range_end):
         assert re.fullmatch(r'[A-Z]+[0-9]+', range_start)
@@ -203,10 +282,18 @@ class Workbook:
             'cellFormat':   result['sheets'][0]['data'][0]['rowData'][0]['values'][0],
         }
 
-    def set_background_color(self, sheet_name, cell_address, *, red=0.0, green=0.0, blue=0.0):
+    def set_background_color(self, sheet_name, cell_address, *, red=None, green=None, blue=None):
         cell_row, cell_column = parse_column_notation(cell_address)
         cell_row -= 1
         cell_column -= 1
+
+        # default white
+        if red is None and green is None and blue is None:
+            red = green = blue = 1.0
+        assert isinstance(red, (int, float)) and 0.0 <= red <= 1.0
+        assert isinstance(green, (int, float)) and 0.0 <= red <= 1.0
+        assert isinstance(blue, (int, float)) and 0.0 <= red <= 1.0
+
         body = {
             "requests": [
                 {
@@ -303,10 +390,10 @@ if __name__ == '__main__':
     # # wb = Workbook('1ahbAXvuamz2PB1COGx2dWjIV8BN75bqYL_KmgdHkWKk')
     #
     # # https://docs.google.com/spreadsheets/d/1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70/edit#gid=1116371039
-    wb = Workbook('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70')  # copy, so I don't break anything
+    # wb = Workbook('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70')  # copy, so I don't break anything
     #
     # # https://docs.google.com/spreadsheets/d/1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo/edit#gid=0
-    # wb = Workbook('1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo')  # random unused sheet
+    wb = Workbook('1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo')  # random unused sheet
     #
     # # # values = wb.get_sheet_range_values('Blk 95A', 'A1', 'P29')
     # # # values = wb.get_sheet_range_values('Blk 95A', 'A11', 'B12')
@@ -317,15 +404,15 @@ if __name__ == '__main__':
     #     for row in values:
     #         print(row)
     #
-    # values = wb.get_cell_properties('Sheet1', 'B2')
-    # # pprint(values['properties'])
-    # pprint(values)
-    print(wb._get_sheet_id('Blk \95A'))
+    values = wb.get_cell_properties('Sheet1', 'B2')
+    pprint(values)
 
     # values = wb.set_background_color('Sheet1', 'B2', red=0.6, blue=0.6, green=0.6)
     # pprint(values)
     # values = wb.set_text_format('Sheet1', 'B2', red=0, blue=1, green=1)
     # pprint(values)
+    wb.set_background_color('Sheet1', 'B2')
+    wb.set_text_format('Sheet1', 'B2')
 
     # for address in ['A1', 'B2', 'D123', 'AA1', ]:
     #     print(address, parse_column_notation(address))
