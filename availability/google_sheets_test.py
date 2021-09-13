@@ -286,9 +286,18 @@ class Workbook:
         result = self.sheet.values().get(spreadsheetId=self.spreadsheet_id,
                                          range=f'{sheet_name}!{range_start}:{range_end}',
                                          ).execute()
-        print(result.get('range'))
-        print(result.get('majorDimension'))
+        # print(result.get('range'))
+        # print(result.get('majorDimension'))
         return result.get('values', [])
+
+    def get_cell_value(self, sheet_name, cell_address):
+        assert re.fullmatch(r'[A-Z]+[0-9]+', cell_address)
+        result = self.sheet.values().get(spreadsheetId=self.spreadsheet_id,
+                                         range=f'{sheet_name}!{cell_address}',
+                                         ).execute()
+        # print(result.get('range'))
+        # print(result.get('majorDimension'))
+        return result.get('values', [])[0][0]
 
     def get_cell_properties(self, sheet_name, cell_address):
         assert re.fullmatch(r'[A-Z]+[0-9]+', cell_address)
@@ -425,6 +434,7 @@ if __name__ == '__main__':
     #
     # values = wb.get_cell_properties('Sheet1', 'B2')
     values = wb.get_cell_properties('Units taken by date', 'A1')
+    values = wb.get_cell_value('Units taken by date', 'A1')
     pprint(values)
 
     # wb.set_background_color('Sheet1', 'B2', **color_hex_to_float('#999999'))
