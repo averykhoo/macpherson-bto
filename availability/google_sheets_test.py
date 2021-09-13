@@ -2,7 +2,6 @@ import itertools
 import os
 import re
 import string
-from pprint import pprint
 from typing import Optional
 from typing import Union
 
@@ -162,12 +161,24 @@ class Workbook:
         self.spreadsheet_id = spreadsheet_id
 
     def _get_sheet_id(self, sheet_name):
+        """
+        sheet names are case-insensitive but space-sensitive
+        only spaces are allowed, not other whitespace
+        """
         result = self.sheet.get(spreadsheetId=self.spreadsheet_id,
-                                ranges=[f'{sheet_name}!A1'],
+                                ranges=[],
                                 includeGridData=False,
                                 ).execute()
-        # todo: check sheet name is correct! otherwise maybe the request was badly defined oops
-        return result['sheets'][0]['properties']['sheetId']
+        if not isinstance(sheet_name, str):
+            raise TypeError
+        if not sheet_name or any(char in sheet_name for char in '\v\t\f\r\n'):
+            raise ValueError(sheet_name)
+        sheet_names = []
+        for sheet in result['sheets']:
+            if sheet['properties']['title'].casefold() == sheet_name.casefold():
+                return sheet['properties']['sheetId']
+            sheet_names.append(sheet['properties']['title'])
+        raise ValueError(f'{sheet_name} not in {sheet_names}')
 
     def get_sheet_range_values(self, sheet_name, range_start, range_end):
         assert re.fullmatch(r'[A-Z]+[0-9]+', range_start)
@@ -292,10 +303,10 @@ if __name__ == '__main__':
     # # wb = Workbook('1ahbAXvuamz2PB1COGx2dWjIV8BN75bqYL_KmgdHkWKk')
     #
     # # https://docs.google.com/spreadsheets/d/1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70/edit#gid=1116371039
-    # # wb = Workbook('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70')  # copy, so I don't break anything
+    wb = Workbook('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70')  # copy, so I don't break anything
     #
     # # https://docs.google.com/spreadsheets/d/1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo/edit#gid=0
-    wb = Workbook('1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo')  # random unused sheet
+    # wb = Workbook('1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo')  # random unused sheet
     #
     # # # values = wb.get_sheet_range_values('Blk 95A', 'A1', 'P29')
     # # # values = wb.get_sheet_range_values('Blk 95A', 'A11', 'B12')
@@ -306,14 +317,15 @@ if __name__ == '__main__':
     #     for row in values:
     #         print(row)
     #
-    values = wb.get_cell_properties('Sheet1', 'B2')
-    # pprint(values['properties'])
-    pprint(values)
+    # values = wb.get_cell_properties('Sheet1', 'B2')
+    # # pprint(values['properties'])
+    # pprint(values)
+    print(wb._get_sheet_id('Blk \95A'))
 
-    values = wb.set_background_color('Sheet1', 'B2', red=0.6, blue=0.6, green=0.6)
-    pprint(values)
-    values = wb.set_text_format('Sheet1', 'B2', red=0, blue=1, green=1)
-    pprint(values)
+    # values = wb.set_background_color('Sheet1', 'B2', red=0.6, blue=0.6, green=0.6)
+    # pprint(values)
+    # values = wb.set_text_format('Sheet1', 'B2', red=0, blue=1, green=1)
+    # pprint(values)
 
     # for address in ['A1', 'B2', 'D123', 'AA1', ]:
     #     print(address, parse_column_notation(address))
