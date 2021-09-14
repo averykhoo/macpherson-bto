@@ -1,9 +1,7 @@
 import itertools
-import operator
 import os
 import re
 import string
-from pprint import pprint
 from typing import Dict
 from typing import Optional
 from typing import Union
@@ -325,6 +323,10 @@ class Workbook:
         _props = self.get_properties(sheet_name, cell_address)
         return color_float_to_hex(**_props['cellFormat']['effectiveFormat']['backgroundColor'])
 
+    def get_horizontal_alignment(self, sheet_name, cell_address):
+        _props = self.get_properties(sheet_name, cell_address)
+        return _props['cellFormat']['effectiveFormat']['horizontalAlignment']
+
     def get_text_color(self, sheet_name, cell_address):
         _props = self.get_properties(sheet_name, cell_address)
         return color_float_to_hex(**_props['cellFormat']['effectiveFormat']['textFormat']['foregroundColor'])
@@ -334,45 +336,29 @@ class Workbook:
         result = self.sheet.values().get(spreadsheetId=self.spreadsheet_id,
                                          range=f'{sheet_name}!{cell_address}',
                                          ).execute()
-        # print(result.get('range'))
-        # print(result.get('majorDimension'))
         return result.get('values', [])[0][0]
+
+    def get_values(self, sheet_name, range_start, range_end):
+        assert re.fullmatch(r'[A-Z]+[0-9]+', range_start)
+        assert re.fullmatch(r'[A-Z]+[0-9]+', range_end)
+        result = self.sheet.values().get(spreadsheetId=self.spreadsheet_id,
+                                         range=f'{sheet_name}!{range_start}:{range_end}',
+                                         ).execute()
+        return result.get('values', [])
 
     def set_background_color(self,
                              sheet_name: str,
                              cell_address: str,
                              color: Optional[str] = None,
                              ):
-        if color is not None:
-            red, green, blue = operator.itemgetter('red', 'green', 'blue')(color_hex_to_float(color))
-        else:
-            red = green = blue = 1.0  # default white
+        if color is None:
+            color = '#FFFFFF'
 
-        body = {
-            "requests": [
-                {
-                    "updateCells": {
-                        "range":  self._get_sheet_range(sheet_name, cell_address),
-                        "rows":   [
-                            {
-                                "values": [
-                                    {
-                                        "userEnteredFormat": {
-                                            "backgroundColor": {
-                                                "red":   red,
-                                                "green": green,
-                                                "blue":  blue,
-                                            }
-                                        }
-                                    }
-                                ]
-                            }
-                        ],
-                        "fields": "userEnteredFormat.backgroundColor"
-                    }
-                }
-            ]
-        }
+        body = {"requests": [{"updateCells": {
+            "fields": "userEnteredFormat.backgroundColor",
+            "range":  self._get_sheet_range(sheet_name, cell_address),
+            "rows":   [{"values": [{"userEnteredFormat": {"backgroundColor": color_hex_to_float(color)}}]}],
+        }}]}
         return self.sheet.batchUpdate(spreadsheetId=self.spreadsheet_id, body=body).execute()
 
     def set_text_format(self,
@@ -386,45 +372,56 @@ class Workbook:
                         strikethrough: Optional[bool] = None,
                         font_size: Optional[Union[float, int]] = None,
                         ):
-        if color is not None:
-            red, green, blue = operator.itemgetter('red', 'green', 'blue')(color_hex_to_float(color))
-        else:
-            red = green = blue = None  # default black
 
-        body = {
-            "requests": [
-                {
-                    "updateCells": {
-                        "range":  self._get_sheet_range(sheet_name, cell_address),
-                        "rows":   [
-                            {
-                                "values": [
-                                    {
-                                        "userEnteredFormat": {
-                                            "textFormat": {
-                                                "foregroundColor": {
-                                                    "red":   red,
-                                                    "green": green,
-                                                    "blue":  blue,
-                                                },
-                                                "fontSize":        font_size,
-                                                "bold":            bold,
-                                                "italic":          italic,
-                                                "underline":       underline,
-                                                "strikethrough":   strikethrough,
-                                            }
-                                        }
-                                    }
-                                ]
-                            }
-                        ],
-                        "fields": "userEnteredFormat.textFormat"
-                        # "fields": "userEnteredFormat(backgroundColor,textFormat,horizontalAlignment)"
-                    }
-                }
-            ]
-        }
+        body = {"requests": [{"updateCells": {
+            "fields": "userEnteredFormat.textFormat",
+            "range":  self._get_sheet_range(sheet_name, cell_address),
+            "rows":   [{"values": [{"userEnteredFormat": {
+                "textFormat": {"fontSize":        font_size,
+                               "bold":            bold,
+                               "italic":          italic,
+                               "underline":       underline,
+                               "strikethrough":   strikethrough,
+                               "foregroundColor": None if color is None else color_hex_to_float(color),
+                               }}}]}],
+        }}]}
         return self.sheet.batchUpdate(spreadsheetId=self.spreadsheet_id, body=body).execute()
+
+    def set_horizontal_alignment(self,
+                                 sheet_name,
+                                 cell_address,
+                                 horizontal_alignment: Optional[str] = None,
+                                 ):
+        if horizontal_alignment is not None:
+            if not isinstance(horizontal_alignment, str):
+                raise TypeError(horizontal_alignment)
+            if horizontal_alignment.casefold() not in {'left', 'center', 'right'}:  # american spelling only
+                raise ValueError(horizontal_alignment)
+        body = {"requests": [{"updateCells": {
+            "fields": "userEnteredFormat.horizontalAlignment",
+            "range":  self._get_sheet_range(sheet_name, cell_address),
+            "rows":   [{"values": [{"userEnteredFormat": {"horizontalAlignment": horizontal_alignment}}]}],
+        }}]}
+        return self.sheet.batchUpdate(spreadsheetId=self.spreadsheet_id, body=body).execute()
+
+    def set_values(self, sheet_name, range_start, range_end, values):
+        result = self.sheet.values().update(
+            spreadsheetId=self.spreadsheet_id,
+            range=f'{sheet_name}!{range_start}:{range_end}',
+            valueInputOption='USER_ENTERED',  # or 'RAW'
+            body={'values': values},
+        ).execute()
+        return result
+
+    def set_value(self, sheet_name, cell_address, value):
+        assert isinstance(value, str)
+        result = self.sheet.values().update(
+            spreadsheetId=self.spreadsheet_id,
+            range=f'{sheet_name}!{cell_address}',
+            valueInputOption='USER_ENTERED',  # or 'RAW'
+            body={'values': [[value]]},
+        ).execute()
+        return result
 
 
 if __name__ == '__main__':
@@ -439,7 +436,7 @@ if __name__ == '__main__':
     #
     # # # values = wb.get_sheet_range_values('Blk 95A', 'A1', 'P29')
     # # # values = wb.get_sheet_range_values('Blk 95A', 'A11', 'B12')
-    # values = wb.get_sheet_range_values('Sheet1', 'A1', 'B2')
+    # values = wb.get_sheet_range_values('Sheet6', 'A1', 'B2')
     # if not values:
     #     print('No data found.')
     # else:
@@ -447,12 +444,17 @@ if __name__ == '__main__':
     #         print(row)
     #
 
-    # wb.set_background_color('Sheet1', 'B2', color='#999')
-    # wb.set_background_color('Sheet1', 'B2', color='#d9d9d9')
-    # wb.set_text_format('Sheet1', 'B2', color='#0ff')
-    wb.set_background_color('Sheet1', 'B2')
-    wb.set_text_format('Sheet1', 'B2')
+    # wb.set_background_color('Sheet6', 'B2', color='#999')
+    # wb.set_background_color('Sheet6', 'B2', color='#d9d9d9')
+    # wb.set_text_format('Sheet6', 'B2', color='#0ff')
+    # wb.set_value('Sheet6', 'B2', 'hello world')
+    wb.set_values('Sheet6', 'B2', 'C3', [['x', 'y'], [8, 9]])
+    wb.set_horizontal_alignment('Sheet6', 'B2')
+    wb.set_background_color('Sheet6', 'B2')
+    wb.set_text_format('Sheet6', 'B2')
+    # wb.set_value('Sheet6', 'B2', 'Divide and Conquer')
 
-    print('value=', wb.get_value('Sheet1', 'B2'))
-    print('text_color=', wb.get_text_color('Sheet1', 'B2'))
-    print('background_color=', wb.get_background_color('Sheet1', 'B2'))
+    print('value:', wb.get_value('Sheet6', 'B2'))
+    print('text_color:', wb.get_text_color('Sheet6', 'B2'))
+    print('background_color:', wb.get_background_color('Sheet6', 'B2'))
+    print('horizontal_alignment:', wb.get_horizontal_alignment('Sheet6', 'B2'))
