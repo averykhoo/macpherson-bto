@@ -341,10 +341,10 @@ class Workbook:
     def set_background_color(self,
                              sheet_name: str,
                              cell_address: str,
-                             color_hex: Optional[str] = None,
+                             color: Optional[str] = None,
                              ):
-        if color_hex is not None:
-            red, green, blue = operator.itemgetter('red', 'green', 'blue')(color_hex_to_float(color_hex))
+        if color is not None:
+            red, green, blue = operator.itemgetter('red', 'green', 'blue')(color_hex_to_float(color))
         else:
             red = green = blue = 1.0  # default white
 
@@ -378,16 +378,16 @@ class Workbook:
     def set_text_format(self,
                         sheet_name,
                         cell_address,
-                        color_hex: Optional[str] = None,
                         *,
+                        color: Optional[str] = None,
                         bold: Optional[bool] = None,
                         italic: Optional[bool] = None,
                         underline: Optional[bool] = None,
                         strikethrough: Optional[bool] = None,
                         font_size: Optional[Union[float, int]] = None,
                         ):
-        if color_hex is not None:
-            red, green, blue = operator.itemgetter('red', 'green', 'blue')(color_hex_to_float(color_hex))
+        if color is not None:
+            red, green, blue = operator.itemgetter('red', 'green', 'blue')(color_hex_to_float(color))
         else:
             red = green = blue = None  # default black
 
@@ -447,9 +447,9 @@ if __name__ == '__main__':
     #         print(row)
     #
 
-    # wb.set_background_color('Sheet1', 'B2', color_hex='#999')
-    # wb.set_background_color('Sheet1', 'B2', color_hex='#d9d9d9')
-    # wb.set_text_format('Sheet1', 'B2', color_hex='#0ff')
+    # wb.set_background_color('Sheet1', 'B2', color='#999')
+    # wb.set_background_color('Sheet1', 'B2', color='#d9d9d9')
+    # wb.set_text_format('Sheet1', 'B2', color='#0ff')
     wb.set_background_color('Sheet1', 'B2')
     wb.set_text_format('Sheet1', 'B2')
 
