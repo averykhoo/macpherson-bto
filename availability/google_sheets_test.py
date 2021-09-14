@@ -1,4 +1,5 @@
 import itertools
+import operator
 import os
 import re
 import string
@@ -82,7 +83,7 @@ def _column_index_from_string(str_col: str):
         raise ValueError("{0} is not a valid column name".format(str_col))
 
 
-def parse_column_notation(cell_address: str):
+def parse_column_notation(cell_address: str, zero_index: bool = False):
     """
     Convert R1C1 to coordinates: 'B7' -> (7, 2)
     One-indexed
@@ -91,6 +92,10 @@ def parse_column_notation(cell_address: str):
     (2, 1)
     >>> parse_column_notation('AA22')
     (22, 27)
+    >>> parse_column_notation('A1', zero_index=True)
+    (0, 0)
+    >>> parse_column_notation('Z10', zero_index=True)
+    (9, 25)
     """
     if not isinstance(cell_address, str):
         raise TypeError(cell_address)
@@ -105,7 +110,10 @@ def parse_column_notation(cell_address: str):
                 raise ValueError(f'col too large, not supported: {cell_address[:i]}')
             if not cell_address[i:].isdigit():
                 raise ValueError(f'invalid row: {cell_address[i:]}')
-            return int(cell_address[i:]), _column_index_from_string(cell_address[:i])
+            if zero_index:
+                return int(cell_address[i:]) - 1, _column_index_from_string(cell_address[:i]) - 1
+            else:
+                return int(cell_address[i:]), _column_index_from_string(cell_address[:i])
     raise ValueError(f'no col: {cell_address}')
 
 
@@ -280,6 +288,16 @@ class Workbook:
                 return actual_sheet_id
         raise IndexError(f'"{sheet_name}" not in {sheet_name_ids.keys()}')
 
+    def _get_sheet_range(self, sheet_name, range_start, range_end=None):
+        start_row, start_column = parse_column_notation(range_start, zero_index=True)
+        end_row, end_column = parse_column_notation(range_end or range_start)
+        return {"sheetId":          self._get_sheet_id(sheet_name),
+                "startRowIndex":    start_row,
+                "endRowIndex":      end_row,
+                "startColumnIndex": start_column,
+                "endColumnIndex":   end_column,
+                }
+
     def get_sheet_range_values(self, sheet_name, range_start, range_end):
         assert re.fullmatch(r'[A-Z]+[0-9]+', range_start)
         assert re.fullmatch(r'[A-Z]+[0-9]+', range_end)
@@ -320,27 +338,21 @@ class Workbook:
         # print(result.get('majorDimension'))
         return result.get('values', [])[0][0]
 
-    def set_background_color(self, sheet_name, cell_address, *, red=None, green=None, blue=None):
-        cell_row, cell_column = parse_column_notation(cell_address)
-        cell_row -= 1
-        cell_column -= 1
-
-        # default white
-        if red is None and green is None and blue is None:
-            red = green = blue = 1.0
-        color_float_to_hex(red=red, green=green, blue=blue)  # use this as a sanity check
+    def set_background_color(self,
+                             sheet_name: str,
+                             cell_address: str,
+                             color_hex: Optional[str] = None,
+                             ):
+        if color_hex is not None:
+            red, green, blue = operator.itemgetter('red', 'green', 'blue')(color_hex_to_float(color_hex))
+        else:
+            red = green = blue = 1.0  # default white
 
         body = {
             "requests": [
                 {
                     "updateCells": {
-                        "range":  {
-                            "sheetId":          self._get_sheet_id(sheet_name),
-                            "startRowIndex":    cell_row,
-                            "endRowIndex":      cell_row + 1,
-                            "startColumnIndex": cell_column,
-                            "endColumnIndex":   cell_column + 1
-                        },
+                        "range":  self._get_sheet_range(sheet_name, cell_address),
                         "rows":   [
                             {
                                 "values": [
@@ -366,30 +378,24 @@ class Workbook:
     def set_text_format(self,
                         sheet_name,
                         cell_address,
+                        color_hex: Optional[str] = None,
                         *,
-                        red: Optional[Union[float, int]] = None,  # 0.0 to 1.0
-                        green: Optional[Union[float, int]] = None,  # 0.0 to 1.0
-                        blue: Optional[Union[float, int]] = None,  # 0.0 to 1.0
                         bold: Optional[bool] = None,
                         italic: Optional[bool] = None,
                         underline: Optional[bool] = None,
                         strikethrough: Optional[bool] = None,
                         font_size: Optional[Union[float, int]] = None,
                         ):
-        cell_row, cell_column = parse_column_notation(cell_address)
-        cell_row -= 1
-        cell_column -= 1
+        if color_hex is not None:
+            red, green, blue = operator.itemgetter('red', 'green', 'blue')(color_hex_to_float(color_hex))
+        else:
+            red = green = blue = None  # default black
+
         body = {
             "requests": [
                 {
                     "updateCells": {
-                        "range":  {
-                            "sheetId":          self._get_sheet_id(sheet_name),
-                            "startRowIndex":    cell_row,
-                            "endRowIndex":      cell_row + 1,
-                            "startColumnIndex": cell_column,
-                            "endColumnIndex":   cell_column + 1
-                        },
+                        "range":  self._get_sheet_range(sheet_name, cell_address),
                         "rows":   [
                             {
                                 "values": [
@@ -426,10 +432,10 @@ if __name__ == '__main__':
     # # wb = Workbook('1ahbAXvuamz2PB1COGx2dWjIV8BN75bqYL_KmgdHkWKk')
     #
     # # https://docs.google.com/spreadsheets/d/1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70/edit#gid=1116371039
-    wb = Workbook('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70')  # copy, so I don't break anything
+    # wb = Workbook('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70')  # copy, so I don't break anything
     #
     # # https://docs.google.com/spreadsheets/d/1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo/edit#gid=0
-    # wb = Workbook('1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo')  # random unused sheet
+    wb = Workbook('1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo')  # random unused sheet
     #
     # # # values = wb.get_sheet_range_values('Blk 95A', 'A1', 'P29')
     # # # values = wb.get_sheet_range_values('Blk 95A', 'A11', 'B12')
@@ -440,18 +446,13 @@ if __name__ == '__main__':
     #     for row in values:
     #         print(row)
     #
-    # values = wb.get_properties('Sheet1', 'B2')
-    # values = wb.get_properties('Units taken by date', 'A1')
-    # values = wb.get_background_color('Units taken by date', 'A1')
-    values = wb.get_text_color('Units taken by date', 'A1')
-    # values = wb.get_value('Units taken by date', 'A1')
-    pprint(values)
 
-    # wb.set_background_color('Sheet1', 'B2', **color_hex_to_float('#999999'))
-    # wb.set_background_color('Sheet1', 'B2', red=0.6, blue=0.6, green=0.6)
-    # wb.set_text_format('Sheet1', 'B2', red=0, blue=1, green=1)
-    # wb.set_background_color('Sheet1', 'B2')
-    # wb.set_text_format('Sheet1', 'B2')
+    # wb.set_background_color('Sheet1', 'B2', color_hex='#999')
+    # wb.set_background_color('Sheet1', 'B2', color_hex='#d9d9d9')
+    # wb.set_text_format('Sheet1', 'B2', color_hex='#0ff')
+    wb.set_background_color('Sheet1', 'B2')
+    wb.set_text_format('Sheet1', 'B2')
 
-    # for address in ['A1', 'B2', 'D123', 'AA1', ]:
-    #     print(address, parse_column_notation(address))
+    print('value=', wb.get_value('Sheet1', 'B2'))
+    print('text_color=', wb.get_text_color('Sheet1', 'B2'))
+    print('background_color=', wb.get_background_color('Sheet1', 'B2'))
