@@ -288,7 +288,7 @@ class Sheet:
                 return actual_sheet_id
         raise IndexError(f'"{self.sheet_name}" not in {sheet_name_ids.keys()}')
 
-    def _get_sheet_range(self, range_start, range_end=None):
+    def _get_sheet_range(self, range_start, range_end=None):  # todo: range_address instead
         start_row, start_column = parse_column_notation(range_start, zero_index=True)
         end_row, end_column = parse_column_notation(range_end or range_start)
         return {"sheetId":          self._get_sheet_id(),
@@ -298,7 +298,7 @@ class Sheet:
                 "endColumnIndex":   end_column,
                 }
 
-    def get_sheet_range_values(self, range_start, range_end):
+    def get_sheet_range_values(self, range_start, range_end):  # todo: range_address instead
         assert re.fullmatch(r'[A-Z]+[0-9]+', range_start)
         assert re.fullmatch(r'[A-Z]+[0-9]+', range_end)
         result = self.sheet_service.values().get(spreadsheetId=self.spreadsheet_id,
@@ -340,7 +340,7 @@ class Sheet:
                                                  ).execute()
         return result.get('values', [])[0][0]
 
-    def get_values(self, range_start, range_end):
+    def get_values(self, range_start, range_end):  # todo: range_address instead
         assert re.fullmatch(r'[A-Z]+[0-9]+', range_start)
         assert re.fullmatch(r'[A-Z]+[0-9]+', range_end)
         result = self.sheet_service.values().get(spreadsheetId=self.spreadsheet_id,
@@ -350,7 +350,7 @@ class Sheet:
 
     def set_background_color(self,
                              range_start: str,
-                             range_end=None,
+                             range_end=None,  # todo: range_address instead
                              *,
                              color: Optional[str] = None,
                              ):
@@ -366,7 +366,7 @@ class Sheet:
 
     def set_text_format(self,
                         range_start,
-                        range_end=None,
+                        range_end=None,  # todo: range_address instead
                         *,
                         color: Optional[str] = None,
                         bold: Optional[bool] = None,
@@ -392,7 +392,7 @@ class Sheet:
 
     def set_horizontal_alignment(self,
                                  range_start,
-                                 range_end=None,
+                                 range_end=None,  # todo: range_address instead
                                  *,
                                  horizontal_alignment: Optional[str] = None,
                                  ):
@@ -437,7 +437,7 @@ class Sheet:
         ).execute()
         return result
 
-    def set_values(self, range_start, range_end, values):
+    def set_values(self, range_start, range_end, values):  # todo: range_address instead
         result = self.sheet_service.values().update(
             spreadsheetId=self.spreadsheet_id,
             range=f'{self.sheet_name}!{range_start}:{range_end}',
