@@ -234,8 +234,8 @@ def color_float_to_hex(*, red: float = 0.0, green: float = 0.0, blue: float = 0.
     return f'#{round(red * 0xFF):02X}{round(green * 0xFF):02X}{round(blue * 0xFF):02X}'
 
 
-class Workbook:
-    def __init__(self, spreadsheet_id):
+class Sheet:
+    def __init__(self, spreadsheet_id, sheet_name):
 
         """Shows basic usage of the Sheets API.
         Prints values from a sample spreadsheet.
@@ -261,57 +261,59 @@ class Workbook:
                 token.write(creds.to_json())
 
         service = build('sheets', 'v4', credentials=creds)
-        self.sheet = service.spreadsheets()
+        self.sheet_service = service.spreadsheets()
         self.spreadsheet_id = spreadsheet_id
+        self.sheet_name = sheet_name
+        self._get_sheet_id()  # test sheet name exists
 
-    def _get_sheet_names_and_ids(self) -> Dict[str, int]:
-        result = self.sheet.get(spreadsheetId=self.spreadsheet_id,
-                                ranges=[],
-                                includeGridData=False,
-                                ).execute()
+    def __get_workbook_sheet_names_and_ids(self) -> Dict[str, int]:
+        result = self.sheet_service.get(spreadsheetId=self.spreadsheet_id,
+                                        ranges=[],
+                                        includeGridData=False,
+                                        ).execute()
         return {sheet['properties']['title']: sheet['properties']['sheetId'] for sheet in result['sheets']}
 
-    def _get_sheet_id(self, sheet_name) -> int:
+    def _get_sheet_id(self) -> int:
         """
-        sheet names are case-insensitive but space-sensitive
+        sheet_service names are case-insensitive but space-sensitive
         only spaces are allowed, not other whitespace
         """
-        if not isinstance(sheet_name, str):
+        if not isinstance(self.sheet_name, str):
             raise TypeError
-        if not sheet_name or any(char in sheet_name for char in '\v\t\f\r\n'):
-            raise ValueError(sheet_name)
-        sheet_name_ids = self._get_sheet_names_and_ids()
+        if not self.sheet_name or any(char in self.sheet_name for char in '\v\t\f\r\n'):
+            raise ValueError(self.sheet_name)
+        sheet_name_ids = self.__get_workbook_sheet_names_and_ids()
         for actual_sheet_name, actual_sheet_id in sheet_name_ids.items():
-            if sheet_name.casefold() == actual_sheet_name.casefold():
+            if self.sheet_name.casefold() == actual_sheet_name.casefold():
                 return actual_sheet_id
-        raise IndexError(f'"{sheet_name}" not in {sheet_name_ids.keys()}')
+        raise IndexError(f'"{self.sheet_name}" not in {sheet_name_ids.keys()}')
 
-    def _get_sheet_range(self, sheet_name, range_start, range_end=None):
+    def _get_sheet_range(self, range_start, range_end=None):
         start_row, start_column = parse_column_notation(range_start, zero_index=True)
         end_row, end_column = parse_column_notation(range_end or range_start)
-        return {"sheetId":          self._get_sheet_id(sheet_name),
+        return {"sheetId":          self._get_sheet_id(),
                 "startRowIndex":    start_row,
                 "endRowIndex":      end_row,
                 "startColumnIndex": start_column,
                 "endColumnIndex":   end_column,
                 }
 
-    def get_sheet_range_values(self, sheet_name, range_start, range_end):
+    def get_sheet_range_values(self, range_start, range_end):
         assert re.fullmatch(r'[A-Z]+[0-9]+', range_start)
         assert re.fullmatch(r'[A-Z]+[0-9]+', range_end)
-        result = self.sheet.values().get(spreadsheetId=self.spreadsheet_id,
-                                         range=f'{sheet_name}!{range_start}:{range_end}',
-                                         ).execute()
+        result = self.sheet_service.values().get(spreadsheetId=self.spreadsheet_id,
+                                                 range=f'{self.sheet_name}!{range_start}:{range_end}',
+                                                 ).execute()
         # print(result.get('range'))
         # print(result.get('majorDimension'))
         return result.get('values', [])
 
-    def get_properties(self, sheet_name, cell_address):
+    def get_properties(self, cell_address):
         assert re.fullmatch(r'[A-Z]+[0-9]+', cell_address)
-        result = self.sheet.get(spreadsheetId=self.spreadsheet_id,
-                                ranges=[f'{sheet_name}!{cell_address}'],
-                                includeGridData=True,
-                                ).execute()
+        result = self.sheet_service.get(spreadsheetId=self.spreadsheet_id,
+                                        ranges=[f'{self.sheet_name}!{cell_address}'],
+                                        includeGridData=True,
+                                        ).execute()
 
         return {
             'properties':   result['properties'],
@@ -319,51 +321,52 @@ class Workbook:
             'cellFormat':   result['sheets'][0]['data'][0]['rowData'][0]['values'][0],
         }
 
-    def get_background_color(self, sheet_name, cell_address):
-        _props = self.get_properties(sheet_name, cell_address)
+    def get_background_color(self, cell_address):
+        _props = self.get_properties(cell_address)
         return color_float_to_hex(**_props['cellFormat']['effectiveFormat']['backgroundColor'])
 
-    def get_horizontal_alignment(self, sheet_name, cell_address):
-        _props = self.get_properties(sheet_name, cell_address)
+    def get_horizontal_alignment(self, cell_address):
+        _props = self.get_properties(cell_address)
         return _props['cellFormat']['effectiveFormat']['horizontalAlignment']
 
-    def get_text_color(self, sheet_name, cell_address):
-        _props = self.get_properties(sheet_name, cell_address)
+    def get_text_color(self, cell_address):
+        _props = self.get_properties(cell_address)
         return color_float_to_hex(**_props['cellFormat']['effectiveFormat']['textFormat']['foregroundColor'])
 
-    def get_value(self, sheet_name, cell_address):
+    def get_value(self, cell_address):
         assert re.fullmatch(r'[A-Z]+[0-9]+', cell_address)
-        result = self.sheet.values().get(spreadsheetId=self.spreadsheet_id,
-                                         range=f'{sheet_name}!{cell_address}',
-                                         ).execute()
+        result = self.sheet_service.values().get(spreadsheetId=self.spreadsheet_id,
+                                                 range=f'{self.sheet_name}!{cell_address}',
+                                                 ).execute()
         return result.get('values', [])[0][0]
 
-    def get_values(self, sheet_name, range_start, range_end):
+    def get_values(self, range_start, range_end):
         assert re.fullmatch(r'[A-Z]+[0-9]+', range_start)
         assert re.fullmatch(r'[A-Z]+[0-9]+', range_end)
-        result = self.sheet.values().get(spreadsheetId=self.spreadsheet_id,
-                                         range=f'{sheet_name}!{range_start}:{range_end}',
-                                         ).execute()
+        result = self.sheet_service.values().get(spreadsheetId=self.spreadsheet_id,
+                                                 range=f'{self.sheet_name}!{range_start}:{range_end}',
+                                                 ).execute()
         return result.get('values', [])
 
     def set_background_color(self,
-                             sheet_name: str,
-                             cell_address: str,
+                             range_start: str,
+                             range_end=None,
+                             *,
                              color: Optional[str] = None,
                              ):
         if color is None:
             color = '#FFFFFF'
 
-        body = {"requests": [{"updateCells": {
+        body = {"requests": [{"repeatCell": {
             "fields": "userEnteredFormat.backgroundColor",
-            "range":  self._get_sheet_range(sheet_name, cell_address),
-            "rows":   [{"values": [{"userEnteredFormat": {"backgroundColor": color_hex_to_float(color)}}]}],
+            "range":  self._get_sheet_range(range_start, range_end),
+            "cell":   {"userEnteredFormat": {"backgroundColor": color_hex_to_float(color)}},
         }}]}
-        return self.sheet.batchUpdate(spreadsheetId=self.spreadsheet_id, body=body).execute()
+        return self.sheet_service.batchUpdate(spreadsheetId=self.spreadsheet_id, body=body).execute()
 
     def set_text_format(self,
-                        sheet_name,
-                        cell_address,
+                        range_start,
+                        range_end=None,
                         *,
                         color: Optional[str] = None,
                         bold: Optional[bool] = None,
@@ -373,23 +376,24 @@ class Workbook:
                         font_size: Optional[Union[float, int]] = None,
                         ):
 
-        body = {"requests": [{"updateCells": {
+        body = {"requests": [{"repeatCell": {
             "fields": "userEnteredFormat.textFormat",
-            "range":  self._get_sheet_range(sheet_name, cell_address),
-            "rows":   [{"values": [{"userEnteredFormat": {
+            "range":  self._get_sheet_range(range_start, range_end),
+            "cell":   {"userEnteredFormat": {
                 "textFormat": {"fontSize":        font_size,
                                "bold":            bold,
                                "italic":          italic,
                                "underline":       underline,
                                "strikethrough":   strikethrough,
                                "foregroundColor": None if color is None else color_hex_to_float(color),
-                               }}}]}],
+                               }}},
         }}]}
-        return self.sheet.batchUpdate(spreadsheetId=self.spreadsheet_id, body=body).execute()
+        return self.sheet_service.batchUpdate(spreadsheetId=self.spreadsheet_id, body=body).execute()
 
     def set_horizontal_alignment(self,
-                                 sheet_name,
-                                 cell_address,
+                                 range_start,
+                                 range_end=None,
+                                 *,
                                  horizontal_alignment: Optional[str] = None,
                                  ):
         if horizontal_alignment is not None:
@@ -397,27 +401,56 @@ class Workbook:
                 raise TypeError(horizontal_alignment)
             if horizontal_alignment.casefold() not in {'left', 'center', 'right'}:  # american spelling only
                 raise ValueError(horizontal_alignment)
-        body = {"requests": [{"updateCells": {
+        body = {"requests": [{"repeatCell": {
             "fields": "userEnteredFormat.horizontalAlignment",
-            "range":  self._get_sheet_range(sheet_name, cell_address),
-            "rows":   [{"values": [{"userEnteredFormat": {"horizontalAlignment": horizontal_alignment}}]}],
+            "range":  self._get_sheet_range(range_start, range_end),
+            "cell":   {"userEnteredFormat": {"horizontalAlignment": horizontal_alignment}},
         }}]}
-        return self.sheet.batchUpdate(spreadsheetId=self.spreadsheet_id, body=body).execute()
+        return self.sheet_service.batchUpdate(spreadsheetId=self.spreadsheet_id, body=body).execute()
 
-    def set_values(self, sheet_name, range_start, range_end, values):
-        result = self.sheet.values().update(
+    def get_first_empty_row_after_existing_content(self, *, zero_index=False):
+        result = self.sheet_service.values().append(
             spreadsheetId=self.spreadsheet_id,
-            range=f'{sheet_name}!{range_start}:{range_end}',
+            range=f'{self.sheet_name}',
+            valueInputOption='USER_ENTERED',  # or 'RAW'
+            body={'values': [[]]},
+        ).execute()
+        return parse_column_notation(result['updates']['updatedRange'].rpartition('!')[-1], zero_index=zero_index)[0]
+
+    def append_values(self, values, after_end=True):
+        """
+        returns something like
+        {'spreadsheetId': '1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo',
+         'updates':       {'spreadsheetId': '1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo',
+                           'updatedRange':  'Sheet6!A13',
+                           'updatedRows':    1,
+                           'updatedColumns': 1,
+                           'updatedCells':   1,
+                           }}
+        """
+        empty_row_idx = self.get_first_empty_row_after_existing_content() if after_end else 1
+        result = self.sheet_service.values().append(
+            spreadsheetId=self.spreadsheet_id,
+            range=f'{self.sheet_name}!A{empty_row_idx}',
             valueInputOption='USER_ENTERED',  # or 'RAW'
             body={'values': values},
         ).execute()
         return result
 
-    def set_value(self, sheet_name, cell_address, value):
-        assert isinstance(value, str)
-        result = self.sheet.values().update(
+    def set_values(self, range_start, range_end, values):
+        result = self.sheet_service.values().update(
             spreadsheetId=self.spreadsheet_id,
-            range=f'{sheet_name}!{cell_address}',
+            range=f'{self.sheet_name}!{range_start}:{range_end}',
+            valueInputOption='USER_ENTERED',  # or 'RAW'
+            body={'values': values},
+        ).execute()
+        return result
+
+    def set_value(self, cell_address, value):
+        assert isinstance(value, str)
+        result = self.sheet_service.values().update(
+            spreadsheetId=self.spreadsheet_id,
+            range=f'{self.sheet_name}!{cell_address}',
             valueInputOption='USER_ENTERED',  # or 'RAW'
             body={'values': [[value]]},
         ).execute()
@@ -426,13 +459,13 @@ class Workbook:
 
 if __name__ == '__main__':
     # # https://docs.google.com/spreadsheets/d/1ahbAXvuamz2PB1COGx2dWjIV8BN75bqYL_KmgdHkWKk/edit#gid=1211096710
-    # # wb = Workbook('1ahbAXvuamz2PB1COGx2dWjIV8BN75bqYL_KmgdHkWKk')
+    # # sheet = Sheet('1ahbAXvuamz2PB1COGx2dWjIV8BN75bqYL_KmgdHkWKk', '...)
     #
     # # https://docs.google.com/spreadsheets/d/1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70/edit#gid=1116371039
-    # wb = Workbook('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70')  # copy, so I don't break anything
+    # sheet = Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', '...)  # copy, so I don't break anything
     #
     # # https://docs.google.com/spreadsheets/d/1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo/edit#gid=0
-    wb = Workbook('1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo')  # random unused sheet
+    sheet = Sheet('1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo', 'Sheet6')  # random unused sheet_service
     #
     # # # values = wb.get_sheet_range_values('Blk 95A', 'A1', 'P29')
     # # # values = wb.get_sheet_range_values('Blk 95A', 'A11', 'B12')
@@ -444,17 +477,15 @@ if __name__ == '__main__':
     #         print(row)
     #
 
-    # wb.set_background_color('Sheet6', 'B2', color='#999')
-    # wb.set_background_color('Sheet6', 'B2', color='#d9d9d9')
-    # wb.set_text_format('Sheet6', 'B2', color='#0ff')
-    # wb.set_value('Sheet6', 'B2', 'hello world')
-    wb.set_values('Sheet6', 'B2', 'C3', [['x', 'y'], [8, 9]])
-    wb.set_horizontal_alignment('Sheet6', 'B2')
-    wb.set_background_color('Sheet6', 'B2')
-    wb.set_text_format('Sheet6', 'B2')
-    # wb.set_value('Sheet6', 'B2', 'Divide and Conquer')
+    # sheet.set_horizontal_alignment('Sheet6', 'B2', 'C3')
+    # sheet.set_background_color('Sheet6', 'B2', 'C3')
+    # sheet.set_text_format('Sheet6', 'B2', 'C3')
+    print(sheet.get_first_empty_row_after_existing_content())
+    # print(sheet.append_values('Sheet6', [['a']]))
+    # sheet.set_values('Sheet6', 'B2', 'C3', [['x', 'y'], [8, 9]])
+    # sheet.set_value('Sheet6', 'B2', 'hello world')
 
-    print('value:', wb.get_value('Sheet6', 'B2'))
-    print('text_color:', wb.get_text_color('Sheet6', 'B2'))
-    print('background_color:', wb.get_background_color('Sheet6', 'B2'))
-    print('horizontal_alignment:', wb.get_horizontal_alignment('Sheet6', 'B2'))
+    print('value:', sheet.get_value('B2'))
+    print('text_color:', sheet.get_text_color('B2'))
+    print('background_color:', sheet.get_background_color('B2'))
+    print('horizontal_alignment:', sheet.get_horizontal_alignment('B2'))

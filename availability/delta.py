@@ -6,6 +6,8 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
+from availability.google_sheets_test import Sheet
+
 backups_dir = Path('backups')
 
 if __name__ == '__main__':
@@ -70,16 +72,53 @@ if __name__ == '__main__':
     df = pd.DataFrame(rows, columns=headers)
     df_removed = df[df['unit_id'].apply(lambda x: x in removed_ids)]
 
-    print((datetime.datetime.strptime(curr_file.stem, '%Y-%m-%d--%H-%M-%S') - datetime.timedelta(hours=12))
-          .strftime('%d/%m/%Y') + '\t' + 'Public queue')
-    print('2-Room total:\t' + str(len(df_removed[df_removed['flat_type'].str.contains('2-Room')])))
+    sheet = Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Units taken by date')  # copy
+    next_row = sheet.get_first_empty_row_after_existing_content()
+
+    date_str = (datetime.datetime.strptime(curr_file.stem, '%Y-%m-%d--%H-%M-%S')
+                - datetime.timedelta(hours=12)).strftime('%d/%m/%Y')
+    print(date_str + '\t' + 'Public queue')
+    next_row += 1
+    sheet.set_values(f'A{next_row}', f'B{next_row}', [[date_str, 'Public queue']])
+    sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
+    sheet.set_horizontal_alignment(f'A{next_row}', horizontal_alignment='left')
+    sheet.set_background_color(f'A{next_row}', f'B{next_row}', color='#d9d9d9')
+    next_row += 1
+
+    n_2rm = str(len(df_removed[df_removed['flat_type'].str.contains('2-Room')]))
+
+    print('2-room total:\t' + n_2rm)
+    sheet.set_values(f'A{next_row}', f'B{next_row}', [['2-room total:', n_2rm]])
+    sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
+    next_row += 1
     for i, row in df_removed[df_removed['flat_type'].str.contains('2-Room')].iterrows():
         print('Blk ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
+        sheet.set_values(f'A{next_row}', f'B{next_row}', [['Blk ' + str(row['block']),
+                                                           row['level_str'] + '-' + str(row['stack'])]])
+        next_row += 1
     print()
-    print('3-Room total:\t' + str(len(df_removed[df_removed['flat_type'].str.contains('3-Room')])))
+    next_row += 1
+
+    n_3rm = str(len(df_removed[df_removed['flat_type'].str.contains('3-Room')]))
+    print('3-room total:\t' + n_3rm)
+    sheet.set_values(f'A{next_row}', f'B{next_row}', [['3-room total:', n_3rm]])
+    sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
+    next_row += 1
     for i, row in df_removed[df_removed['flat_type'].str.contains('3-Room')].iterrows():
         print('Blk ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
+        sheet.set_values(f'A{next_row}', f'B{next_row}', [['Blk ' + str(row['block']),
+                                                           row['level_str'] + '-' + str(row['stack'])]])
+        next_row += 1
     print()
-    print('4-Room total:\t' + str(len(df_removed[df_removed['flat_type'].str.contains('4-Room')])))
+    next_row += 1
+
+    n_4rm = str(len(df_removed[df_removed['flat_type'].str.contains('4-Room')]))
+    print('4-room total:\t' + n_4rm)
+    sheet.set_values(f'A{next_row}', f'B{next_row}', [['4-room total:', n_4rm]])
+    sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
+    next_row += 1
     for i, row in df_removed[df_removed['flat_type'].str.contains('4-Room')].iterrows():
         print('Blk ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
+        sheet.set_values(f'A{next_row}', f'B{next_row}', [['Blk ' + str(row['block']),
+                                                           row['level_str'] + '-' + str(row['stack'])]])
+        next_row += 1
