@@ -7,6 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from availability.google_sheets_test import Sheet
+from availability.google_sheets_test import build_column_notation
 
 backups_dir = Path('backups')
 
@@ -122,3 +123,50 @@ if __name__ == '__main__':
         sheet.set_values(f'A{next_row}', f'B{next_row}', [['Blk ' + str(row['block']),
                                                            row['level_str'] + '-' + str(row['stack'])]])
         next_row += 1
+
+    sheets = {  # copy, so I don't break anything
+        'Blk 95A': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 95A'),
+        'Blk 95B': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 95B'),
+        'Blk 95C': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 95C'),
+        'Blk 97A': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 97A'),
+        'Blk 97B': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 97B'),
+        'Blk 99A': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 99A'),
+        'Blk 99B': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 99B'),
+    }
+
+    tables = {block: dict() for block in sheets.keys()}
+    for block, sheet in sheets.items():
+        level_dict = dict.fromkeys(range(2, 20))
+        stack_dict = dict()
+        header_row = None
+        for i, row in enumerate(sheet.get_values('A1', f'A{sheet.get_first_empty_row_after_existing_content()}')):
+            if not row:
+                continue
+            value = row[0]
+            row_idx = i + 1
+            if value.strip() == 'LEVEL/UNIT':
+                header_row = row_idx
+            if header_row and value.isdigit() and int(value) in level_dict:
+                assert level_dict[int(value)] is None
+                level_dict[int(value)] = row_idx
+
+        for j, value in enumerate(sheet.get_values(f'B{header_row}', f'Z{header_row}')[0]):
+            col_idx = j + 2
+            if not value.isdigit():
+                continue
+            stack_dict[int(value)] = col_idx
+
+        print(block)
+        print(level_dict)
+        print(stack_dict)
+        for level, row_idx in level_dict.items():
+            for stack, col_idx in stack_dict.items():
+                tables[block][f'#{level:02d}-{stack}'] = build_column_notation(row_idx, col_idx)
+        print(tables[block])
+
+    for i, row in df_removed.iterrows():
+        block = 'Blk ' + str(row['block'])
+        unit = row['level_str'] + '-' + str(row['stack'])
+        cell_address = tables[block][unit]
+        print('gray', block, unit, cell_address)
+        sheets[block].set_background_color(cell_address, color='#999')

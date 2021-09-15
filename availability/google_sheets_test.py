@@ -459,33 +459,45 @@ class Sheet:
 
 if __name__ == '__main__':
     # # https://docs.google.com/spreadsheets/d/1ahbAXvuamz2PB1COGx2dWjIV8BN75bqYL_KmgdHkWKk/edit#gid=1211096710
-    # # sheet = Sheet('1ahbAXvuamz2PB1COGx2dWjIV8BN75bqYL_KmgdHkWKk', '...)
+    # # sheet = Sheet('1ahbAXvuamz2PB1COGx2dWjIV8BN75bqYL_KmgdHkWKk', '...')
     #
     # # https://docs.google.com/spreadsheets/d/1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70/edit#gid=1116371039
-    # sheet = Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', '...)  # copy, so I don't break anything
-    #
-    # # https://docs.google.com/spreadsheets/d/1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo/edit#gid=0
-    sheet = Sheet('1NeklzsZ_EZXz0W5eyPdRbZmGpNqIdAGJyIMVYO342oo', 'Sheet6')  # random unused sheet_service
-    #
-    # # # values = wb.get_sheet_range_values('Blk 95A', 'A1', 'P29')
-    # # # values = wb.get_sheet_range_values('Blk 95A', 'A11', 'B12')
-    # values = wb.get_sheet_range_values('Sheet6', 'A1', 'B2')
-    # if not values:
-    #     print('No data found.')
-    # else:
-    #     for row in values:
-    #         print(row)
-    #
+    sheets = {  # copy, so I don't break anything
+        'Blk 95A': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 95A'),
+        'Blk 95B': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 95B'),
+        'Blk 95C': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 95C'),
+        'Blk 97A': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 97A'),
+        'Blk 97B': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 97B'),
+        'Blk 99A': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 99A'),
+        'Blk 99B': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 99B'),
+    }
 
-    # sheet.set_horizontal_alignment('Sheet6', 'B2', 'C3')
-    # sheet.set_background_color('Sheet6', 'B2', 'C3')
-    # sheet.set_text_format('Sheet6', 'B2', 'C3')
-    print(sheet.get_first_empty_row_after_existing_content())
-    # print(sheet.append_values('Sheet6', [['a']]))
-    # sheet.set_values('Sheet6', 'B2', 'C3', [['x', 'y'], [8, 9]])
-    # sheet.set_value('Sheet6', 'B2', 'hello world')
+    tables = {block: dict() for block in sheets.keys()}
+    for block, sheet in sheets.items():
+        level_dict = dict.fromkeys(range(2, 20))
+        stack_dict = dict()
+        header_row = None
+        for i, row in enumerate(sheet.get_values('A1', f'A{sheet.get_first_empty_row_after_existing_content()}')):
+            if not row:
+                continue
+            value = row[0]
+            row_idx = i + 1
+            if value.strip() == 'LEVEL/UNIT':
+                header_row = row_idx
+            if header_row and value.isdigit() and int(value) in level_dict:
+                assert level_dict[int(value)] is None
+                level_dict[int(value)] = row_idx
 
-    print('value:', sheet.get_value('B2'))
-    print('text_color:', sheet.get_text_color('B2'))
-    print('background_color:', sheet.get_background_color('B2'))
-    print('horizontal_alignment:', sheet.get_horizontal_alignment('B2'))
+        for j, value in enumerate(sheet.get_values(f'B{header_row}', f'Z{header_row}')[0]):
+            col_idx = j + 2
+            if not value.isdigit():
+                continue
+            stack_dict[int(value)] = col_idx
+
+        print(block)
+        print(level_dict)
+        print(stack_dict)
+        for level, row_idx in level_dict.items():
+            for stack, col_idx in stack_dict.items():
+                tables[block][f'#{level:02d}-{stack}'] = build_column_notation(row_idx, col_idx)
+        print(tables[block])
