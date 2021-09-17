@@ -2,6 +2,7 @@ import itertools
 import os
 import re
 import string
+import time
 from typing import Dict
 from typing import Optional
 from typing import Union
@@ -271,6 +272,7 @@ class Sheet:
                                         ranges=[],
                                         includeGridData=False,
                                         ).execute()
+        time.sleep(1)
         return {sheet['properties']['title']: sheet['properties']['sheetId'] for sheet in result['sheets']}
 
     def _get_sheet_id(self) -> int:
@@ -304,6 +306,7 @@ class Sheet:
         result = self.sheet_service.values().get(spreadsheetId=self.spreadsheet_id,
                                                  range=f'{self.sheet_name}!{range_start}:{range_end}',
                                                  ).execute()
+        time.sleep(1)
         # print(result.get('range'))
         # print(result.get('majorDimension'))
         return result.get('values', [])
@@ -314,6 +317,7 @@ class Sheet:
                                         ranges=[f'{self.sheet_name}!{cell_address}'],
                                         includeGridData=True,
                                         ).execute()
+        time.sleep(1)
 
         return {
             'properties':   result['properties'],
@@ -338,6 +342,7 @@ class Sheet:
         result = self.sheet_service.values().get(spreadsheetId=self.spreadsheet_id,
                                                  range=f'{self.sheet_name}!{cell_address}',
                                                  ).execute()
+        time.sleep(1)
         return result.get('values', [])[0][0]
 
     def get_values(self, range_start, range_end):  # todo: range_address instead
@@ -346,6 +351,7 @@ class Sheet:
         result = self.sheet_service.values().get(spreadsheetId=self.spreadsheet_id,
                                                  range=f'{self.sheet_name}!{range_start}:{range_end}',
                                                  ).execute()
+        time.sleep(1)
         return result.get('values', [])
 
     def set_background_color(self,
@@ -362,6 +368,7 @@ class Sheet:
             "range":  self._get_sheet_range(range_start, range_end),
             "cell":   {"userEnteredFormat": {"backgroundColor": color_hex_to_float(color)}},
         }}]}
+        time.sleep(1)
         return self.sheet_service.batchUpdate(spreadsheetId=self.spreadsheet_id, body=body).execute()
 
     def set_text_format(self,
@@ -388,6 +395,7 @@ class Sheet:
                                "foregroundColor": None if color is None else color_hex_to_float(color),
                                }}},
         }}]}
+        time.sleep(1)
         return self.sheet_service.batchUpdate(spreadsheetId=self.spreadsheet_id, body=body).execute()
 
     def set_horizontal_alignment(self,
@@ -406,6 +414,7 @@ class Sheet:
             "range":  self._get_sheet_range(range_start, range_end),
             "cell":   {"userEnteredFormat": {"horizontalAlignment": horizontal_alignment}},
         }}]}
+        time.sleep(1)
         return self.sheet_service.batchUpdate(spreadsheetId=self.spreadsheet_id, body=body).execute()
 
     def get_first_empty_row_after_existing_content(self, *, zero_index=False):
@@ -415,6 +424,7 @@ class Sheet:
             valueInputOption='USER_ENTERED',  # or 'RAW'
             body={'values': [[]]},
         ).execute()
+        time.sleep(1)
         return parse_column_notation(result['updates']['updatedRange'].rpartition('!')[-1], zero_index=zero_index)[0]
 
     def append_values(self, values, after_end=True):
@@ -435,6 +445,7 @@ class Sheet:
             valueInputOption='USER_ENTERED',  # or 'RAW'
             body={'values': values},
         ).execute()
+        time.sleep(1)
         return result
 
     def set_values(self, range_start, range_end, values):  # todo: range_address instead
@@ -444,6 +455,7 @@ class Sheet:
             valueInputOption='USER_ENTERED',  # or 'RAW'
             body={'values': values},
         ).execute()
+        time.sleep(1)
         return result
 
     def set_value(self, cell_address, value):
@@ -454,6 +466,7 @@ class Sheet:
             valueInputOption='USER_ENTERED',  # or 'RAW'
             body={'values': [[value]]},
         ).execute()
+        time.sleep(1)
         return result
 
 
