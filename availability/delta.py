@@ -78,6 +78,8 @@ if __name__ == '__main__':
     # workbook_id = '1ahbAXvuamz2PB1COGx2dWjIV8BN75bqYL_KmgdHkWKk'  # original
     workbook_id = '1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70'  # copy, so I don't break anything
 
+    # # # update list of taken units
+
     sheet = Sheet(workbook_id, 'Units taken by date')
     next_row = sheet.get_first_empty_row_after_existing_content()
 
@@ -129,6 +131,8 @@ if __name__ == '__main__':
                                                            row['level_str'] + '-' + str(row['stack'])]])
         next_row += 1
 
+    # # # color the taken units gray
+
     sheets = {
         'Blk 95A': Sheet(workbook_id, 'Blk 95A'),
         'Blk 95B': Sheet(workbook_id, 'Blk 95B'),
@@ -175,6 +179,8 @@ if __name__ == '__main__':
         cell_address = tables[block][unit]
         print('make gray', block, unit, cell_address, 'currently', sheets[block].get_background_color(cell_address))
         sheets[block].set_background_color(cell_address, color='#999')
+
+    # # # update the remaining number of units
 
     # hardcode where to insert the remaining units because too lazy to parse
     remaining_count_locations = {
