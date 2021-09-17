@@ -1,3 +1,4 @@
+import csv
 import datetime
 import json
 from pathlib import Path
@@ -8,6 +9,7 @@ from bs4 import BeautifulSoup
 
 from availability.google_sheets_test import Sheet
 from availability.google_sheets_test import build_column_notation
+from availability.google_sheets_test import parse_column_notation
 
 backups_dir = Path('backups')
 
@@ -73,7 +75,10 @@ if __name__ == '__main__':
     df = pd.DataFrame(rows, columns=headers)
     df_removed = df[df['unit_id'].apply(lambda x: x in removed_ids)]
 
-    sheet = Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Units taken by date')  # copy
+    # workbook_id = '1ahbAXvuamz2PB1COGx2dWjIV8BN75bqYL_KmgdHkWKk'  # original
+    workbook_id = '1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70'  # copy, so I don't break anything
+
+    sheet = Sheet(workbook_id, 'Units taken by date')
     next_row = sheet.get_first_empty_row_after_existing_content()
 
     date_str = (datetime.datetime.strptime(curr_file.stem, '%Y-%m-%d--%H-%M-%S')
@@ -124,14 +129,14 @@ if __name__ == '__main__':
                                                            row['level_str'] + '-' + str(row['stack'])]])
         next_row += 1
 
-    sheets = {  # copy, so I don't break anything
-        'Blk 95A': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 95A'),
-        'Blk 95B': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 95B'),
-        'Blk 95C': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 95C'),
-        'Blk 97A': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 97A'),
-        'Blk 97B': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 97B'),
-        'Blk 99A': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 99A'),
-        'Blk 99B': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 99B'),
+    sheets = {
+        'Blk 95A': Sheet(workbook_id, 'Blk 95A'),
+        'Blk 95B': Sheet(workbook_id, 'Blk 95B'),
+        'Blk 95C': Sheet(workbook_id, 'Blk 95C'),
+        'Blk 97A': Sheet(workbook_id, 'Blk 97A'),
+        'Blk 97B': Sheet(workbook_id, 'Blk 97B'),
+        'Blk 99A': Sheet(workbook_id, 'Blk 99A'),
+        'Blk 99B': Sheet(workbook_id, 'Blk 99B'),
     }
 
     tables = {block: dict() for block in sheets.keys()}
@@ -168,5 +173,62 @@ if __name__ == '__main__':
         block = 'Blk ' + str(row['block'])
         unit = row['level_str'] + '-' + str(row['stack'])
         cell_address = tables[block][unit]
-        print('gray', block, unit, cell_address)
+        print('make gray', block, unit, cell_address, 'currently', sheets[block].get_background_color(cell_address))
         sheets[block].set_background_color(cell_address, color='#999')
+
+    # hardcode where to insert the remaining units because too lazy to parse
+    remaining_count_locations = {
+        ('Blk 95A', '2-room'): 'A31',
+        ('Blk 95A', '3-room'): 'F31',
+        ('Blk 95A', '4-room'): 'K31',
+        ('Blk 95B', '2-room'): 'A31',
+        ('Blk 95B', '3-room'): 'F31',
+        ('Blk 95B', '4-room'): 'K31',
+        ('Blk 95C', '4-room'): 'B28',
+        ('Blk 97A', '4-room'): 'B29',
+        ('Blk 97B', '4-room'): 'B28',
+        ('Blk 99A', '4-room'): 'B29',
+        ('Blk 99B', '4-room'): 'B28',
+    }
+
+    remaining_counts = dict()
+    with open('macpherson-ethnic-quota.csv', encoding='utf8') as f:
+        c = csv.reader(f)
+        headers = next(c)
+        for block, flat_type, chinese, malay, indian, remaining, total in c:
+            remaining_counts[(f'Blk {block}', flat_type[:6])] = (chinese, malay, indian, remaining, total)
+
+    for (sheet_name, room_type), cell_address in remaining_count_locations.items():
+        print(sheet_name, room_type, cell_address)
+        assert sheets[sheet_name].get_value(cell_address) == room_type
+
+    for (sheet_name, room_type), cell_address in remaining_count_locations.items():
+        print(f'checking {sheet_name} ({room_type}) remaining values')
+        row, col = parse_column_notation(cell_address)
+        total_cell = build_column_notation(row + 2, col + 3)
+        total_remaining_cell = build_column_notation(row + 2, col + 1)
+        malay_remaining_cell = build_column_notation(row + 6, col + 1)
+        chinese_remaining_cell = build_column_notation(row + 7, col + 1)
+        indian_remaining_cell = build_column_notation(row + 8, col + 1)
+
+        chinese, malay, indian, remaining, total = remaining_counts[(sheet_name, room_type)]
+
+        if sheets[sheet_name].get_value(total_cell) != total:
+            print(f'updating total={total}')
+            sheets[sheet_name].set_value(total_cell, total)
+
+        if sheets[sheet_name].get_value(total_remaining_cell) != remaining:
+            print(f'updating remaining={remaining}')
+            sheets[sheet_name].set_value(total_remaining_cell, remaining)
+
+        if sheets[sheet_name].get_value(malay_remaining_cell) != malay:
+            print(f'updating malay={malay}')
+            sheets[sheet_name].set_value(malay_remaining_cell, malay)
+
+        if sheets[sheet_name].get_value(chinese_remaining_cell) != chinese:
+            print(f'updating chinese={chinese}')
+            sheets[sheet_name].set_value(chinese_remaining_cell, chinese)
+
+        if sheets[sheet_name].get_value(indian_remaining_cell) != indian:
+            print(f'updating indian={indian}')
+            sheets[sheet_name].set_value(indian_remaining_cell, indian)
