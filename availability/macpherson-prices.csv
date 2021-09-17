@@ -144,7 +144,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95A,"3-Room (Income Ceiling $14,000)",#11,11,6960,504,69,388500,,True
 95A,"3-Room (Income Ceiling $14,000)",#11,11,6978,506,69,388500,,True
 95A,"3-Room (Income Ceiling $14,000)",#11,11,6996,508,69,392800,MGPS 3+4,False
-95A,"3-Room (Income Ceiling $14,000)",#11,11,7011,510,69,392800,,True
+95A,"3-Room (Income Ceiling $14,000)",#11,11,7011,510,69,392800,,False
 95A,"3-Room (Income Ceiling $14,000)",#11,11,7026,512,69,388500,GRO,False
 95A,"3-Room (Income Ceiling $14,000)",#10,10,6959,504,69,386800,,True
 95A,"3-Room (Income Ceiling $14,000)",#10,10,6977,506,69,386800,,True
