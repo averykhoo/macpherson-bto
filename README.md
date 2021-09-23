@@ -9,3 +9,7 @@
   * how to handle merge conflicts?
   * just generate diff and manually edit?
 * normalize save datetimes to latest 2359 prev day if before 4am
+* get many formats?
+* get many alignments?
+* datatype for format?
+* sheet read only, ignore writes

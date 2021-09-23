@@ -6,9 +6,12 @@ from pathlib import Path
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
+from tabulate import tabulate
 
 from availability.google_sheets_test import Sheet
+from availability.google_sheets_test import SheetCache
 from availability.google_sheets_test import build_column_notation
+from availability.google_sheets_test import color_hex_to_name
 from availability.google_sheets_test import parse_column_notation
 
 backups_dir = Path('backups')
@@ -78,58 +81,71 @@ if __name__ == '__main__':
     # workbook_id = '1ahbAXvuamz2PB1COGx2dWjIV8BN75bqYL_KmgdHkWKk'  # original
     workbook_id = '1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70'  # copy, so I don't break anything
 
+    read_only = True
+
     # # # update list of taken units
 
     sheet = Sheet(workbook_id, 'Units taken by date')
     next_row = sheet.get_first_empty_row_after_existing_content()
+    cache = SheetCache(sheet.get_values('A1', f'Z{next_row}'))
 
     date_str = (datetime.datetime.strptime(curr_file.stem, '%Y-%m-%d--%H-%M-%S')
                 - datetime.timedelta(hours=12)).strftime('%d/%m/%Y')
-    print(date_str + '\t' + 'Public queue')
-    next_row += 1
-    sheet.set_values(f'A{next_row}', f'B{next_row}', [[date_str, 'Public queue']])
-    sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
-    sheet.set_horizontal_alignment(f'A{next_row}', horizontal_alignment='left')
-    sheet.set_background_color(f'A{next_row}', f'B{next_row}', color='#d9d9d9')
-    next_row += 1
-
-    n_2rm = str(len(df_removed[df_removed['flat_type'].str.contains('2-Room')]))
-
-    print('2-room total:\t' + n_2rm)
-    sheet.set_values(f'A{next_row}', f'B{next_row}', [['2-room total:', n_2rm]])
-    sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
-    next_row += 1
-    for i, row in df_removed[df_removed['flat_type'].str.contains('2-Room')].iterrows():
-        print('Blk ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
-        sheet.set_values(f'A{next_row}', f'B{next_row}', [['Blk ' + str(row['block']),
-                                                           row['level_str'] + '-' + str(row['stack'])]])
+    if any(row[0] == date_str for row in cache.table):
+        print('already added data')
+    else:
+        print(date_str + '\t' + 'Public queue')
         next_row += 1
-    print()
-    next_row += 1
-
-    n_3rm = str(len(df_removed[df_removed['flat_type'].str.contains('3-Room')]))
-    print('3-room total:\t' + n_3rm)
-    sheet.set_values(f'A{next_row}', f'B{next_row}', [['3-room total:', n_3rm]])
-    sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
-    next_row += 1
-    for i, row in df_removed[df_removed['flat_type'].str.contains('3-Room')].iterrows():
-        print('Blk ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
-        sheet.set_values(f'A{next_row}', f'B{next_row}', [['Blk ' + str(row['block']),
-                                                           row['level_str'] + '-' + str(row['stack'])]])
+        if not read_only:
+            sheet.set_values(f'A{next_row}', f'B{next_row}', [[date_str, 'Public queue']])
+            sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
+            sheet.set_horizontal_alignment(f'A{next_row}', horizontal_alignment='left')
+            sheet.set_background_color(f'A{next_row}', f'B{next_row}', color='#d9d9d9')
         next_row += 1
-    print()
-    next_row += 1
 
-    n_4rm = str(len(df_removed[df_removed['flat_type'].str.contains('4-Room')]))
-    print('4-room total:\t' + n_4rm)
-    sheet.set_values(f'A{next_row}', f'B{next_row}', [['4-room total:', n_4rm]])
-    sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
-    next_row += 1
-    for i, row in df_removed[df_removed['flat_type'].str.contains('4-Room')].iterrows():
-        print('Blk ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
-        sheet.set_values(f'A{next_row}', f'B{next_row}', [['Blk ' + str(row['block']),
-                                                           row['level_str'] + '-' + str(row['stack'])]])
+        n_2rm = str(len(df_removed[df_removed['flat_type'].str.contains('2-Room')]))
+
+        print('2-room total:\t' + n_2rm)
+        if not read_only:
+            sheet.set_values(f'A{next_row}', f'B{next_row}', [['2-room total:', n_2rm]])
+            sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
         next_row += 1
+        for i, row in df_removed[df_removed['flat_type'].str.contains('2-Room')].iterrows():
+            print('Blk ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
+            if not read_only:
+                sheet.set_values(f'A{next_row}', f'B{next_row}', [['Blk ' + str(row['block']),
+                                                                   row['level_str'] + '-' + str(row['stack'])]])
+            next_row += 1
+        print()
+        next_row += 1
+
+        n_3rm = str(len(df_removed[df_removed['flat_type'].str.contains('3-Room')]))
+        print('3-room total:\t' + n_3rm)
+        if not read_only:
+            sheet.set_values(f'A{next_row}', f'B{next_row}', [['3-room total:', n_3rm]])
+            sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
+        next_row += 1
+        for i, row in df_removed[df_removed['flat_type'].str.contains('3-Room')].iterrows():
+            print('Blk ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
+            if not read_only:
+                sheet.set_values(f'A{next_row}', f'B{next_row}', [['Blk ' + str(row['block']),
+                                                                   row['level_str'] + '-' + str(row['stack'])]])
+            next_row += 1
+        print()
+        next_row += 1
+
+        n_4rm = str(len(df_removed[df_removed['flat_type'].str.contains('4-Room')]))
+        print('4-room total:\t' + n_4rm)
+        if not read_only:
+            sheet.set_values(f'A{next_row}', f'B{next_row}', [['4-room total:', n_4rm]])
+            sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
+        next_row += 1
+        for i, row in df_removed[df_removed['flat_type'].str.contains('4-Room')].iterrows():
+            print('Blk ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
+            if not read_only:
+                sheet.set_values(f'A{next_row}', f'B{next_row}', [['Blk ' + str(row['block']),
+                                                                   row['level_str'] + '-' + str(row['stack'])]])
+            next_row += 1
 
     # # # color the taken units gray
 
@@ -143,12 +159,26 @@ if __name__ == '__main__':
         'Blk 99B': Sheet(workbook_id, 'Blk 99B'),
     }
 
+    sheet_values = dict()
+    sheet_colors = dict()
+    for block, sheet in sheets.items():
+        print(f'caching {block}...')
+        last_row = sheet.get_first_empty_row_after_existing_content()
+        sheet_values[block] = SheetCache(sheet.get_values('A1', f'Z{last_row}'))
+        sheet_colors[block] = SheetCache(sheet.get_background_colors('A1', f'Z{last_row}'))
+        print(tabulate([row for row in sheet_values[block].table if any(row)]))
+        # print(tabulate([row for row in sheet_colors[block].table if any(row)]))
+        print(tabulate([[color_hex_to_name(cell) if cell else None for cell in row]
+                        for row in sheet_colors[block].table if any(row)]))
+
     tables = {block: dict() for block in sheets.keys()}
     for block, sheet in sheets.items():
+        # last_row = sheet.get_first_empty_row_after_existing_content()
+        last_row = len(sheet_values[block].table)
         level_dict = dict.fromkeys(range(2, 20))
         stack_dict = dict()
         header_row = None
-        for i, row in enumerate(sheet.get_values('A1', f'A{sheet.get_first_empty_row_after_existing_content()}')):
+        for i, row in enumerate(sheet_values[block].get_values('A1', f'A{last_row}')):
             if not row:
                 continue
             value = row[0]
@@ -159,7 +189,7 @@ if __name__ == '__main__':
                 assert level_dict[int(value)] is None
                 level_dict[int(value)] = row_idx
 
-        for j, value in enumerate(sheet.get_values(f'B{header_row}', f'Z{header_row}')[0]):
+        for j, value in enumerate(sheet_values[block].get_values(f'B{header_row}', f'Z{header_row}')[0]):
             col_idx = j + 2
             if not value.isdigit():
                 continue
@@ -173,12 +203,15 @@ if __name__ == '__main__':
                 tables[block][f'#{level:02d}-{stack}'] = build_column_notation(row_idx, col_idx)
         print(tables[block])
 
-    for i, row in df_removed.iterrows():
+    df = pd.read_csv('macpherson-prices.csv')
+    for i, row in df[~df['available']].iterrows():
         block = 'Blk ' + str(row['block'])
         unit = row['level_str'] + '-' + str(row['stack'])
         cell_address = tables[block][unit]
-        print('make gray', block, unit, cell_address, 'currently', sheets[block].get_background_color(cell_address))
-        sheets[block].set_background_color(cell_address, color='#999')
+        if sheet_colors[block][cell_address] != '#999999':
+            print(block, unit, cell_address, color_hex_to_name(sheet_colors[block][cell_address]), 'to gray')
+            if not read_only:
+                sheets[block].set_background_color(cell_address, color='#999')
 
     # # # update the remaining number of units
 
@@ -219,22 +252,27 @@ if __name__ == '__main__':
 
         chinese, malay, indian, remaining, total = remaining_counts[(sheet_name, room_type)]
 
-        if sheets[sheet_name].get_value(total_cell) != total:
+        if sheet_values[sheet_name][total_cell] != total:
             print(f'updating total={total}')
-            sheets[sheet_name].set_value(total_cell, total)
+            if not read_only:
+                sheets[sheet_name].set_value(total_cell, total)
 
-        if sheets[sheet_name].get_value(total_remaining_cell) != remaining:
+        if sheet_values[sheet_name][total_remaining_cell] != remaining:
             print(f'updating remaining={remaining}')
-            sheets[sheet_name].set_value(total_remaining_cell, remaining)
+            if not read_only:
+                sheets[sheet_name].set_value(total_remaining_cell, remaining)
 
-        if sheets[sheet_name].get_value(malay_remaining_cell) != malay:
+        if sheet_values[sheet_name][malay_remaining_cell] != malay:
             print(f'updating malay={malay}')
-            sheets[sheet_name].set_value(malay_remaining_cell, malay)
+            if not read_only:
+                sheets[sheet_name].set_value(malay_remaining_cell, malay)
 
-        if sheets[sheet_name].get_value(chinese_remaining_cell) != chinese:
+        if sheet_values[sheet_name][chinese_remaining_cell] != chinese:
             print(f'updating chinese={chinese}')
-            sheets[sheet_name].set_value(chinese_remaining_cell, chinese)
+            if not read_only:
+                sheets[sheet_name].set_value(chinese_remaining_cell, chinese)
 
-        if sheets[sheet_name].get_value(indian_remaining_cell) != indian:
+        if sheet_values[sheet_name][indian_remaining_cell] != indian:
             print(f'updating indian={indian}')
-            sheets[sheet_name].set_value(indian_remaining_cell, indian)
+            if not read_only:
+                sheets[sheet_name].set_value(indian_remaining_cell, indian)

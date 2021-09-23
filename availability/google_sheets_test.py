@@ -1,9 +1,13 @@
 import itertools
+import operator
 import os
 import re
 import string
 import time
+from dataclasses import dataclass
+from pprint import pprint
 from typing import Dict
+from typing import List
 from typing import Optional
 from typing import Union
 
@@ -11,6 +15,8 @@ from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
+
+from availability.color_distance import nearest_color_name
 
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
@@ -235,6 +241,11 @@ def color_float_to_hex(*, red: float = 0.0, green: float = 0.0, blue: float = 0.
     return f'#{round(red * 0xFF):02X}{round(green * 0xFF):02X}{round(blue * 0xFF):02X}'
 
 
+def color_hex_to_name(color_hex):
+    r, g, b = operator.itemgetter('red', 'green', 'blue')(color_hex_to_float(color_hex))
+    return nearest_color_name((r * 0xFF, g * 0xFF, b * 0xFF))
+
+
 class Sheet:
     def __init__(self, spreadsheet_id, sheet_name):
 
@@ -325,9 +336,40 @@ class Sheet:
             'cellFormat':   result['sheets'][0]['data'][0]['rowData'][0]['values'][0],
         }
 
+    def get_properties_many(self, range_start, range_end):  # todo: range_address instead
+        assert re.fullmatch(r'[A-Z]+[0-9]+', range_start)
+        assert re.fullmatch(r'[A-Z]+[0-9]+', range_end)
+        result = self.sheet_service.get(spreadsheetId=self.spreadsheet_id,
+                                        ranges=[f'{self.sheet_name}!{range_start}:{range_end}'],
+                                        includeGridData=True,
+                                        ).execute()
+        time.sleep(1)
+
+        return {
+            'properties':    result['properties'],
+            'columnFormats': result['sheets'][0]['data'][0]['columnMetadata'],
+            'rowFormats':    result['sheets'][0]['data'][0]['rowData'],
+        }
+
     def get_background_color(self, cell_address):
         _props = self.get_properties(cell_address)
         return color_float_to_hex(**_props['cellFormat']['effectiveFormat']['backgroundColor'])
+
+    def get_background_colors(self, range_start, range_end):  # todo: range_address instead
+        _props = self.get_properties_many(range_start, range_end)
+        out = []
+        for row in _props['rowFormats']:
+            if not row.get('values'):
+                out.append([])
+                continue
+            _row = []
+            for cell in row['values']:
+                if cell.get('effectiveFormat', {}).get('backgroundColor') is not None:
+                    _row.append(color_float_to_hex(**cell['effectiveFormat']['backgroundColor']))
+                else:
+                    _row.append(None)
+            out.append(_row)
+        return out
 
     def get_horizontal_alignment(self, cell_address):
         _props = self.get_properties(cell_address)
@@ -470,47 +512,76 @@ class Sheet:
         return result
 
 
+@dataclass
+class SheetCache:
+    table: List[List[str]]
+
+    def __post_init__(self):
+        max_row_len = max(len(row) for row in self.table)
+        for row in self.table:
+            while len(row) < max_row_len:
+                row.append('')
+
+    def __getitem__(self, item):
+        row, column = parse_column_notation(item, zero_index=True)
+        if row >= len(self.table):
+            raise IndexError(row)
+        if column >= len(self.table[row]):
+            raise IndexError(column)
+        return self.table[row][column]
+
+    def get_values(self, range_start, range_end):
+        row_start, col_start = parse_column_notation(range_start, zero_index=True)
+        row_end, col_end = parse_column_notation(range_end, zero_index=True)
+        return [row[col_start:col_end + 1] for row in self.table[row_start:row_end + 1]]
+
+
 if __name__ == '__main__':
     # # https://docs.google.com/spreadsheets/d/1ahbAXvuamz2PB1COGx2dWjIV8BN75bqYL_KmgdHkWKk/edit#gid=1211096710
     # # sheet = Sheet('1ahbAXvuamz2PB1COGx2dWjIV8BN75bqYL_KmgdHkWKk', '...')
     #
     # # https://docs.google.com/spreadsheets/d/1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70/edit#gid=1116371039
-    sheets = {  # copy, so I don't break anything
-        'Blk 95A': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 95A'),
-        'Blk 95B': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 95B'),
-        'Blk 95C': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 95C'),
-        'Blk 97A': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 97A'),
-        'Blk 97B': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 97B'),
-        'Blk 99A': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 99A'),
-        'Blk 99B': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 99B'),
-    }
+    # sheets = {  # copy, so I don't break anything
+    #     'Blk 95A': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 95A'),
+    #     'Blk 95B': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 95B'),
+    #     'Blk 95C': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 95C'),
+    #     'Blk 97A': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 97A'),
+    #     'Blk 97B': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 97B'),
+    #     'Blk 99A': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 99A'),
+    #     'Blk 99B': Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 99B'),
+    # }
+    #
+    # tables = {block: dict() for block in sheets.keys()}
+    # for block, sheet in sheets.items():
+    #     level_dict = dict.fromkeys(range(2, 20))
+    #     stack_dict = dict()
+    #     header_row = None
+    #     for i, row in enumerate(sheet.get_values('A1', f'A{sheet.get_first_empty_row_after_existing_content()}')):
+    #         if not row:
+    #             continue
+    #         value = row[0]
+    #         row_idx = i + 1
+    #         if value.strip() == 'LEVEL/UNIT':
+    #             header_row = row_idx
+    #         if header_row and value.isdigit() and int(value) in level_dict:
+    #             assert level_dict[int(value)] is None
+    #             level_dict[int(value)] = row_idx
+    #
+    #     for j, value in enumerate(sheet.get_values(f'B{header_row}', f'Z{header_row}')[0]):
+    #         col_idx = j + 2
+    #         if not value.isdigit():
+    #             continue
+    #         stack_dict[int(value)] = col_idx
+    #
+    #     print(block)
+    #     print(level_dict)
+    #     print(stack_dict)
+    #     for level, row_idx in level_dict.items():
+    #         for stack, col_idx in stack_dict.items():
+    #             tables[block][f'#{level:02d}-{stack}'] = build_column_notation(row_idx, col_idx)
+    #     print(tables[block])
 
-    tables = {block: dict() for block in sheets.keys()}
-    for block, sheet in sheets.items():
-        level_dict = dict.fromkeys(range(2, 20))
-        stack_dict = dict()
-        header_row = None
-        for i, row in enumerate(sheet.get_values('A1', f'A{sheet.get_first_empty_row_after_existing_content()}')):
-            if not row:
-                continue
-            value = row[0]
-            row_idx = i + 1
-            if value.strip() == 'LEVEL/UNIT':
-                header_row = row_idx
-            if header_row and value.isdigit() and int(value) in level_dict:
-                assert level_dict[int(value)] is None
-                level_dict[int(value)] = row_idx
-
-        for j, value in enumerate(sheet.get_values(f'B{header_row}', f'Z{header_row}')[0]):
-            col_idx = j + 2
-            if not value.isdigit():
-                continue
-            stack_dict[int(value)] = col_idx
-
-        print(block)
-        print(level_dict)
-        print(stack_dict)
-        for level, row_idx in level_dict.items():
-            for stack, col_idx in stack_dict.items():
-                tables[block][f'#{level:02d}-{stack}'] = build_column_notation(row_idx, col_idx)
-        print(tables[block])
+    sheet = Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 95A')  # copy
+    colors = sheet.get_background_colors('A15', 'C20')
+    pprint(colors)
+    pprint([[color_hex_to_name(cell) for cell in row] for row in colors])
