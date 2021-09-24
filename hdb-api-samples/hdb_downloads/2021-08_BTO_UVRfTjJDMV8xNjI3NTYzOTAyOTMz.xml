@@ -32,12 +32,6 @@
             <uri/>
         </key>
         <key>
-            <selection-month>October 2021 to June 2022</selection-month>
-        </key>
-        <key>
-            <est-waiting-time>67 months</est-waiting-time>
-        </key>
-        <key>
             <lease-period-2rm/>
         </key>
         <key>
@@ -51,14 +45,11 @@
         </key>
         <unit-details>
             <ukey>
-                <flat-type>3-Room (Income Ceiling $14,000)</flat-type>
+                <flat-type>3-Room</flat-type>
                 <supply>76</supply>
                 <est-floor-area-lower>69</est-floor-area-lower>
                 <est-floor-area-upper>69</est-floor-area-upper>
                 <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
-                <est-internal-floor-area-lower>66</est-internal-floor-area-lower>
-                <est-internal-floor-area-upper>66</est-internal-floor-area-upper>
-                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
                 <price-range-lower>382000</price-range-lower>
                 <price-range-upper>464000</price-range-upper>
                 <finishes-and-fittings-text>
@@ -66,6 +57,13 @@
                         						
                         
    						&lt;h4>Finishes and Fittings&lt;/h4>
+						&lt;br>
+						&lt;p>
+						Please note that all samples of finishes shown in the images below are strictly for reference only and subject to change without notice. The samples shown are conceptual and indicative only and the colour schemes, design, dimensions, type, tonal differences, and specifications may differ from the actual fittings installed in the flat.
+						&lt;/p>
+	 					&lt;p>
+						Buyers are advised to view actual samples of the finishes for the living/ dining/ bedroom/ door laminate on display near the Sales Office.
+	  					&lt;/p>
 						&lt;br>
 						&lt;h5>Non-Optional Finishes&lt;/h5>
 						&lt;br>
@@ -130,9 +128,6 @@
                 <est-floor-area-lower>93</est-floor-area-lower>
                 <est-floor-area-upper>93</est-floor-area-upper>
                 <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
-                <est-internal-floor-area-lower>90</est-internal-floor-area-lower>
-                <est-internal-floor-area-upper>90</est-internal-floor-area-upper>
-                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
                 <price-range-lower>540000</price-range-lower>
                 <price-range-upper>670000</price-range-upper>
                 <finishes-and-fittings-text>
@@ -140,6 +135,13 @@
                         						
                         
    						&lt;h4>Finishes and Fittings&lt;/h4>
+						&lt;br>
+						&lt;p>
+						Please note that all samples of finishes shown in the images below are strictly for reference only and subject to change without notice. The samples shown are conceptual and indicative only and the colour schemes, design, dimensions, type, tonal differences, and specifications may differ from the actual fittings installed in the flat.
+						&lt;/p>
+	 					&lt;p>
+						Buyers are advised to view actual samples of the finishes for the living/ dining/ bedroom/ door laminate on display near the Sales Office.
+	  					&lt;/p>
 						&lt;br>
 						&lt;h5>Non-Optional Finishes&lt;/h5>
 						&lt;br>
@@ -224,8 +226,6 @@
 			To facilitate your flat application, we have provided information on the surrounding land use, proposed facilities and their locations in the maps and plans of individual projects. As the information provided is based on the current planning intent of the relevant authorities, such information is indicative only and subject to review from time to time.
 			&lt;br>&lt;br>
 			&lt;ul>
-			&lt;li>Get answers to &lt;a href="https://www.hdb.gov.sg/cs/infoweb/residential/buying-a-flat/new/buying-process/application-procedure/faqs-for-sales-launch">Frequently Asked Questions on sales launches&lt;/a>&lt;/li>
-			&lt;br>
    			&lt;li>Visit the virtual showflats at &lt;a href="https://www.hdb.gov.sg/mynicehomegallery?utm_source=Aug21website&amp;utm_medium=link&amp;utm_campaign=MNHG">My Nice Home Gallery&lt;/a> and get interior decor ideas&lt;/li>
 			&lt;/ul>
 			
@@ -311,6 +311,26 @@
             <link>2021-08/bto/qt_n2c1/carousel/01_perspective.jpg</link>
             <link>2021-08/bto/qt_n2c1/carousel/02_perspective.jpg</link>
             <link>2021-08/bto/qt_n2c1/carousel/03_siteplan_qt_n2c1.jpg</link>
+            <link>2021-08/bto/qt_n2c1/carousel/m01.jpg</link>
+            <link>2021-08/bto/qt_n2c1/carousel/m02.jpg</link>
+            <link>2021-08/bto/qt_n2c1/carousel/m03.jpg</link>
+            <link>2021-08/bto/qt_n2c1/carousel/m04.jpg</link>
+            <link>2021-08/bto/qt_n2c1/carousel/m05.jpg</link>
+            <link>2021-08/bto/qt_n2c1/carousel/m06.jpg</link>
+            <link>2021-08/bto/qt_n2c1/carousel/m07.jpg</link>
+            <link>2021-08/bto/qt_n2c1/carousel/m08.jpg</link>
+            <link>2021-08/bto/qt_n2c1/carousel/m09.jpg</link>
+            <link>2021-08/bto/qt_n2c1/carousel/m10.jpg</link>
+            <link>2021-08/bto/qt_n2c1/carousel/m11.jpg</link>
+            <link>2021-08/bto/qt_n2c1/carousel/m12.jpg</link>
+            <link>2021-08/bto/qt_n2c1/carousel/m13.jpg</link>
+            <link>2021-08/bto/qt_n2c1/carousel/m14.jpg</link>
+            <link>2021-08/bto/qt_n2c1/carousel/m15.jpg</link>
+            <link>2021-08/bto/qt_n2c1/carousel/m16.jpg</link>
+            <link>2021-08/bto/qt_n2c1/carousel/m17.jpg</link>
+            <link>2021-08/bto/qt_n2c1/carousel/m18.jpg</link>
+            <link>2021-08/bto/qt_n2c1/carousel/m19.jpg</link>
+            <link>2021-08/bto/qt_n2c1/carousel/m20.jpg</link>
         </carousel>
         <sound>2021-08/bto/qt_n2c1/sound/qt_n2c1.mp3</sound>
         <genspecs>
@@ -329,10 +349,130 @@
             <oydh-3rm>2021-08/bto/qt_n2c1/oydh/oydh_qt_n2c1_3rm.jpg</oydh-3rm>
             <oydh-4rm>2021-08/bto/qt_n2c1/oydh/oydh_qt_n2c1_4rm.jpg</oydh-4rm>
         </oydh>
+        <unitdis>
+            <blk200a>2021-08/bto/qt_n2c1/unitdis/unitdis_qt_n2c1_200a.jpg</blk200a>
+            <blk200b>2021-08/bto/qt_n2c1/unitdis/unitdis_qt_n2c1_200b.jpg</blk200b>
+        </unitdis>
+        <blockplan>
+            <blk200a>
+                <lv2>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_2-6.jpg</lv2>
+                <lv3>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_2-6.jpg</lv3>
+                <lv4>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_2-6.jpg</lv4>
+                <lv5>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_2-6.jpg</lv5>
+                <lv6>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_2-6.jpg</lv6>
+            </blk200a>
+            <blk200a>
+                <lv24>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_24.jpg</lv24>
+            </blk200a>
+            <blk200a>
+                <lv25>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_25.jpg</lv25>
+            </blk200a>
+            <blk200a>
+                <lv26>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_26-32.jpg</lv26>
+                <lv27>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_26-32.jpg</lv27>
+                <lv28>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_26-32.jpg</lv28>
+                <lv29>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_26-32.jpg</lv29>
+                <lv30>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_26-32.jpg</lv30>
+                <lv31>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_26-32.jpg</lv31>
+                <lv32>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_26-32.jpg</lv32>
+            </blk200a>
+            <blk200a>
+                <lv7>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_7.jpg</lv7>
+            </blk200a>
+            <blk200a>
+                <lv8>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_8.jpg</lv8>
+            </blk200a>
+            <blk200a>
+                <lv9>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_9-23.jpg</lv9>
+                <lv10>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_9-23.jpg</lv10>
+                <lv11>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_9-23.jpg</lv11>
+                <lv12>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_9-23.jpg</lv12>
+                <lv13>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_9-23.jpg</lv13>
+                <lv14>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_9-23.jpg</lv14>
+                <lv15>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_9-23.jpg</lv15>
+                <lv16>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_9-23.jpg</lv16>
+                <lv17>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_9-23.jpg</lv17>
+                <lv18>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_9-23.jpg</lv18>
+                <lv19>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_9-23.jpg</lv19>
+                <lv20>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_9-23.jpg</lv20>
+                <lv21>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_9-23.jpg</lv21>
+                <lv22>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_9-23.jpg</lv22>
+                <lv23>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200a_zz_9-23.jpg</lv23>
+            </blk200a>
+            <blk200b>
+                <lv2>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_2.jpg</lv2>
+            </blk200b>
+            <blk200b>
+                <lv3>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv3>
+                <lv4>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv4>
+                <lv5>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv5>
+                <lv6>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv6>
+                <lv7>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv7>
+                <lv8>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv8>
+                <lv9>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv9>
+                <lv10>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv10>
+                <lv11>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv11>
+                <lv12>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv12>
+                <lv13>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv13>
+                <lv14>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv14>
+                <lv15>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv15>
+                <lv16>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv16>
+                <lv17>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv17>
+                <lv18>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv18>
+                <lv19>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv19>
+                <lv20>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv20>
+                <lv21>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv21>
+                <lv22>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv22>
+                <lv23>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv23>
+                <lv24>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv24>
+                <lv25>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv25>
+                <lv26>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv26>
+                <lv27>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv27>
+                <lv28>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv28>
+                <lv29>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_3-29.jpg</lv29>
+            </blk200b>
+            <blk200b>
+                <lv30>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_30.jpg</lv30>
+            </blk200b>
+            <blk200b>
+                <lv31>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_31.jpg</lv31>
+            </blk200b>
+            <blk200b>
+                <lv32>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_32-39.jpg</lv32>
+                <lv33>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_32-39.jpg</lv33>
+                <lv34>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_32-39.jpg</lv34>
+                <lv35>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_32-39.jpg</lv35>
+                <lv36>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_32-39.jpg</lv36>
+                <lv37>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_32-39.jpg</lv37>
+                <lv38>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_32-39.jpg</lv38>
+                <lv39>2021-08/bto/qt_n2c1/blockplan/blockplan_qt_n2c1_200b_zz_32-39.jpg</lv39>
+            </blk200b>
+        </blockplan>
         <ocsleaflet>
             <ocsleaflet-3rm>2021-08/bto/qt_n2c1/ocsleaflet/ocsleaflet_qt_n2c1_3rm_4rm(1).png</ocsleaflet-3rm>
             <ocsleaflet-4rm>2021-08/bto/qt_n2c1/ocsleaflet/ocsleaflet_qt_n2c1_3rm_4rm(1).png</ocsleaflet-4rm>
         </ocsleaflet>
-        <ocs/>
+        <ocs>
+            <ocs-door>
+                <door-3rm>2021-08/bto/qt_n2c1/ocs/door/door_qt_n2c1_3rm_4rm(1).jpg</door-3rm>
+                <door-4rm>2021-08/bto/qt_n2c1/ocs/door/door_qt_n2c1_3rm_4rm(1).jpg</door-4rm>
+            </ocs-door>
+            <ocs-floor>
+                <floor-3rm>2021-08/bto/qt_n2c1/ocs/floor/floor_qt_n2c1_3rm_4rm(1).jpg</floor-3rm>
+                <floor-4rm>2021-08/bto/qt_n2c1/ocs/floor/floor_qt_n2c1_3rm_4rm(1).jpg</floor-4rm>
+                <floor-3rm>2021-08/bto/qt_n2c1/ocs/floor/floor_qt_n2c1_3rm_4rm(2).jpg</floor-3rm>
+                <floor-4rm>2021-08/bto/qt_n2c1/ocs/floor/floor_qt_n2c1_3rm_4rm(2).jpg</floor-4rm>
+            </ocs-floor>
+        </ocs>
+        <nonocs>
+            <nonocs-3rm>2021-08/bto/qt_n2c1/nonocs/nonocs_qt_n2c1_3rm_4rm(1).jpg</nonocs-3rm>
+            <nonocs-4rm>2021-08/bto/qt_n2c1/nonocs/nonocs_qt_n2c1_3rm_4rm(1).jpg</nonocs-4rm>
+            <nonocs-3rm>2021-08/bto/qt_n2c1/nonocs/nonocs_qt_n2c1_3rm_4rm(2).jpg</nonocs-3rm>
+            <nonocs-4rm>2021-08/bto/qt_n2c1/nonocs/nonocs_qt_n2c1_3rm_4rm(2).jpg</nonocs-4rm>
+            <nonocs-3rm>2021-08/bto/qt_n2c1/nonocs/nonocs_qt_n2c1_3rm_4rm(3).jpg</nonocs-3rm>
+            <nonocs-4rm>2021-08/bto/qt_n2c1/nonocs/nonocs_qt_n2c1_3rm_4rm(3).jpg</nonocs-4rm>
+            <nonocs-3rm>2021-08/bto/qt_n2c1/nonocs/nonocs_qt_n2c1_3rm_4rm(4).jpg</nonocs-3rm>
+            <nonocs-4rm>2021-08/bto/qt_n2c1/nonocs/nonocs_qt_n2c1_3rm_4rm(4).jpg</nonocs-4rm>
+        </nonocs>
     </resources>
 </template>
