@@ -203,12 +203,13 @@ if __name__ == '__main__':
                 tables[block][f'#{level:02d}-{stack}'] = build_column_notation(row_idx, col_idx)
         print(tables[block])
 
-        top_left = build_column_notation(min(level_dict.values()) - 1, min(stack_dict.values()) - 1)
-        bottom_right = build_column_notation(max(level_dict.values()), max(stack_dict.values()) + 1)
-        print(top_left, bottom_right)
-        if not read_only:
-            sheets[block].set_text_format(top_left, bottom_right)
-            sheets[block].set_horizontal_alignment(top_left, bottom_right, horizontal_alignment='center')
+        # # run once: fix formatting
+        # top_left = build_column_notation(min(level_dict.values()) - 1, min(stack_dict.values()) - 1)
+        # bottom_right = build_column_notation(max(level_dict.values()), max(stack_dict.values()) + 1)
+        # print(top_left, bottom_right)
+        # if not read_only:
+        #     sheets[block].set_text_format(top_left, bottom_right)
+        #     sheets[block].set_horizontal_alignment(top_left, bottom_right, horizontal_alignment='center')
 
     df = pd.read_csv('macpherson-prices.csv')
     for i, row in df[~df['available']].iterrows():
@@ -220,22 +221,23 @@ if __name__ == '__main__':
             if not read_only:
                 sheets[block].set_background_color(cell_address, color='#999')
 
-    size_color = {38: '#F4CCCC',
-                  48: '#EA9999',
-                  69: '#B6D7A8',  # '#93C47D',
-                  93: '#FFD966',  # '#F1C232',
-                  }
-    for i, row in df[df['available']].iterrows():
-        block = 'Blk ' + str(row['block'])
-        unit = row['level_str'] + '-' + str(row['stack'])
-        cell_address = tables[block][unit]
-        if sheet_colors[block][cell_address] != size_color[row['area_sqm']]:
-            print(block, unit, cell_address,
-                  color_hex_to_name(sheet_colors[block][cell_address]), sheet_colors[block][cell_address],
-                  'to',
-                  color_hex_to_name(size_color[row['area_sqm']]), size_color[row['area_sqm']])
-            if not read_only:
-                sheets[block].set_background_color(cell_address, color=size_color[row['area_sqm']])
+    # # run once: fix background colors
+    # size_color = {38: '#F4CCCC',
+    #               48: '#EA9999',
+    #               69: '#B6D7A8',  # '#93C47D',
+    #               93: '#FFD966',  # '#F1C232',
+    #               }
+    # for i, row in df[df['available']].iterrows():
+    #     block = 'Blk ' + str(row['block'])
+    #     unit = row['level_str'] + '-' + str(row['stack'])
+    #     cell_address = tables[block][unit]
+    #     if sheet_colors[block][cell_address] != size_color[row['area_sqm']]:
+    #         print(block, unit, cell_address,
+    #               color_hex_to_name(sheet_colors[block][cell_address]), sheet_colors[block][cell_address],
+    #               'to',
+    #               color_hex_to_name(size_color[row['area_sqm']]), size_color[row['area_sqm']])
+    #         if not read_only:
+    #             sheets[block].set_background_color(cell_address, color=size_color[row['area_sqm']])
 
     # # # update the remaining number of units
 
