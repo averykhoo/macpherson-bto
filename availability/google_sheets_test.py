@@ -311,6 +311,34 @@ class Sheet:
                 "endColumnIndex":   end_column,
                 }
 
+    def set_sheet_dimensions(self, num_rows, num_columns):
+        # https://stackoverflow.com/questions/61791361/how-to-resize-a-worksheet-with-the-google-client-library
+        body = {"requests": [{"updateSheetProperties": {
+            "properties": {
+                "gridProperties": {
+                    "rowCount":    num_rows,
+                    "columnCount": num_columns
+                }, "sheetId":     self._get_sheet_id(),
+            }, "fields":  "gridProperties"
+        }}]}
+        self.sheet_service.batchUpdate(spreadsheetId=self.spreadsheet_id,
+                                       body=body).execute()
+
+    def append_sheet_dimensions(self, additional_rows, additional_columns):
+        # https://stackoverflow.com/questions/61791361/how-to-resize-a-worksheet-with-the-google-client-library
+        body = {"requests": [{"appendDimension": {
+            "sheetId":   self._get_sheet_id(),
+            "dimension": "ROWS",
+            "length":    additional_rows
+        }},
+            {"appendDimension": {
+                "sheetId":   self._get_sheet_id(),
+                "dimension": "COLUMNS",
+                "length":    additional_columns
+            }}]}
+        self.sheet_service.batchUpdate(spreadsheetId=self.spreadsheet_id,
+                                       body=body).execute()
+
     def get_sheet_range_values(self, range_start, range_end):  # todo: range_address instead
         assert re.fullmatch(r'[A-Z]+[0-9]+', range_start)
         assert re.fullmatch(r'[A-Z]+[0-9]+', range_end)
@@ -581,7 +609,10 @@ if __name__ == '__main__':
     #             tables[block][f'#{level:02d}-{stack}'] = build_column_notation(row_idx, col_idx)
     #     print(tables[block])
 
-    sheet = Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 95A')  # copy
-    colors = sheet.get_background_colors('A15', 'C20')
-    pprint(colors)
-    pprint([[color_hex_to_name(cell) for cell in row] for row in colors])
+    # sheet = Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Blk 95A')  # copy
+    # colors = sheet.get_background_colors('A15', 'C20')
+    # pprint(colors)
+    # pprint([[color_hex_to_name(cell) for cell in row] for row in colors])
+    sheet = Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Sheet30')  # copy
+    # sheet.set_sheet_dimensions(5,5)
+    sheet.append_sheet_dimensions(5,2)
