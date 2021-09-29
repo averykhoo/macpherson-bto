@@ -81,7 +81,7 @@ if __name__ == '__main__':
     workbook_id = '1ahbAXvuamz2PB1COGx2dWjIV8BN75bqYL_KmgdHkWKk'  # original
     # workbook_id = '1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70'  # copy, so I don't break anything
 
-    read_only = True
+    read_only = 0  # True
 
     # # # update list of taken units
 
@@ -94,6 +94,7 @@ if __name__ == '__main__':
     if not read_only and any(row[0] == date_str for row in cache.table):
         print('already added data')
     else:
+        original_row = next_row
         print(date_str + '\t' + 'Public queue')
         next_row += 1
         if not read_only:
@@ -110,7 +111,8 @@ if __name__ == '__main__':
             sheet.set_values(f'A{next_row}', f'B{next_row}', [['2-room total:', n_2rm]])
             sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
         next_row += 1
-        for i, row in df_removed[df_removed['flat_type'].str.contains('2-Room')].sort_values(by=['block', 'level_str', 'stack']).iterrows():
+        for i, row in df_removed[df_removed['flat_type'].str.contains('2-Room')].sort_values(
+                by=['block', 'level_str', 'stack']).iterrows():
             print('Blk ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
             if not read_only:
                 sheet.set_values(f'A{next_row}', f'B{next_row}', [['Blk ' + str(row['block']),
@@ -125,7 +127,8 @@ if __name__ == '__main__':
             sheet.set_values(f'A{next_row}', f'B{next_row}', [['3-room total:', n_3rm]])
             sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
         next_row += 1
-        for i, row in df_removed[df_removed['flat_type'].str.contains('3-Room')].sort_values(by=['block', 'level_str', 'stack']).iterrows():
+        for i, row in df_removed[df_removed['flat_type'].str.contains('3-Room')].sort_values(
+                by=['block', 'level_str', 'stack']).iterrows():
             print('Blk ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
             if not read_only:
                 sheet.set_values(f'A{next_row}', f'B{next_row}', [['Blk ' + str(row['block']),
@@ -140,12 +143,18 @@ if __name__ == '__main__':
             sheet.set_values(f'A{next_row}', f'B{next_row}', [['4-room total:', n_4rm]])
             sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
         next_row += 1
-        for i, row in df_removed[df_removed['flat_type'].str.contains('4-Room')].sort_values(by=['block', 'level_str', 'stack']).iterrows():
+        for i, row in df_removed[df_removed['flat_type'].str.contains('4-Room')].sort_values(
+                by=['block', 'level_str', 'stack']).iterrows():
             print('Blk ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
             if not read_only:
                 sheet.set_values(f'A{next_row}', f'B{next_row}', [['Blk ' + str(row['block']),
                                                                    row['level_str'] + '-' + str(row['stack'])]])
             next_row += 1
+
+        # append so we don't hit the end
+        sheet_rows, _ = sheet.get_sheet_dimensions()
+        if sheet_rows - next_row < 20:
+            sheet.append_sheet_dimensions(next_row - original_row, 0)
 
     # # # color the taken units gray
 

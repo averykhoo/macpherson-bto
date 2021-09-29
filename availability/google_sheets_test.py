@@ -5,7 +5,6 @@ import re
 import string
 import time
 from dataclasses import dataclass
-from pprint import pprint
 from typing import Dict
 from typing import List
 from typing import Optional
@@ -311,6 +310,16 @@ class Sheet:
                 "endColumnIndex":   end_column,
                 }
 
+    def get_sheet_dimensions(self):
+        _props = self.sheet_service.get(spreadsheetId=self.spreadsheet_id,
+                                        ranges=[],
+                                        includeGridData=False,
+                                        ).execute()
+        for sheet_data in _props['sheets']:
+            sheet_props = sheet_data['properties']
+            if sheet_props['title'].casefold() == self.sheet_name.casefold():
+                return sheet_props['gridProperties']['rowCount'], sheet_props['gridProperties']['columnCount']
+
     def set_sheet_dimensions(self, num_rows, num_columns):
         # https://stackoverflow.com/questions/61791361/how-to-resize-a-worksheet-with-the-google-client-library
         body = {"requests": [{"updateSheetProperties": {
@@ -614,5 +623,6 @@ if __name__ == '__main__':
     # pprint(colors)
     # pprint([[color_hex_to_name(cell) for cell in row] for row in colors])
     sheet = Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Sheet30')  # copy
-    # sheet.set_sheet_dimensions(5,5)
-    sheet.append_sheet_dimensions(5,2)
+    # sheet.set_sheet_dimensions(5, 5)
+    # sheet.append_sheet_dimensions(5, 2)
+    print(sheet.get_sheet_dimensions())
