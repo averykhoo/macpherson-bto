@@ -92,69 +92,69 @@ if __name__ == '__main__':
     date_str = (datetime.datetime.strptime(curr_file.stem, '%Y-%m-%d--%H-%M-%S')
                 - datetime.timedelta(hours=12)).strftime('%d/%m/%Y')
     if not read_only and any(row[0] == date_str for row in cache.table):
-        print('already added data')
-    else:
-        original_row = next_row
-        print(date_str + '\t' + 'Public queue')
+        print('already added data, not writing to sheet')
+
+    original_row = next_row
+    print(date_str + '\t' + 'Public queue')
+    next_row += 1
+    if not read_only and not any(row[0] == date_str for row in cache.table):
+        sheet.set_values(f'A{next_row}', f'B{next_row}', [[date_str, 'Public queue']])
+        sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
+        sheet.set_horizontal_alignment(f'A{next_row}', horizontal_alignment='left')
+        sheet.set_background_color(f'A{next_row}', f'B{next_row}', color='#d9d9d9')
+    next_row += 1
+
+    n_2rm = str(len(df_removed[df_removed['flat_type'].str.contains('2-Room')]))
+
+    print('2-room total:\t' + n_2rm)
+    if not read_only and not any(row[0] == date_str for row in cache.table):
+        sheet.set_values(f'A{next_row}', f'B{next_row}', [['2-room total:', n_2rm]])
+        sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
+    next_row += 1
+    for i, row in df_removed[df_removed['flat_type'].str.contains('2-Room')].sort_values(
+            by=['block', 'level_str', 'stack']).iterrows():
+        print('Blk ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
+        if not read_only and not any(row[0] == date_str for row in cache.table):
+            sheet.set_values(f'A{next_row}', f'B{next_row}', [['Blk ' + str(row['block']),
+                                                               row['level_str'] + '-' + str(row['stack'])]])
         next_row += 1
-        if not read_only:
-            sheet.set_values(f'A{next_row}', f'B{next_row}', [[date_str, 'Public queue']])
-            sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
-            sheet.set_horizontal_alignment(f'A{next_row}', horizontal_alignment='left')
-            sheet.set_background_color(f'A{next_row}', f'B{next_row}', color='#d9d9d9')
+    print()
+    next_row += 1
+
+    n_3rm = str(len(df_removed[df_removed['flat_type'].str.contains('3-Room')]))
+    print('3-room total:\t' + n_3rm)
+    if not read_only and not any(row[0] == date_str for row in cache.table):
+        sheet.set_values(f'A{next_row}', f'B{next_row}', [['3-room total:', n_3rm]])
+        sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
+    next_row += 1
+    for i, row in df_removed[df_removed['flat_type'].str.contains('3-Room')].sort_values(
+            by=['block', 'level_str', 'stack']).iterrows():
+        print('Blk ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
+        if not read_only and not any(row[0] == date_str for row in cache.table):
+            sheet.set_values(f'A{next_row}', f'B{next_row}', [['Blk ' + str(row['block']),
+                                                               row['level_str'] + '-' + str(row['stack'])]])
+        next_row += 1
+    print()
+    next_row += 1
+
+    n_4rm = str(len(df_removed[df_removed['flat_type'].str.contains('4-Room')]))
+    print('4-room total:\t' + n_4rm)
+    if not read_only and not any(row[0] == date_str for row in cache.table):
+        sheet.set_values(f'A{next_row}', f'B{next_row}', [['4-room total:', n_4rm]])
+        sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
+    next_row += 1
+    for i, row in df_removed[df_removed['flat_type'].str.contains('4-Room')].sort_values(
+            by=['block', 'level_str', 'stack']).iterrows():
+        print('Blk ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
+        if not read_only and not any(row[0] == date_str for row in cache.table):
+            sheet.set_values(f'A{next_row}', f'B{next_row}', [['Blk ' + str(row['block']),
+                                                               row['level_str'] + '-' + str(row['stack'])]])
         next_row += 1
 
-        n_2rm = str(len(df_removed[df_removed['flat_type'].str.contains('2-Room')]))
-
-        print('2-room total:\t' + n_2rm)
-        if not read_only:
-            sheet.set_values(f'A{next_row}', f'B{next_row}', [['2-room total:', n_2rm]])
-            sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
-        next_row += 1
-        for i, row in df_removed[df_removed['flat_type'].str.contains('2-Room')].sort_values(
-                by=['block', 'level_str', 'stack']).iterrows():
-            print('Blk ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
-            if not read_only:
-                sheet.set_values(f'A{next_row}', f'B{next_row}', [['Blk ' + str(row['block']),
-                                                                   row['level_str'] + '-' + str(row['stack'])]])
-            next_row += 1
-        print()
-        next_row += 1
-
-        n_3rm = str(len(df_removed[df_removed['flat_type'].str.contains('3-Room')]))
-        print('3-room total:\t' + n_3rm)
-        if not read_only:
-            sheet.set_values(f'A{next_row}', f'B{next_row}', [['3-room total:', n_3rm]])
-            sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
-        next_row += 1
-        for i, row in df_removed[df_removed['flat_type'].str.contains('3-Room')].sort_values(
-                by=['block', 'level_str', 'stack']).iterrows():
-            print('Blk ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
-            if not read_only:
-                sheet.set_values(f'A{next_row}', f'B{next_row}', [['Blk ' + str(row['block']),
-                                                                   row['level_str'] + '-' + str(row['stack'])]])
-            next_row += 1
-        print()
-        next_row += 1
-
-        n_4rm = str(len(df_removed[df_removed['flat_type'].str.contains('4-Room')]))
-        print('4-room total:\t' + n_4rm)
-        if not read_only:
-            sheet.set_values(f'A{next_row}', f'B{next_row}', [['4-room total:', n_4rm]])
-            sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
-        next_row += 1
-        for i, row in df_removed[df_removed['flat_type'].str.contains('4-Room')].sort_values(
-                by=['block', 'level_str', 'stack']).iterrows():
-            print('Blk ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
-            if not read_only:
-                sheet.set_values(f'A{next_row}', f'B{next_row}', [['Blk ' + str(row['block']),
-                                                                   row['level_str'] + '-' + str(row['stack'])]])
-            next_row += 1
-
-        # append so we don't hit the end
-        sheet_rows, _ = sheet.get_sheet_dimensions()
-        if sheet_rows - next_row < 20:
-            sheet.append_sheet_dimensions(next_row - original_row, 0)
+    # append so we don't hit the end
+    sheet_rows, _ = sheet.get_sheet_dimensions()
+    if not read_only and not any(row[0] == date_str for row in cache.table) and sheet_rows - next_row < 30:
+        sheet.append_sheet_dimensions(next_row - original_row + 10, 0)
 
     # # # color the taken units gray
 
