@@ -113,47 +113,47 @@ if __name__ == '__main__':
     next_row += 1
     for i, row in df_removed[df_removed['flat_type'].str.contains('2-Room')].sort_values(
             by=['block', 'level_str', 'stack']).iterrows():
-        print('Blk ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
-        if not read_only and not any(row[0] == date_str for row in cache.table):
-            sheet.set_values(f'A{next_row}', f'B{next_row}', [['Blk ' + str(row['block']),
-                                                               row['level_str'] + '-' + str(row['stack'])]])
-        next_row += 1
+        print('BLK ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
+        if not read_only and not any(_row[0] == date_str for _row in cache.table):
+            sheet.set_values(f'A{next_row}', f'B{next_row}',
+                             [['BLK ' + str(row['block']), row['level_str'] + '-' + str(row['stack'])]])
+            next_row += 1
     print()
     next_row += 1
 
     n_3rm = str(len(df_removed[df_removed['flat_type'].str.contains('3-Room')]))
     print('3-room total:\t' + n_3rm)
-    if not read_only and not any(row[0] == date_str for row in cache.table):
+    if not read_only and not any(_row[0] == date_str for _row in cache.table):
         sheet.set_values(f'A{next_row}', f'B{next_row}', [['3-room total:', n_3rm]])
         sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
     next_row += 1
     for i, row in df_removed[df_removed['flat_type'].str.contains('3-Room')].sort_values(
             by=['block', 'level_str', 'stack']).iterrows():
-        print('Blk ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
-        if not read_only and not any(row[0] == date_str for row in cache.table):
-            sheet.set_values(f'A{next_row}', f'B{next_row}', [['Blk ' + str(row['block']),
-                                                               row['level_str'] + '-' + str(row['stack'])]])
-        next_row += 1
+        print('BLK ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
+        if not read_only and not any(_row[0] == date_str for _row in cache.table):
+            sheet.set_values(f'A{next_row}', f'B{next_row}',
+                             [['BLK ' + str(row['block']), row['level_str'] + '-' + str(row['stack'])]])
+            next_row += 1
     print()
     next_row += 1
 
     n_4rm = str(len(df_removed[df_removed['flat_type'].str.contains('4-Room')]))
     print('4-room total:\t' + n_4rm)
-    if not read_only and not any(row[0] == date_str for row in cache.table):
+    if not read_only and not any(_row[0] == date_str for _row in cache.table):
         sheet.set_values(f'A{next_row}', f'B{next_row}', [['4-room total:', n_4rm]])
         sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
     next_row += 1
     for i, row in df_removed[df_removed['flat_type'].str.contains('4-Room')].sort_values(
             by=['block', 'level_str', 'stack']).iterrows():
-        print('Blk ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
-        if not read_only and not any(row[0] == date_str for row in cache.table):
-            sheet.set_values(f'A{next_row}', f'B{next_row}', [['Blk ' + str(row['block']),
-                                                               row['level_str'] + '-' + str(row['stack'])]])
-        next_row += 1
+        print('BLK ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
+        if not read_only and not any(_row[0] == date_str for _row in cache.table):
+            sheet.set_values(f'A{next_row}', f'B{next_row}',
+                             [['BLK ' + str(row['block']), row['level_str'] + '-' + str(row['stack'])]])
+            next_row += 1
 
     # append so we don't hit the end
     sheet_rows, _ = sheet.get_sheet_dimensions()
-    if not read_only and not any(row[0] == date_str for row in cache.table) and sheet_rows - next_row < 30:
+    if not read_only and not any(_row[0] == date_str for _row in cache.table) and sheet_rows - next_row < 30:
         sheet.append_sheet_dimensions(next_row - original_row + 10, 0)
 
     # # # color the taken units gray
