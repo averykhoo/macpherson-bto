@@ -102,7 +102,7 @@ if __name__ == '__main__':
         sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
         sheet.set_horizontal_alignment(f'A{next_row}', horizontal_alignment='left')
         sheet.set_background_color(f'A{next_row}', f'B{next_row}', color='#d9d9d9')
-    next_row += 1
+        next_row += 1
 
     n_2rm = str(len(df_removed[df_removed['flat_type'].str.contains('2-Room')]))
 
@@ -110,7 +110,7 @@ if __name__ == '__main__':
     if not read_only and not any(row[0] == date_str for row in cache.table):
         sheet.set_values(f'A{next_row}', f'B{next_row}', [['2-room total:', n_2rm]])
         sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
-    next_row += 1
+        next_row += 1
     for i, row in df_removed[df_removed['flat_type'].str.contains('2-Room')].sort_values(
             by=['block', 'level_str', 'stack']).iterrows():
         print('BLK ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
@@ -126,7 +126,7 @@ if __name__ == '__main__':
     if not read_only and not any(_row[0] == date_str for _row in cache.table):
         sheet.set_values(f'A{next_row}', f'B{next_row}', [['3-room total:', n_3rm]])
         sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
-    next_row += 1
+        next_row += 1
     for i, row in df_removed[df_removed['flat_type'].str.contains('3-Room')].sort_values(
             by=['block', 'level_str', 'stack']).iterrows():
         print('BLK ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
@@ -142,7 +142,7 @@ if __name__ == '__main__':
     if not read_only and not any(_row[0] == date_str for _row in cache.table):
         sheet.set_values(f'A{next_row}', f'B{next_row}', [['4-room total:', n_4rm]])
         sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
-    next_row += 1
+        next_row += 1
     for i, row in df_removed[df_removed['flat_type'].str.contains('4-Room')].sort_values(
             by=['block', 'stack', 'level_str']).iterrows():
         print('BLK ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
@@ -153,8 +153,9 @@ if __name__ == '__main__':
 
     # append so we don't hit the end
     sheet_rows, _ = sheet.get_sheet_dimensions()
-    if not read_only and not any(_row[0] == date_str for _row in cache.table) and sheet_rows - next_row < 30:
-        sheet.append_sheet_dimensions(next_row - original_row + 10, 0)
+    next_row = sheet.get_first_empty_row_after_existing_content()
+    if not read_only and sheet_rows - next_row < 50:
+        sheet.append_sheet_dimensions(next_row + 50, 0)
 
     # # # color the taken units gray
 
