@@ -144,7 +144,7 @@ if __name__ == '__main__':
         sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
     next_row += 1
     for i, row in df_removed[df_removed['flat_type'].str.contains('4-Room')].sort_values(
-            by=['block', 'level_str', 'stack']).iterrows():
+            by=['block', 'stack', 'level_str']).iterrows():
         print('BLK ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
         if not read_only and not any(_row[0] == date_str for _row in cache.table):
             sheet.set_values(f'A{next_row}', f'B{next_row}',
