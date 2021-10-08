@@ -89,16 +89,21 @@ if __name__ == '__main__':
     next_row = sheet.get_first_empty_row_after_existing_content()
     cache = SheetCache(sheet.get_values('A1', f'Z{next_row}'))
 
-    date_str = (datetime.datetime.strptime(curr_file.stem, '%Y-%m-%d--%H-%M-%S')
-                - datetime.timedelta(hours=12)).strftime('%d/%m/%Y')
-    if not read_only and any(row[0] == date_str for row in cache.table):
+    date_str_1 = (datetime.datetime.strptime(curr_file.stem, '%Y-%m-%d--%H-%M-%S')
+                  - datetime.timedelta(hours=12)).strftime('%d/%m/%Y')
+    date_str_2 = (datetime.datetime.strptime(curr_file.stem, '%Y-%m-%d--%H-%M-%S')
+                  - datetime.timedelta(hours=12)).strftime('%m/%d/%Y')
+    date_str_3 = (datetime.datetime.strptime(curr_file.stem, '%Y-%m-%d--%H-%M-%S')
+                  - datetime.timedelta(hours=12)).strftime('%-m/%-d/%Y')
+    date_already_exists = any(row[0] in {date_str_1, date_str_2, date_str_3} for row in cache.table[-50:])
+    if not read_only and date_already_exists:
         print('already added data, not writing to sheet')
 
     original_row = next_row
-    print(date_str + '\t' + 'Public queue')
+    print(date_str_1 + '\t' + 'Public queue')
     next_row += 1
-    if not read_only and not any(row[0] == date_str for row in cache.table):
-        sheet.set_values(f'A{next_row}', f'B{next_row}', [[date_str, 'Public queue']])
+    if not read_only and not date_already_exists:
+        sheet.set_values(f'A{next_row}', f'B{next_row}', [[date_str_1, 'Public queue']])
         sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
         sheet.set_horizontal_alignment(f'A{next_row}', horizontal_alignment='left')
         sheet.set_background_color(f'A{next_row}', f'B{next_row}', color='#d9d9d9')
@@ -107,14 +112,14 @@ if __name__ == '__main__':
     n_2rm = str(len(df_removed[df_removed['flat_type'].str.contains('2-Room')]))
 
     print('2-room total:\t' + n_2rm)
-    if not read_only and not any(row[0] == date_str for row in cache.table):
+    if not read_only and not date_already_exists:
         sheet.set_values(f'A{next_row}', f'B{next_row}', [['2-room total:', n_2rm]])
         sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
         next_row += 1
     for i, row in df_removed[df_removed['flat_type'].str.contains('2-Room')].sort_values(
             by=['block', 'level_str', 'stack']).iterrows():
         print('BLK ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
-        if not read_only and not any(_row[0] == date_str for _row in cache.table):
+        if not read_only and not date_already_exists:
             sheet.set_values(f'A{next_row}', f'B{next_row}',
                              [['BLK ' + str(row['block']), row['level_str'] + '-' + str(row['stack'])]])
             next_row += 1
@@ -123,14 +128,14 @@ if __name__ == '__main__':
 
     n_3rm = str(len(df_removed[df_removed['flat_type'].str.contains('3-Room')]))
     print('3-room total:\t' + n_3rm)
-    if not read_only and not any(_row[0] == date_str for _row in cache.table):
+    if not read_only and not date_already_exists:
         sheet.set_values(f'A{next_row}', f'B{next_row}', [['3-room total:', n_3rm]])
         sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
         next_row += 1
     for i, row in df_removed[df_removed['flat_type'].str.contains('3-Room')].sort_values(
             by=['block', 'level_str', 'stack']).iterrows():
         print('BLK ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
-        if not read_only and not any(_row[0] == date_str for _row in cache.table):
+        if not read_only and not date_already_exists:
             sheet.set_values(f'A{next_row}', f'B{next_row}',
                              [['BLK ' + str(row['block']), row['level_str'] + '-' + str(row['stack'])]])
             next_row += 1
@@ -139,14 +144,14 @@ if __name__ == '__main__':
 
     n_4rm = str(len(df_removed[df_removed['flat_type'].str.contains('4-Room')]))
     print('4-room total:\t' + n_4rm)
-    if not read_only and not any(_row[0] == date_str for _row in cache.table):
+    if not read_only and not date_already_exists:
         sheet.set_values(f'A{next_row}', f'B{next_row}', [['4-room total:', n_4rm]])
         sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
         next_row += 1
     for i, row in df_removed[df_removed['flat_type'].str.contains('4-Room')].sort_values(
             by=['block', 'stack', 'level_str']).iterrows():
         print('BLK ' + str(row['block']) + '\t' + row['level_str'] + '-' + str(row['stack']))
-        if not read_only and not any(_row[0] == date_str for _row in cache.table):
+        if not read_only and not date_already_exists:
             sheet.set_values(f'A{next_row}', f'B{next_row}',
                              [['BLK ' + str(row['block']), row['level_str'] + '-' + str(row['stack'])]])
             next_row += 1
