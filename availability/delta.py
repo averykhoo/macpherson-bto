@@ -94,8 +94,8 @@ if __name__ == '__main__':
     date_str_2 = (datetime.datetime.strptime(curr_file.stem, '%Y-%m-%d--%H-%M-%S')
                   - datetime.timedelta(hours=12)).strftime('%m/%d/%Y')
     date_str_3 = (datetime.datetime.strptime(curr_file.stem, '%Y-%m-%d--%H-%M-%S')
-                  - datetime.timedelta(hours=12)).strftime('%-m/%-d/%Y')
-    date_already_exists = any(row[0] in {date_str_1, date_str_2, date_str_3} for row in cache.table[-50:])
+                  - datetime.timedelta(hours=12)).strftime('%m/%d/%Y').replace('/0', '/')
+    date_already_exists = any(row[0].strip() in {date_str_1, date_str_2, date_str_3} for row in cache.table[-50:])
     if not read_only and date_already_exists:
         print('already added data, not writing to sheet')
 

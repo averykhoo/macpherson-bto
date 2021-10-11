@@ -5,6 +5,7 @@ import re
 import string
 import time
 from dataclasses import dataclass
+from pprint import pprint
 from typing import Dict
 from typing import List
 from typing import Optional
@@ -14,6 +15,7 @@ from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
+from tabulate import tabulate
 
 from availability.color_distance import nearest_color_name
 
@@ -622,7 +624,14 @@ if __name__ == '__main__':
     # colors = sheet.get_background_colors('A15', 'C20')
     # pprint(colors)
     # pprint([[color_hex_to_name(cell) for cell in row] for row in colors])
-    sheet = Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Sheet30')  # copy
-    # sheet.set_sheet_dimensions(5, 5)
-    # sheet.append_sheet_dimensions(5, 2)
-    print(sheet.get_sheet_dimensions())
+    # sheet = Sheet('1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70', 'Sheet30')  # copy
+    # # sheet.set_sheet_dimensions(5, 5)
+    # # sheet.append_sheet_dimensions(5, 2)
+    # print(sheet.get_sheet_dimensions())
+
+    workbook_id = '1ahbAXvuamz2PB1COGx2dWjIV8BN75bqYL_KmgdHkWKk'  # original
+    # workbook_id = '1Hx_oFmbRYRuek_eyVUyfz4_b9861mPhSBF1NHH9et70'  # copy, so I don't break anything
+    sheet = Sheet(workbook_id, 'Units taken by date')
+    next_row = sheet.get_first_empty_row_after_existing_content()
+    cache = SheetCache(sheet.get_values('A1', f'Z{next_row}'))
+    pprint(cache.table)
