@@ -159,8 +159,8 @@ if __name__ == '__main__':
     # append so we don't hit the end
     sheet_rows, _ = sheet.get_sheet_dimensions()
     next_row = sheet.get_first_empty_row_after_existing_content()
-    if not read_only and sheet_rows - next_row < 50:
-        sheet.append_sheet_dimensions(next_row + 50, 0)
+    if not read_only and sheet_rows - next_row < 100:
+        sheet.append_sheet_dimensions(next_row + 100, 0)
 
     # # # color the taken units gray
 
