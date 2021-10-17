@@ -160,6 +160,7 @@ if __name__ == '__main__':
     sheet_rows, _ = sheet.get_sheet_dimensions()
     next_row = sheet.get_first_empty_row_after_existing_content()
     if not read_only and sheet_rows - next_row < 100:
+        print(f'extending sheet by {next_row + 100 - sheet_rows} rows')
         sheet.append_sheet_dimensions(next_row + 100, 0)
 
     # # # color the taken units gray
