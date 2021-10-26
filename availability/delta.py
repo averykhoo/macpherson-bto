@@ -104,7 +104,8 @@ if __name__ == '__main__':
     next_row += 1
     if not read_only and not date_already_exists:
         current_time = datetime.datetime.now().strftime('%I:%M %p')
-        sheet.set_values(f'A{next_row}', f'B{next_row}', [[date_str_1, 'Public queue', f'updated at {current_time}']])
+        # sheet.set_values(f'A{next_row}', f'C{next_row}', [[date_str_1, 'Public queue', f'updated at {current_time}']])
+        sheet.set_values(f'A{next_row}', f'B{next_row}', [[date_str_1, 'Public queue']])
         sheet.set_text_format(f'A{next_row}', f'B{next_row}', bold=True)
         sheet.set_horizontal_alignment(f'A{next_row}', horizontal_alignment='left')
         sheet.set_background_color(f'A{next_row}', f'B{next_row}', color='#d9d9d9')
