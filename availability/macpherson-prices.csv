@@ -25,7 +25,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95A,2-Room Flexi,#16,16,6839,520,48,266100,,False
 95A,2-Room Flexi,#15,15,6748,500,48,264900,,True
 95A,2-Room Flexi,#15,15,6766,502,48,264900,,False
-95A,2-Room Flexi,#15,15,6784,514,48,264900,,True
+95A,2-Room Flexi,#15,15,6784,514,48,264900,,False
 95A,2-Room Flexi,#15,15,6802,516,48,264900,,False
 95A,2-Room Flexi,#15,15,6820,518,48,264900,,False
 95A,2-Room Flexi,#15,15,6838,520,48,264900,,False
@@ -34,7 +34,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95A,2-Room Flexi,#14,14,6783,514,48,263700,,True
 95A,2-Room Flexi,#14,14,6801,516,48,263700,,False
 95A,2-Room Flexi,#14,14,6819,518,48,263700,,False
-95A,2-Room Flexi,#14,14,6837,520,48,263700,,True
+95A,2-Room Flexi,#14,14,6837,520,48,263700,,False
 95A,2-Room Flexi,#13,13,6746,500,48,262500,,True
 95A,2-Room Flexi,#13,13,6764,502,48,262500,,False
 95A,2-Room Flexi,#13,13,6782,514,48,262500,,True
@@ -64,7 +64,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95A,2-Room Flexi,#09,9,6778,514,48,257700,,True
 95A,2-Room Flexi,#09,9,6796,516,48,257700,,False
 95A,2-Room Flexi,#09,9,6814,518,48,257700,,False
-95A,2-Room Flexi,#09,9,6832,520,48,257700,,True
+95A,2-Room Flexi,#09,9,6832,520,48,257700,,False
 95A,2-Room Flexi,#08,8,6741,500,48,256500,MGPS 2+4,False
 95A,2-Room Flexi,#08,8,6759,502,48,256500,MGPS 2+4,False
 95A,2-Room Flexi,#08,8,6777,514,48,256500,,True
@@ -106,7 +106,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95A,2-Room Flexi,#02,2,6771,514,48,234600,,True
 95A,2-Room Flexi,#02,2,6789,516,48,234600,,True
 95A,2-Room Flexi,#02,2,6807,518,48,234600,,True
-95A,2-Room Flexi,#02,2,6825,520,48,234600,,True
+95A,2-Room Flexi,#02,2,6825,520,48,234600,,False
 95A,"3-Room (Income Ceiling $14,000)",#19,19,6968,504,69,400400,,False
 95A,"3-Room (Income Ceiling $14,000)",#19,19,6986,506,69,400400,,False
 95A,"3-Room (Income Ceiling $14,000)",#19,19,7034,512,69,400400,,False
@@ -127,7 +127,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95A,"3-Room (Income Ceiling $14,000)",#15,15,7015,510,69,399600,,False
 95A,"3-Room (Income Ceiling $14,000)",#15,15,7030,512,69,395300,,False
 95A,"3-Room (Income Ceiling $14,000)",#14,14,6963,504,69,393600,MGPS 3+4,True
-95A,"3-Room (Income Ceiling $14,000)",#14,14,6981,506,69,393600,,True
+95A,"3-Room (Income Ceiling $14,000)",#14,14,6981,506,69,393600,,False
 95A,"3-Room (Income Ceiling $14,000)",#14,14,6999,508,69,397900,,False
 95A,"3-Room (Income Ceiling $14,000)",#14,14,7014,510,69,397900,MGPS 3+4,False
 95A,"3-Room (Income Ceiling $14,000)",#14,14,7029,512,69,393600,,False
@@ -142,7 +142,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95A,"3-Room (Income Ceiling $14,000)",#12,12,7012,510,69,394500,,False
 95A,"3-Room (Income Ceiling $14,000)",#12,12,7027,512,69,390200,,False
 95A,"3-Room (Income Ceiling $14,000)",#11,11,6960,504,69,388500,,True
-95A,"3-Room (Income Ceiling $14,000)",#11,11,6978,506,69,388500,,True
+95A,"3-Room (Income Ceiling $14,000)",#11,11,6978,506,69,388500,,False
 95A,"3-Room (Income Ceiling $14,000)",#11,11,6996,508,69,392800,MGPS 3+4,False
 95A,"3-Room (Income Ceiling $14,000)",#11,11,7011,510,69,392800,,False
 95A,"3-Room (Income Ceiling $14,000)",#11,11,7026,512,69,388500,GRO,False
@@ -168,7 +168,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95A,"3-Room (Income Ceiling $14,000)",#07,7,7022,512,69,379100,,False
 95A,"3-Room (Income Ceiling $14,000)",#06,6,6955,504,69,374800,MGPS 3+4,True
 95A,"3-Room (Income Ceiling $14,000)",#06,6,6973,506,69,374800,,True
-95A,"3-Room (Income Ceiling $14,000)",#06,6,6991,508,69,379100,,True
+95A,"3-Room (Income Ceiling $14,000)",#06,6,6991,508,69,379100,,False
 95A,"3-Room (Income Ceiling $14,000)",#06,6,7006,510,69,379100,,False
 95A,"3-Room (Income Ceiling $14,000)",#06,6,7021,512,69,374800,,True
 95A,"3-Room (Income Ceiling $14,000)",#05,5,6954,504,69,370500,,True
@@ -269,7 +269,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95B,2-Room Flexi,#18,18,6949,548,38,209900,MGPS 2+4,False
 95B,2-Room Flexi,#17,17,6858,530,38,209000,,True
 95B,2-Room Flexi,#17,17,6876,532,48,267300,MGPS 2+4,False
-95B,2-Room Flexi,#17,17,6894,542,48,267300,,True
+95B,2-Room Flexi,#17,17,6894,542,48,267300,,False
 95B,2-Room Flexi,#17,17,6912,544,48,267300,,True
 95B,2-Room Flexi,#17,17,6930,546,38,209000,,True
 95B,2-Room Flexi,#17,17,6948,548,38,209000,,True
@@ -324,7 +324,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95B,2-Room Flexi,#08,8,6849,530,38,200900,MGPS 2+4,False
 95B,2-Room Flexi,#08,8,6867,532,48,256500,,True
 95B,2-Room Flexi,#08,8,6885,542,48,256500,,True
-95B,2-Room Flexi,#08,8,6903,544,48,256500,,True
+95B,2-Room Flexi,#08,8,6903,544,48,256500,,False
 95B,2-Room Flexi,#08,8,6921,546,38,200900,,True
 95B,2-Room Flexi,#08,8,6939,548,38,200900,,True
 95B,2-Room Flexi,#07,7,6848,530,38,198600,,True
@@ -421,12 +421,12 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95B,"3-Room (Income Ceiling $14,000)",#06,6,7093,540,69,379100,,False
 95B,"3-Room (Income Ceiling $14,000)",#05,5,7038,534,69,370500,,True
 95B,"3-Room (Income Ceiling $14,000)",#05,5,7056,536,69,370500,,True
-95B,"3-Room (Income Ceiling $14,000)",#05,5,7074,538,69,370500,,True
-95B,"3-Room (Income Ceiling $14,000)",#05,5,7092,540,69,370500,,True
+95B,"3-Room (Income Ceiling $14,000)",#05,5,7074,538,69,370500,,False
+95B,"3-Room (Income Ceiling $14,000)",#05,5,7092,540,69,370500,,False
 95B,"3-Room (Income Ceiling $14,000)",#04,4,7037,534,69,364100,,True
 95B,"3-Room (Income Ceiling $14,000)",#04,4,7055,536,69,364100,,True
 95B,"3-Room (Income Ceiling $14,000)",#04,4,7073,538,69,364100,,True
-95B,"3-Room (Income Ceiling $14,000)",#04,4,7091,540,69,364100,,True
+95B,"3-Room (Income Ceiling $14,000)",#04,4,7091,540,69,364100,,False
 95B,"3-Room (Income Ceiling $14,000)",#03,3,7036,534,69,357700,,True
 95B,"3-Room (Income Ceiling $14,000)",#03,3,7054,536,69,357700,,True
 95B,"3-Room (Income Ceiling $14,000)",#03,3,7072,538,69,357700,,True
@@ -635,7 +635,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 95C,4-Room,#07,7,7300,564,93,577000,,True
 95C,4-Room,#07,7,7318,566,93,577000,,True
 95C,4-Room,#07,7,7336,568,93,577000,,False
-95C,4-Room,#07,7,7354,570,93,577000,,True
+95C,4-Room,#07,7,7354,570,93,577000,,False
 95C,4-Room,#07,7,7372,572,93,577000,,True
 95C,4-Room,#07,7,7390,574,93,577000,,True
 95C,4-Room,#07,7,7407,576,93,577000,,True
@@ -766,12 +766,12 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 97A,4-Room,#12,12,7457,582,93,592700,,True
 97A,4-Room,#12,12,7475,584,93,592700,,True
 97A,4-Room,#12,12,7489,586,93,592700,,True
-97A,4-Room,#12,12,7503,588,93,592700,,True
+97A,4-Room,#12,12,7503,588,93,592700,,False
 97A,4-Room,#12,12,7520,590,93,592700,,False
 97A,4-Room,#12,12,7538,592,93,598800,,False
 97A,4-Room,#12,12,7556,594,93,598800,,False
 97A,4-Room,#12,12,7574,596,93,592700,,False
-97A,4-Room,#12,12,7592,598,93,592700,,True
+97A,4-Room,#12,12,7592,598,93,592700,,False
 97A,4-Room,#12,12,7610,600,93,592700,,True
 97A,4-Room,#11,11,7438,580,93,590300,,True
 97A,4-Room,#11,11,7456,582,93,590300,,True
@@ -891,7 +891,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 97B,4-Room,#19,19,7771,618,93,613200,,False
 97B,4-Room,#19,19,7789,620,93,613200,,True
 97B,4-Room,#18,18,7634,602,93,613200,,False
-97B,4-Room,#18,18,7652,604,93,613200,,True
+97B,4-Room,#18,18,7652,604,93,613200,,False
 97B,4-Room,#18,18,7670,606,93,613200,,False
 97B,4-Room,#18,18,7688,608,93,613200,,False
 97B,4-Room,#18,18,7706,610,93,613200,,False
@@ -1073,7 +1073,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 99A,4-Room,#18,18,7931,636,93,613200,,False
 99A,4-Room,#18,18,7949,638,93,613200,,True
 99A,4-Room,#17,17,7805,622,93,610800,,False
-99A,4-Room,#17,17,7823,624,93,610800,,True
+99A,4-Room,#17,17,7823,624,93,610800,,False
 99A,4-Room,#17,17,7840,626,93,598600,,False
 99A,4-Room,#17,17,7858,628,93,610800,,False
 99A,4-Room,#17,17,7876,630,93,598600,,False
@@ -1318,7 +1318,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 99B,4-Room,#09,9,8088,656,93,585500,,True
 99B,4-Room,#09,9,8106,658,93,591600,,False
 99B,4-Room,#08,8,7957,640,93,589200,,True
-99B,4-Room,#08,8,7975,642,93,589200,,True
+99B,4-Room,#08,8,7975,642,93,589200,,False
 99B,4-Room,#08,8,7990,644,93,589200,,False
 99B,4-Room,#08,8,8001,646,93,589200,,False
 99B,4-Room,#08,8,8015,648,93,589200,,False
