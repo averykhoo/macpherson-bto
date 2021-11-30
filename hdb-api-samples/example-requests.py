@@ -25,6 +25,12 @@ bto_details_urls = [
     'https://homes.hdb.gov.sg/home/bto/details/2021-08_BTO_VEFQX045QzEwXzE2Mjc1NjM5NjI5MzI',
     'https://homes.hdb.gov.sg/home/bto/details/2021-08_BTO_SkVfTjJDMjZfMTYyNzU2Mzc4MzAxNA',
     'https://homes.hdb.gov.sg/home/bto/details/2021-08_BTO_S1dOX041QzUyXzE2Mjc1NjM4NDI3ODk',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-11_UPB_R0xfTjRDNTBfMTYzNDgxNjE2NzMwNw',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-11_UPB_S1dOX04yQzM2XzE2MzUzOTQ1MDQ5ODc',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-11_UPB_VEdfRDFDNl8xNjM0ODE4OTg0OTMz',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-11_UPB_VEdfRDNDNV8xNjM2NjE1NTA1Mzkx',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-11_UPB_WVNfTjNDMjdfMTYzNDgxOTEwNDQ1Mg',
+    'https://homes.hdb.gov.sg/home/bto/details/2021-11_UPB_WVNfTjRDMjNfMTYzNTQxODY4NDUwMw',
 ]
 
 
