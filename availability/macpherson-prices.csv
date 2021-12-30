@@ -1358,7 +1358,7 @@ block,flat_type,level_str,level_number,unit_id,stack,area_sqm,price,tag,availabl
 99B,4-Room,#05,5,8084,656,93,564800,,False
 99B,4-Room,#05,5,8102,658,93,570900,,False
 99B,4-Room,#04,4,7953,640,93,555600,,False
-99B,4-Room,#04,4,7971,642,93,549500,,True
+99B,4-Room,#04,4,7971,642,93,549500,,False
 99B,4-Room,#04,4,8011,648,93,555600,,False
 99B,4-Room,#04,4,8029,650,93,555600,,False
 99B,4-Room,#04,4,8047,652,93,549500,,False
