@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <project-name>Bukit Merah Ridge</project-name>
+    <standard-project-info>
+        <key>
+            <town>Bukit Merah</town>
+            <tooltip/>
+            <uri/>
+        </key>
+        <key>
+            <point>1233|1072</point>
+        </key>
+        <key>
+            <latitude>1.2868908</latitude>
+            <longitude>103.8237244</longitude>
+        </key>
+        <key>
+            <completion-date>1Q2028</completion-date>
+            <tooltip>
+                
+This is an estimated date that the flat will be completed and ready for key collection, and the actual completion date will depend on the progress of construction works on site. As the Estimated Completion Date (ECD) is indicative only, HDB shall not be responsible for any damage or loss arising from a change in the ECD.
+&lt;br/>&lt;br/>
+After booking the flat, buyers may check for updates via My HDBPage on HDB InfoWEB, as the construction of the project progresses.
+&lt;br/>&lt;br/>
+Note: The contractual date in the Agreement for Lease by which HDB is required to deliver vacant possession of the booked flat to buyers is known as the Delivery Possession Date (DPD), which may vary from project to project. Currently, the estimated DPD is from 30 Sep 2029.
+
+            </tooltip>
+            <uri/>
+        </key>
+        <key>
+            <remaining-lease>99</remaining-lease>
+            <tooltip>The 3- and 4-room flats are sold on a 99-year lease.</tooltip>
+            <uri/>
+        </key>
+        <key>
+            <selection-month>Jul 2022 to Apr 2023</selection-month>
+        </key>
+        <key>
+            <est-waiting-time>60 months</est-waiting-time>
+        </key>
+        <key>
+            <lease-period-2rm>B</lease-period-2rm>
+        </key>
+        <key>
+            <price-tooltip>
+                
+The indicative price range of the flats exclude grants and are based on 99-year leases.
+&lt;br/>&lt;br/>
+Actual prices may vary based on the actual attributes of the flats at the time of selection. Find out details of the Optional Component Scheme offered for this project.
+&lt;br/>&lt;br/>
+
+            </price-tooltip>
+        </key>
+        <unit-details>
+            <ukey>
+                <flat-type>3-room</flat-type>
+                <supply>443</supply>
+                <est-floor-area-lower>66</est-floor-area-lower>
+                <est-floor-area-upper>66</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge</tooltip>
+                <est-internal-floor-area-lower>63</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>63</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>377000</price-range-lower>
+                <price-range-upper>509000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        
+    &lt;h4>Finishes and Fittings&lt;/h4>
+    &lt;br>
+    &lt;h5>Non-Optional Finishes&lt;/h5>
+    &lt;br>
+    &lt;p>More than just a well-designed and functional interior, the 3-room flats will come with the following finishes and fittings: &lt;/p>
+    &lt;ul>
+      &lt;li>Floor tiles in the:&lt;/li>
+      &lt;ul>
+        &lt;li>Bathrooms&lt;/li>
+        &lt;li>Household shelter&lt;/li>
+        &lt;li>Kitchen/ utility &lt;/li>
+      &lt;/ul>
+      &lt;li>Wall tiles in the:&lt;/li>
+      &lt;ul>
+        &lt;li>Bathrooms&lt;/li>
+        &lt;li>Kitchen/ utility  &lt;/li>
+      &lt;/ul>
+    &lt;/ul>
+                    </non-optional>
+                    <optional>
+                        <p>You can choose to install the following OCS items in the 3-room flat:</p>
+                        <floor>
+                            <header>Flooring for Living/ Dining and Bedrooms </header>
+                            <price>3190</price>
+                            <text>
+                                &lt;ul>
+  &lt;li>Vinyl strip flooring in the bedrooms&lt;/li>
+  &lt;li>Polished porcelain floor tiles in the living/ dining&lt;/li>
+&lt;/ul>
+                            </text>
+                        </floor>
+                        <door>
+                            <header>Internal Doors and Sanitary Fittings </header>
+                            <price>2770</price>
+                            <text>
+                                &lt;ul>
+  &lt;li>2 laminated UPVC bedroom doors&lt;/li>
+  &lt;li>2 laminated UPVC folding bathroom doors&lt;/li>
+  &lt;li>Wash basin with tap mixer&lt;/li>
+  &lt;li>Shower set with bath/ shower mixer&lt;/li>
+&lt;/ul>
+                            </text>
+                        </door>
+                    </optional>
+                </finishes-and-fittings-text>
+            </ukey>
+            <ukey>
+                <flat-type>4-room</flat-type>
+                <supply>1226</supply>
+                <est-floor-area-lower>89</est-floor-area-lower>
+                <est-floor-area-upper>89</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge</tooltip>
+                <est-internal-floor-area-lower>86</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>86</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>540000</price-range-lower>
+                <price-range-upper>737000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        
+    &lt;h4>Finishes and Fittings&lt;/h4>
+    &lt;br>
+    &lt;h5>Non-Optional Finishes&lt;/h5>
+    &lt;br>
+    &lt;p>More than just a well-designed and functional interior, the 4-room flats will come with the following finishes and fittings: &lt;/p>
+    &lt;ul>
+      &lt;li>Floor tiles in the:&lt;/li>
+      &lt;ul>
+        &lt;li>Bathrooms&lt;/li>
+        &lt;li>Household shelter&lt;/li>
+        &lt;li>Kitchen and service yard &lt;/li>
+      &lt;/ul>
+      &lt;li>Wall tiles in the:&lt;/li>
+      &lt;ul>
+        &lt;li>Bathrooms&lt;/li>
+        &lt;li>Kitchen  &lt;/li>
+      &lt;/ul>
+    &lt;/ul>
+
+                    </non-optional>
+                    <optional>
+                        <p>You can choose to install the following OCS items in the 4-room flat:</p>
+                        <floor>
+                            <header>Flooring for Living/ Dining and Bedrooms </header>
+                            <price>4740</price>
+                            <text>
+                                &lt;ul>
+  &lt;li>Vinyl strip flooring in the bedrooms&lt;/li>
+  &lt;li>Polished porcelain floor tiles in the living/ dining&lt;/li>
+&lt;/ul>
+                            </text>
+                        </floor>
+                        <door>
+                            <header>Internal Doors and Sanitary Fittings </header>
+                            <price>3180</price>
+                            <text>
+                                &lt;ul>
+  &lt;li>3 laminated UPVC bedroom doors&lt;/li>
+  &lt;li>2 laminated UPVC folding bathroom doors&lt;/li>
+  &lt;li>Wash basin with tap mixer&lt;/li>
+  &lt;li>Shower set with bath/ shower mixer&lt;/li>
+&lt;/ul>
+                            </text>
+                        </door>
+                    </optional>
+                </finishes-and-fittings-text>
+            </ukey>
+        </unit-details>
+        <overview>
+            <p>
+                
+&lt;h6>Bukit Merah&lt;/h6>
+&lt;br/>
+Bukit Merah Ridge &lt;a class="audioBtn Bukit-Merah-Ridge">&lt;i class="fas fa-volume-up">&lt;/i>&lt;/a> is bounded by Bukit Merah View, Henderson Road, Tiong Bahru Road, and Lower Delta Road. The development comprises 5 residential blocks ranging from 29 to 48 storeys in height, and will have a total of 1,669 units of 3- and 4-room flats. Bukit Merah Ridge is offered under the new Prime Location Public Housing (PLH) model. Find out more about &lt;a href="https://www.hdb.gov.sg/cs/infoweb/residential/buying-a-flat/finding-a-flat/plh">the PLH model&lt;/a>.
+&lt;br>&lt;br>
+Bukit Merah Ridge takes its name from the nearby Southern Ridges, which can be seen from the development. Inspired by the greenery at Telok Blangah Hill Park, Mount Faber Park, and the nearby Tiong Bahru Park, Bukit Merah Ridge boasts lush landscaping and roof gardens. 
+&lt;br>&lt;br>
+Bukit Merah Ridge comes with facilities like a childcare centre, a residents’ network centre, children’s playgrounds, fitness stations, and 2 multi-purpose courts. There are also accessible roof gardens located at the development’s 2 Multi-Storey Car Park blocks.
+&lt;br>&lt;br>
+Please refer to the site plan located at the top of this page, for the facilities provided in the development. Facilities in this development will be accessible by the public.
+&lt;br>&lt;br>
+
+            </p>
+        </overview>
+        <notes>
+            <p>
+                HDB precincts are planned to serve the evolving needs of the community. There are spaces catered for future inclusion of amenities/ facilities (such as childcare centres, elderly-related facilities, education centres, residents' network centres, day activity centres, etc), commercial facilities (such as shops and eating houses), mechanical and electrical rooms, and such other facilities depending on the prevailing needs. These spaces could be in the void decks, common property, car parks, or stand-alone community buildings.
+			&lt;br>&lt;br>
+			In addition, housing projects may be located near roads, railways, airbases, and land used for non-residential purposes. Hence, residents may experience higher noise levels. We have provided information on the surrounding land use, proposed facilities and their locations in the maps and plans of individual projects, where feasible. The information provided is indicatively based on the current planning intent of the relevant authorities and is subject to change from time to time. 
+			&lt;br>&lt;br>
+			&lt;ul>
+			&lt;li>Get answers to &lt;a href="https://www.hdb.gov.sg/cs/infoweb/residential/buying-a-flat/buying-procedure-for-new-flats/modes-of-sale/faqs-for-sales-launch">Frequently Asked Questions on sales launches&lt;/a>&lt;/li>
+			&lt;br>
+   			&lt;li>Visit the virtual showflats at &lt;a href="https://www.hdb.gov.sg/mynicehomegallery?utm_source=May22website&amp;utm_medium=link&amp;utm_campaign=MNHG">My Nice Home Gallery&lt;/a> and get interior decor ideas&lt;/li>
+			&lt;/ul>
+			
+            </p>
+        </notes>
+    </standard-project-info>
+    <template-body>
+        <row>
+            <header>
+        Eco-Friendly Features
+      </header>
+        </row>
+        <row>
+            <p>
+                
+&lt;p>To encourage green and sustainable living, Bukit Merah Ridge will have several eco-friendly features such as:&lt;/p>&lt;ul>&lt;li>Separate chutes for recyclable waste&lt;/li>&lt;li>Regenerative lifts to reduce energy consumption&lt;/li>&lt;li>Bicycle stands to encourage cycling as an environmentally-friendly form of transport  &lt;/li>&lt;li>Parking spaces to facilitate future provision of electric vehicle charging stations &lt;/li>&lt;li>Use of sustainable products in the development&lt;/li>&lt;li>Active, Beautiful, Clean Waters design features to clean rainwater and beautify the landscapes&lt;/li>&lt;/ul>
+            </p>
+        </row>
+        <row>
+            <template1>
+                <photo-folder>2022-05/bto/bm_n6c58/template1</photo-folder>
+                <photos>
+                    <photo>2022-05/bto/bm_n6c58/template1/1.jpg</photo>
+                    <photo>2022-05/bto/bm_n6c58/template1/2.jpg</photo>
+                    <photo>2022-05/bto/bm_n6c58/template1/3.jpg</photo>
+                </photos>
+            </template1>
+        </row>
+        <row>
+            <header>
+        Smart Solutions
+      </header>
+        </row>
+        <row>
+            <p>
+                
+&lt;p>Bukit Merah Ridge will come with the following smart solutions to reduce energy usage, and contribute to a safer and more sustainable living environment:   &lt;/p>&lt;ul>&lt;li>Smart-Enabled Homes with provisions to support easy installation of smart systems&lt;/li>&lt;li>Smart Lighting in common areas to reduce energy usage&lt;/li>&lt;/ul>
+            </p>
+        </row>
+        <row>
+            <header>
+        About Bukit Merah Town
+      </header>
+        </row>
+        <row>
+            <p>
+                
+Bukit Merah Ridge is surrounded by Tiong Bahru Park, Henderson Community Club, Tiong Bahru Plaza, and a neighbourhood centre along Bukit Merah View that comes with a market and hawker centre. 
+&lt;br/>&lt;br/>
+More amenities are located in the vicinity to cater to residents’ various needs. These include Delta Swimming Complex and Delta Sports Hall for the sports enthusiasts, and several community clubs and centres for pursuing one’s hobbies. For shopping and dining, just head to Tiong Bahru Plaza or check out the many  eateries and shops within the town . To explore HDB’s heartland shops in Bukit Merah, visit &lt;a href="https://www.hdb.gov.sg/cs/infoweb/residential/where2shop/explore/bukit-merah">Where2Shop@HDB&lt;/a>.
+&lt;br/>&lt;br/>
+Bukit Merah Ridge is served by Tiong Bahru MRT station and the Central Expressway. Schools in the area include Zhangde Primary School, Gan Eng Seng Primary School, Gan Eng Seng Secondary School, and Bukit Merah Secondary School. 
+&lt;br/>&lt;br/>
+
+            </p>
+        </row>
+        <row>
+            <template2>
+                <photo-folder>2022-05/bto/bm_n6c58/template2</photo-folder>
+                <photos>
+                    <photo>2022-05/bto/bm_n6c58/template2/1.jpg</photo>
+                    <photo>2022-05/bto/bm_n6c58/template2/2.jpg</photo>
+                    <photo>2022-05/bto/bm_n6c58/template2/3.jpg</photo>
+                    <photo>2022-05/bto/bm_n6c58/template2/4.jpg</photo>
+                    <photo>2022-05/bto/bm_n6c58/template2/5.jpg</photo>
+                    <photo>2022-05/bto/bm_n6c58/template2/6.jpg</photo>
+                </photos>
+            </template2>
+        </row>
+    </template-body>
+    <resources>
+        <town-map>2022-05/bto/bm_n6c58/townmap/townmap_bm_n6c58.jpg</town-map>
+        <carousel>
+            <link>2022-05/bto/bm_n6c58/carousel/01_perspective.jpg</link>
+            <link>2022-05/bto/bm_n6c58/carousel/02_perspective.jpg</link>
+            <link>2022-05/bto/bm_n6c58/carousel/03_siteplan_bm_n6c58.jpg</link>
+        </carousel>
+        <sound>2022-05/bto/bm_n6c58/sound/bm_n6c58.mp3</sound>
+        <genspecs>
+            <genspecs-3rm>2022-05/bto/bm_n6c58/genspecs/genspecs_bm_n6c58_3rm_4rm.jpg</genspecs-3rm>
+            <genspecs-4rm>2022-05/bto/bm_n6c58/genspecs/genspecs_bm_n6c58_3rm_4rm.jpg</genspecs-4rm>
+        </genspecs>
+        <layoutideas>
+            <layoutideas-3rm>2022-05/bto/bm_n6c58/layoutideas/layoutideas_bm_n6c58_3rm.jpg</layoutideas-3rm>
+            <layoutideas-4rm>2022-05/bto/bm_n6c58/layoutideas/layoutideas_bm_n6c58_4rm.jpg</layoutideas-4rm>
+        </layoutideas>
+        <resale>
+            <resale-3rm>2022-05/bto/bm_n6c58/resale/resale_bm_n6c58_3rm.jpg</resale-3rm>
+            <resale-4rm>2022-05/bto/bm_n6c58/resale/resale_bm_n6c58_4rm.jpg</resale-4rm>
+        </resale>
+        <oydh>
+            <oydh-3rm>2022-05/bto/bm_n6c58/oydh/oydh_bm_n6c58_3rm.jpg</oydh-3rm>
+            <oydh-4rm>2022-05/bto/bm_n6c58/oydh/oydh_bm_n6c58_4rm.jpg</oydh-4rm>
+        </oydh>
+        <ocsleaflet>
+            <ocsleaflet-3rm>2022-05/bto/bm_n6c58/ocsleaflet/ocsleaflet_bm_n6c58_3rm_4rm_5rm(1).png</ocsleaflet-3rm>
+            <ocsleaflet-4rm>2022-05/bto/bm_n6c58/ocsleaflet/ocsleaflet_bm_n6c58_3rm_4rm_5rm(1).png</ocsleaflet-4rm>
+            <ocsleaflet-5rm>2022-05/bto/bm_n6c58/ocsleaflet/ocsleaflet_bm_n6c58_3rm_4rm_5rm(1).png</ocsleaflet-5rm>
+        </ocsleaflet>
+        <ocs/>
+    </resources>
+</template>
