@@ -31,11 +31,16 @@ bto_details_urls = [
     # 'https://homes.hdb.gov.sg/home/bto/details/2021-11_UPB_VEdfRDNDNV8xNjM2NjE1NTA1Mzkx',
     # 'https://homes.hdb.gov.sg/home/bto/details/2021-11_UPB_WVNfTjNDMjdfMTYzNDgxOTEwNDQ1Mg',
     # 'https://homes.hdb.gov.sg/home/bto/details/2021-11_UPB_WVNfTjRDMjNfMTYzNTQxODY4NDUwMw',
-    'https://homes.hdb.gov.sg/home/bto/details/2022-05_BTO_VFBfTjFDMjdfMTY1MDI3NDMyODA4Mw',
-    'https://homes.hdb.gov.sg/home/bto/details/2022-05_BTO_UVRfTjZDOF8xNjUwMjc0MjY4MjEx',
-    'https://homes.hdb.gov.sg/home/bto/details/2022-05_BTO_Qk1fTjZDNThfMTY1MDI3NDA4OTUyMA',
-    'https://homes.hdb.gov.sg/home/bto/details/2022-05_BTO_SldfTjNDMzFfMTY1MDI3NDIwODU5Nw',
-    'https://homes.hdb.gov.sg/home/bto/details/2022-05_BTO_WVNfTjlDM18xNjUwMjc0Mzg4ODkz',
+    # 'https://homes.hdb.gov.sg/home/bto/details/2022-05_BTO_VFBfTjFDMjdfMTY1MDI3NDMyODA4Mw',
+    # 'https://homes.hdb.gov.sg/home/bto/details/2022-05_BTO_UVRfTjZDOF8xNjUwMjc0MjY4MjEx',
+    # 'https://homes.hdb.gov.sg/home/bto/details/2022-05_BTO_Qk1fTjZDNThfMTY1MDI3NDA4OTUyMA',
+    # 'https://homes.hdb.gov.sg/home/bto/details/2022-05_BTO_SldfTjNDMzFfMTY1MDI3NDIwODU5Nw',
+    # 'https://homes.hdb.gov.sg/home/bto/details/2022-05_BTO_WVNfTjlDM18xNjUwMjc0Mzg4ODkz',
+    'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_S1dOX042QzU0XzE2NjY3MDE1NjAzNzY',
+    'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_UVRfTjhDMV8xNjY2NzAxNjI2ODEw',
+    'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_SldfTjlDMjFfMTY2NjcwMDg0MTA5Mg',
+    'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_S1dOX04xQzQ1QV8xNjY2NzAxMjAxMDQ1',
+    'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_S1dOX04xQzQ1QV8xNjY2NzAxMjAxMDQ1',
 ]
 
 
@@ -592,14 +597,16 @@ if __name__ == '__main__':
 
         r1 = requests.get(f'https://resources.homes.hdb.gov.sg/nf/{month}/bto/'
                           f'unit_xml/'
-                          f'UNIT_{month}_{project_type}_{b64_chunk}.xml')
+                          f'UNIT_{month}_{project_type}_{b64_chunk}.xml',
+                          verify=False)
         if r1.status_code == 200:
             with open(f'hdb_downloads/{os.path.basename(r1.url)}', 'wb') as f:
                 f.write(r1.content)
 
         r2 = requests.get(f'https://resources.homes.hdb.gov.sg/nf/{month}/bto/'
                           f'{town.lower()}_{project_code.lower().rstrip("_")}/'
-                          f'{month}_{project_type}_{b64_chunk}.xml')
+                          f'{month}_{project_type}_{b64_chunk}.xml',
+                          verify=False)
         if r2.status_code == 200:
             with open(f'hdb_downloads/{os.path.basename(r2.url)}', 'wb') as f:
                 f.write(r2.content)
@@ -607,7 +614,8 @@ if __name__ == '__main__':
         # map_url = 'https://resources.homes.hdb.gov.sg/nf/2021-02/upcoming-bto/qt_n2c1/townmap/townmap_qt_n2c1.jpg'
         r3 = requests.get(f'https://resources.homes.hdb.gov.sg/nf/{month}/'
                           f'upcoming-bto/{town.lower()}_{project_code.lower()}/'
-                          f'townmap/townmap_{town.lower()}_{project_code.lower()}.jpg')
+                          f'townmap/townmap_{town.lower()}_{project_code.lower()}.jpg',
+                          verify=False)
         if r3.status_code == 200:
             with open(f'hdb_downloads/{os.path.basename(r3.url)}', 'wb') as f:
                 f.write(r3.content)
