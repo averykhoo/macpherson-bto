@@ -40,9 +40,8 @@ bto_details_urls = [
     'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_UVRfTjhDMV8xNjY2NzAxNjI2ODEw',
     'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_SldfTjlDMjFfMTY2NjcwMDg0MTA5Mg',
     'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_S1dOX04xQzQ1QV8xNjY2NzAxMjAxMDQ1',
-    'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_S1dOX04xQzQ1QV8xNjY2NzAxMjAxMDQ1',
+    'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_VEdfRDVDMl8xNjY2NzAxNjgwNTEz',
 ]
-
 
 # def fetch(url, params):
 #     """
@@ -599,6 +598,11 @@ if __name__ == '__main__':
                           f'unit_xml/'
                           f'UNIT_{month}_{project_type}_{b64_chunk}.xml',
                           verify=False)
+        if r1.status_code != 200:
+            r1 = requests.get(f'https://resources.homes.hdb.gov.sg/nf/{month}/upcoming-bto/'
+                              f'unit_xml/'
+                              f'UNIT_{month}_{project_type}_{b64_chunk}.xml',
+                              verify=False)
         if r1.status_code == 200:
             with open(f'hdb_downloads/{os.path.basename(r1.url)}', 'wb') as f:
                 f.write(r1.content)
@@ -607,6 +611,11 @@ if __name__ == '__main__':
                           f'{town.lower()}_{project_code.lower().rstrip("_")}/'
                           f'{month}_{project_type}_{b64_chunk}.xml',
                           verify=False)
+        if r2.status_code != 200:
+            r2 = requests.get(f'https://resources.homes.hdb.gov.sg/nf/{month}/upcoming-bto/'
+                              f'{town.lower()}_{project_code.lower().rstrip("_")}/'
+                              f'{month}_{project_type}_{b64_chunk}.xml',
+                              verify=False)
         if r2.status_code == 200:
             with open(f'hdb_downloads/{os.path.basename(r2.url)}', 'wb') as f:
                 f.write(r2.content)
@@ -616,6 +625,11 @@ if __name__ == '__main__':
                           f'upcoming-bto/{town.lower()}_{project_code.lower()}/'
                           f'townmap/townmap_{town.lower()}_{project_code.lower()}.jpg',
                           verify=False)
+        if r3.status_code != 200:
+            r3 = requests.get(f'https://resources.homes.hdb.gov.sg/nf/{month}/'
+                              f'upcoming-bto/{town.lower()}_{project_code.lower().rstrip("_")}/'
+                              f'townmap/townmap_{town.lower()}_{project_code.lower().rstrip("_")}.jpg',
+                              verify=False)
         if r3.status_code == 200:
             with open(f'hdb_downloads/{os.path.basename(r3.url)}', 'wb') as f:
                 f.write(r3.content)

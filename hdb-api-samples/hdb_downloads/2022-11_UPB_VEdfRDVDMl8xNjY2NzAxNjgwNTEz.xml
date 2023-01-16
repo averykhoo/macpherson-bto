@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <standard-project-info>
+        <key>
+            <town>Tengah</town>
+            <tooltip/>
+            <uri/>
+        </key>
+        <key>
+            <point>3312|835</point>
+        </key>
+        <key>
+            <latitude>1.3709661</latitude>
+            <longitude>103.7455273</longitude>
+        </key>
+        <key>
+            <launch-qtr>2023-02</launch-qtr>
+        </key>
+        <unit-details>
+            <flat-type>2-room Flexi</flat-type>
+            <flat-type>3-room</flat-type>
+            <flat-type>4-room</flat-type>
+            <flat-type>5-room</flat-type>
+            <total>1640</total>
+        </unit-details>
+    </standard-project-info>
+    <resources>
+        <town-map>2022-11/upcoming-bto/tg_d5c2/townmap/townmap_tg_d5c2.jpg</town-map>
+    </resources>
+</template>

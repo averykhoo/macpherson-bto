@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <standard-project-info>
+        <key>
+            <town>Kallang/Whampoa</town>
+            <tooltip/>
+            <uri/>
+        </key>
+        <key>
+            <point>682|1930</point>
+        </key>
+        <key>
+            <latitude>1.3099572</latitude>
+            <longitude>103.8507503</longitude>
+        </key>
+        <key>
+            <launch-qtr>2023-02</launch-qtr>
+        </key>
+        <unit-details>
+            <flat-type>2-room Flexi</flat-type>
+            <flat-type>3-room</flat-type>
+            <flat-type>4-room</flat-type>
+            <total>1270</total>
+        </unit-details>
+    </standard-project-info>
+    <resources>
+        <town-map>2022-11/upcoming-bto/kwn_n1c45a/townmap/townmap_kwn_n1c45a.jpg</town-map>
+    </resources>
+</template>

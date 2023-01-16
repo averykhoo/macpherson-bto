@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <standard-project-info>
+        <key>
+            <town>Queenstown</town>
+            <tooltip/>
+            <uri/>
+        </key>
+        <key>
+            <point>1178|725</point>
+        </key>
+        <key>
+            <latitude>1.3099948</latitude>
+            <longitude>103.7833142</longitude>
+        </key>
+        <key>
+            <launch-qtr>2023-02</launch-qtr>
+        </key>
+        <unit-details>
+            <flat-type>3-room</flat-type>
+            <flat-type>4-room</flat-type>
+            <total>730</total>
+        </unit-details>
+    </standard-project-info>
+    <resources>
+        <town-map>2022-11/upcoming-bto/qt_n8c1/townmap/townmap_qt_n8c1.jpg</town-map>
+    </resources>
+</template>
