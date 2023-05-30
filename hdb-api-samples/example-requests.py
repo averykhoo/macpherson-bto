@@ -36,11 +36,16 @@ bto_details_urls = [
     # 'https://homes.hdb.gov.sg/home/bto/details/2022-05_BTO_Qk1fTjZDNThfMTY1MDI3NDA4OTUyMA',
     # 'https://homes.hdb.gov.sg/home/bto/details/2022-05_BTO_SldfTjNDMzFfMTY1MDI3NDIwODU5Nw',
     # 'https://homes.hdb.gov.sg/home/bto/details/2022-05_BTO_WVNfTjlDM18xNjUwMjc0Mzg4ODkz',
-    'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_S1dOX042QzU0XzE2NjY3MDE1NjAzNzY',
-    'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_UVRfTjhDMV8xNjY2NzAxNjI2ODEw',
-    'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_SldfTjlDMjFfMTY2NjcwMDg0MTA5Mg',
-    'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_S1dOX04xQzQ1QV8xNjY2NzAxMjAxMDQ1',
-    'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_VEdfRDVDMl8xNjY2NzAxNjgwNTEz',
+    # 'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_S1dOX042QzU0XzE2NjY3MDE1NjAzNzY',
+    # 'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_UVRfTjhDMV8xNjY2NzAxNjI2ODEw',
+    # 'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_SldfTjlDMjFfMTY2NjcwMDg0MTA5Mg',
+    # 'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_S1dOX04xQzQ1QV8xNjY2NzAxMjAxMDQ1',
+    # 'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_VEdfRDVDMl8xNjY2NzAxNjgwNTEz',
+    'https://homes.hdb.gov.sg/home/bto/details/2023-05_BTO_QkRfTjJDMTNfMTY4MjMxNzg3MDk1OQ',
+    'https://homes.hdb.gov.sg/home/bto/details/2023-05_BTO_S1dOX04xQzQ2XzE2ODIzMTc5NDgzMjc',
+    'https://homes.hdb.gov.sg/home/bto/details/2023-05_BTO_VEdfRDNDMV8xNjgxNzE2NDQ4NzUy',
+    'https://homes.hdb.gov.sg/home/bto/details/2023-05_BTO_VEdfRDFDOF8xNjgyMzE4MDYyMDc1',
+    'https://homes.hdb.gov.sg/home/bto/details/2023-05_BTO_U0dOX04xQzIxXzE2ODIzMTgwMDIxNjI',
 ]
 
 # def fetch(url, params):

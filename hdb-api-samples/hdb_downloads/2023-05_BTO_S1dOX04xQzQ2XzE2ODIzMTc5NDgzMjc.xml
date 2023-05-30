@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <project-name>Farrer Park Arena</project-name>
+    <standard-project-info>
+        <key>
+            <town>Kallang/Whampoa</town>
+            <tooltip/>
+            <uri/>
+        </key>
+        <key>
+            <point>1000|969</point>
+        </key>
+        <key>
+            <latitude>1.3114481</latitude>
+            <longitude>103.8496238</longitude>
+        </key>
+        <key>
+            <completion-date/>
+            <tooltip>
+                
+					&amp;nbsp;
+				
+            </tooltip>
+            <uri/>
+        </key>
+        <key>
+            <remaining-lease>99</remaining-lease>
+            <tooltip>The 3- and 4-room flats are sold on a 99-year lease.</tooltip>
+            <uri/>
+        </key>
+        <key>
+            <selection-month/>
+        </key>
+        <key>
+            <est-waiting-time>48 months</est-waiting-time>
+            <tooltip>
+                Estimated Waiting Time refers to the estimated length of time successful applicants have to wait for the delivery of their BTO project. It is computed from the median month of the flat selection period, which is between Aug 2023 and May 2024 for this May 2023 BTO launch, to the median of the projected completion month of the blocks within this project.
+&lt;br>&lt;br>
+Estimated Completion Date (ECD) is the estimated date that the project will be completed. As ECD will depend on the progress of construction works on site, HDB shall not be responsible for any damage or loss arising from a change in the ECD. The ECD of this project is 4Q 2027.
+&lt;br>&lt;br>
+Delivery Possession Date (DPD) is the contractual date in the Agreement for Lease by which HDB is required to deliver vacant possession of the booked flat to buyers. DPD is later than the ECD. The estimated DPD for this project is 30 Jun 2029.
+&lt;br>&lt;br>
+
+            </tooltip>
+        </key>
+        <key>
+            <lease-period-2rm>B</lease-period-2rm>
+        </key>
+        <key>
+            <price-tooltip>
+                The indicative price range of the flats exclude grants and are based on 99-year leases.
+&lt;br>&lt;br>
+Actual prices may vary based on the actual attributes of the flats at the time of selection. Find out details of the Optional Component Scheme offered for this project.
+&lt;br>&lt;br>
+
+            </price-tooltip>
+        </key>
+        <unit-details>
+            <ukey>
+                <flat-type>3-room</flat-type>
+                <supply>92</supply>
+                <est-floor-area-lower>69</est-floor-area-lower>
+                <est-floor-area-upper>69</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <est-internal-floor-area-lower>66</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>66</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>362000</price-range-lower>
+                <price-range-upper>466000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        
+&lt;h4>Finishes and Fittings&lt;/h4>
+&lt;br>
+&lt;h5>Non-Optional Finishes&lt;/h5>
+&lt;br>
+&lt;p>More than just a well-designed and functional interior, the 3-room flats will come with the following finishes and fittings: &lt;/p>
+&lt;ul>
+  &lt;li>Floor tiles in the:&lt;/li>
+  &lt;ul>
+    &lt;li>Bathrooms&lt;/li>
+    &lt;li>Household shelter&lt;/li>
+    &lt;li>Kitchen/ utility  &lt;/li>
+  &lt;/ul>
+  &lt;li>Wall tiles in the:&lt;/li>
+  &lt;ul>
+    &lt;li>Bathrooms&lt;/li>
+    &lt;li>Kitchen/ utility&lt;/li>
+  &lt;/ul>
+&lt;/ul>
+                    </non-optional>
+                    <optional>
+                        <p>You can choose to install the following OCS items in the 3-room flat:</p>
+                        <floor>
+                            <header>Flooring for Living/ Dining, Dry Kitchen, and Bedrooms </header>
+                            <price>3340</price>
+                            <text>
+                                
+  &lt;ul>
+    &lt;li>Vinyl strip flooring in the bedrooms&lt;/li>
+    &lt;li>Polished porcelain floor tiles in the living/ dining, dry kitchen&lt;/li>
+  &lt;/ul>
+
+                            </text>
+                        </floor>
+                        <door>
+                            <header>Internal Doors and Sanitary Fittings </header>
+                            <price>2770</price>
+                            <text>
+                                
+  &lt;ul>
+    &lt;li>2 laminated UPVC bedroom doors&lt;/li>
+    &lt;li>2 laminated UPVC folding bathroom doors&lt;/li>
+    &lt;li>Wash basin with tap mixer&lt;/li>
+    &lt;li>Shower set with bath/ shower mixer&lt;/li>
+  &lt;/ul>
+
+                            </text>
+                        </door>
+                    </optional>
+                </finishes-and-fittings-text>
+            </ukey>
+            <ukey>
+                <flat-type>4-room</flat-type>
+                <supply>477</supply>
+                <est-floor-area-lower>93</est-floor-area-lower>
+                <est-floor-area-upper>93</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <est-internal-floor-area-lower>90</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>90</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>505000</price-range-lower>
+                <price-range-upper>642000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        
+&lt;h4>Finishes and Fittings&lt;/h4>
+&lt;br>
+&lt;h5>Non-Optional Finishes&lt;/h5>
+&lt;br>
+&lt;p>More than just a well-designed and functional interior, the 4-room flats will come with the following finishes and fittings: &lt;/p>
+&lt;ul>
+  &lt;li>Floor tiles in the:&lt;/li>
+  &lt;ul>
+    &lt;li>Bathrooms&lt;/li>
+    &lt;li>Household shelter&lt;/li>
+    &lt;li>Kitchen and service yard&lt;/li>
+  &lt;/ul>
+  &lt;li>Wall tiles in the:&lt;/li>
+  &lt;ul>
+    &lt;li>Bathrooms&lt;/li>
+    &lt;li>Kitchen  &lt;/li>
+  &lt;/ul>
+&lt;/ul>
+                    </non-optional>
+                    <optional>
+                        <p>You can choose to install the following OCS items in the 4-room flat:</p>
+                        <floor>
+                            <header>Flooring for Living/ Dining and Bedrooms </header>
+                            <price>4970</price>
+                            <text>
+                                
+  &lt;ul>
+    &lt;li>Vinyl strip flooring in the bedrooms&lt;/li>
+    &lt;li>Polished porcelain floor tiles in the living/ dining&lt;/li>
+  &lt;/ul>
+
+                            </text>
+                        </floor>
+                        <door>
+                            <header>Internal Doors and Sanitary Fittings </header>
+                            <price>3180</price>
+                            <text>
+                                
+  &lt;ul>
+    &lt;li>3 laminated UPVC bedroom doors&lt;/li>
+    &lt;li>2 laminated UPVC folding bathroom doors&lt;/li>
+    &lt;li>Wash basin with tap mixer&lt;/li>
+    &lt;li>Shower set with bath/ shower mixer&lt;/li>
+  &lt;/ul>
+
+                            </text>
+                        </door>
+                    </optional>
+                </finishes-and-fittings-text>
+            </ukey>
+        </unit-details>
+        <overview>
+            <p>
+                
+&lt;h6>Kallang/Whampoa&lt;/h6>
+&lt;br/>
+Farrer Park Arena &lt;a class="audioBtn Farrer-Park-Arena">&lt;i class="fas fa-volume-up">&lt;/i>&lt;/a> is bounded by Farrer Park Road and Dorset Road. The project is offered under the &lt;a href="https://www.hdb.gov.sg/cs/infoweb/residential/buying-a-flat/finding-a-flat/plh">Prime Location Public Housing (PLH) model&lt;/a>, and comprises 3 residential blocks, each with 24 storeys. You can choose from 569 units of 3- and 4-room flats.
+&lt;br>&lt;br>
+The name Farrer Park Arena takes inspiration from the past, as the project site used to house a boxing gym. The former boxing gym building will be repurposed into a multi-purpose community sporting space to honour its unique heritage. In addition, you can also jog amid the green surrounds of Farrer Park Arena and work out at the adult and elderly fitness stations. Those who enjoy ball games will enjoy the hard court located at the roof garden above the Multi-Storey Car Park. Other facilities within the project include children’s playgrounds, a childcare centre, and a residents’ network centre.
+&lt;br>&lt;br>
+Residents can also enjoy more facilities located just next door, such as a proposed park and new sports centre, which will boast swimming pools, a field, as well as other sporting facilities.
+&lt;br>&lt;br>
+Please refer to the site plan located at the top of this page for the facilities provided in the project. Facilities in this project will be accessible by the public.
+&lt;br>&lt;br>
+
+            </p>
+        </overview>
+        <notes>
+            <p>
+                HDB precincts are planned to serve the evolving needs of the community. There are spaces catered for future inclusion of amenities/ facilities (such as childcare centres, eldercare facilities, education centres, residents' network centres, day activity centres, etc), commercial facilities (such as shops and eating houses), mechanical and electrical rooms, and such other facilities depending on the prevailing needs. These spaces could be in the void decks, common property, car parks, or stand-alone community buildings.
+&lt;br>&lt;br>In addition, housing projects may be located near roads, railways, airbases, and land used for non-residential purposes. Hence, residents may experience higher noise levels. We have provided information on the surrounding land use, proposed facilities and their locations in the maps and plans of individual projects, where feasible. The information provided is indicatively based on the current planning intent of the relevant authorities and is subject to change from time to time.
+&lt;br>&lt;br>
+&lt;ul>
+  &lt;li>Get answers to &lt;a href="https://www.hdb.gov.sg/cs/infoweb/residential/buying-a-flat/buying-procedure-for-new-flats/modes-of-sale/faqs-for-sales-launch">Frequently Asked Questions on sales launches&lt;/a>&lt;/li>
+  &lt;br>
+  &lt;li>Visit the virtual showflats at &lt;a href="https://assets.hdb.gov.sg/residential/buying-a-flat/finding-a-flat/my-nice-home-gallery/eamnhindex/index.html?utm_source=May23website&amp;utm_medium=link&amp;utm_campaign=MNHG">My Nice Home Gallery&lt;/a> and get interior decor ideas&lt;/li>
+&lt;/ul>
+
+            </p>
+        </notes>
+    </standard-project-info>
+    <template-body>
+        <row>
+            <header>Eco-Friendly Features</header>
+        </row>
+        <row>
+            <p>
+                &lt;p>To encourage green and sustainable living, Farrer Park Arena will have several eco-friendly features such as:&lt;/p>
+&lt;ul>
+  &lt;li>Separate chutes for recyclable waste&lt;/li>
+  &lt;li>Regenerative lifts to reduce energy consumption&lt;/li>
+  &lt;li>Bicycle stands to encourage cycling as an environmentally-friendly form of transport&lt;/li>
+  &lt;li>Parking spaces to facilitate future provision of electric vehicle charging stations &lt;/li>
+  &lt;li>Use of sustainable products in the project &lt;/li>
+  &lt;li>Active, Beautiful, Clean Waters design features to clean rainwater and beautify the landscapes&lt;/li>
+&lt;/ul>
+
+            </p>
+        </row>
+        <row>
+            <template1>
+                <photo-folder>2023-05/bto/kwn_n1c46/template1</photo-folder>
+            </template1>
+        </row>
+        <row>
+            <header>Smart Solutions</header>
+        </row>
+        <row>
+            <p>
+                &lt;p>Farrer Park Arena will come with the following smart solutions to reduce energy usage, and contribute to a safer and more sustainable living environment:&lt;/p>
+&lt;ul>
+  &lt;li>Smart-Enabled Homes with provisions to facilitate adoption of smart home solutions&lt;/li>
+  &lt;li>Smart Lighting in common areas to reduce energy usage&lt;/li>
+  &lt;li>Smart Pneumatic Waste Conveyance System to optimise the deployment of resources for cleaner and fuss-free waste disposal &lt;/li>
+&lt;/ul>
+
+            </p>
+        </row>
+        <row>
+            <header>Embracing Walk Cycle Ride</header>
+        </row>
+        <row>
+            <p>
+                &lt;p>With an increased focus on active and healthy living, the housing precinct is designed with well-connected pathways to make it easier for residents to walk and cycle more as part of your daily commutes to the surrounding amenities and public transport:&lt;/p>
+&lt;ul>
+  &lt;li>Convenient access and walking distance to public transport&lt;/li>
+  &lt;li>Safe, pleasant, and welcoming streets for walking and cycling&lt;/li>
+  &lt;li>Sheltered covered linkways and barrier free accessibility to facilities&lt;/li>
+  &lt;li>Wayfinding and signages for orientation and navigation&lt;/li>
+&lt;/ul>
+&lt;p>Farrer Park Arena residents will be served by the nearby Little India and Farrer Park MRT stations as well as bus services. &lt;/p>
+&lt;p>Learn more about transport connectivity in this town using &lt;a href="https://www.lta.gov.sg/content/dam/ltagov/Home/PDF/MTM.pdf">MyTransport.sg app&lt;/a>. &lt;/p>
+
+            </p>
+        </row>
+        <row>
+            <header>About Kallang/Whampoa Town</header>
+        </row>
+        <row>
+            <p>
+                Enjoy a wide variety of food and shopping choices at Pek Kio Market &amp;amp; Food Centre and shopping malls such as City Square Mall, Centrium Square, and Mustafa Centre. Visit &lt;a href="https://www.hdb.gov.sg/cs/infoweb/residential/where2shop/explore/kallang-whampoa">Where2Shop@HDB&lt;/a> to find out more about HDB’s heartland shops in this area.
+&lt;br>&lt;br>
+Explore new hobbies at Pek Kio Community Centre and Kallang Community Club, or work out a sweat jogging at Jalan Besar Stadium and along the Rochor Canal. More sporting options will be available at a new sports centre adjacent to Farrer Park Arena, which will include swimming pools, a field, as well as other sporting facilities.
+&lt;br>&lt;br>
+Parents with school-going children can consider nearby schools such as Farrer Park Primary School, Hong Wen School, Bendemeer Secondary School, and St. Joseph’s Institution Junior.
+&lt;br>&lt;br>
+
+            </p>
+        </row>
+        <row>
+            <template2>
+                <photo-folder>2023-05/bto/kwn_n1c46/template2</photo-folder>
+                <photos>
+                    <photo>2023-05/bto/kwn_n1c46/template2/1.jpg</photo>
+                    <photo>2023-05/bto/kwn_n1c46/template2/2.jpg</photo>
+                    <photo>2023-05/bto/kwn_n1c46/template2/3.jpg</photo>
+                    <photo>2023-05/bto/kwn_n1c46/template2/4.jpg</photo>
+                    <photo>2023-05/bto/kwn_n1c46/template2/5.jpg</photo>
+                    <photo>2023-05/bto/kwn_n1c46/template2/6.jpg</photo>
+                </photos>
+            </template2>
+        </row>
+    </template-body>
+    <resources>
+        <town-map>2023-05/bto/kwn_n1c46/townmap/townmap_kwn_n1c46.jpg</town-map>
+        <carousel>
+            <link>2023-05/bto/kwn_n1c46/carousel/01_perspective.jpg</link>
+            <link>2023-05/bto/kwn_n1c46/carousel/02_perspective.jpg</link>
+            <link>2023-05/bto/kwn_n1c46/carousel/03_siteplan_kwn_n1c46.jpg</link>
+        </carousel>
+        <sound>2023-05/bto/kwn_n1c46/sound/kwn_n1c46.mp3</sound>
+        <genspecs>
+            <genspecs-3rm>2023-05/bto/kwn_n1c46/genspecs/genspecs_kwn_n1c46_3rm_4rm.jpg</genspecs-3rm>
+            <genspecs-4rm>2023-05/bto/kwn_n1c46/genspecs/genspecs_kwn_n1c46_3rm_4rm.jpg</genspecs-4rm>
+        </genspecs>
+        <layoutideas>
+            <layoutideas-3rm>2023-05/bto/kwn_n1c46/layoutideas/layoutideas_kwn_n1c46_3rm.jpg</layoutideas-3rm>
+            <layoutideas-4rm>2023-05/bto/kwn_n1c46/layoutideas/layoutideas_kwn_n1c46_4rm.jpg</layoutideas-4rm>
+        </layoutideas>
+        <resale>
+            <resale-3rm>2023-05/bto/kwn_n1c46/resale/resale_kwn_n1c46_3rm.jpg</resale-3rm>
+            <resale-4rm>2023-05/bto/kwn_n1c46/resale/resale_kwn_n1c46_4rm.jpg</resale-4rm>
+        </resale>
+        <oydh>
+            <oydh-3rm>2023-05/bto/kwn_n1c46/oydh/oydh_kwn_n1c46_3rm.jpg</oydh-3rm>
+            <oydh-4rm>2023-05/bto/kwn_n1c46/oydh/oydh_kwn_n1c46_4rm.jpg</oydh-4rm>
+        </oydh>
+        <ocsleaflet>
+            <ocsleaflet-3rm>2023-05/bto/kwn_n1c46/ocsleaflet/ocsleaflet_kwn_n1c46_3rm_4rm(1).png</ocsleaflet-3rm>
+            <ocsleaflet-4rm>2023-05/bto/kwn_n1c46/ocsleaflet/ocsleaflet_kwn_n1c46_3rm_4rm(1).png</ocsleaflet-4rm>
+        </ocsleaflet>
+        <ocs/>
+    </resources>
+</template>

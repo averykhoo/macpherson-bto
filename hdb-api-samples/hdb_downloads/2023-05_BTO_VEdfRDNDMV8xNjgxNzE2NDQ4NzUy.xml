@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <project-name>Parc Meadow @ Tengah</project-name>
+    <standard-project-info>
+        <key>
+            <town>Tengah</town>
+            <tooltip/>
+            <uri/>
+        </key>
+        <key>
+            <point>2611|1205</point>
+        </key>
+        <key>
+            <latitude>1.3653405</latitude>
+            <longitude>103.7367511</longitude>
+        </key>
+        <key>
+            <completion-date/>
+            <tooltip/>
+            <uri/>
+        </key>
+        <key>
+            <remaining-lease>99</remaining-lease>
+            <tooltip>The 3-, 4-, and 5-room flats are sold on a 99-year lease. First-timer and second-timer families, and first-timer singles will be offered 99-year 2-room Flexi flats. Eligible Singapore Citizens and their spouses (if applicable) aged 55 and above can choose a short lease of between 15 and 45 years, in five-year increments, for the 2-room Flexi flat. The chosen lease has to cover them up to the age of at least 95 years.</tooltip>
+            <uri/>
+        </key>
+        <key>
+            <selection-month/>
+        </key>
+        <key>
+            <est-waiting-time>37 months (Blocks 326C, 327A, 327B, 327C, 328A, 328B, 328C, and 328D)/ 40 months (Blocks 326A, 326B, 330A, 330B, 330C, 331A, and 332A)</est-waiting-time>
+            <tooltip>
+                Estimated Waiting Time refers to the estimated length of time successful applicants have to wait for the delivery of their BTO project.  It is computed from the median month of the flat selection period, which is between Aug 2023 and May 2024 for this May 2023 BTO launch, to the median of the projected completion month of the blocks within this project.
+&lt;br>&lt;br>
+Estimated Completion Date (ECD) is the estimated date that the project will be completed. As ECD will depend on the progress of construction works on site, HDB shall not be responsible for any damage or loss arising from a change in the ECD. The ECDs of this project are:
+&lt;ul>
+  &lt;li>1Q 2027 (Blocks 326C, 327A, 327B, 327C, 328A, 328B, 328C, and 328D)&lt;/li>
+  &lt;li>2Q 2027 (Blocks 326A, 326B, 330A, 330B, 330C, 331A, and 332A)&lt;/li>
+&lt;/ul>
+Delivery Possession Date (DPD) is the contractual date in the Agreement for Lease by which HDB is required to deliver vacant possession of the booked flat to buyers. DPD is later than the ECD. The estimated DPDs for this project are:
+&lt;ul>
+  &lt;li>30 Sep 2028 (Blocks 326C, 327A, 327B, 327C, 328A, 328B, 328C, and 328D)&lt;/li>
+  &lt;li>31 Dec 2028 (Blocks 326A, 326B, 330A, 330B, 330C, 331A, and 332A)&lt;/li>
+&lt;/ul>
+
+            </tooltip>
+        </key>
+        <key>
+            <lease-period-2rm>B</lease-period-2rm>
+        </key>
+        <key>
+            <price-tooltip>
+                The indicative price range of the flats exclude grants and are based on 99-year leases.
+&lt;br>&lt;br>
+Actual prices may vary based on the actual attributes of the flats at the time of selection. Prices include the costs of floor finishes, internal doors, and sanitary fittings.
+&lt;br>&lt;br>
+
+            </price-tooltip>
+        </key>
+        <unit-details>
+            <ukey>
+                <flat-type>2-room Flexi (Type 1)</flat-type>
+                <supply>92</supply>
+                <est-floor-area-lower>39</est-floor-area-lower>
+                <est-floor-area-upper>39</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <est-internal-floor-area-lower>37</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>37</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>127000</price-range-lower>
+                <price-range-upper>158000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        
+&lt;h4>Finishes and Fittings&lt;/h4>
+&lt;br>
+&lt;h5>Non-Optional Finishes&lt;/h5>
+&lt;br>
+&lt;p>To boost construction productivity, Parc Meadow @ Tengah will be built using the Prefabricated Prefinished Volumetric Construction (PPVC) method. The flats will come with full floor finishes, internal doors, and sanitary fittings.&lt;/p>
+&lt;p>The 2-room Flexi (Type 1) flats will come with the following finishes and fittings: &lt;/p>
+&lt;ul>
+  &lt;li>Vinyl strip flooring in the:&lt;/li>
+  &lt;ul>
+    &lt;li>Living/ dining&lt;/li>
+    &lt;li>Bedroom&lt;/li>
+  &lt;/ul>
+  &lt;li>Floor tiles in the:&lt;/li>
+  &lt;ul>
+    &lt;li>Bathroom&lt;/li>
+    &lt;li>Household shelter&lt;/li>
+    &lt;li>Kitchen&lt;/li>
+  &lt;/ul>
+  &lt;li>Wall tiles in the: &lt;/li>
+  &lt;ul>
+    &lt;li>Bathroom&lt;/li>
+    &lt;li>Kitchen &lt;/li>
+  &lt;/ul>
+  &lt;li>A sliding partition/ door for the bedroom and folding bathroom door&lt;/li>
+  &lt;li>Sanitary fittings, i.e. wash basin with tap mixer, shower set with bath/ shower mixer, and water closet suite&lt;/li>
+  &lt;li>Grab bars (for 2-room Flexi flats on short-leases)&lt;/li>
+&lt;/ul>
+                    </non-optional>
+                    <optional>
+                        <elderly>
+                            <header>OCS Package for short-lease 2-room Flexi flats </header>
+                            <price>6160</price>
+                            <text>
+                                
+  &lt;ul>
+    &lt;li>Lighting &lt;/li>
+    &lt;li>Window grilles &lt;/li>
+    &lt;li>Built-in kitchen cabinets with induction hob and cooker hood, kitchen sink, tap, and dish drying rack. Buyers who are wheel-chair bound may choose to have a lower kitchen countertop &lt;/li>
+    &lt;li>Built-in wardrobe&lt;/li>
+    &lt;li>Water heater &lt;/li>
+    &lt;li>Mirror and toilet roll holder in bathroom&lt;/li>
+  &lt;/ul>
+
+                            </text>
+                        </elderly>
+                    </optional>
+                </finishes-and-fittings-text>
+            </ukey>
+            <ukey>
+                <flat-type>2-room Flexi (Type 2)</flat-type>
+                <supply>354</supply>
+                <est-floor-area-lower>50</est-floor-area-lower>
+                <est-floor-area-upper>50</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <est-internal-floor-area-lower>48</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>48</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>165000</price-range-lower>
+                <price-range-upper>202000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        
+&lt;h4>Finishes and Fittings&lt;/h4>
+&lt;br>
+&lt;h5>Non-Optional Finishes&lt;/h5>
+&lt;br>
+&lt;p>To boost construction productivity, Parc Meadow @ Tengah will be built using the Prefabricated Prefinished Volumetric Construction (PPVC) method. The flats will come with full floor finishes, internal doors, and sanitary fittings.&lt;/p>
+&lt;p>The 2-room Flexi (Type 2) flats will come with the following finishes and fittings: &lt;/p>
+&lt;ul>
+  &lt;li>Vinyl strip flooring in the:&lt;/li>
+  &lt;ul>
+    &lt;li>Living/ dining&lt;/li>
+    &lt;li>Bedroom&lt;/li>
+  &lt;/ul>
+  &lt;li>Floor tiles in the:&lt;/li>
+  &lt;ul>
+    &lt;li>Bathroom&lt;/li>
+    &lt;li>Household shelter&lt;/li>
+    &lt;li>Kitchen&lt;/li>
+  &lt;/ul>
+  &lt;li>Wall tiles in the: &lt;/li>
+  &lt;ul>
+    &lt;li>Bathroom&lt;/li>
+    &lt;li>Kitchen &lt;/li>
+  &lt;/ul>
+  &lt;li>A sliding partition/ door for the bedroom and folding bathroom door&lt;/li>
+  &lt;li>Sanitary fittings, i.e. wash basin with tap mixer, shower set with bath/ shower mixer, and water closet suite&lt;/li>
+  &lt;li>Grab bars (for 2-room Flexi flats on short-leases)&lt;/li>
+&lt;/ul>
+                    </non-optional>
+                    <optional>
+                        <elderly>
+                            <header>OCS Package for short-lease 2-room Flexi flats </header>
+                            <price>7460</price>
+                            <text>
+                                
+  &lt;ul>
+    &lt;li>Lighting &lt;/li>
+    &lt;li>Window grilles &lt;/li>
+    &lt;li>Built-in kitchen cabinets with induction hob and cooker hood, kitchen sink, tap, and dish drying rack. Buyers who are wheel-chair bound may choose to have a lower kitchen countertop &lt;/li>
+    &lt;li>Built-in wardrobe&lt;/li>
+    &lt;li>Water heater &lt;/li>
+    &lt;li>Mirror and toilet roll holder in bathroom&lt;/li>
+    &lt;li>Laminated UPVC folding door for the flexible space &lt;/li>
+  &lt;/ul>
+
+                            </text>
+                        </elderly>
+                    </optional>
+                </finishes-and-fittings-text>
+            </ukey>
+            <ukey>
+                <flat-type>3-room (Income Ceiling $7,000)</flat-type>
+                <supply>82</supply>
+                <est-floor-area-lower>70</est-floor-area-lower>
+                <est-floor-area-upper>70</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <est-internal-floor-area-lower>67</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>67</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>253000</price-range-lower>
+                <price-range-upper>309000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        
+&lt;h4>Finishes and Fittings&lt;/h4>
+&lt;br>
+&lt;h5>Non-Optional Finishes&lt;/h5>
+&lt;br>
+&lt;p>To boost construction productivity, Parc Meadow @ Tengah will be built using the Prefabricated Prefinished Volumetric Construction (PPVC) method. The flats will come with full floor finishes, internal doors, and sanitary fittings.&lt;/p>
+&lt;p>The 3-room flats will come with the following finishes and fittings: &lt;/p>
+&lt;ul>
+  &lt;li>Vinyl strip flooring in the:&lt;/li>
+  &lt;ul>
+    &lt;li>Living/ dining&lt;/li>
+    &lt;li>Bedrooms&lt;/li>
+  &lt;/ul>
+  &lt;li>Floor tiles in the:&lt;/li>
+  &lt;ul>
+    &lt;li>Bathrooms&lt;/li>
+    &lt;li>Household shelter&lt;/li>
+    &lt;li>Kitchen/ utility&lt;/li>
+  &lt;/ul>
+  &lt;li>Wall tiles in the:&lt;/li>
+  &lt;ul>
+    &lt;li>Bathrooms&lt;/li>
+    &lt;li>Kitchen/ utility&lt;/li>
+  &lt;/ul>
+  &lt;li>Internal doors for bedrooms and folding doors for bathrooms&lt;/li>
+  &lt;li>Sanitary fittings, i.e. wash basin with tap mixer, shower set with bath/ shower mixer, and water closet suite&lt;/li>
+&lt;/ul>
+                    </non-optional>
+                </finishes-and-fittings-text>
+            </ukey>
+            <ukey>
+                <flat-type>4-room</flat-type>
+                <supply>791</supply>
+                <est-floor-area-lower>93</est-floor-area-lower>
+                <est-floor-area-upper>94</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <est-internal-floor-area-lower>90</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>91</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>363000</price-range-lower>
+                <price-range-upper>467000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        
+&lt;h4>Finishes and Fittings&lt;/h4>
+&lt;br>
+&lt;h5>Non-Optional Finishes&lt;/h5>
+&lt;br>
+&lt;p>To boost construction productivity, Parc Meadow @ Tengah will be built using the Prefabricated Prefinished Volumetric Construction (PPVC) method. The flats will come with full floor finishes, internal doors, and sanitary fittings.&lt;/p>
+&lt;p>The 4-room flats will come with the following finishes and fittings: &lt;/p>
+&lt;ul>
+  &lt;li>Vinyl strip flooring in the:&lt;/li>
+  &lt;ul>
+    &lt;li>Living/ dining&lt;/li>
+    &lt;li>Bedrooms&lt;/li>
+  &lt;/ul>
+  &lt;li>Floor tiles in the:&lt;/li>
+  &lt;ul>
+    &lt;li>Bathrooms&lt;/li>
+    &lt;li>Household shelter&lt;/li>
+    &lt;li>Kitchen and service yard&lt;/li>
+  &lt;/ul>
+  &lt;li>Wall tiles in the:&lt;/li>
+  &lt;ul>
+    &lt;li>Bathrooms&lt;/li>
+    &lt;li>Kitchen&lt;/li>
+  &lt;/ul>
+  &lt;li>Internal doors for bedrooms and folding doors for bathrooms&lt;/li>
+  &lt;li>Sanitary fittings, i.e. wash basin with tap mixer, shower set with bath/ shower mixer, and water closet suite&lt;/li>
+&lt;/ul>
+                    </non-optional>
+                </finishes-and-fittings-text>
+            </ukey>
+            <ukey>
+                <flat-type>5-room</flat-type>
+                <supply>666</supply>
+                <est-floor-area-lower>113</est-floor-area-lower>
+                <est-floor-area-upper>113</est-floor-area-upper>
+                <tooltip>Refers to the estimated area of the whole apartment, comprising the internal floor area and the air-conditioner ledge.</tooltip>
+                <est-internal-floor-area-lower>110sqm</est-internal-floor-area-lower>
+                <est-internal-floor-area-upper>110sqm</est-internal-floor-area-upper>
+                <tooltip>Refers to the estimated area of the apartment computed based on the centre line of the apartment wall.</tooltip>
+                <price-range-lower>489000</price-range-lower>
+                <price-range-upper>607000</price-range-upper>
+                <finishes-and-fittings-text>
+                    <non-optional>
+                        
+&lt;h4>Finishes and Fittings&lt;/h4>
+&lt;br>
+&lt;h5>Non-Optional Finishes&lt;/h5>
+&lt;br>
+&lt;p>To boost construction productivity, Parc Meadow @ Tengah will be built using the Prefabricated Prefinished Volumetric Construction (PPVC) method. The flats will come with full floor finishes, internal doors, and sanitary fittings.&lt;/p>
+&lt;p>The 5-room flats will come with the following finishes and fittings: &lt;/p>
+&lt;ul>
+  &lt;li>Vinyl strip flooring in the:&lt;/li>
+  &lt;ul>
+    &lt;li>Living/ dining&lt;/li>
+    &lt;li>Bedrooms&lt;/li>
+  &lt;/ul>
+  &lt;li>Floor tiles in the:&lt;/li>
+  &lt;ul>
+    &lt;li>Bathrooms&lt;/li>
+    &lt;li>Household shelter&lt;/li>
+    &lt;li>Kitchen and service yard&lt;/li>
+  &lt;/ul>
+  &lt;li>Wall tiles in the:&lt;/li>
+  &lt;ul>
+    &lt;li>Bathrooms&lt;/li>
+    &lt;li>Kitchen&lt;/li>
+  &lt;/ul>
+  &lt;li>Internal doors for bedrooms and folding doors for bathrooms&lt;/li>
+  &lt;li>Sanitary fittings, i.e. wash basin with tap mixer, shower set with bath/ shower mixer, and water closet suite&lt;/li>
+&lt;/ul>
+                    </non-optional>
+                </finishes-and-fittings-text>
+            </ukey>
+        </unit-details>
+        <overview>
+            <p>
+                  
+                
+&lt;h6>Tengah&lt;/h6>
+&lt;br/>
+Located in the Park District of Tengah town, Parc Meadow @ Tengah &lt;a class="audioBtn Parc-Meadow">&lt;i class="fas fa-volume-up">&lt;/i>&lt;/a> is bounded by Tengah Park Avenue and Tengah Park Walk. This project comprises 15 residential blocks, ranging from 12 to 13 storeys in height. You can choose a home from 1,985 units of 2-room Flexi, 3-, 4-, and 5-room flats.
+&lt;br>&lt;br>
+Located next to Central Park and a common green, Parc Meadow @ Tengah takes its name from the surrounding lush greenery. Delight in outdoor fun at your doorstep, with fitness stations designed for adults and the elderly, and children’s playgrounds. The roof gardens above the Multi-Storey Car Parks provide areas for residents to enjoy a quiet moment or chat with neighbours.
+&lt;br>&lt;br>
+Daily conveniences are also within easy reach, as Parc Meadow @ Tengah will come with shops, an eating house, and a minimart. A residents’ network centre and childcare centre will be located within the project as well. In addition, residents will be served by the other planned amenities in Tengah town such as a Neighbourhood Centre and nearby transport nodes, including JS3 MRT Station on the Jurong Region Line and a bus interchange.
+&lt;br>&lt;br>
+Please refer to the site plan located at the top of this page, for the facilities provided in Parc Meadow @ Tengah. Facilities in this project will be accessible by the public.
+&lt;br>&lt;br>
+&lt;u>About Park District&lt;/u>
+&lt;br>&lt;br>
+Park District is located at the heart of Tengah, nestled within a lush park-like setting.
+&lt;br>&lt;br>
+Residents can enjoy quality living amidst greenery, and connect with the community through a myriad of amenities and green spaces. There are green and blue spaces found within Park District, such as the future Central Park, Forest Stream, Plantation and Garden Farmways, Rainforest Walk, green links, rain gardens, and skyrise greenery. These spaces provide visual relief and create more outdoor recreational opportunities for residents.
+&lt;br>&lt;br>
+Park District is also home to Singapore’s first car-free HDB town centre which will provide a safe environment for walking and cycling. The town centre will be set amidst a lush park, with vehicles plying underneath the town centre. It will offer a greener, car-lite, people-friendly, and pedestrian-friendly environment.
+&lt;br>&lt;br>
+
+            </p>
+        </overview>
+        <notes>
+            <p>
+                HDB precincts are planned to serve the evolving needs of the community. There are spaces catered for future inclusion of amenities/ facilities (such as childcare centres, eldercare facilities, education centres, residents' network centres, day activity centres, etc), commercial facilities (such as shops and eating houses), mechanical and electrical rooms, and such other facilities depending on the prevailing needs. These spaces could be in the void decks, common property, car parks, or stand-alone community buildings.
+&lt;br>&lt;br>In addition, housing projects may be located near roads, railways, airbases, and land used for non-residential purposes. Hence, residents may experience higher noise levels. We have provided information on the surrounding land use, proposed facilities and their locations in the maps and plans of individual projects, where feasible. The information provided is indicatively based on the current planning intent of the relevant authorities and is subject to change from time to time.
+&lt;br>&lt;br>
+&lt;ul>
+  &lt;li>Get answers to &lt;a href="https://www.hdb.gov.sg/cs/infoweb/residential/buying-a-flat/buying-procedure-for-new-flats/modes-of-sale/faqs-for-sales-launch">Frequently Asked Questions on sales launches&lt;/a>&lt;/li>
+  &lt;br>
+  &lt;li>Visit the virtual showflats at &lt;a href="https://assets.hdb.gov.sg/residential/buying-a-flat/finding-a-flat/my-nice-home-gallery/eamnhindex/index.html?utm_source=May23website&amp;amp;utm_medium=link&amp;amp;utm_campaign=MNHG">My Nice Home Gallery&lt;/a> and get interior decor ideas&lt;/li>
+&lt;/ul>
+
+            </p>
+        </notes>
+    </standard-project-info>
+    <template-body>
+        <row>
+            <header>Eco-Friendly Features</header>
+        </row>
+        <row>
+            <p>
+                &lt;p>To encourage green and sustainable living, Parc Meadow @ Tengah will have several eco-friendly features such as:&lt;/p>
+&lt;ul>
+  &lt;li>Separate chutes for recyclable waste&lt;/li>
+  &lt;li>Regenerative lifts to reduce energy consumption&lt;/li>
+  &lt;li>Bicycle stands to encourage cycling as an environmentally-friendly form of transport  &lt;/li>
+  &lt;li>Parking spaces to facilitate future provision of electric vehicle charging stations &lt;/li>
+  &lt;li>Use of sustainable products in the project &lt;/li>
+  &lt;li>Active, Beautiful, Clean Waters design features to clean rainwater and beautify the landscapes&lt;/li>
+&lt;/ul>
+
+            </p>
+        </row>
+        <row>
+            <template1>
+                <photo-folder>2023-05/bto/tg_d3c1/template1</photo-folder>
+            </template1>
+        </row>
+        <row>
+            <header>Smart Solutions</header>
+        </row>
+        <row>
+            <p>
+                &lt;p>Parc Meadow @ Tengah will come with the following smart solutions to reduce energy usage, and contribute to a safer and more sustainable living environment:   &lt;/p>
+&lt;ul>
+  &lt;li>Smart-Enabled Homes with provisions to facilitate adoption of smart home solutions&lt;/li>
+  &lt;li>Smart Lighting in common areas to reduce energy usage&lt;/li>
+  &lt;li>Smart Pneumatic Waste Conveyance System to optimise the deployment of resources for cleaner and fuss-free waste disposal &lt;/li>
+&lt;/ul>
+
+            </p>
+        </row>
+        <row>
+            <header>Embracing Walk Cycle Ride</header>
+        </row>
+        <row>
+            <p>
+                &lt;p>With an increased focus on active and healthy living, the housing precinct is designed with well-connected pathways to make it easier for residents to walk and cycle more as part of your daily commutes to the surrounding amenities and public transport:&lt;/p>
+&lt;ul>
+  &lt;li>Convenient access and walking distance to public transport&lt;/li>
+  &lt;li>Safe, pleasant, and welcoming streets for walking and cycling&lt;/li>
+  &lt;li>Sheltered covered linkways and barrier free accessibility to facilities&lt;/li>
+  &lt;li>Wayfinding and signages for orientation and navigation&lt;/li>
+&lt;/ul>
+&lt;p>Parc Meadow @ Tengah residents will be served by bus services within Tengah and JS3 MRT Station on the Jurong Region Line that connect to nearby towns. A future temporary bus interchange is conveniently located across the road. &lt;/p> 
+&lt;p>Learn more about transport connectivity in this town using &lt;a href="https://www.lta.gov.sg/content/dam/ltagov/Home/PDF/MTM.pdf">MyTransport.sg app&lt;/a>.&lt;/p>
+            </p>
+        </row>
+        <row>
+            <header>Centralised Cooling System</header>
+        </row>
+        <row>
+            <p>
+                &lt;p>Residents can choose to subscribe to have air conditioning provided from a centralised cooling system. This system for public housing is the first of its kind in Singapore. &lt;/p>&lt;p>Cooling to each household unit will come from highly energy efficient chillers, and residents need not install nor maintain outdoor condensing units on their air-conditioner ledge. They will get to enjoy cost savings while contributing to a sustainable lifestyle in this eco-friendly district. Residents may decide to subscribe to the centralised cooling system after signing the Agreement for Lease. &lt;/p>&lt;p>For further enquiries, please contact SP Group at tengahcooling@spgroup.com.sg or visit &lt;a href="https://www.mytengah.sg/">mytengah.sg&lt;/a>.&lt;/p>
+            </p>
+        </row>
+        <row>
+            <header>About Tengah Town</header>
+        </row>
+        <row>
+            <p>
+                Homes in Tengah town will be surrounded by lush greenery and nature. HDB has applied its Biophilic Town Framework to guide the enhancement of existing natural assets and the design and development of neighbourhood landscapes in Tengah. Residents can look forward to nature-centric neighbourhoods that offer a greater sense of place, better well-being, and an enhanced quality of life. A variety of outdoor spaces and landscape features will be introduced to draw people closer to nature. A town-wide Active, Beautiful, and Clean Waters design strategy will also be introduced to slow down and treat stormwater runoff, while enhancing the biodiversity. Find out more details on &lt;a href="https://www.hdb.gov.sg/cs/infoweb/about-us/history/hdb-towns-your-home/tengah">Tengah town&lt;/a>.
+&lt;br>&lt;br>
+Tengah will be the first town to integrate housing projects with the area’s surrounding greenery and biodiversity. One major attraction will be the approximately 100-metre wide and 5km long Forest Corridor, which will form part of the larger network of greenery that connects the Western Water Catchment Area and the Central Catchment Nature Reserve. In collaboration with the National Parks Boards, various tree species will be planted in the Forest Corridor to transform it into a rich forest habitat.
+&lt;br>&lt;br>
+Complementing the Forest Corridor is the Forest Fringe, a 15- to 20-metre wide linear greenscape that will provide a tranquil and rustic environment for residents to enjoy flora and fauna. In addition, extensive park spaces, such as the Central Park and Community Farmways, will string key amenities and facilities together, providing a safe environment for residents to access their daily amenities.
+&lt;br>&lt;br>
+Tengah will be the first HDB town to have a car-free town centre nestled next to a lush green park. To encourage green commuting, there will be dedicated walking and cycling paths along all roads to create seamless connections within the town. The upcoming Jurong Region Line and bus services will serve the public transport needs of residents.
+&lt;br>&lt;br>
+Tengah is also the first HDB town to be planned with town-wide smart technologies from the outset. Guided by HDB’s Smart Town Framework, the various districts will integrate smart technology in its design, so that residents can enjoy a quality living environment. Autonomous vehicles will be piloted in Tengah town to provide convenient first-mile-last-mile connection to key transport nodes and amenities.
+&lt;br>&lt;br>
+Apart from existing primary, secondary, and tertiary institutions in the vicinity of Tengah town, new schools will also be built within the town. This includes Anglo Chinese School (Primary), which will be situated within 1km of Parc Meadow @ Tengah when it relocates to the town in 2030.
+&lt;br>&lt;br>
+Vibrant commercial facilities are planned for the town centre and in the districts, complementing other shopping and dining options in the nearby Bukit Batok town. Check out the heartland shops on &lt;a href="https://www.hdb.gov.sg/cs/infoweb/residential/where2shop/explore/bukit-batok">Where2Shop@HDB&lt;/a>.
+&lt;br>&lt;br>
+
+            </p>
+        </row>
+        <row>
+            <template2>
+                <photo-folder>2023-05/bto/tg_d3c1/template2</photo-folder>
+                <photos>
+                    <photo>2023-05/bto/tg_d3c1/template2/1.jpg</photo>
+                    <photo>2023-05/bto/tg_d3c1/template2/2.jpg</photo>
+                    <photo>2023-05/bto/tg_d3c1/template2/3.jpg</photo>
+                </photos>
+            </template2>
+        </row>
+    </template-body>
+    <resources>
+        <town-map>2023-05/bto/tg_d3c1/townmap/townmap_tg_d3c1.jpg</town-map>
+        <carousel>
+            <link>2023-05/bto/tg_d3c1/carousel/01_perspective.jpg</link>
+            <link>2023-05/bto/tg_d3c1/carousel/02_perspective.jpg</link>
+            <link>2023-05/bto/tg_d3c1/carousel/03_siteplan_tg_d3c1.jpg</link>
+        </carousel>
+        <sound>2023-05/bto/tg_d3c1/sound/tg_d3c1.mp3</sound>
+        <genspecs>
+            <genspecs-2rm>2023-05/bto/tg_d3c1/genspecs/genspecs_tg_d3c1_2rm.jpg</genspecs-2rm>
+            <genspecs-2rm>2023-05/bto/tg_d3c1/genspecs/genspecs_tg_d3c1_2rm_3rm_4rm_5rm.jpg</genspecs-2rm>
+            <genspecs-3rm>2023-05/bto/tg_d3c1/genspecs/genspecs_tg_d3c1_2rm_3rm_4rm_5rm.jpg</genspecs-3rm>
+            <genspecs-4rm>2023-05/bto/tg_d3c1/genspecs/genspecs_tg_d3c1_2rm_3rm_4rm_5rm.jpg</genspecs-4rm>
+            <genspecs-5rm>2023-05/bto/tg_d3c1/genspecs/genspecs_tg_d3c1_2rm_3rm_4rm_5rm.jpg</genspecs-5rm>
+        </genspecs>
+        <layoutideas>
+            <layoutideas-2rmtype1>2023-05/bto/tg_d3c1/layoutideas/layoutideas_tg_d3c1_2rmtype1.jpg</layoutideas-2rmtype1>
+            <layoutideas-2rmtype2>2023-05/bto/tg_d3c1/layoutideas/layoutideas_tg_d3c1_2rmtype2.jpg</layoutideas-2rmtype2>
+            <layoutideas-3rm>2023-05/bto/tg_d3c1/layoutideas/layoutideas_tg_d3c1_3rm.jpg</layoutideas-3rm>
+            <layoutideas-4rm>2023-05/bto/tg_d3c1/layoutideas/layoutideas_tg_d3c1_4rm.jpg</layoutideas-4rm>
+            <layoutideas-5rm>2023-05/bto/tg_d3c1/layoutideas/layoutideas_tg_d3c1_5rm.jpg</layoutideas-5rm>
+        </layoutideas>
+        <resale>
+            <resale-2rm>2023-05/bto/tg_d3c1/resale/resale_tg_d3c1_2rm.jpg</resale-2rm>
+            <resale-3rm>2023-05/bto/tg_d3c1/resale/resale_tg_d3c1_3rm.jpg</resale-3rm>
+            <resale-4rm>2023-05/bto/tg_d3c1/resale/resale_tg_d3c1_4rm.jpg</resale-4rm>
+            <resale-5rm>2023-05/bto/tg_d3c1/resale/resale_tg_d3c1_5rm.jpg</resale-5rm>
+        </resale>
+        <oydh>
+            <oydh-2rmtype1>2023-05/bto/tg_d3c1/oydh/oydh_tg_d3c1_2rmtype1.jpg</oydh-2rmtype1>
+            <oydh-2rmtype2>2023-05/bto/tg_d3c1/oydh/oydh_tg_d3c1_2rmtype2.jpg</oydh-2rmtype2>
+            <oydh-3rm>2023-05/bto/tg_d3c1/oydh/oydh_tg_d3c1_3rm.jpg</oydh-3rm>
+            <oydh-4rm>2023-05/bto/tg_d3c1/oydh/oydh_tg_d3c1_4rm.jpg</oydh-4rm>
+            <oydh-5rm>2023-05/bto/tg_d3c1/oydh/oydh_tg_d3c1_5rm.jpg</oydh-5rm>
+        </oydh>
+        <ocsleaflet>
+            <ocsleaflet-2rm>2023-05/bto/tg_d3c1/ocsleaflet/ocsleaflet_tg_d3c1_2rm(1).png</ocsleaflet-2rm>
+            <ocsleaflet-2rm>2023-05/bto/tg_d3c1/ocsleaflet/ocsleaflet_tg_d3c1_2rm(2).png</ocsleaflet-2rm>
+        </ocsleaflet>
+        <ocs/>
+    </resources>
+</template>
