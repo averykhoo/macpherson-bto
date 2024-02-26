@@ -41,11 +41,12 @@ bto_details_urls = [
     # 'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_SldfTjlDMjFfMTY2NjcwMDg0MTA5Mg',
     # 'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_S1dOX04xQzQ1QV8xNjY2NzAxMjAxMDQ1',
     # 'https://homes.hdb.gov.sg/home/bto/details/2022-11_UPB_VEdfRDVDMl8xNjY2NzAxNjgwNTEz',
-    'https://homes.hdb.gov.sg/home/bto/details/2023-05_BTO_QkRfTjJDMTNfMTY4MjMxNzg3MDk1OQ',
-    'https://homes.hdb.gov.sg/home/bto/details/2023-05_BTO_S1dOX04xQzQ2XzE2ODIzMTc5NDgzMjc',
-    'https://homes.hdb.gov.sg/home/bto/details/2023-05_BTO_VEdfRDNDMV8xNjgxNzE2NDQ4NzUy',
-    'https://homes.hdb.gov.sg/home/bto/details/2023-05_BTO_VEdfRDFDOF8xNjgyMzE4MDYyMDc1',
-    'https://homes.hdb.gov.sg/home/bto/details/2023-05_BTO_U0dOX04xQzIxXzE2ODIzMTgwMDIxNjI',
+    # 'https://homes.hdb.gov.sg/home/bto/details/2023-05_BTO_QkRfTjJDMTNfMTY4MjMxNzg3MDk1OQ',
+    # 'https://homes.hdb.gov.sg/home/bto/details/2023-05_BTO_S1dOX04xQzQ2XzE2ODIzMTc5NDgzMjc',
+    # 'https://homes.hdb.gov.sg/home/bto/details/2023-05_BTO_VEdfRDNDMV8xNjgxNzE2NDQ4NzUy',
+    # 'https://homes.hdb.gov.sg/home/bto/details/2023-05_BTO_VEdfRDFDOF8xNjgyMzE4MDYyMDc1',
+    # 'https://homes.hdb.gov.sg/home/bto/details/2023-05_BTO_U0dOX04xQzIxXzE2ODIzMTgwMDIxNjI',
+    'https://homes.hdb.gov.sg/home/bto/details/2024-02_BTO_QkRfTjJDMTJfMTcwNTk3NDcwNzY2Mw',
 ]
 
 # def fetch(url, params):

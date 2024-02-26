@@ -12,7 +12,7 @@ out = Path('parsed_xml2_downloads')
 
 if __name__ == '__main__':
     directory = Path('hdb_downloads')
-    for path in directory.glob('2023-05_BTO_*.xml'):
+    for path in directory.glob('2024-02_BTO_*.xml'):
         soup = BeautifulSoup(path.read_bytes(), 'lxml-xml')
         town = soup.find('town').text.replace('/', '+')
         project_name = soup.find('project-name').text
